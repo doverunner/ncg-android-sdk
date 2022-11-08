@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   
+    <string name="menu_settings">Settings</string>
+    <string name="crash_toast_text">An error has been occurred.</string>
+    <string name="app_name">NCG2 Sample</string>
+    <string name="low_app_name">NCG2 Low Sample</string>
+    <string name="dialog_web_loading">Loading. Please wait...</string>
+    <string name="confirm_end">Do you want to exit the application?</string>
+        
+    <string name="confirm_dnp">Do you want to download the content now?</string>
+    <string name="confirm_play">Do you want to play the content now?</string>
+    <string name="confirm_play_already_exist">The file already exists.\nDo you want to play it now?</string>
+    <string name="play_now">Play now</string>
+    <string name="download_completed">The download has been completed.</string>    
+        
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string> 
+    <string name="no">No</string>
+ 	<string name="cancel">Cancel</string>
+ 	<string name="playback">Playback</string>
+ 	<string name="notify">Notification</string>
+ 	<string name="confirm">Confirm</string>
+ 	
+ 	<string name="download_title">Download</string>
+ 	<string name="failed_to_renew_license">Failed to renew the license.</string>
+ 	<string name="view_error">View Detail Error</string>
+ 	
+ 	<string name="error_dialog_title">NCG Sample - Error</string>
+ 	<string name="renew_license_of_count_info_msg">Play count of the content has exceeded limit.\nPlease renew the license of the content.</string>     		
+ 	<string name="renew_license_title">License Renewal</string>
+ 	<string name="renew_license_of_period_info_msg">The license of the content has expired.\nPlease renew the license of the content.</string>
+ 	<string name="license_updated_msg">License has been renewed.\nYou can play the content now.</string>
+	<string name="confirm_for_playcount_format">The remaining playable count is %d.\nDo you want to play now?</string>
+	<string name="security_read_phone_state_error">After allowing telephone permission, Please run the app again.</string>
+	<string name="modified_dbfile_ino_error">Please re-launch the app for the normal running apps.</string>	 	 	 	
+	
+	<string name="menu_view_log">View log file</string>
+	<string name="menu_delete_file">Delete selected item</string>
+	<string name="menu_decrypt_file">Decrypt selected item</string>
+	<string name="menu_decrypt_license_only">Delete license of selected item</string>
+	<string name="menu_download_site_license">Download site license</string>
+	<string name="menu_show_application_info">Applicaion information</string>
+			
+	<string name="developerInfo">INKA ENTWORKS</string>
+ 	<string name="dateInfo">2013.08.08</string>
+	
+	<string name="playcount_exceeded">Your license of this content has expired. Please repurchase the content for playback.</string>
+	<string name="no_license">You have no license to play this content. Please purchase the content for playback.</string>
+	<string name="date_expired">Your license of this content has expired. Please repurchase the content for playback.</string>	
+	<string name="aquire_license">You have no license to play this content. Do you want to acquire the license?</string>
+	<string name="selectMode">Select Player Mode</string>	
+	<string name="notsupport">This Player does not support this method</string>	
+	<string name="before_start_date">Your license of this content is before the start date. You can check the license information by long-touching the item.</string>
+	
+	<!-- category strings for ListView -->
+	<string name="Download_Category">DownLoad</string>
+	<string name="ProgressiveDownload_Category">ProgressiveDownload</string>
+	<string name="HttpLiveStreaming_Category">Http Live Streaming(VOD)</string>
+	<string name="LocalDownLoaded_Category">Local DownLoaded</string>
+	
+	<!-- nextPlayer String -->
+ 	<string name="cp_playtime">00:00/00:00</string>
+    <string name="ad_tag_url"><![CDATA[https://s3.ap-northeast-2.amazonaws.com/mpdsample/vast.xml]]></string>
+
+</resources>

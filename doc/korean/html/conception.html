@@ -1,0 +1,785 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NCG SDK for Android: Conception</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo_inka.jpg"/></td>
+  <td id="projectalign">
+   <div id="projectname">NCG SDK for Android<span id="projectnumber">&#160;Build 20220425</span>
+   </div>
+   <div id="projectbrief">INKA Entworks NCG DRM Library for Android</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('conception.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Conception </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><!DOCTYPE html>
+<html>
+<head>
+<title>PallyCon_Conception_Android_KOR.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<script src="raphael-min.js"></script>
+<script src="flowchart-latest.js"></script>
+<script src="webfont.js"></script>
+<script src="underscore-min.js"></script>
+<script src="sequence-diagram-min.js"></script>
+<h1 id="a-name%22doctop%22apallycon-sdk-sample-app-scenario"><a name="doc_top"></a>PallyCon SDK Sample App Scenario</h1>
+<p>Application을 기획하고, 설계, 구현할 때 PallyCon SDK에 대한 이해는 매우 중요하다.
+본 문서에서는 <strong>SDK가 DRM 컨텐츠를 어떻게 처리하는지</strong>를 Flow Chat를 통해 이해하고 이를 반영한 <strong>Sample App에서 SDK 운용 및 역활에 대한 전체적인 상호작용</strong>을 살펴봄으로써 Application 기획/설계의 오류를 예방할 수 있다.</p>
+<ul>
+<li><a href="#sdk-drm-processing">SDK DRM Processing</a>에서는 SDK가 DRM 컨텐츠(Downloaded Contents)를 처리하는 흐름을 설명한다.</li>
+<li><a href="#sdk-sample-app-sequence">SDK Sample App Sequence</a>에서는 User, App(Application), SDK, License Server의 전체적인 상호 작용을 설명한다.</li>
+</ul>
+<hr>
+<h2 id="sdk-drm-processing">SDK DRM Processing</h2>
+<p>PallyCon SDK가 DRM 컨텐츠를 어떻게 처리하는지 흐름을 알아야 구현될 Application(App)의 시나리오를 계획할 수 있다.
+아래 flow chat는 SDK가 DRM 비디오 컨텐츠를 처리하는 흐름을 나타낸 것이다. 이외에 오디오, 문서, 그림 등도 유사한 흐름으로 처리된다.</p>
+<center>
+<div id="flow"></div>
+<script>
+  var diagram = flowchart.parse(
+  "st=>start: Contents Select\n" +
+  "e=>end\n" +
+  "isNCG=>condition: 1. Encrypted ?\n" +
+  "licenseExist=>condition: 2. License\n" +
+  "  Exist ?\n" +
+  "licenseValid=>condition: 3. Valid\n" +
+  "License ?\n" +
+  "acquire=>subroutine: 4. License\n" +
+  "Acquisition\n" +
+  "acquireLicensecheck=>condition: 5. Valid\n" +
+  "License ?\n" +
+  "Proxy=>subroutine: 6. Local WebServer\n" +
+  "io=>inputoutput: 7. Player(Playback)\n" +
+  "st->isNCG->licenseExist->licenseValid->Proxy->io->e\n" +
+  "isNCG(yes)->licenseExist\n" +
+  "isNCG(no)->io\n" +
+  "licenseExist(yes)->licenseValid\n" +
+  "licenseExist(no)->acquire\n" +
+  "licenseValid(yes)->Proxy\n" +
+  "licenseValid(no)->acquire(right)->acquireLicensecheck\n" +
+  "acquireLicensecheck(yes)->Proxy\n" +
+  "acquireLicensecheck(no)->e\n");
+  diagram.drawSVG('flow');
+</script>
+</center>
+<p>아래는 <code>Flow Chat</code>에 대한 설명이다.</p>
+<blockquote>
+<p>App에서 비디오 컨텐츠 재생을 시도하게 되면</p>
+<ol>
+<li>비디오 컨텐츠가 DRM 파일인지 아닌지를 판단해야 한다.
+<ul>
+<li>DRM 파일이 아닐 경우 암호화되지 않은 파일이므로 7번의 일반 재생 절차를 따른다.</li>
+<li>DRM 파일일 경우 2번에서 라이선스를 가지고 있는지 찾는다.</li>
+</ul>
+</li>
+<li>비디오 컨텐츠의 라이선스를 찾아보고 있다면,
+<ul>
+<li>라이선스가 있다면 3번 유효한 라이선스인지 확인한다.</li>
+<li>라이선스가 없다면 4번 라이선스 획득(라이선스 서버로부터)을 시도한다.</li>
+</ul>
+</li>
+<li>비디오 컨텐츠의 라이선스가 있다면 유효한 라이선스인지 확인한다.
+<ul>
+<li>유효한 라이선스라면 6번 재생 시도로 넘어간다.</li>
+<li>유효한 라이선스가 아니라면 4번 라이선스 획득을 시도한다(재생을 제한해도 된다).</li>
+</ul>
+</li>
+<li>라이선스 서버로 라이선스 획득을 시도한다.</li>
+<li>발급 받은 라이선스가 유효한 라이선스인지 확인한다.
+<ul>
+<li>유효한 라이선스라면 6번 Local WebServer로 넘어간다.</li>
+<li>유효한 라이선스가 아니라면 재생을 제한한다(시나리오에 따라 다를 수 있다).</li>
+</ul>
+</li>
+<li>Local WebServer는 Player가 재생 가능한 DRM 컨텐츠의 가상 URL을 리턴한다.</li>
+<li>Player는 정상적인 일반 파일이거나 정상적인 DRM 컨텐츠일 경우 재생한다.</li>
+</ol>
+</blockquote>
+<p><a href="#doc_top">Top</a></p>
+<hr>
+<h2 id="sdk-sample-app-sequence">SDK Sample App Sequence</h2>
+<p>SDK가 적용된 Sample App의 전체적인 상호 작용 및 흐름을 나타낸 시퀀스 다이그램이다. <code>User</code>가 <code>DRM 컨텐츠</code>를 사용하기 위해서는 <code>SDK(PallyCon SDK)</code>가 적용된 <code>App</code>이 있어야하며 DRM 컨텐츠의 라이선스를 발급 받을 수 있는 <code>License Server</code>가 준비되어 있어야 한다. User의 이벤트에 따라 App, SDK, License Server 의 동작을 순서대로 나타냈으며 App과 SDK를 중심으로 설명한다.
+아래 설명은 DRM Contents 일 경우에 대한 흐름이다. Non-DRM File은 고려하지 않았다.</p>
+<center>
+<div id="sequence"></div>
+<script>
+  var diagram = Diagram.parse(
+  "User->App: App Excute\n" +
+  "App->SDK: 1. init\n" +
+  "SDK->>SDK: initialize: Local Server Start\n" +
+  "User->App: Playback or Download\n" +
+  "App->SDK: 2. Check License of Contents\n" +
+  "SDK-->App: License Validation Return\n" +
+  "App->SDK: 3. License Acquisition\n" +
+  "SDK->License Server: Device info Enroll\n" +
+  "License Server-->SDK: Certification Issue\n" +
+  "Note over SDK: Certification Save\n" +
+  "SDK->License Server: License Acquire\n" +
+  "License Server-->SDK: License Issue\n" +
+  "Note over SDK: License Check\n" +
+  "App->SDK: 4. Playback URL Request\n" +
+  "Note over SDK: Playable URL\n" +
+  "SDK-->App: 5. Virtual URL Return\n" +
+  "App->>App: Playback\n" +
+  "App-->User: Watching\n" +
+  "User->App: App Background Entry\n" +
+  "App->>App: Play Stop\n" +
+  "App->SDK: 6. Remove All Temporary License\n" +
+  "App->SDK: 7. App Background Entry\n" +
+  "User->App: App Foreground Entry\n" +
+  "App->SDK: 8. App Foreground Entry\n" +
+  "App->>App: Playback\n" +
+  "App-->User: Watching");
+  diagram.drawSVG("sequence", {theme: 'simple'});
+</script>
+</center>
+<p>아래는 <code>Sequence Diagram</code> 에 대한 설명이다.</p>
+<blockquote>
+<p>디바이스에 SDK가 적용된 App이 설치되어 있다면</p>
+<ol>
+<li>init
+<ul>
+<li>사용자가 App 을 실행시면 App은 PallyCon SDK의 init 함수를 통해 초기화 작업이 수행된다.</li>
+<li>이때 DRM 라이선스 파일 및 인증서 파일의 유효성을 검증하고 데이터를 로딩한다.</li>
+<li>초기화 시점에 Offline 지원 정책을 설정할 수 있으며 자세한 설정방법은 'OfflineSupportPolicy' enum class 를 통해 확인할 수 있다.</li>
+<li>PallyCon SDK에 현재 시간을 내부에 세팅하며 시간값은 주기적으로 업데이트 된다.</li>
+</ul>
+</li>
+<li>Check License of Contents
+<ul>
+<li>사용자가 컨텐츠를 재생하기전에 해당 컨텐츠의 라이선스 유효성을 검증해야한다.</li>
+</ul>
+</li>
+<li>License Acquisition
+<ul>
+<li><strong>만약 유효한 라이선스가 존재한다면</strong> 라이선스 획득 과정은 필요하지 않다.</li>
+<li>라이선스가 없는 경우 디바이스에 대한 인증을 받고 라이선스 요청 및 획득할 수 있다.</li>
+<li>라이선스 획득은 <code>aquireLicenseByPath</code>, CID를 아는 경우에는 <code>aquireLicenseByCID</code>를 호출하여 획득할 수 있으며,  HTTP Request하여 라이선스 서버로 보내고 HTTP Response 를 해석하여 라이선스를 저장한다.  <strong>만약 일회용 라이선스가 필요하다면</strong> temporary 파라매터를 이용하여 획득할 수 있다.</li>
+</ul>
+</li>
+<li>Playback URL Request
+<ul>
+<li>받은 라이선스를 확인하여 유효한 경우 LocalWebserver Interface의 <code>addLocalFilePathForPlayback</code>, <code>addProgressiveDownloadUrlForPlayback</code>, <code>addHttpLiveStreamUrlForPlayback</code> 함수 호출을 통해 재생 가능한 가상 URL을 요청한다.</li>
+</ul>
+</li>
+<li>Virtual URL Return
+<ul>
+<li>SDK는 3번 함수를 통해 Player가 재생 가능한 DRM 컨텐츠의 가상 URL을 리턴하고, Player는 이를 재생하여 사용자에게 보여준다.</li>
+</ul>
+</li>
+<li>Remove All Temporary License
+<ul>
+<li><strong>만약 일회용 라이선스를 획득했다면</strong> 프로그램을 종료하거나 <code>removeAllTemporaryLicense</code> 를 호출해야 일회용 라이선스가 삭제된다.</li>
+</ul>
+</li>
+<li>App Background Entry
+<ul>
+<li>사용자가 DRM 컨텐츠를 재생 중에 App을 Background로 진입시켰을 때 App은 재생을 멈추고 Player를 reset 한다.</li>
+</ul>
+</li>
+<li>App Foreground Entry
+<ul>
+<li>사용자가 Background에 있는 App을 다시 Foreground로 진입시켰을 때 App은 Player의 setDataSource에 URL을 다시 설정을 하고 재생을 하게 된다.</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<p><a href="#doc_top">Top</a></p>
+<hr>
+<h2 id="pallycon-sdk-sample-app-ui">PallyCon SDK Sample App UI</h2>
+<p>SDK Sample App 은 아래 그림과 같이 UI가 구성되어 있다.</p>
+<p><img src="main_activity.png" width="500" height="800"></p>
+리스트에 `Download`, `ProgressiveDownload`, `Http Live Streaming, Local Downloaded` 로 구분되어 있다. 각각의 의미는 아래 표와 같다.
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Download</td>
+<td>원격지에 있는 파일 다운로드</td>
+</tr>
+<tr>
+<td>Progressive Download(PD)</td>
+<td>원격지에 있는 미디어 파일 재생</td>
+</tr>
+<tr>
+<td>HTTP Live Streaming(HLS)</td>
+<td>HTTP 기반 미디어 스트리밍 재생</td>
+</tr>
+<tr>
+<td>Local Downloaded</td>
+<td>디바이스 내 미디어 파일 재생 (Local File)</td>
+</tr>
+</tbody>
+</table>
+<p><code>Download</code>는 원격지에 있는 파일을 다운로드한다.
+<code>Progressive Download(PD)</code>는 원격지에 있는 암호화된 컨텐츠 파일을 다운로드하면서 재생하는 것을 말한다. 파일을 다운로드하지만 물리적인 파일로 저장하는 것은 아니며 메모리상에만 존재한다.
+<code>HTTP Live Streaming(HLS)</code>는 Apple에서 iOS 3.0과 QuickTime X를 위해 2009년에 내놓은 프로토콜로써 HTTP 기반 미디어 스트리밍이다. 재생에 대한 정보는 m3u8 파일을 이용하여 플레이어 전송하며, 암호화된 <code>Key</code>를 복호화하여 재생한다.
+<code>Local Downloaded</code>는 디바이스 내 있는 암호화된 컨텐츠 재생을 의미하며, 다운로드를 받거나 App 에 직접 넣은 파일일 수 있다.</p>
+<p><a href="#doc_top">Top</a></p>
+<hr>
+<h2 id="sample-app-playback-test">Sample App Playback Test</h2>
+<p>SDK Sample App Project를 통해 컨텐츠 형태(Download, Progressive Download, Http Live Streaming)에 따라 각각 재생 테스트 해 볼 수 있다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Screenshots</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="playback_screen.png" width="700" height="400"></td>
+</tr>
+<tr>
+<td style="text-align:center">Play</td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="content_attr_dialog.png" width="400" height="600"></td>
+</tr>
+<tr>
+<td style="text-align:center">Item Long Click</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="download">Download</h3>
+<ol>
+<li>Download 카테고리에서 재생하고자 하는 컨텐츠를 리스트에서 눌려 파일을 다운로드 한다.</li>
+<li>다운로드가 완료되면 Local Downloaded 카테고리에 파일이 생긴다.</li>
+<li>다운로드 중 Play 버튼을 누르면 다운로드 받으면서 컨텐츠를 재생할 수 있다.</li>
+<li>재생이 완료되거나 재생 중에 [완료]를 누르면 리스트로 빠져나갈 수 있다.</li>
+</ol>
+<h3 id="progressive-download-playback">Progressive Download Playback</h3>
+<ol>
+<li>PD 카테고리에서 재생하고자 하는 컨텐츠를 리스트에서 누른다.</li>
+<li>플레이어가 실행되고 컨텐츠 재생이 시작된다.</li>
+<li>재생이 완료되거나 재생 중에 [완료]를 누르면 리스트로 빠져나갈 수 있다.</li>
+</ol>
+<h3 id="http-live-streaming-playback">HTTP Live Streaming Playback</h3>
+<ol>
+<li>HLS 카테고리에서 재생하고자 하는 컨텐츠를 리스트에서 누른다.</li>
+<li>플레이어가 실행되고 컨텐츠 재생이 시작된다.</li>
+<li>재생이 완료되거나 재생 중에 [완료]를 누르면 리스트로 빠져나갈 수 있다.</li>
+</ol>
+<h3 id="local-downloaded">Local Downloaded</h3>
+<ol>
+<li>Local Downloaded 카테고리에서 재생하고자 하는 컨텐츠를 리스트에서 누른다.</li>
+<li>플레이어가 실행되고 컨텐츠 재생이 시작된다.</li>
+<li>재생이 완료되거나 재생 중에 [완료]를 누르면 리스트로 빠져나갈 수 있다.</li>
+<li>Local Downloaded 카테고리에서 라이선스를 확인하고 싶은 컨텐츠를 리스트에서 길게 누른다.</li>
+<li>다이얼로그가 생성되면서 라이선스 정보와 헤더정보가 나온다.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong></p>
+<ul>
+<li>Progressive Download 컨텐츠의 경우 moov 태그가 뒤에 있으면 정상적으로 작동하지 않을 수 도 있다.</li>
+</ul>
+</blockquote>
+<p><a href="#doc_top">Top</a></p>
+<hr>
+<h2 id="test-contents-url">Test Contents URL</h2>
+<p>테스트에 제공되는 컨텐츠는 아래 표와 같다.</p>
+<table>
+<thead>
+<tr>
+<th>Download Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>http://cdn.pallycon.com/demo/d/PallyConDownload_1.mp4.ncg</td>
+</tr>
+<tr>
+<td>http://cdn.pallycon.com/demo/d/PallyConDownload_2.mp4.ncg</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Progressive Download</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>http://cdn.pallycon.com/demo/d/PallyConPD_1.mp4.ncg</td>
+</tr>
+<tr>
+<td>http://cdn.pallycon.com/demo/d/PallyConPD_2.mp4.ncg</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>HTTP Live Streaming</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>http://cdn.pallycon.com/demo/hls/gosigak01/gosigak_01.m3u8</td>
+</tr>
+<tr>
+<td>http://cdn.pallycon.com/demo/hls/gosigak02/gosigak_02.m3u8</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#doc_top">Top</a></p>
+<hr>
+
+</body>
+</html>
+   </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>

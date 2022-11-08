@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="52dip"
+    android:padding="10dip"
+    android:orientation="vertical">	    
+    <!-- 아이템 이름 -->
+    <TextView android:id="@+id/downloadName"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:textSize="17dip"
+		android:singleLine="true"    
+		android:textColor="#a0faa0"
+		android:text="listCellName"
+		android:ellipsize="middle" />
+		
+	<FrameLayout
+		android:layout_width="fill_parent"
+    	android:layout_height="wrap_content">
+    	
+		<!-- 재생 Progress 바 -->
+		<ProgressBar android:id="@+id/downloadProgess"
+	        style="?android:attr/progressBarStyleHorizontal"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:max="100"
+	        android:progress="0"/>
+	        
+	    <!-- 다운로드 사이즈 표시 -->
+	    <TextView android:id="@+id/downloadPercent"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			android:textSize="17dip"
+			android:gravity="center"
+			android:singleLine="true"
+			android:textColor="#aaa0faa0"
+			android:text=""
+			android:ellipsize="middle" />
+	</FrameLayout>
+	
+	
+	<RelativeLayout
+		android:id="@+id/RLayout_DialogDownloadProgress"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="5dip"
+		>
+		<Button 
+	   		android:id="@+id/btn_play"
+	   		android:layout_width="60dip"
+	   		android:layout_height="40dip"   		     		   	
+	   		android:textSize="14dip"
+	   		android:text="Play"
+	   		android:layout_alignParentLeft="true"
+	   		android:layout_centerVertical="true"	   		
+	   		/>
+		<TextView
+			android:id="@+id/TextView_DialogDownedSize"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="00.0"
+			android:textSize="17dip"
+			android:textColor="#aaa0faa0"
+			android:layout_toLeftOf="@+id/TextView_DialogSlash"
+			android:layout_centerVertical="true"
+			/>
+			
+		<TextView
+			android:id="@+id/TextView_DialogSlash"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text=" / "
+			android:textColor="#aaa0faa0"
+			android:layout_toLeftOf="@+id/TextView_DialogDownloadFileSize"
+			android:layout_centerVertical="true"
+			/>		
+		<TextView
+			android:id="@+id/TextView_DialogDownloadFileSize"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="00.0 MB"
+			android:textSize="17dip"
+			android:textColor="#aaa0faa0"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			/>
+	</RelativeLayout>	
+	
+</LinearLayout>

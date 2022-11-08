@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> 
+    <string name="crash_toast_text">오류가 발생하였습니다.</string>
+    <string name="app_name">NCG2 Sample</string>
+    <string name="low_app_name">NCG2 Low Sample</string>
+    <string name="dialog_web_loading">Loading. Please wait...</string>
+    <string name="confirm_end">종료하시겠습니까?</string>
+        
+    <string name="confirm_dnp">다운로드 받으시겠습니까?</string>
+    <string name="confirm_play">지금 바로 재생하시겠습니까?</string>
+    <string name="confirm_play_already_exist">이미 존재하는 파일이 있습니다. 바로 재생하시겠습니까?</string>    
+    <string name="play_now">바로재생</string>
+    <string name="download_completed">다운로드가 완료되었습니다.</string>
+        
+    <string name="ok">확인</string>
+    <string name="yes">예</string> 
+    <string name="no">아니요</string>
+ 	<string name="cancel">취소</string>
+ 	<string name="playback">재생</string>
+ 	<string name="notify">알림</string>
+ 	<string name="confirm">확인</string>
+ 	
+ 	<string name="download_title">다운로드</string>
+ 	<string name="failed_to_renew_license">라이센스 연장 실패</string>
+ 	<string name="view_error">자세한 에러 보기</string>
+ 	
+ 	<string name="renew_license_of_count_info_msg">이 컨텐츠는 재생 회수가 모두 소진 되었습니다.\n컨텐츠를 재구매하거나 사이트 관리자에게 문의 하십시오.</string>     		
+ 	<string name="renew_license_title">라이센스 연장 요청</string>
+ 	<string name="renew_license_of_period_info_msg">이 컨텐츠의 재생 기간이 만료되었습니다.\n기간을 연장하거나 컨텐츠를 재구매 하십시오.</string>
+ 	<string name="license_updated_msg">라이센스가 갱신되었습니다.\n컨텐츠 재생이 가능합니다.</string> 	 
+ 	<string name="confirm_for_playcount_format">이 컨텐츠는 재생 회수 제한이 있으며 현재 %d번 재생이 가능한 상태입니다.\n재생하고 남은 회수를 차감하시겠습니까?</string>
+ 	<string name="security_read_phone_state_error">설정에서 전화 권한을 허용하신 후에 앱을 다시 실행해 주십시요.</string>		
+ 	<string name="modified_dbfile_ino_error">정상적인 앱 구동을 위해 앱을 재 실행 해 주십시요.</string>
+ 	
+ 	<string name="menu_view_log">로그파일보기</string>
+	<string name="menu_delete_file">선택 파일 삭제</string>
+	<string name="menu_decrypt_file">선택 파일 복호화</string>
+	<string name="menu_decrypt_license_only">선택 파일 라이센스만 삭제</string>
+	<string name="menu_download_site_license">사이트라이선스 다운로드</string>
+	<string name="menu_show_application_info">어플리케이션 정보</string>
+	
+	<string name="playcount_exceeded">이 컨텐츠는 재생 회수가 모두 소진되었습니다, 재생 회수를 갱신하거나 사이트 관리자에게 문의하십시오.</string>	
+	<string name="no_license">이 컨텐츠를 재생할 권한이 없습니다, 컨텐츠를 재구매하거나 사이트 관리자에게 문의하십시오.</string>
+	<string name="date_expired">이 컨텐츠의 재생 기간이 만료되었습니다, 기간을 연장하거나 컨텐츠를 재구매 하십시오.</string>	
+	<string name="aquire_license">해당 컨텐츠에 대한 라이센스가 없습니다. 라이센스를 획득하시겠습니까?</string>
+	<string name="notsupport">이 플레이어에서는 해당 메소드를 지원하지 않습니다.</string>
+	<string name="before_start_date">이 컨텐츠의 라이선스 재생 가능 기간 이전입니다. 항목을 길게 눌러 자세한 라이선스 정보를 확인할 수 있습니다.</string>
+	
+ 	<!-- nextPlayer String -->
+ 	<string name="cp_playtime">00:00/00:00</string> 	
+</resources>

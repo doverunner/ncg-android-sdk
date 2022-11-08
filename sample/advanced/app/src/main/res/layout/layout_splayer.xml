@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/mplayerArea"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#000000"
+	>
+	
+	<FrameLayout
+		android:id="@+id/frm_player_area"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent">
+		<!-- 동적으로 여기에 플레이어가 추가될 것 이다. -->
+	</FrameLayout>
+
+  	<LinearLayout android:id="@+id/mplayerHeader" 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+	   	android:layout_alignParentTop="true"
+	   	android:background="#55000000"
+	   	android:clickable="false">
+	   	
+  	    <RelativeLayout
+  	        android:id="@+id/mplayerTitleLayout"
+  	        android:layout_width="fill_parent"
+	   		android:layout_height="wrap_content"
+	   		android:layout_alignParentTop="true">
+  	        <TextView android:id="@+id/mplayerTitle" 
+		   		android:layout_width="wrap_content" 
+		   		android:layout_height="20dip"
+		   		android:layout_alignParentTop="true"
+		   		android:text="Title"
+				android:textColor="#ffffff"
+		   		android:gravity="center" android:layout_centerHorizontal="true"/>
+  	    </RelativeLayout>
+	   	
+	   	<RelativeLayout 
+	   		android:layout_width="fill_parent"
+	   		android:layout_height="wrap_content"
+	   		android:layout_below="@id/mplayerTitleLayout"
+	   		>	   	    
+	   	    <Button android:id="@+id/emptyleftbtn"
+	   	        android:layout_width="76dip"
+				android:layout_height="46dip"
+				android:layout_marginLeft="10dip"				
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"	    		
+	    		android:visibility="invisible"/>
+	   	    
+	   	    <Button android:id="@+id/btn_close"
+	   	        android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginRight="10dip"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+	    		android:background="@drawable/btn_media_close"/>
+	   	    
+	   	    <TextView android:id="@+id/posTextView" 
+		   		android:layout_width="wrap_content" 
+		   		android:layout_height="wrap_content"
+		   		android:layout_marginLeft="5dip"
+				android:layout_marginRight="5dip"
+		   		android:text="00:00:00"		   		
+				android:textColor="#ffffff"
+		   		android:layout_centerVertical="true"		    	
+		   		android:layout_toRightOf="@id/emptyleftbtn"/>  		
+		   	
+		   	<TextView android:id="@+id/durTextView" 
+		   		android:layout_width="wrap_content" 
+		   		android:layout_height="wrap_content"
+		   		android:layout_marginLeft="5dip"
+				android:layout_marginRight="5dip"
+		   		android:text="00:00:00"				
+				android:textColor="#ffffff"
+				android:layout_centerVertical="true"
+		   		android:layout_toLeftOf="@id/btn_close"/>
+	   	    
+	   	    <SeekBar
+		    	android:id="@+id/posSeekBar"
+		    	android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:max="100"
+		    	android:progress="0"
+		    	android:secondaryProgress="0"
+		    	android:minHeight="16dip"
+		    	android:maxHeight="16dip"
+		    	android:progressDrawable="@drawable/custom_progress"
+		    	android:thumb="@drawable/img_custom_thumb"
+		    	android:thumbOffset="0dip"
+		    	android:paddingLeft="10dip"
+		    	android:paddingRight="10dip"
+		    	android:layout_toRightOf="@id/posTextView"
+		   		android:layout_toLeftOf="@id/durTextView"
+		   		android:layout_centerInParent="true"/>
+	   	    	   	
+	   	</RelativeLayout>	   	
+    </LinearLayout>
+        
+  	<!-- mplayerRight : Speed Control(Option) -->	
+  	<RelativeLayout android:id="@+id/mpSpeedCtrl"
+		android:layout_width="80dip"
+		android:layout_height="176dip"
+		android:layout_marginRight="11dip"
+    	android:layout_alignParentRight="true"
+    	android:layout_centerVertical="true"
+    	android:background="@drawable/bg_speedctl"
+    	android:clickable="false">
+  		<include layout="@layout/playspeedctrl" />
+  	</RelativeLayout>
+  	
+	<RelativeLayout android:id="@+id/mplayerFooter"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+    	android:layout_alignParentBottom="true"
+    	android:background="@drawable/bg_bottom"
+    	android:clickable="false">
+  		
+    	<Button android:id="@+id/btn_playnpause" 
+		  	android:layout_width="wrap_content"
+			android:layout_height="wrap_content"					  			  	
+		  	android:background="@drawable/btn_media_play_pause" 
+		  	android:layout_centerInParent="true"/>
+    	
+    	<Button android:id="@+id/btn_retour"
+    		android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="20dip"
+			android:layout_toLeftOf="@id/btn_playnpause" 
+    		android:background="@drawable/btn_media_rew" 
+    		android:layout_centerVertical="true"/>		
+		
+		<Button android:id="@+id/btn_advance"
+    		android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="20dip"
+			android:layout_toRightOf="@id/btn_playnpause"    		
+    		android:background="@drawable/btn_media_ff" 
+    		android:layout_centerVertical="true"/>
+		
+		<ToggleButton android:id="@+id/btn_popup"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"		    
+		    android:textOn=""
+		    android:textOff=""
+		   android:layout_alignParentLeft="true" 		
+		    android:layout_marginLeft="20dip"
+		    android:background="@drawable/btn_media_popup" 
+		    android:layout_centerVertical="true"/>	
+		    
+		<ToggleButton android:id="@+id/btn_earcomfort"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"		    
+		    android:textOn=""
+		    android:textOff=""
+		    android:layout_alignParentRight="true" android:layout_marginRight="20dip"
+		    android:background="@drawable/btn_media_earcomfort" 
+		    android:layout_centerVertical="true"/>
+		
+				  					  		
+ 	</RelativeLayout>
+</RelativeLayout>
