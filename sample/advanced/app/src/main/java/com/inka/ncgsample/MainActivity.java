@@ -1194,16 +1194,11 @@ public class MainActivity extends Activity {
 			mListViewItems.add( new ListViewItem(ListItemType.Title, "Http Live Streaming") );
 			mListViewItems.add( new ListViewItem(ListItemType.HLS,
 					"https://contents.pallycon.com/TEST/PACKAGED_CONTENT/TEST_SIMPLE/hls_ncg/master.m3u8",
-					"eyJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJvcmlnaW5hbCIsInVzZXJfaWQiOiJ1dGVzdCIsImRybV90eXBlIjoibmNnIiwic2l0ZV9pZCI6IkRFTU8iLCJoYXNoIjoiXC8rRVdFU3BiMUVYM2lVeFF1Z3NzdkRPQnBOcnFldk0wbTA0UmlxTHpYNDg9IiwiY2lkIjoiVGVzdFJ1bm5lciIsInBvbGljeSI6IjlXcUlXa2RocHhWR0s4UFNJWWNuSnNjdnVBOXN4Z3ViTHNkK2FqdVwvYm9tUVpQYnFJK3hhZVlmUW9jY2t2dUVmdUx0dlVMWXEwTnVoNVJaOFhGYzQ1RWxHd1dcLzY3WVhUcTJQSDJ4Z3dIR1hDalVuaUgzbDQ4NVNmcDZjbmV1bm5qdjMxeGt5VHd6VlAzdVhIUGJWNWR3PT0iLCJ0aW1lc3RhbXAiOiIyMDIwLTExLTE5VDE0OjEyOjIzWiJ9",
-					"Sintel Trailer"));
+					"Sintel Trailer-SIMPLE-AES"));
 			mListViewItems.add( new ListViewItem(ListItemType.HLS,
-					"http://contents.pallycon.com/TS_PackTest/license/django_sk/hls_ncg/master.m3u8",
-					"eyJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJvcmlnaW5hbCIsInVzZXJfaWQiOiJ3ZXNmZSIsImRybV90eXBlIjoiTkNHIiwic2l0ZV9pZCI6IktOWEYiLCJoYXNoIjoiOHgxWFB4aVNpZWl2aEV4K25zaDRUQkxLMm0yNDRkbnpScFZtQ1FjOVR2ST0iLCJjaWQiOiJkamFuZ29fc2siLCJwb2xpY3kiOiJOTW1GK1B0OGJiUXNoRm5iVytxYlhRPT0iLCJ0aW1lc3RhbXAiOiIyMDIxLTEyLTE5VDAzOjU1OjA5WiJ9",
-					"hls long"));
-			mListViewItems.add( new ListViewItem(ListItemType.HLS,
-					"https://contents.pallycon.com/TEST/PACKAGED_CONTENT/Clear_key/hls/master.m3u8",
-					"clear",
-					"hls clear"));
+					"https://contents.pallycon.com/DEV/sglee/hlsncgTest_cenc/hls_ncg/master.m3u8",
+					"eyJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJvcmlnaW5hbCIsInVzZXJfaWQiOiJ1dGVzdCIsImRybV90eXBlIjoibmNnIiwic2l0ZV9pZCI6IkRFTU8iLCJoYXNoIjoibUlnaDUxeWl6R01iV1FTYTdzS1Z3Y1V0Q0JhcTRVVU8waXhURWk2dktYVT0iLCJjaWQiOiJsbGFtYSIsInBvbGljeSI6IjlXcUlXa2RocHhWR0s4UFNJWWNuSnNjdnVBOXN4Z3ViTHNkK2FqdVwvYm9tUVpQYnFJK3hhZVlmUW9jY2t2dUVmdUx0dlVMWXEwTnVoNVJaOFhGYzQ1RWxHd1dcLzY3WVhUcTJQSDJ4Z3dIR1hDalVuaUgzbDQ4NVNmcDZjbmV1bm5qdjMxeGt5VHd6VlAzdVhIUGJWNWR3PT0iLCJ0aW1lc3RhbXAiOiIyMDIyLTA2LTI0VDAxOjE1OjU0WiJ9",
+					"hls sglee/bunny/hls_ncg"));
 			mListViewItems.add( new ListViewItem(ListItemType.HLS,
 					"https://contents.pallycon.com/DEV/yhpark/original/tictoc-hls/prog_index.m3u8",
 					"clear",

@@ -9,12 +9,12 @@ import java.util.IllegalFormatConversionException;
 import java.util.IllegalFormatException;
 import java.util.UUID;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.HttpResponseException;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.BasicResponseHandler;
+//import org.apache.http.HttpResponse;
+//import org.apache.http.client.ClientProtocolException;
+//import org.apache.http.client.HttpClient;
+//import org.apache.http.client.HttpResponseException;
+//import org.apache.http.client.methods.HttpGet;
+//import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 
@@ -213,56 +213,56 @@ public class DemoLibrary {
 
 	
 	
-	/**
-	 * @brief send parameter to the URL and receive response data
-	 * 
-	 * @param httpClient
-	 * @param url
-	 * @param params
-	 * @param values
-	 * @return reponseData
-	 */
-	static final public String getUrlResult( HttpClient httpClient, String url, String [] params, String [] values ) {
-		
-		int nParamLen = Math.min( params.length, values.length );
-		for( int i = 0; i < nParamLen; i++ ) {
-			if( i == 0 ) {
-				url = url + "?" + params[i] + "=" + values[i];
-			} else {
-				url = url + "&" + params[i] + "=" + values[i];
-			}
-		}
-		
-		Log.d(TAG, url);
-		HttpGet method = new HttpGet(url);
-		HttpResponse response = null;
-		BasicResponseHandler myHandler = new BasicResponseHandler();
-		String endResult = null;
-		// set timeout (5 seconds)
-		HttpParams httpParams = httpClient.getParams();
-		HttpConnectionParams.setConnectionTimeout(httpParams, 5000);
-		HttpConnectionParams.setSoTimeout(httpParams, 5000);
-		try {
-			response = httpClient.execute(method);
-		} catch (ClientProtocolException e) {
-			e.printStackTrace();
-			return null;
-		} catch (IOException e) {
-			e.printStackTrace();
-			return null;
-		}
-		try {
-			endResult = myHandler.handleResponse(response);
-		} catch (HttpResponseException e) {
-			e.printStackTrace();
-			return null;
-		} catch (IOException e) {
-			e.printStackTrace();
-			return null;
-		}
-
-		return endResult;
-	}
+//	/**
+//	 * @brief send parameter to the URL and receive response data
+//	 *
+//	 * @param httpClient
+//	 * @param url
+//	 * @param params
+//	 * @param values
+//	 * @return reponseData
+//	 */
+//	static final public String getUrlResult( HttpClient httpClient, String url, String [] params, String [] values ) {
+//
+//		int nParamLen = Math.min( params.length, values.length );
+//		for( int i = 0; i < nParamLen; i++ ) {
+//			if( i == 0 ) {
+//				url = url + "?" + params[i] + "=" + values[i];
+//			} else {
+//				url = url + "&" + params[i] + "=" + values[i];
+//			}
+//		}
+//
+//		Log.d(TAG, url);
+//		HttpGet method = new HttpGet(url);
+//		HttpResponse response = null;
+//		BasicResponseHandler myHandler = new BasicResponseHandler();
+//		String endResult = null;
+//		// set timeout (5 seconds)
+//		HttpParams httpParams = httpClient.getParams();
+//		HttpConnectionParams.setConnectionTimeout(httpParams, 5000);
+//		HttpConnectionParams.setSoTimeout(httpParams, 5000);
+//		try {
+//			response = httpClient.execute(method);
+//		} catch (ClientProtocolException e) {
+//			e.printStackTrace();
+//			return null;
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//			return null;
+//		}
+//		try {
+//			endResult = myHandler.handleResponse(response);
+//		} catch (HttpResponseException e) {
+//			e.printStackTrace();
+//			return null;
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//			return null;
+//		}
+//
+//		return endResult;
+//	}
 	
 	
 	final static public String getFileSizeString(long nSize) throws IllegalFormatConversionException {

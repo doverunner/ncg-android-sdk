@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>NCG SDK for Android: Basic implementation Guides</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -26,7 +26,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_inka.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">NCG SDK for Android<span id="projectnumber">&#160;Build 20220425</span>
+   <div id="projectname">NCG SDK for Android<span id="projectnumber">&#160;Build 20221115</span>
    </div>
    <div id="projectbrief">INKA Entworks NCG DRM Library for Android</div>
   </td>
@@ -35,10 +35,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.3 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.9.5 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -78,9 +78,16 @@ $(document).ready(function(){initNavTree('implementation_basic_guides.html','');
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div><div class="header">
@@ -89,379 +96,23 @@ $(document).ready(function(){initNavTree('implementation_basic_guides.html','');
 <div class="contents">
 <div class="textblock"><!DOCTYPE html>
 <html>
+
 <head>
-<title>PallyCon_implematation_Guide_Android_KOR.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PallyCon_implematation_Guide_Android_KOR.md</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
 </head>
-<body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="a-name%22doctop%22apallycon-android-sdk-%EC%A0%81%EC%9A%A9-%EA%B0%80%EC%9D%B4%EB%93%9C"><a name="doc_top"></a>PallyCon Android SDK 적용 가이드</h1>
-<h2 id="1-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95">1. 개발 환경 설정</h2>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="a-namedoc_topapallycon-android-sdk-적용-가이드"><a></a>PallyCon Android SDK 적용 가이드</h1>
+<h2 id="개발-환경-설정">1. 개발 환경 설정</h2>
 <blockquote>
-<p><strong>NOTE</strong>
+<p><strong>NOTE</strong><br>
 본 문서는 아래와 같은 환경을 기준으로 작성되었다.</p>
 </blockquote>
-<p>PallyCon Android SDK는 jar 파일과 so로 구성되어 있으므로 별도의 설치가 필요 없고,
-해당 파일들을 SDK가 적용될 Application 프로젝트의 라이브러리폴더(libs)에 적절히 복사해 넣어주면 된다.
+<p>PallyCon Android SDK는 jar 파일과 so로 구성되어 있으므로 별도의 설치가 필요 없고,<br>
+해당 파일들을 SDK가 적용될 Application 프로젝트의 라이브러리폴더(libs)에 적절히 복사해 넣어주면 된다.<br>
 데모 프로젝트에서 처럼 PallyCon Android SDK를 별도의 프로젝트에 적용하기 위해 아래와 같은 단계를 통해 프로젝트를 설정할 수 있다.</p>
 <ol>
 <li>
@@ -471,22 +122,23 @@ code {
 <p>ncg2sdk.jar파일을 libs 폴더에 복사해 넣는다. (sqlcipher.jar 파일도 libs 폴더에 넣는다)</p>
 </li>
 <li>
-<p>아래 그림과 같이 &quot;Java Build Path&quot; 에 ncg2sdk.jar파일을 추가해줘야 한다.</p>
+<p>아래 그림과 같이 “Java Build Path” 에 ncg2sdk.jar파일을 추가해줘야 한다.</p>
 </li>
 </ol>
 <p><img src="build_setting.png" width="700" height="450"></p>
 <ol start="4">
-<li>또한 아래그림과 같이 &quot;Order and Export&quot; 탭에서 ncg2sdk.jar를 체크해준다.</li>
+<li>또한 아래그림과 같이 “Order and Export” 탭에서 ncg2sdk.jar를 체크해준다.</li>
 </ol>
 <p><img src="build_setting_check.png" width="700" height="450"></p>
 <blockquote>
-<p><strong>NOTE</strong>
-프로젝트 내 libs 폴더안에 또 다른 폴더를 생성하여 jar파일을 관리하는 경우에는 App 실행시 FATAL 에러가 발생할 가능성이 있다.
-이러한 경우에는 &quot;Order and Export&quot; 탭에서 ncg2sdk.jar를 체크해준다.</p>
+<p><strong>NOTE</strong><br>
+프로젝트 내 libs 폴더안에 또 다른 폴더를 생성하여 jar파일을 관리하는 경우에는 App 실행시 FATAL 에러가 발생할 가능성이 있다.<br>
+이러한 경우에는 “Order and Export” 탭에서 ncg2sdk.jar를 체크해준다.</p>
 </blockquote>
 <hr>
-<h3 id="androidmanifestxml-%EA%B6%8C%ED%95%9C-%EC%84%A4%EC%A0%95">AndroidManifest.xml 권한 설정</h3>
+<h3 id="androidmanifest.xml-권한-설정">AndroidManifest.xml 권한 설정</h3>
 <p>PallyCon Android SDK를 정상적으로 사용하려면 기본적으로 요구되는 권한은 다음과 같다.</p>
+
 <table>
 <thead>
 <tr>
@@ -516,23 +168,23 @@ code {
 <td>파일 시스템 편집 권한</td>
 </tr>
 </tbody>
-</table>
-<p><a href="#doc_top">Top</a></p>
+</table><p><a href="#doc_top">Top</a></p>
 <hr>
-<h2 id="2-%EC%B4%88%EA%B8%B0%ED%99%94">2. 초기화</h2>
+<h2 id="초기화">2. 초기화</h2>
 <p>Core객체는 싱글톤으로 APP이 구동되는 동안 하나의 객체만이 생성된다.</p>
-<pre class="hljs"><code><div><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DemoLibrary</span> </span>{
-    ...
-    <span class="hljs-keyword">static</span> Ncg2Agent g_ncgAgent = Ncg2SdkFactory.getNcgAgentInstance();
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> Ncg2Agent <span class="hljs-title">getNcgAgent</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">return</span> g_ncgAgent;
-    }
-    ...
-}
-</div></code></pre>
-<p>Ncg2Agent 객체를 사용하기 위해서는 init() 메소드를 통한 초기화 작업을 수행하여야 한다.
-일반적으로 Ncg2Agent의 init() 메소드는 앱이 시작되는 시점( android.app.Application의 onCreate )에서 호출하여 준다.
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DemoLibrary</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token keyword">static</span> Ncg2Agent g_ncgAgent <span class="token operator">=</span> Ncg2SdkFactory<span class="token punctuation">.</span><span class="token function">getNcgAgentInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">static</span> Ncg2Agent <span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> g_ncgAgent<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Ncg2Agent 객체를 사용하기 위해서는 init() 메소드를 통한 초기화 작업을 수행하여야 한다.<br>
+일반적으로 Ncg2Agent의 init() 메소드는 앱이 시작되는 시점( android.app.Application의 onCreate )에서 호출하여 준다.<br>
 Ncg2Agent 객체가 초기화 되지 않았거나, 이미 릴리즈 된 상태에서 내부 메소드들이 호출되면 오류가 발생되므로 주의해야 한다.</p>
+
 <table>
 <thead>
 <tr>
@@ -550,76 +202,76 @@ Ncg2Agent 객체가 초기화 되지 않았거나, 이미 릴리즈 된 상태�
 <td>오프라인시 지원함</td>
 </tr>
 </tbody>
-</table>
-<p>오프라인 지원정책을 'OfflineSupport' 로 설정하는 경우 오프라인에서 연속으로 실행되는 횟수를 제한할 수 있는 방법을 제공한다.  기본으로 셋팅된 실행제한횟수는 10이며 이 값은 OfflineSupportPolicy enum 클래스의 setCountOfExecutionLimit 메소드를 통해 설정이 가능하다.</p>
-<pre class="hljs"><code><div><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DemoApplication</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Application</span> </span>{
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">super</span>.onCreate();
-        initializeNcgAgent();
-    }
+</table><p>오프라인 지원정책을 ‘OfflineSupport’ 로 설정하는 경우 오프라인에서 연속으로 실행되는 횟수를 제한할 수 있는 방법을 제공한다.  기본으로 셋팅된 실행제한횟수는 10이며 이 값은 OfflineSupportPolicy enum 클래스의 setCountOfExecutionLimit 메소드를 통해 설정이 가능하다.</p>
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DemoApplication</span> <span class="token keyword">extends</span> <span class="token class-name">Application</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">initializeNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">initializeNcgAgent</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">try</span> {
-            DemoLibrary.getNcgAgent().setHttpRequestCallback(mHttpRequestCallback);
-            Ncg2Agent.OfflineSupportPolicy policy = Ncg2Agent.OfflineSupportPolicy.OfflineSupport;
-            policy.setCountOfExecutionLimit(<span class="hljs-number">20</span>);
-            DemoLibrary.getNcgAgent().init(<span class="hljs-keyword">this</span>, policy);
-            DemoLibrary.getNcgAgent().enableLog();
-        } <span class="hljs-keyword">catch</span> (Ncg2Exception e) {
-            e.printStackTrace();
-            String errorMsg = <span class="hljs-string">"Exception in init() : "</span> + e.getMessage();
-            Log.e(DemoLibrary.TAG, errorMsg);
-            Toast.makeText(<span class="hljs-keyword">this</span>, errorMsg, Toast.LENGTH_LONG).show();
-        }
-    }
-    ...
-}
-</div></code></pre>
-<p>PallyCon Android SDK 내부에서 HTTP 통신 제어를 위해서는 앱에서 HttpRequestCallback을 구현하여 초기화 이후 Callback을 설정하면 된다.
+    <span class="token keyword">void</span> <span class="token function">initializeNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setHttpRequestCallback</span><span class="token punctuation">(</span>mHttpRequestCallback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            Ncg2Agent<span class="token punctuation">.</span>OfflineSupportPolicy policy <span class="token operator">=</span> Ncg2Agent<span class="token punctuation">.</span>OfflineSupportPolicy<span class="token punctuation">.</span>OfflineSupport<span class="token punctuation">;</span>
+            policy<span class="token punctuation">.</span><span class="token function">setCountOfExecutionLimit</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> policy<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">enableLog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Ncg2Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            String errorMsg <span class="token operator">=</span> <span class="token string">"Exception in init() : "</span> <span class="token operator">+</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            Log<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>DemoLibrary<span class="token punctuation">.</span>TAG<span class="token punctuation">,</span> errorMsg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            Toast<span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> errorMsg<span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>PallyCon Android SDK 내부에서 HTTP 통신 제어를 위해서는 앱에서 HttpRequestCallback을 구현하여 초기화 이후 Callback을 설정하면 된다.<br>
 HttpRequestCallback 콜백 객체를 설정해주기 위해서 Ncg2Agent.setHttpRequestCallback 메소드가 사용된다.</p>
-<pre class="hljs"><code><div><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DemoApplication</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Application</span></span>{
-    <span class="hljs-keyword">private</span> Ncg2Agent.HttpRequestCallback mHttpRequestCallback = <span class="hljs-keyword">new</span> Ncg2Agent.HttpRequestCallback() {
-        <span class="hljs-meta">@Override</span>
-        <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">sendRequest</span><span class="hljs-params">(String url, String param)</span></span>{
-            ...
-        }
-        <span class="hljs-meta">@Override</span>
-        <span class="hljs-keyword">public</span> <span class="hljs-keyword">byte</span>[] sendRequestResponseBytes(String url, String param) <span class="hljs-keyword">throws</span> NcgHttpRequestException {
-            ...
-        }
-        <span class="hljs-meta">@Override</span>
-        <span class="hljs-keyword">public</span> <span class="hljs-keyword">byte</span>[] sendRequest(String url, String param, <span class="hljs-keyword">int</span> begin, <span class="hljs-keyword">int</span> end) <span class="hljs-keyword">throws</span> NcgHttpRequestException {    
-            ...
-        }
-    }
-    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">initializeNcgAgent</span><span class="hljs-params">()</span> </span>{
-        ...
-        DemoLibrary.getNcgAgent().setHttpRequestCallback(mHttpRequestCallback);
-        ...
-    }
- }
-</div></code></pre>
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DemoApplication</span> <span class="token keyword">extends</span> <span class="token class-name">Application</span><span class="token punctuation">{</span>
+    <span class="token keyword">private</span> Ncg2Agent<span class="token punctuation">.</span>HttpRequestCallback mHttpRequestCallback <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Ncg2Agent<span class="token punctuation">.</span>HttpRequestCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> String <span class="token function">sendRequest</span><span class="token punctuation">(</span>String url<span class="token punctuation">,</span> String param<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token punctuation">}</span>
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">sendRequestResponseBytes</span><span class="token punctuation">(</span>String url<span class="token punctuation">,</span> String param<span class="token punctuation">)</span> <span class="token keyword">throws</span> NcgHttpRequestException <span class="token punctuation">{</span>
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token punctuation">}</span>
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">sendRequest</span><span class="token punctuation">(</span>String url<span class="token punctuation">,</span> String param<span class="token punctuation">,</span> <span class="token keyword">int</span> begin<span class="token punctuation">,</span> <span class="token keyword">int</span> end<span class="token punctuation">)</span> <span class="token keyword">throws</span> NcgHttpRequestException <span class="token punctuation">{</span>    
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">initializeNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setHttpRequestCallback</span><span class="token punctuation">(</span>mHttpRequestCallback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+</code></pre>
 <p><a href="#doc_top">Top</a></p>
 <hr>
-<h2 id="3%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4">3.라이선스</h2>
-<h3 id="%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%ED%99%95%EC%9D%B8">라이선스 확인</h3>
-<p>DRM이 적용된 콘텐츠를 사용하기 위해서는 반드시 라이선스를 발급 받아야 한다.
-라이선스 파일은 유효 기간, 재생 횟수, TV-out 허용 여부 등 콘텐츠의 권한이 포함되어 있다.
-따라서 콘텐츠를 재생시키기 위해서는 라이선스 서버로부터 발급 받아야하며, 라이선스가 없거나 유효하지 않으면 DRM 콘텐츠 사용이 제한된다.
+<h2 id="라이선스">3.라이선스</h2>
+<h3 id="라이선스-확인">라이선스 확인</h3>
+<p>DRM이 적용된 콘텐츠를 사용하기 위해서는 반드시 라이선스를 발급 받아야 한다.<br>
+라이선스 파일은 유효 기간, 재생 횟수, TV-out 허용 여부 등 콘텐츠의 권한이 포함되어 있다.<br>
+따라서 콘텐츠를 재생시키기 위해서는 라이선스 서버로부터 발급 받아야하며, 라이선스가 없거나 유효하지 않으면 DRM 콘텐츠 사용이 제한된다.<br>
 라이선스 확인을 위해 PallyCon Android SDK에서 제공하는 함수는 다음과 같다.</p>
-<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Ncg2Agent</span></span>{
-    <span class="hljs-comment">// 입력된 경로 및 URL에 위치한 파일이 NCG 파일 인지를 확인한다. </span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isNcgContent</span><span class="hljs-params">(String strFileOrURL)</span> <span class="hljs-keyword">throws</span> Ncg2Exception
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">interface</span> <span class="token class-name">Ncg2Agent</span><span class="token punctuation">{</span>
+    <span class="token comment">// 입력된 경로 및 URL에 위치한 파일이 NCG 파일 인지를 확인한다. </span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isNcgContent</span><span class="token punctuation">(</span>String strFileOrURL<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception
     
-    <span class="hljs-comment">// 입력된 경로 및 URL에 위치한 파일의 라이선스가 유효한지 확인한다.</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isLicenseValid</span><span class="hljs-params">(String strFileOrURL)</span> throw Ncg2Exception
+    <span class="token comment">// 입력된 경로 및 URL에 위치한 파일의 라이선스가 유효한지 확인한다.</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isLicenseValid</span><span class="token punctuation">(</span>String strFileOrURL<span class="token punctuation">)</span> <span class="token keyword">throw</span> Ncg2Exception
     
-    <span class="hljs-comment">// 콘텐츠의 라이선스 유효성을 확인한다.</span>
-    <span class="hljs-keyword">public</span> LicenseValidation <span class="hljs-title">checkLicenseValid</span><span class="hljs-params">(String path)</span> <span class="hljs-keyword">throws</span> Ncg2Exception
-}
-</span></div></code></pre>
+    <span class="token comment">// 콘텐츠의 라이선스 유효성을 확인한다.</span>
+    <span class="token keyword">public</span> LicenseValidation <span class="token function">checkLicenseValid</span><span class="token punctuation">(</span>String path<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception
+<span class="token punctuation">}</span>
+</code></pre>
 <p>checkLicenseValid 메소드에서 반환되는 LicenseValidation enum타입의 다음과 같다.</p>
+
 <table>
 <thead>
 <tr>
@@ -673,357 +325,367 @@ HttpRequestCallback 콜백 객체를 설정해주기 위해서 Ncg2Agent.setHttp
 <td>스크린 레코더 앱이 감지가 된 경우</td>
 </tr>
 </tbody>
-</table>
-<p>Sample Project에서는 아래와 같은 순서로 라이선스의 유효성을 확인한다.</p>
-<pre class="hljs"><code><div><span class="hljs-keyword">if</span>( DemoLibrary.getNcgAgent().isNcgContent(path) == <span class="hljs-keyword">false</span> ) {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
-}
+</table><p>Sample Project에서는 아래와 같은 순서로 라이선스의 유효성을 확인한다.</p>
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">if</span><span class="token punctuation">(</span> DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isNcgContent</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token boolean">false</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-Ncg2Agent.LicenseValidation validation = DemoLibrary.getNcgAgent().checkLicenseValid(path);
-<span class="hljs-keyword">if</span>( validation == LicenseValidation.ValidLicense ) {
-    <span class="hljs-comment">// 라이선스 유효 처리 루틴</span>
-    ...
+Ncg2Agent<span class="token punctuation">.</span>LicenseValidation validation <span class="token operator">=</span> DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">checkLicenseValid</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span> validation <span class="token operator">==</span> LicenseValidation<span class="token punctuation">.</span>ValidLicense <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 라이선스 유효 처리 루틴</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>( validation == LicenseValidation.NotExistLicense ) {
-    <span class="hljs-comment">// 라이선스가 없거나 유효하지 않음</span>
-    ...
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span> validation <span class="token operator">==</span> LicenseValidation<span class="token punctuation">.</span>NotExistLicense <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 라이선스가 없거나 유효하지 않음</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 
-    <span class="hljs-comment">// 라이선스 서버에 라이선스 요청</span>
-    DemoLibrary.getNcgAgent().acquireLicenseByPath( path, DemoLibrary.getUserID(), DemoLibrary.getOrderID() );
-    <span class="hljs-keyword">if</span>( DemoLibrary.getNcgAgent().checkLicenseValid(path) == LicenseValidation.ValidLicense ) {
-        <span class="hljs-comment">// 서버에서 유효한 라이선스를 받음</span>
-    } <span class="hljs-keyword">else</span> {
-        <span class="hljs-comment">// 서버에서 라이선스를 받지 못함</span>
-    }
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>( validation == LicenseValidation.ExternalDeviceDisallowed) {
-    <span class="hljs-comment">// HDMI 장치같은 External Device가 연결되어서 재생을 허용하지 않을 경우</span>
-    ...
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>( validation == LicenseValidation.RootedDeviceDisallowed) {
-    <span class="hljs-comment">// Rooting 단말에서 허용되지 않는 라이선스인 경우.</span>
-    ...
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(validation == LicenseValidation.ExpiredLicense){
-    <span class="hljs-comment">// 라이선스가 기간이 만료된 경우</span>
-    ...
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(validation == LicenseValidation.ExceededPlayCount){
-    <span class="hljs-comment">// 횟수제 라이선스의 경우 횟수가 만료된 경우</span>
-    ...
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(validation == LicenseValidation.ScreenRecorderDetected ){
-    <span class="hljs-comment">// 스크린레코더 앱이 감지된 경우 앱 이름과 패키지 이름을 </span>
-    <span class="hljs-comment">// 아래 코드처럼 확인할 수 있다</span>
-    HashMap&lt;String,String&gt; data = validation.getExtraData();
-    String appName = data.get(<span class="hljs-string">"AppName"</span>);
-    String packageName = data.get(<span class="hljs-string">"AppPackageName"</span>);
-    ...
-}
-</div></code></pre>
+    <span class="token comment">// 라이선스 서버에 라이선스 요청</span>
+    DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">acquireLicenseByPath</span><span class="token punctuation">(</span> path<span class="token punctuation">,</span> DemoLibrary<span class="token punctuation">.</span><span class="token function">getUserID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> DemoLibrary<span class="token punctuation">.</span><span class="token function">getOrderID</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span> DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">checkLicenseValid</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span> <span class="token operator">==</span> LicenseValidation<span class="token punctuation">.</span>ValidLicense <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 서버에서 유효한 라이선스를 받음</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 서버에서 라이선스를 받지 못함</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span> validation <span class="token operator">==</span> LicenseValidation<span class="token punctuation">.</span>ExternalDeviceDisallowed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// HDMI 장치같은 External Device가 연결되어서 재생을 허용하지 않을 경우</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span> validation <span class="token operator">==</span> LicenseValidation<span class="token punctuation">.</span>RootedDeviceDisallowed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Rooting 단말에서 허용되지 않는 라이선스인 경우.</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>validation <span class="token operator">==</span> LicenseValidation<span class="token punctuation">.</span>ExpiredLicense<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 라이선스가 기간이 만료된 경우</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>validation <span class="token operator">==</span> LicenseValidation<span class="token punctuation">.</span>ExceededPlayCount<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 횟수제 라이선스의 경우 횟수가 만료된 경우</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>validation <span class="token operator">==</span> LicenseValidation<span class="token punctuation">.</span>ScreenRecorderDetected <span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 스크린레코더 앱이 감지된 경우 앱 이름과 패키지 이름을 </span>
+    <span class="token comment">// 아래 코드처럼 확인할 수 있다</span>
+    HashMap<span class="token operator">&lt;</span>String<span class="token punctuation">,</span>String<span class="token operator">&gt;</span> data <span class="token operator">=</span> validation<span class="token punctuation">.</span><span class="token function">getExtraData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    String appName <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"AppName"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    String packageName <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"AppPackageName"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <blockquote>
-<p><strong>NOTE</strong>
-사용자가 고의적으로 디바이스 시간을 바꾸는 경우를 검출하기 위해,
-무제한 라이선스를 제외한 나머지 종류의 라이선스 타입에서는 내부적으로 오프라인상태로 실행된 경우가  setCountOfExecutionLimit 메소드에 의해 명시적으로 지정된 값 이상이 되면 OfflineStatusTooLong 값이 반환된다.
+<p><strong>NOTE</strong><br>
+사용자가 고의적으로 디바이스 시간을 바꾸는 경우를 검출하기 위해,<br>
+무제한 라이선스를 제외한 나머지 종류의 라이선스 타입에서는 내부적으로 오프라인상태로 실행된 경우가  setCountOfExecutionLimit 메소드에 의해 명시적으로 지정된 값 이상이 되면 OfflineStatusTooLong 값이 반환된다.<br>
 OfflineStatusTooLong  값은 init() 메소드호출시 오프라인지원(OfflineSupport 파라미터)옵션으로 설정된 경우에만 동작된다.</p>
 </blockquote>
 <p><a href="#doc_top">Top</a></p>
 <hr>
-<h3 id="%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%B0%9C%EA%B8%89-%EB%B0%8F-%EA%B0%B1%EC%8B%A0">라이선스 발급 및 갱신</h3>
-<p>라이선스가 없거나 기간이 만료되었을 경우에 해당 콘텐츠에 대한 라이선스를 발급받아야 한다.
-라이선스를 발급받는 시점은 실제 사용 전 아무 때나 가능하지만 SDK Sample App Project에서는 재생 시점에 라이선스 발급을 시도한다. 라이선스 발급 시점은 개발하는 App 시나리오에 따라 달라지겠지만, 일반적으로 발급 시점은 재생 시점에 라이선스를 요청한다.
+<h3 id="라이선스-발급-및-갱신">라이선스 발급 및 갱신</h3>
+<p>라이선스가 없거나 기간이 만료되었을 경우에 해당 콘텐츠에 대한 라이선스를 발급받아야 한다.<br>
+라이선스를 발급받는 시점은 실제 사용 전 아무 때나 가능하지만 SDK Sample App Project에서는 재생 시점에 라이선스 발급을 시도한다. 라이선스 발급 시점은 개발하는 App 시나리오에 따라 달라지겠지만, 일반적으로 발급 시점은 재생 시점에 라이선스를 요청한다.<br>
 라이선스 발급을 위해 PallyCon Android SDK에서 지원하는 함수는 다음과 같다.</p>
-<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Ncg2Agent</span> </span>{
-    <span class="hljs-comment">// 입력된 경로와 UserID, OrderID로 라이선스를 획득한다.</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">acquireLicenseByPath</span><span class="hljs-params">(String path, String userId, String orderId)</span> <span class="hljs-keyword">throws</span> Ncg2Exception
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">interface</span> <span class="token class-name">Ncg2Agent</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 입력된 경로와 UserID, OrderID로 라이선스를 획득한다.</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">acquireLicenseByPath</span><span class="token punctuation">(</span>String path<span class="token punctuation">,</span> String userId<span class="token punctuation">,</span> String orderId<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception
     
-    <span class="hljs-comment">// 입력된 경로와 UserID, OrderID로 라이선스를 획득하며, temporary를 설정하여 일회용 라이선스 획득이 가능하다.</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">acquireLicenseByPath</span><span class="hljs-params">( String path, String userID, String orderID, <span class="hljs-keyword">boolean</span> temporary )</span> <span class="hljs-keyword">throws</span> Ncg2Exception</span>;
+    <span class="token comment">// 입력된 경로와 UserID, OrderID로 라이선스를 획득하며, temporary를 설정하여 일회용 라이선스 획득이 가능하다.</span>
+    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">acquireLicenseByPath</span><span class="token punctuation">(</span> String path<span class="token punctuation">,</span> String userID<span class="token punctuation">,</span> String orderID<span class="token punctuation">,</span> <span class="token keyword">boolean</span> temporary <span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception<span class="token punctuation">;</span>
     
-    <span class="hljs-comment">// Content ID를 이용하여 라이선스를 획득한다.</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">acquireLicenseByCID</span><span class="hljs-params">(String cid, String userID, String orderID, String acquisitionURL)</span> throw Ncg2Exception
+    <span class="token comment">// Content ID를 이용하여 라이선스를 획득한다.</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">acquireLicenseByCID</span><span class="token punctuation">(</span>String cid<span class="token punctuation">,</span> String userID<span class="token punctuation">,</span> String orderID<span class="token punctuation">,</span> String acquisitionURL<span class="token punctuation">)</span> <span class="token keyword">throw</span> Ncg2Exception
 
-    <span class="hljs-comment">// Content ID를 이용하여 라이선스를 획득한다.</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">acquireLicenseByCID</span><span class="hljs-params">(String cid, String userID, String siteID, String orderID, String acquisitionURL)</span> throw Ncg2Exception
+    <span class="token comment">// Content ID를 이용하여 라이선스를 획득한다.</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">acquireLicenseByCID</span><span class="token punctuation">(</span>String cid<span class="token punctuation">,</span> String userID<span class="token punctuation">,</span> String siteID<span class="token punctuation">,</span> String orderID<span class="token punctuation">,</span> String acquisitionURL<span class="token punctuation">)</span> <span class="token keyword">throw</span> Ncg2Exception
     
-    <span class="hljs-comment">// Content ID를 이용하여 라이선스를 획득하며, temporary를 설정하여 일회용 라이선스 획득이 가능하다.</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">acquireLicenseByCID</span><span class="hljs-params">(String cid, String userID, String siteID, String orderID, String acquisitionURL, <span class="hljs-keyword">boolean</span> temporary )</span> <span class="hljs-keyword">throws</span> Ncg2Exception</span>;
-}
-</div></code></pre>
-<p>기간제 라이선스와 달리 횟수제 라이선스는 라이선스 정보에서 확인을 해야한다.
+    <span class="token comment">// Content ID를 이용하여 라이선스를 획득하며, temporary를 설정하여 일회용 라이선스 획득이 가능하다.</span>
+    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">acquireLicenseByCID</span><span class="token punctuation">(</span>String cid<span class="token punctuation">,</span> String userID<span class="token punctuation">,</span> String siteID<span class="token punctuation">,</span> String orderID<span class="token punctuation">,</span> String acquisitionURL<span class="token punctuation">,</span> <span class="token keyword">boolean</span> temporary <span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>기간제 라이선스와 달리 횟수제 라이선스는 라이선스 정보에서 확인을 해야한다.<br>
 만약 횟수제 라이선스인 경우에는 횟수를 차감하는 함수를 PallyCon Android SDK에서 제공하고 있으며, 횟수를 차감하는 시점은 라이선스 발급과 가상 URL 반환이 완료된 시점에서 해줘야 한다.</p>
-<pre class="hljs"><code><div><span class="hljs-keyword">private</span> OnPreparedListener mPreparedListener = <span class="hljs-keyword">new</span> OnPreparedListener() {
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onPrepared</span><span class="hljs-params">(MediaPlayer mp)</span> </span>{
-        ...
-        <span class="hljs-keyword">if</span>( mIsCountLimitedContent ) {
-            DemoLibrary.getNcgAgent().decreasePlayCount(mNcgFilePath);
-        }
-        ...
-    }
-}
-</div></code></pre>
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">private</span> OnPreparedListener mPreparedListener <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">OnPreparedListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onPrepared</span><span class="token punctuation">(</span>MediaPlayer mp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span> mIsCountLimitedContent <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">decreasePlayCount</span><span class="token punctuation">(</span>mNcgFilePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <blockquote>
-<p><strong>NOTE</strong>
-원격지 콘텐츠(PD/HLS)의 경우 네트워크 환경이 불안정한 경우 라이선스 발급 및 콘텐츠 재생이 원활하지 않을 수 있다.
-콘텐츠를 재생할때마다 라이선스 발급을 하고 싶다면, 일회용 라이선스로 획득하는 것이 바람직하다.
+<p><strong>NOTE</strong><br>
+원격지 콘텐츠(PD/HLS)의 경우 네트워크 환경이 불안정한 경우 라이선스 발급 및 콘텐츠 재생이 원활하지 않을 수 있다.<br>
+콘텐츠를 재생할때마다 라이선스 발급을 하고 싶다면, 일회용 라이선스로 획득하는 것이 바람직하다.<br>
 Downloaded Contents의 경우 라이선스 발급이 되었다면 네트워크이 안되는 환경에서 재생이 가능하다. 따라서 콘텐츠가 다운로드가 완료되는 시점(네트워크가 연결되어 있는)에 라이선스 발급하는 것이 바람직하다.</p>
 </blockquote>
 <p><a href="#doc_top">Top</a></p>
 <hr>
-<h3 id="%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EC%82%AD%EC%A0%9C">라이선스 삭제</h3>
+<h3 id="라이선스-삭제">라이선스 삭제</h3>
 <p>APP 시나리오에 따라 이미 발급된 라이선스를 폐기해야 할 필요가 있을 수 있다. 이런 경우에 사용할 수 있는 라이선스 삭제 관련 함수는 다음과 같으며, 시나리오에 맞게 사용하면 된다. 일회용 라이선스를 폐기하는 시점은 실제 사용 후 아무때나 가능하지만 SDK Sample App Project에서는 재생종료 시점에 라이선스 폐기를 시도한다.</p>
-<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Ncg2Agent</span></span>{
-    <span class="hljs-comment">// 발급받은 라이선스의 모든 CID를 통해 라이선스를 삭제한다.</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removeLicenseAllCID</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Ncg2Exception
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">interface</span> <span class="token class-name">Ncg2Agent</span><span class="token punctuation">{</span>
+    <span class="token comment">// 발급받은 라이선스의 모든 CID를 통해 라이선스를 삭제한다.</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">removeLicenseAllCID</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception
 
-    <span class="hljs-comment">// 발급받은 모든 일회용 라이선스를 삭제한다.</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removeAllTemporaryLicense</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Ncg2Exception
+    <span class="token comment">// 발급받은 모든 일회용 라이선스를 삭제한다.</span>
+    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">removeAllTemporaryLicense</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception
 
-    <span class="hljs-comment">// CID를 통해 라이선스를 삭제한다.</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removeLicenseByCID</span><span class="hljs-params">(strContentsID)</span> throw Ncg2Exception
+    <span class="token comment">// CID를 통해 라이선스를 삭제한다.</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">removeLicenseByCID</span><span class="token punctuation">(</span>strContentsID<span class="token punctuation">)</span> <span class="token keyword">throw</span> Ncg2Exception
 
-    <span class="hljs-comment">// 파일 경로에 있는 콘텐츠의 라이선스를 삭제한다.</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removeLicenseByPath</span><span class="hljs-params">(strFilename)</span> <span class="hljs-keyword">throws</span> Ncg2Exception
-}
-</span></div></code></pre>
+    <span class="token comment">// 파일 경로에 있는 콘텐츠의 라이선스를 삭제한다.</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">removeLicenseByPath</span><span class="token punctuation">(</span>strFilename<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception
+<span class="token punctuation">}</span>
+</code></pre>
 <p><a href="#doc_top">Top</a></p>
 <hr>
-<h2 id="4-%EC%9E%AC%EC%83%9D">4. 재생</h2>
-<p>PallyCon Android SDK를 이용하여 라이선스까지 정상적으로 발급을 받았다면, Ncg2LocalWebServer 인터페이스를 이용하여 내부에 있는 LocalWebserver를 컨트롤 할 수 있다.
-PallyCon 콘텐츠를 재생할 수 있도록 PallyCon 콘텐츠의 경로를 지정하면 가상 URL를 반환해주는 형태로 이용된다.
-가상 URL을 획득한 이 후 Android에서 제공하는 MediaPlayer 혹은 3th Party Player로 접속하여 재생하면 된다.
+<h2 id="재생">4. 재생</h2>
+<p>PallyCon Android SDK를 이용하여 라이선스까지 정상적으로 발급을 받았다면, Ncg2LocalWebServer 인터페이스를 이용하여 내부에 있는 LocalWebserver를 컨트롤 할 수 있다.<br>
+PallyCon 콘텐츠를 재생할 수 있도록 PallyCon 콘텐츠의 경로를 지정하면 가상 URL를 반환해주는 형태로 이용된다.<br>
+가상 URL을 획득한 이 후 Android에서 제공하는 MediaPlayer 혹은 3th Party Player로 접속하여 재생하면 된다.<br>
 아래는 Ncg2LocalWebServer 에서 제공하는 가상 URL 반환 함수이다.</p>
-<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Ncg2LocalWebServer</span></span>{
-    <span class="hljs-comment">// Local File의 경우</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">addLocalFilePathForPlayback</span><span class="hljs-params">(Activity activity, String url, <span class="hljs-keyword">long</span> fileSize)</span> <span class="hljs-keyword">throws</span> Ncg2InvalidLicenseException, Ncg2Exception</span>;
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">interface</span> <span class="token class-name">Ncg2LocalWebServer</span><span class="token punctuation">{</span>
+    <span class="token comment">// Local File의 경우</span>
+    <span class="token keyword">public</span> String <span class="token function">addLocalFilePathForPlayback</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">,</span> String url<span class="token punctuation">,</span> <span class="token keyword">long</span> fileSize<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
 
-    <span class="hljs-comment">// PD 콘텐츠의 경우</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">addProgressiveDownloadUrlForPlayback</span><span class="hljs-params">(Activity activity, String url)</span> <span class="hljs-keyword">throws</span> Ncg2InvalidLicenseException, Ncg2Exception</span>;
+    <span class="token comment">// PD 콘텐츠의 경우</span>
+    <span class="token keyword">public</span> String <span class="token function">addProgressiveDownloadUrlForPlayback</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">,</span> String url<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
 
-    <span class="hljs-comment">// HLS의 경우</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">addHttpLiveStreamUrlForPlayback</span><span class="hljs-params">(Activity activity, String url)</span> <span class="hljs-keyword">throws</span> Ncg2InvalidLicenseException, Ncg2Exception</span>;
+    <span class="token comment">// HLS의 경우</span>
+    <span class="token keyword">public</span> String <span class="token function">addHttpLiveStreamUrlForPlayback</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">,</span> String url<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
 
-    <span class="hljs-comment">// HLS (live)의 경우</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">addHttpLiveStreamUrlForPlayback</span><span class="hljs-params">(Activity activity, String url, <span class="hljs-keyword">boolean</span> isLiveHLS)</span> <span class="hljs-keyword">throws</span> Ncg2InvalidLicenseException, Ncg2Exception</span>;
+    <span class="token comment">// HLS (live)의 경우</span>
+    <span class="token keyword">public</span> String <span class="token function">addHttpLiveStreamUrlForPlayback</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">,</span> String url<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isLiveHLS<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
 
-    <span class="hljs-comment">// HLS의 경우</span>
-    <span class="hljs-comment">// addHttpLiveStreamUrlForPlayback()와는 다르게 m3u8 경로에 해당되는 key파일을 미리 체크하지 않는다. </span>
-    <span class="hljs-comment">// 라이선스를 미리 체크하지 않으므로 HLS 키파일의 라이선스는 반드시 유효해야 한다. 그렇지 않다면 재생오류가 발생될 것이다.</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">addHttpLiveStreamUrlForPlaybackWithoutChecking</span><span class="hljs-params">(Activity activity, String url)</span> <span class="hljs-keyword">throws</span> Ncg2InvalidLicenseException, Ncg2Exception</span>;
+    <span class="token comment">// HLS의 경우</span>
+    <span class="token comment">// addHttpLiveStreamUrlForPlayback()와는 다르게 m3u8 경로에 해당되는 key파일을 미리 체크하지 않는다. </span>
+    <span class="token comment">// 라이선스를 미리 체크하지 않으므로 HLS 키파일의 라이선스는 반드시 유효해야 한다. 그렇지 않다면 재생오류가 발생될 것이다.</span>
+    <span class="token keyword">public</span> String <span class="token function">addHttpLiveStreamUrlForPlaybackWithoutChecking</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">,</span> String url<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
 
-    <span class="hljs-comment">// HLS의 경우</span>
-    <span class="hljs-comment">// CID와 SiteID를 직접 넣어서 라이선스는 검증하되 m3u8 파일와 key 파일에 접근하지 않도록 처리한다.</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">addHttpLiveStreamUrlForPlayback</span><span class="hljs-params">(Activity activity, String url, String cid, String siteID)</span> <span class="hljs-keyword">throws</span> Ncg2InvalidLicenseException, Ncg2Exception</span>;
+    <span class="token comment">// HLS의 경우</span>
+    <span class="token comment">// CID와 SiteID를 직접 넣어서 라이선스는 검증하되 m3u8 파일와 key 파일에 접근하지 않도록 처리한다.</span>
+    <span class="token keyword">public</span> String <span class="token function">addHttpLiveStreamUrlForPlayback</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">,</span> String url<span class="token punctuation">,</span> String cid<span class="token punctuation">,</span> String siteID<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
 
-    <span class="hljs-comment">// HLS (live)의 경우</span>
-    <span class="hljs-comment">// CID와 SiteID, Live 유무를 직접 넣어서 라이선스는 검증하되 m3u8 파일와 key 파일에 접근하지 않도록 처리한다.</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">addHttpLiveStreamUrlForPlayback</span><span class="hljs-params">(Activity activity, String url, String cid, String siteID, <span class="hljs-keyword">boolean</span> isLiveHLS)</span> <span class="hljs-keyword">throws</span> Ncg2InvalidLicenseException, Ncg2Exception</span>;
-}
-</div></code></pre>
+    <span class="token comment">// HLS (live)의 경우</span>
+    <span class="token comment">// CID와 SiteID, Live 유무를 직접 넣어서 라이선스는 검증하되 m3u8 파일와 key 파일에 접근하지 않도록 처리한다.</span>
+    <span class="token keyword">public</span> String <span class="token function">addHttpLiveStreamUrlForPlayback</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">,</span> String url<span class="token punctuation">,</span> String cid<span class="token punctuation">,</span> String siteID<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isLiveHLS<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <p>아래 코드를 통해 PallyCon 콘텐츠로부터 가상 URL를 어떻게 얻을 수 있는지 확인할 수 있다.</p>
-<pre class="hljs"><code><div><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PlayerActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Activity</span> </span>{
-    ...
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
-        Ncg2Agent ncgAgent = Ncg2SdkFactory.getNcgAgentInstance();
-        Ncg2LocalWebServer ncgLocalWebServer = ncgAgent.getLocalWebServer();
-        ncgLocalWebServer.setWebServerListener(mWebServerCallback);
-        ncgLocalWebServer.clearPlaybackUrls();
-        <span class="hljs-keyword">try</span> {
-            <span class="hljs-keyword">if</span>( mNcgFilePath.contains(<span class="hljs-string">".m3u8"</span>) ) {
-                <span class="hljs-comment">// HLS Playback</span>
-                mPlaybackURL = ncgLocalWebServer.addHttpLiveStreamUrlForPlayback(mNcgFilePath);
-            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(mNcgFilePath.startsWith(<span class="hljs-string">"http://"</span>)) {
-                <span class="hljs-comment">// PD Playback</span>
-                mPlaybackURL = ncgLocalWebServer.addProgressiveDownloadUrlForPlayback(mNcgFilePath);
-            } <span class="hljs-keyword">else</span> {
-                <span class="hljs-comment">// Local Playback</span>
-                mPlaybackURL = ncgLocalWebServer.addLocalFilePathForPlayback(mNcgFilePath, mNcgFileSize);
-            }
-        } <span class="hljs-keyword">catch</span> (Ncg2Exception e) {
-            e.printStackTrace();
-            Toast.makeText(MediaPlayerActivity.<span class="hljs-keyword">this</span>, 
-                    <span class="hljs-string">"[onCreate] Error Occured. : "</span> + e.getMessage(), Toast.LENGTH_LONG).show();
-            <span class="hljs-keyword">return</span>;
-        }
-    }
-}
-</div></code></pre>
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PlayerActivity</span> <span class="token keyword">extends</span> <span class="token class-name">Activity</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span>Bundle savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Ncg2Agent ncgAgent <span class="token operator">=</span> Ncg2SdkFactory<span class="token punctuation">.</span><span class="token function">getNcgAgentInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Ncg2LocalWebServer ncgLocalWebServer <span class="token operator">=</span> ncgAgent<span class="token punctuation">.</span><span class="token function">getLocalWebServer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ncgLocalWebServer<span class="token punctuation">.</span><span class="token function">setWebServerListener</span><span class="token punctuation">(</span>mWebServerCallback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ncgLocalWebServer<span class="token punctuation">.</span><span class="token function">clearPlaybackUrls</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span> mNcgFilePath<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">".m3u8"</span><span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">// HLS Playback</span>
+                mPlaybackURL <span class="token operator">=</span> ncgLocalWebServer<span class="token punctuation">.</span><span class="token function">addHttpLiveStreamUrlForPlayback</span><span class="token punctuation">(</span>mNcgFilePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>mNcgFilePath<span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span><span class="token string">"http://"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">// PD Playback</span>
+                mPlaybackURL <span class="token operator">=</span> ncgLocalWebServer<span class="token punctuation">.</span><span class="token function">addProgressiveDownloadUrlForPlayback</span><span class="token punctuation">(</span>mNcgFilePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token comment">// Local Playback</span>
+                mPlaybackURL <span class="token operator">=</span> ncgLocalWebServer<span class="token punctuation">.</span><span class="token function">addLocalFilePathForPlayback</span><span class="token punctuation">(</span>mNcgFilePath<span class="token punctuation">,</span> mNcgFileSize<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Ncg2Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            Toast<span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>MediaPlayerActivity<span class="token punctuation">.</span><span class="token keyword">this</span><span class="token punctuation">,</span> 
+                    <span class="token string">"[onCreate] Error Occured. : "</span> <span class="token operator">+</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <blockquote>
-<p><strong>NOTE</strong>
-Android 3.0 이상부터 Android Media Player에서 HLS를 지원한다.
+<p><strong>NOTE</strong><br>
+Android 3.0 이상부터 Android Media Player에서 HLS를 지원한다.<br>
 그러나 기기에 따라 재생이 원활하지 않은 경우도 있다.</p>
 </blockquote>
 <p>아래 코드를 통해 어떻게 가상 URL를 복호화하고 이용할 수 있는지 확인할 수 있다.</p>
-<pre class="hljs"><code><div><span class="hljs-keyword">try</span> {
-    mPlayer.setDataSource(mPlaybackURL);
-    mPlayer.prepareAsync();
-} <span class="hljs-keyword">catch</span> (IllegalArgumentException e) {
-    e.printStackTrace();
-    errorMsg = e.getMessage();
-} <span class="hljs-keyword">catch</span> (IllegalStateException e) {
-    e.printStackTrace();
-    errorMsg = e.getMessage();
-} <span class="hljs-keyword">catch</span> (IOException e) {
-    e.printStackTrace();
-    errorMsg = e.getMessage();
-}
-</div></code></pre>
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">try</span> <span class="token punctuation">{</span>
+    mPlayer<span class="token punctuation">.</span><span class="token function">setDataSource</span><span class="token punctuation">(</span>mPlaybackURL<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    mPlayer<span class="token punctuation">.</span><span class="token function">prepareAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IllegalArgumentException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    errorMsg <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IllegalStateException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    errorMsg <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    errorMsg <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <p><a href="#doc_top"><i class="icon-list"></i> Top</a></p>
 <hr>
 <h3 id="localwebserver-callback">LocalWebserver Callback</h3>
-<p>Ncg2LocalWebServer는 내부적으로 프록시형태의 Web Server를 이용하게 되는데 이 Web Server에서 SDK 외부로 이벤트를 알리기 위해 WebServerListener 인터페이스를 이용한다.
-아래 코드에서 확인할 수 있듯이 Ncg2LocalWebServer의 통지나 오류에 대하여 처리할 수 있다.
+<p>Ncg2LocalWebServer는 내부적으로 프록시형태의 Web Server를 이용하게 되는데 이 Web Server에서 SDK 외부로 이벤트를 알리기 위해 WebServerListener 인터페이스를 이용한다.<br>
+아래 코드에서 확인할 수 있듯이 Ncg2LocalWebServer의 통지나 오류에 대하여 처리할 수 있다.<br>
 주의할 것은 onCheckPlayerStatus()메소드는 적절한 플레이어의 상태를 확인하여 반환해줘야 한다.</p>
-<pre class="hljs"><code><div><span class="hljs-keyword">private</span> Ncg2LocalWebServer.WebServerListener mWebServerCallback = <span class="hljs-keyword">new</span> Ncg2LocalWebServer.WebServerListener(){
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">private</span> Ncg2LocalWebServer<span class="token punctuation">.</span>WebServerListener mWebServerCallback <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Ncg2LocalWebServer<span class="token punctuation">.</span>WebServerListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
 
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onNotification</span><span class="hljs-params">(<span class="hljs-keyword">int</span> notificationCode)</span> </span>{
-        <span class="hljs-comment">//통지코드는 대부분 무시되어야 된다.</span>
-    }
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onNotification</span><span class="token punctuation">(</span><span class="token keyword">int</span> notificationCode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//통지코드는 대부분 무시되어야 된다.</span>
+    <span class="token punctuation">}</span>
 
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onError</span><span class="hljs-params">(<span class="hljs-keyword">int</span> errorCode, String errorMessage)</span> </span>{
-        <span class="hljs-comment">//적절한 사용자 오류 메시지를 보여줘야 한다.</span>
-    }
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token keyword">int</span> errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//적절한 사용자 오류 메시지를 보여줘야 한다.</span>
+    <span class="token punctuation">}</span>
 
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> PlayerState <span class="hljs-title">onCheckPlayerStatus</span><span class="hljs-params">(String uri)</span> </span>{
-        <span class="hljs-keyword">if</span> (mIsPrepared) {
-            <span class="hljs-comment">//플레이어가 재생이 가능할때만 PlayerState.ReadyToPlay를 반환해야 한다.</span>
-            <span class="hljs-keyword">return</span> PlayerState.ReadyToPlay;
-        } <span class="hljs-keyword">else</span> {
-            <span class="hljs-comment">// PlayerState.Fail이 반환된 경우에는 재생이 차단되어 진다.</span>
-            <span class="hljs-keyword">return</span> PlayerState.Fail;
-        }
-    }
-};
-</div></code></pre>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> PlayerState <span class="token function">onCheckPlayerStatus</span><span class="token punctuation">(</span>String uri<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>mIsPrepared<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//플레이어가 재생이 가능할때만 PlayerState.ReadyToPlay를 반환해야 한다.</span>
+            <span class="token keyword">return</span> PlayerState<span class="token punctuation">.</span>ReadyToPlay<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token comment">// PlayerState.Fail이 반환된 경우에는 재생이 차단되어 진다.</span>
+            <span class="token keyword">return</span> PlayerState<span class="token punctuation">.</span>Fail<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
 <blockquote>
-<p><strong>NOTE</strong>
-해커가 가상 URL로 접속하여 데이터를 다운로드 받는 경우를 막기 위해 Player의 상태를 체크한다.
+<p><strong>NOTE</strong><br>
+해커가 가상 URL로 접속하여 데이터를 다운로드 받는 경우를 막기 위해 Player의 상태를 체크한다.<br>
 가상 URL로 접속은 했지만 실제로 재생 중이 아닐때는 복호화를 차단하기 위함이다.</p>
 </blockquote>
 <p><a href="#doc_top">Top</a></p>
 <hr>
-<h3 id="%ED%8C%8C%EC%9D%BC-%EB%B3%B5%ED%98%B8%ED%99%94">파일 복호화</h3>
-<p>PallyCon Android SDK에서는 일반 NCG 파일도 복호화 할 수 있는 기능을 제공하고 있다.
-Ncg2Agent에서 NcgFile 객체를 반환 받은 후 open-&gt;read 순으로 진행을 하면 된다.
+<h3 id="파일-복호화">파일 복호화</h3>
+<p>PallyCon Android SDK에서는 일반 NCG 파일도 복호화 할 수 있는 기능을 제공하고 있다.<br>
+Ncg2Agent에서 NcgFile 객체를 반환 받은 후 open-&gt;read 순으로 진행을 하면 된다.<br>
 아래는 NcgFile에 대해 제공해주는 함수이다.</p>
-<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Ncg2Agent</span></span>{
-    <span class="hljs-comment">//NcgFile객체를 반환한다.</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> NcgFile <span class="hljs-title">createNcgFile</span><span class="hljs-params">()</span></span>;
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">interface</span> <span class="token class-name">Ncg2Agent</span><span class="token punctuation">{</span>
+    <span class="token comment">//NcgFile객체를 반환한다.</span>
+    <span class="token keyword">public</span> NcgFile <span class="token function">createNcgFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     
-    <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">NcgFile</span></span>{
-        <span class="hljs-comment">//NCG 파일을 Open한다.</span>
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">(String path)</span> <span class="hljs-keyword">throws</span> Ncg2InvalidLicenseException, Ncg2InvalidNcgFileException, Ncg2Exception</span>;
-        <span class="hljs-comment">//라이선스를 셋팅 후 NCG파일을 Open한다.</span>
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">(String path, <span class="hljs-keyword">boolean</span> prepare)</span> <span class="hljs-keyword">throws</span> Ncg2InvalidLicenseException, Ncg2InvalidNcgFileException, Ncg2Exception</span>;
-        <span class="hljs-comment">//open 이후 상태에서 해당 메소드를 호출하여 복호화가 가능한 상태로 만든다. </span>
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">prepare</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Ncg2InvalidLicenseException, Ncg2InvalidNcgFileException, Ncg2Exception</span>;
-        <span class="hljs-comment">//Open 된 파일을 닫아준다.</span>
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">close</span><span class="hljs-params">()</span></span>;
-        <span class="hljs-comment">//NCG 파일로부터 콘텐츠데이터를 읽어들인다.</span>
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">long</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">byte</span>[] buff, <span class="hljs-keyword">long</span> sizeToRead)</span> <span class="hljs-keyword">throws</span> Ncg2Exception</span>;
-        <span class="hljs-comment">//읽어들일 파일포인터의 위치를 이동시킨다.</span>
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">seek</span><span class="hljs-params">(<span class="hljs-keyword">long</span> offset, SeekMethod seekMethod)</span> <span class="hljs-keyword">throws</span> Ncg2Exception</span>;
-        <span class="hljs-comment">//현재의 파일포인터 위치를 반환한다.</span>
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">long</span> <span class="hljs-title">getCurrentFilePointer</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Ncg2Exception</span>;
-        <span class="hljs-comment">//NCG 파일의 헤더 크기를 반환한다.</span>
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getHeaderSize</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Ncg2Exception</span>;
-        <span class="hljs-comment">//NCG 파일용 InputStream을 반환한다.</span>
-        <span class="hljs-function"><span class="hljs-keyword">public</span> InputStream <span class="hljs-title">getInputStream</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Ncg2Exception</span>;
-    }
-}
-</div></code></pre>
+    <span class="token keyword">interface</span> <span class="token class-name">NcgFile</span><span class="token punctuation">{</span>
+        <span class="token comment">//NCG 파일을 Open한다.</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">open</span><span class="token punctuation">(</span>String path<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2InvalidNcgFileException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
+        <span class="token comment">//라이선스를 셋팅 후 NCG파일을 Open한다.</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">open</span><span class="token punctuation">(</span>String path<span class="token punctuation">,</span> <span class="token keyword">boolean</span> prepare<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2InvalidNcgFileException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
+        <span class="token comment">//open 이후 상태에서 해당 메소드를 호출하여 복호화가 가능한 상태로 만든다. </span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">prepare</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2InvalidNcgFileException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
+        <span class="token comment">//Open 된 파일을 닫아준다.</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//NCG 파일로부터 콘텐츠데이터를 읽어들인다.</span>
+        <span class="token keyword">public</span> <span class="token keyword">long</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> buff<span class="token punctuation">,</span> <span class="token keyword">long</span> sizeToRead<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception<span class="token punctuation">;</span>
+        <span class="token comment">//읽어들일 파일포인터의 위치를 이동시킨다.</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">seek</span><span class="token punctuation">(</span><span class="token keyword">long</span> offset<span class="token punctuation">,</span> SeekMethod seekMethod<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception<span class="token punctuation">;</span>
+        <span class="token comment">//현재의 파일포인터 위치를 반환한다.</span>
+        <span class="token keyword">public</span> <span class="token keyword">long</span> <span class="token function">getCurrentFilePointer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception<span class="token punctuation">;</span>
+        <span class="token comment">//NCG 파일의 헤더 크기를 반환한다.</span>
+        <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getHeaderSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception<span class="token punctuation">;</span>
+        <span class="token comment">//NCG 파일용 InputStream을 반환한다.</span>
+        <span class="token keyword">public</span> InputStream <span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <p>아래는 NcgFile 객체를 이용하여 원본 콘텐츠로 만드는 샘플 코드이다.</p>
-<pre class="hljs"><code><div><span class="hljs-keyword">try</span> {
-    String ncgFilePath = mFilePath;
-    ncgFile = DemoLibrary.getNcgAgent().createNcgFile();
-    ncgFile.open(ncgFilePath);
-    ncgFile.seek(<span class="hljs-number">0</span>, SeekMethod.End);
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">try</span> <span class="token punctuation">{</span>
+    String ncgFilePath <span class="token operator">=</span> mFilePath<span class="token punctuation">;</span>
+    ncgFile <span class="token operator">=</span> DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createNcgFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ncgFile<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span>ncgFilePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ncgFile<span class="token punctuation">.</span><span class="token function">seek</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> SeekMethod<span class="token punctuation">.</span>End<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="hljs-comment">// the original file's size will be used for checking success of decryption.</span>
-    <span class="hljs-keyword">long</span> contentFileSize = ncgFile.getCurrentFilePointer();
-    ncgFile.seek(<span class="hljs-number">0</span>, SeekMethod.Begin);
-    <span class="hljs-keyword">int</span> pos = mFilePath.lastIndexOf(<span class="hljs-string">"/"</span>);
+    <span class="token comment">// the original file's size will be used for checking success of decryption.</span>
+    <span class="token keyword">long</span> contentFileSize <span class="token operator">=</span> ncgFile<span class="token punctuation">.</span><span class="token function">getCurrentFilePointer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ncgFile<span class="token punctuation">.</span><span class="token function">seek</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> SeekMethod<span class="token punctuation">.</span>Begin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> pos <span class="token operator">=</span> mFilePath<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="hljs-comment">// removes ".ncg" in the path of NCG file</span>
-    String unpackFilePath = ncgFilePath.substring(<span class="hljs-number">0</span>, pos+<span class="hljs-number">1</span>) + <span class="hljs-string">"unpackFile.mp4"</span>;
-    fileOutStream = <span class="hljs-keyword">new</span> BufferedOutputStream(<span class="hljs-keyword">new</span> FileOutputStream(unpackFilePath));
-    <span class="hljs-keyword">long</span> totalReadBytes = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">while</span>( <span class="hljs-keyword">true</span> ) {
-        <span class="hljs-keyword">long</span> readBytes = ncgFile.read(buffer, <span class="hljs-number">1024</span>);
-        <span class="hljs-keyword">if</span>( readBytes &lt;= <span class="hljs-number">0</span> ) {
-            <span class="hljs-keyword">break</span>;
-        }
-        fileOutStream.write(buffer, <span class="hljs-number">0</span>, (<span class="hljs-keyword">int</span>)readBytes);
-        totalReadBytes += readBytes;
-    }
-    <span class="hljs-keyword">if</span>( totalReadBytes == contentFileSize ) {
-        Log.d(DemoLibrary.TAG, <span class="hljs-string">"Decryption succeeded"</span>);
-    } <span class="hljs-keyword">else</span> {
-        Log.d(DemoLibrary.TAG, <span class="hljs-string">"Decryption failed"</span>);
-        Toast.makeText(mainActivity, <span class="hljs-string">"[unpackNcgFiles] decryption failed"</span>, Toast.LENGTH_LONG).show();
-    }
-} <span class="hljs-keyword">catch</span> (Ncg2Exception e) {
-    ...
-}
-</div></code></pre>
+    <span class="token comment">// removes ".ncg" in the path of NCG file</span>
+    String unpackFilePath <span class="token operator">=</span> ncgFilePath<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> pos<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"unpackFile.mp4"</span><span class="token punctuation">;</span>
+    fileOutStream <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BufferedOutputStream</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">FileOutputStream</span><span class="token punctuation">(</span>unpackFilePath<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">long</span> totalReadBytes <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span> <span class="token boolean">true</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">long</span> readBytes <span class="token operator">=</span> ncgFile<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span> readBytes <span class="token operator">&lt;=</span> <span class="token number">0</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        fileOutStream<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>readBytes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        totalReadBytes <span class="token operator">+=</span> readBytes<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span> totalReadBytes <span class="token operator">==</span> contentFileSize <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Log<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>DemoLibrary<span class="token punctuation">.</span>TAG<span class="token punctuation">,</span> <span class="token string">"Decryption succeeded"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        Log<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>DemoLibrary<span class="token punctuation">.</span>TAG<span class="token punctuation">,</span> <span class="token string">"Decryption failed"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Toast<span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mainActivity<span class="token punctuation">,</span> <span class="token string">"[unpackNcgFiles] decryption failed"</span><span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Ncg2Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <blockquote>
-<p><strong>NOTE</strong>
-복호화 후 파일로 만들면 원본파일 노출 등의 위험이 있다.
+<p><strong>NOTE</strong><br>
+복호화 후 파일로 만들면 원본파일 노출 등의 위험이 있다.<br>
 그러므로 메모리상에서만 복호화하여 사용하는 것을 권고한다.</p>
 </blockquote>
 <p><a href="#doc_top">Top</a></p>
 <hr>
-<h2 id="5-%EB%A6%B4%EB%A6%AC%EC%A6%88">5. 릴리즈</h2>
-<p>Ncg2Agent 객체의 사용이 모두 끝나면 release() 메소드를 호출하여 릴리즈를 시켜줘야 한다.
-release() 메소드는 앱이 종료되는 시점(즉, 명시적으로 사용자가 종료한 경우)에서 호출한다.
+<h2 id="릴리즈">5. 릴리즈</h2>
+<p>Ncg2Agent 객체의 사용이 모두 끝나면 release() 메소드를 호출하여 릴리즈를 시켜줘야 한다.<br>
+release() 메소드는 앱이 종료되는 시점(즉, 명시적으로 사용자가 종료한 경우)에서 호출한다.<br>
 Sample App에서는 OnBackPressed() 메소드에서 다이얼로그를 생성하여 release() 메소드를 호출한다.</p>
-<pre class="hljs"><code><div><span class="hljs-keyword">case</span> DIALOG_EXIT :
-    builder.setMessage( getString( R.string.confirm_end ));
-    builder.setPositiveButton( getString( R.string.yes ), <span class="hljs-keyword">new</span> DialogInterface.OnClickListener() {
-        <span class="hljs-meta">@Override</span> <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onClick</span><span class="hljs-params">(DialogInterface dialog, <span class="hljs-keyword">int</span> which)</span> </span>{
-            ...
-            finish();
-            DemoLibrary.getNcgAgent().release();
-        }
-    });
-    builder.setNegativeButton( R.string.no, <span class="hljs-keyword">null</span> );
-    dialog = builder.create();
-    <span class="hljs-keyword">break</span>; 
-</div></code></pre>
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">case</span> DIALOG_EXIT <span class="token operator">:</span>
+    builder<span class="token punctuation">.</span><span class="token function">setMessage</span><span class="token punctuation">(</span> <span class="token function">getString</span><span class="token punctuation">(</span> R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>confirm_end <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    builder<span class="token punctuation">.</span><span class="token function">setPositiveButton</span><span class="token punctuation">(</span> <span class="token function">getString</span><span class="token punctuation">(</span> R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>yes <span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">DialogInterface<span class="token punctuation">.</span>OnClickListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token annotation punctuation">@Override</span> <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onClick</span><span class="token punctuation">(</span>DialogInterface dialog<span class="token punctuation">,</span> <span class="token keyword">int</span> which<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+            <span class="token function">finish</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">release</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    builder<span class="token punctuation">.</span><span class="token function">setNegativeButton</span><span class="token punctuation">(</span> R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>no<span class="token punctuation">,</span> null <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    dialog <span class="token operator">=</span> builder<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span> 
+</code></pre>
 <blockquote>
-<p><strong>NOTE</strong>
+<p><strong>NOTE</strong><br>
 Application의 onTerminate메소드에서 Ncg2Agent.release메소드를 호출하는 경우도 있으나 onTerminate 메소드는 명시적으로 호출되지 않는 경우가 많기 때문에 onTerminate에서 Ncg2Agent.release 메소드를 호출하는 것은 적절하지 않다.</p>
 </blockquote>
 <p><a href="#doc_top">Top</a></p>
 <hr>
-<h2 id="6-%EC%98%A4%EB%A5%98%EC%B2%98%EB%A6%AC">6. 오류처리</h2>
+<h2 id="오류처리">6. 오류처리</h2>
 <p>PallyCon Android SDK의 오류처리 메커니즘은 예외(Exception)을 통해 구현된다.</p>
-<p>기본 class의 Exception인 Ncg2Exception 클래스가 있으며 해당 클래스를 상속받고 있는 별도의 여러 예외 클래스들이 존재한다.
-Ncg2Exception  클래스는 PallyCon SDK의 기본 예외클래스로서 내부적으로 ErrorCode 및 Error Message를 멤버로 갖고 있다.
-에러코드가 설정된 경우 getErrorCode() 메소드를 통해 에러코드를 확인할 수 있으며 에러코드가 설정되지 않은 경우에는 -1이 반환된다.
-Error Message는 getMessage()메소드를 통해 확인할 수 있다.
+<p>기본 class의 Exception인 Ncg2Exception 클래스가 있으며 해당 클래스를 상속받고 있는 별도의 여러 예외 클래스들이 존재한다.<br>
+Ncg2Exception  클래스는 PallyCon SDK의 기본 예외클래스로서 내부적으로 ErrorCode 및 Error Message를 멤버로 갖고 있다.<br>
+에러코드가 설정된 경우 getErrorCode() 메소드를 통해 에러코드를 확인할 수 있으며 에러코드가 설정되지 않은 경우에는 -1이 반환된다.<br>
+Error Message는 getMessage()메소드를 통해 확인할 수 있다.<br>
 아래는 Ncg2Player의 setDataSource() 메소드를 이용하는 경우에 대한 호출시 Ncg2Exception예외를 catch하는 예제코드이다.</p>
-<pre class="hljs"><code><div><span class="hljs-keyword">try</span> {
-    mPlayer.setDataSource(mNcgFilePath, mNcgFileSize);
-    mPlayer.prepareAsync();
-} <span class="hljs-keyword">catch</span> (Ncg2Exception e) {
-    e.printStackTrace();
-    errorMsg = e.getMessage();
-} <span class="hljs-keyword">catch</span> (IllegalArgumentException e) {
-    e.printStackTrace();
-    errorMsg = e.getMessage();
-} <span class="hljs-keyword">catch</span> (IllegalStateException e) {
-    e.printStackTrace();
-    errorMsg = e.getMessage();
-} <span class="hljs-keyword">catch</span> (IOException e) {
-    e.printStackTrace();
-    errorMsg = e.getMessage();
-}
-</div></code></pre>
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">try</span> <span class="token punctuation">{</span>
+    mPlayer<span class="token punctuation">.</span><span class="token function">setDataSource</span><span class="token punctuation">(</span>mNcgFilePath<span class="token punctuation">,</span> mNcgFileSize<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    mPlayer<span class="token punctuation">.</span><span class="token function">prepareAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Ncg2Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    errorMsg <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IllegalArgumentException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    errorMsg <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IllegalStateException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    errorMsg <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    errorMsg <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="기타">7. 기타</h2>
+<h3 id="에뮬레이터-동작-테스트">에뮬레이터 동작 테스트</h3>
+<p>앱 개발시에 에뮬레이터 환경에서만 개발이 가능한 사용자를 위한 API 로 실제 앱 배포시엔 제거 또는 'disableVirtualMachine()'를 호출해야 한다.</p>
+<pre class=" language-java"><code class="prism  language-java"><span class="token comment">//허용</span>
+Ncg2Agent ncgAgent <span class="token operator">=</span> Ncg2SdkFactory<span class="token punctuation">.</span><span class="token function">getNcgAgentInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ncgAgent<span class="token punctuation">.</span><span class="token function">enableVirtualMachine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//비허용</span>
+ncgAgent<span class="token punctuation">.</span><span class="token function">disableVirtualMachine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p><a href="#doc_top">Top</a></p>
 <hr>
-
+</div>
 </body>
+
 </html>
    </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -1031,7 +693,7 @@ Error Message는 getMessage()메소드를 통해 확인할 수 있다.
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>
