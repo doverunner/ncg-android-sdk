@@ -44,6 +44,7 @@ var classcom_1_1inka_1_1ncg2_1_1_ncg2_agent =
     [ "init", "classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#af8bb58e54e38bfa13656f5fe6e340971", null ],
     [ "init", "classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a2de1c7a84dd5d15667d6d36d3f9302e1", null ],
     [ "init", "classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a7ac9beee9362da5e43466710297f20cb", null ],
+    [ "init", "classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a4a18b7823b061076b105caa41eb95e45", null ],
     [ "init", "classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#affdf428ce96e2ba6a82cc617de61e1e7", null ],
     [ "isEnabledLog", "classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#ac8b4c27e5dff6201f566c74c32df5da0", null ],
     [ "isInitialized", "classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a6d4f89b78b31704b4d9b0b7d0f0837e1", null ],
@@ -65,6 +66,7 @@ var classcom_1_1inka_1_1ncg2_1_1_ncg2_agent =
     [ "serialAuthentication", "classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#af474629bf364a53bafb3c4d5e22848ee", null ],
     [ "setExceptionalEventListener", "classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a96efdf5e2a8dbb92b305375628c1b4d5", null ],
     [ "setHttpRequestCallback", "classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a4ebe4cdbb01037012c5fc310e0c7808b", null ],
+    [ "setLocalFileCallback", "classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a3e9e6dd6d5ff897b4a8efb78efc3d410", null ],
     [ "setRootingCheckLevel", "classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a067ce4d342fae17c2d6b99285c7ec28c", null ],
     [ "updateSecureTime", "classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#abcf2638db73c55186f77c59101319983", null ]
 ];

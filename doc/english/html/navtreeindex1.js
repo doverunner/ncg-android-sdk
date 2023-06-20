@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"interfacecom_1_1inka_1_1ncg2_1_1_ncg2_local_web_server.html#a619e14702bb7a8540320342f145bece1":[3,0,0,0,1,12,17],
+"interfacecom_1_1inka_1_1ncg2_1_1_ncg2_local_web_server.html#a690e728897181da23d4d172fe670b812":[3,0,0,0,1,12,19],
 "interfacecom_1_1inka_1_1ncg2_1_1_ncg2_local_web_server.html#a7140eeba49a2ae91404b004971c4f45a":[3,0,0,0,1,12,18],
 "interfacecom_1_1inka_1_1ncg2_1_1_ncg2_local_web_server.html#a8c8b859218419cedfe7c5467ca0691fb":[3,0,0,0,1,12,1],
 "interfacecom_1_1inka_1_1ncg2_1_1_ncg2_local_web_server.html#a8dddce9bdb08160ce58d0b5756d35492":[3,0,0,0,1,12,7],

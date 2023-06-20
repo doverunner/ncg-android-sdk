@@ -45,7 +45,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"interfacecom_1_1inka_1_1ncg2_1_1_ncg2_local_web_server.html#a690e728897181da23d4d172fe670b812"
+"interfacecom_1_1inka_1_1ncg2_1_1_ncg2_local_web_server.html#a2b759558ca2605c22959faf866b1a4bf"
 ];
 
 var SYNCONMSG = '패널 동기화를 비활성화하기 위해 클릭하십시오';

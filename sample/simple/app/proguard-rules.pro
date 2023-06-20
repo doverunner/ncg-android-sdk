@@ -19,3 +19,16 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# exoplayer
+-keep class com.google.android.exoplayer2.* {*;}
+
+# sqlcipher
+-keep class net.sqlcipher.* {*;}
+
+# ncg
+-keep class com.pallycon.* {*;}
+-keep class com.inka.ncg.* {*;}
+-keep class com.inka.ncg2.* {*;}
+
+-keep class com.whitecryption.skb.* {*;}
