@@ -8,6 +8,7 @@ var hierarchy =
         [ "com.inka.ncg2.Ncg2CorruptRODBException", "classcom_1_1inka_1_1ncg2_1_1_ncg2_corrupt_r_o_d_b_exception.html", null ],
         [ "com.inka.ncg2.Ncg2DetectedExternalDisplayException", "classcom_1_1inka_1_1ncg2_1_1_ncg2_detected_external_display_exception.html", null ],
         [ "com.inka.ncg2.Ncg2DetectedRootingDeviceException", "classcom_1_1inka_1_1ncg2_1_1_ncg2_detected_rooting_device_exception.html", null ],
+        [ "com.inka.ncg2.Ncg2DeviceIdException", "classcom_1_1inka_1_1ncg2_1_1_ncg2_device_id_exception.html", null ],
         [ "com.inka.ncg2.Ncg2DeviceNotMatchedException", "classcom_1_1inka_1_1ncg2_1_1_ncg2_device_not_matched_exception.html", null ],
         [ "com.inka.ncg2.Ncg2FatalException", "classcom_1_1inka_1_1ncg2_1_1_ncg2_fatal_exception.html", null ],
         [ "com.inka.ncg2.Ncg2HttpException", "classcom_1_1inka_1_1ncg2_1_1_ncg2_http_exception.html", null ],
@@ -30,6 +31,7 @@ var hierarchy =
     [ "com.inka.ncg2.playerlib.Ncg2Player", "classcom_1_1inka_1_1ncg2_1_1playerlib_1_1_ncg2_player.html", null ],
     [ "com.inka.ncg2.playerlib.Ncg2PlayerLibFactory", "classcom_1_1inka_1_1ncg2_1_1playerlib_1_1_ncg2_player_lib_factory.html", null ],
     [ "com.inka.ncg2.Ncg2Agent.NcgCenc", "interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_cenc.html", null ],
+    [ "com.inka.ncg2.Ncg2Agent.NcgEpubFile", "interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_epub_file.html", null ],
     [ "com.inka.ncg2.Ncg2Agent.NcgExceptionalEventListener", "interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_exceptional_event_listener.html", null ],
     [ "com.inka.ncg2.Ncg2Agent.NcgFile", "interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_file.html", null ],
     [ "com.inka.ncg2.playerlib.Ncg2Player.NcgPlayerListener", "classcom_1_1inka_1_1ncg2_1_1playerlib_1_1_ncg2_player_1_1_ncg_player_listener.html", null ],
@@ -40,6 +42,7 @@ var hierarchy =
     [ "com.inka.ncg.jni.OnNcgLocalWebServerListener", "classcom_1_1inka_1_1ncg_1_1jni_1_1_on_ncg_local_web_server_listener.html", null ],
     [ "com.inka.ncg2.Ncg2Agent.PallyconTokenInfo", "classcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_pallycon_token_info.html", null ],
     [ "com.inka.ncg2.Ncg2LocalWebServer.WebServerListener.PlayerState", "enumcom_1_1inka_1_1ncg2_1_1_ncg2_local_web_server_1_1_web_server_listener_1_1_player_state.html", null ],
+    [ "com.inka.ncg2.Ncg2Agent.NcgEpubFile.SeekMethod", "enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_epub_file_1_1_seek_method.html", null ],
     [ "com.inka.ncg2.Ncg2Agent.NcgFile.SeekMethod", "enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_file_1_1_seek_method.html", null ],
     [ "com.inka.ncg2.Ncg2LocalWebServer.WebServerListener", "interfacecom_1_1inka_1_1ncg2_1_1_ncg2_local_web_server_1_1_web_server_listener.html", null ]
 ];

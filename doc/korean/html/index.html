@@ -26,7 +26,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_inka.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">NCG SDK for Android<span id="projectnumber">&#160;Build 20221115</span>
+   <div id="projectname">NCG SDK for Android<span id="projectnumber">&#160;Build 20230428</span>
    </div>
    <div id="projectbrief">INKA Entworks NCG DRM Library for Android</div>
   </td>
@@ -98,634 +98,1254 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WhatIsNew_Android_KOR.md</title>
-  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>WhatIsNew_Android_KOR</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
 </head>
 
-<body class="stackedit">
-  <div class="stackedit__html"><blockquote>
+<body>
+
+<blockquote>
 <p><strong><font color="blue">이 제품은 Android 4.1(API Level 16) 이상에서만 지원 됩니다.</font></strong></p>
 </blockquote>
-<h3 id="version-2.12.0"><strong>Version 2.12.0</strong></h3>
+
+<h3 id="toc_0"><strong>Version 2.14.0</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.12.0</strong></p>
+<p><strong>What&#39;s New in Version 2.14.0</strong></p>
 </blockquote>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> NcgEpubFile 클래스가 추가되었습니다.</p>
+
+<ul>
+<li>NcgEpubFile 클래스를 이용해 동일 CID 를 가진 NCG 콘텐츠들을 연속해서 빠른 사용이 가능합니다.</li>
+<li><strong>Ncg2Agent.createNcgEpub()</strong> 함수를 사용하여 객체 생성이 가능합니다.</li>
+<li>NcgEpubFile
+
+<ul>
+<li>void release()</li>
+<li>void open(String path)</li>
+<li>void prepare()</li>
+<li>void close()</li>
+<li>long read(byte[] buff, long sizeToRead)</li>
+<li>void seek(long offset, NcgEpubFile.SeekMethod seekMethod)</li>
+<li>long getCurrentFilePointer()</li>
+<li>int getHeaderSize()</li>
+<li>InputStream getInputStream()</li>
+<li>int decreasePlayCount()</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_1"><strong>Version 2.13.0</strong></h3>
+
+<blockquote>
+<p><strong>What&#39;s New in Version 2.13.0</strong></p>
+</blockquote>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> Local File 에 대한 콜백을 등록 할 수 있습니다.</p>
+
+<ul>
+<li>LocaFileCallback 을 통해 SDK 내부적으로 로컬파일에 접근하여 사용하는 부분을 콜백을 등록하여 앱에서 중간에 처리가 가능하게 되었습니다.</li>
+<li><strong>setLocalFileCallback(LocalFileCallback callback)</strong> 함수를 사용하여 콜백을 등록 할 수 있습니다.</li>
+<li>LocalFileCallback
+
+<ul>
+<li>Boolean fileOpen(String filePath, String openMode, int cloneNum)</li>
+<li>void fileClose(int cloneNum)</li>
+<li>byte[] fileRead(long numBytes, int cloneNum)</li>
+<li>long fileWrite(byte[] data, long numBytes, int cloneNum)</li>
+<li>long getFileSize(int cloneNum)</li>
+<li>long setFilePointer(long distanceToMove, int moveMethod, int cloneNum)</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_2"><strong>Version 2.12.2</strong></h3>
+
+<blockquote>
+<p><strong>What&#39;s New in Version 2.12.2</strong></p>
+</blockquote>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> init 함수에 새로운 파라매터가 추가 되었습니다.</p>
+
+<ul>
+<li>init(Context context, OfflineSupportPolicy policy, String deviceID, String roDbPath, <strong>String prefixPreferenceName</strong>, boolean isFirstCallAfterBoot)</li>
+<li>init 함수 파라매터 중 prefixPreferenceName 가 추가되었습니다.</li>
+<li>prefixPreferenceName 파라매터는 SDK 내부에서 사용중인 SharedPreference name 을 변경 할 수 있습니다.</li>
+<li>단, init 에서 prefixPreferenceName 를 설정 할 경우 DeviceManager 를 사용할땐 prefixPreferenceName 를 설정 해줘야 합니다.</li>
+</ul>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> DeviceManager 생성시 Builder 패턴이 추가되었습니다.</p>
+
+<ul>
+<li>Builder 패턴을 이용하여 생성 할 수 있게 되었으며, prefixName 을 설정 할 수 있습니다.</li>
+<li>만약 init 에서 prefixPreferenceName 를 설정하였다면, DeviceManager 사용시에도 prefixName 를 동일하게 설정해야 합니다.</li>
+</ul>
+
+<h3 id="toc_3"><strong>Version 2.12.1</strong></h3>
+
+<blockquote>
+<p><strong>What&#39;s New in Version 2.12.1</strong></p>
+</blockquote>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> 새로운 Ncg2DeviceIdException 이 추가되었습니다.</p>
+
+<ul>
+<li>NCG 내에서 디바이스 ID를 생성할 때 디바이스 상태에 문제가 있는 경우 발생합니다(디바이스를 재부팅하고 MediaDrm을 다시 시작).</li>
+</ul>
+
+<h3 id="toc_4"><strong>Version 2.12.0</strong></h3>
+
+<blockquote>
+<p><strong>What&#39;s New in Version 2.12.0</strong></p>
+</blockquote>
+
 <p><font color="darkviolet"><strong><code>Added</code></strong></font> 이제 epub(zip)을 정식으로 지원합니다.</p>
+
 <ul>
 <li>zip.ncg 파일을 지원하여, zip 파일을 복호화 안하고 사용이 가능합니다.</li>
 </ul>
-<pre class=" language-java"><code class="prism  language-java">NcgZipArchive ncgZipArchive <span class="token operator">=</span> <span class="token function">createNcgZipArchive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-ncgZipArchive<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"file path"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// file open</span>
-        
-NcgZipEntry zipEntry <span class="token operator">=</span> ncgZipArchive<span class="token punctuation">.</span><span class="token function">findEntry</span><span class="token punctuation">(</span><span class="token string">"entry name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// get NcgZipEntry for entry name in zip file.</span>
-InputStream in <span class="token operator">=</span> zipEntry<span class="token punctuation">.</span><span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// get InputStream for file in zip. </span>
-        
-ncgZipArchive<span class="token punctuation">.</span><span class="token function">getZipEntries</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// get all files in zip.</span>
 
-ncgZipArchive<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// file close</span>
-</code></pre>
-<h3 id="version-2.11.2"><strong>Version 2.11.2</strong></h3>
+<div><pre><code class="language-java">NcgZipArchive ncgZipArchive = createNcgZipArchive();
+ncgZipArchive.open(&quot;file path&quot;); // file open
+
+NcgZipEntry zipEntry = ncgZipArchive.findEntry(&quot;entry name&quot;); // get NcgZipEntry for entry name in zip file.
+InputStream in = zipEntry.getInputStream(); // get InputStream for file in zip.
+
+ncgZipArchive.getZipEntries(); // get all files in zip.
+
+ncgZipArchive.close(); // file close</code></pre></div>
+
+<h3 id="toc_5"><strong>Version 2.11.2</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.11.2</strong></p>
+<p><strong>What&#39;s New in Version 2.11.2</strong></p>
 </blockquote>
+
 <p><font color="darkviolet"><strong><code>Added</code></strong></font> 개발시 에뮬레이터 허용여부를 설정하는 API가 추가 됩니다.</p>
-<pre class=" language-java"><code class="prism  language-java">Ncg2Agent <span class="token operator">-</span> <span class="token function">enableVirtualMachine</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-Ncg2Agent <span class="token operator">-</span> <span class="token function">disableVirtualMachine</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
-<h3 id="version-2.11.1"><strong>Version 2.11.1</strong></h3>
+
+<div><pre><code class="language-java">Ncg2Agent - enableVirtualMachine()
+Ncg2Agent - disableVirtualMachine()</code></pre></div>
+
+<h3 id="toc_6"><strong>Version 2.11.1</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.11.1</strong></p>
+<p><strong>What&#39;s New in Version 2.11.1</strong></p>
 </blockquote>
-<p><font color="green"><strong><code>Update</code></strong></font>  샘플앱에 다운로드 저장 위치가 변경됩니다(Scoped Storage 대응).</p>
-<h3 id="version-2.11.0"><strong>Version 2.11.0</strong></h3>
+
+<p><font color="green"><strong><code>Update</code></strong></font> 샘플앱에 다운로드 저장 위치가 변경됩니다(Scoped Storage 대응).</p>
+
+<h3 id="toc_7"><strong>Version 2.11.0</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.11.0</strong></p>
+<p><strong>What&#39;s New in Version 2.11.0</strong></p>
 </blockquote>
+
 <p><font color="royalblue"><strong><code>Fixed</code></strong></font> <code>NCG Core</code> 버그 수정 및 안정성 개선됩니다.</p>
-<h3 id="version-2.11.0-1"><strong>Version 2.11.0</strong></h3>
+
+<h3 id="toc_8"><strong>Version 2.11.0</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.11.0</strong></p>
+<p><strong>What&#39;s New in Version 2.11.0</strong></p>
 </blockquote>
+
 <p><font color="royalblue"><strong><code>Fixed</code></strong></font> <code>NCG Core</code> 버그 수정 및 안정성 개선됩니다.</p>
-<h3 id="version-2.10.3"><strong>Version 2.10.3</strong></h3>
+
+<h3 id="toc_9"><strong>Version 2.10.3</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.10.3</strong></p>
+<p><strong>What&#39;s New in Version 2.10.3</strong></p>
 </blockquote>
+
 <p><font color="royalblue"><strong><code>Fixed</code></strong></font> 라이선스 발급 오류(<code>7003</code>)와 <code>Device ID</code>가 <code>Widevine UUID</code>인 경우 <code>Device ID</code>와 <code>RODB</code>가 초기화됩니다.</p>
+
 <ul>
-<li>
-<p><u><code>RODB</code> 초기화로 저장된 라이선스 정보는 삭제되며, <code>Ncg2Agent.init()</code>함수를 호출해야 합니다</u>.</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token comment">// 라이선스 요청 시 NCGERR_LICENSE_SERVER_RESPONSE_CERTIFICATE_ERROR 에러와 Device ID가 </span>
-<span class="token comment">// Widevine UUID인 경우 발생한다. 이 경우 Ncg2Agent.Init()을 다시 호출해줘야 한다.</span>
-Ncg2CoreErrorCode<span class="token punctuation">.</span>NCGERR_LICENSE_SERVER_RESPONSE_CERTIFICATE_ERROR_AND_DEVICEID_IS_WIDEVINE_UUID
-</code></pre>
-</li>
-<li>
-<p><code>Ncg2SdkWrapperListenerImpl.java</code> 파일에 예제를 참고하시기 바랍니다.</p>
-<pre class=" language-java"><code class="prism  language-java">	<span class="token annotation punctuation">@Override</span>
-	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onServerError</span><span class="token punctuation">(</span><span class="token keyword">final</span> Ncg2ServerResponseErrorException e<span class="token punctuation">,</span>
-			String string<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token keyword">int</span> serverErrorCode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<li><p><u><code>RODB</code> 초기화로 저장된 라이선스 정보는 삭제되며, <code>Ncg2Agent.init()</code>함수를 호출해야 합니다</u>.</p>
 
-		mHandler<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<div><pre><code class="language-java">// 라이선스 요청 시 NCGERR_LICENSE_SERVER_RESPONSE_CERTIFICATE_ERROR 에러와 Device ID가
+// Widevine UUID인 경우 발생한다. 이 경우 Ncg2Agent.Init()을 다시 호출해줘야 한다.
+Ncg2CoreErrorCode.NCGERR_LICENSE_SERVER_RESPONSE_CERTIFICATE_ERROR_AND_DEVICEID_IS_WIDEVINE_UUID</code></pre></div></li>
+<li><p><code>Ncg2SdkWrapperListenerImpl.java</code> 파일에 예제를 참고하시기 바랍니다.</p>
 
-			<span class="token annotation punctuation">@Override</span>
-			<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-				<span class="token keyword">if</span> <span class="token punctuation">(</span>serverErrorCode <span class="token operator">==</span> Ncg2CoreErrorCode<span class="token punctuation">.</span>NCGERR_LICENSE_SERVER_RESPONSE_CERTIFICATE_ERROR_AND_DEVICEID_IS_WIDEVINE_UUID<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-					Ncg2SdkWrapper<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> Ncg2SdkWrapperListenerImpl<span class="token punctuation">.</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-        
-      <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        
-   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-</li>
+<div><pre><code class="language-java">@Override
+public void onServerError(final Ncg2ServerResponseErrorException e,
+        String string, final int serverErrorCode) {
+
+    mHandler.post(new Runnable() {
+
+        @Override
+        public void run() {
+            if (serverErrorCode == Ncg2CoreErrorCode.NCGERR_LICENSE_SERVER_RESPONSE_CERTIFICATE_ERROR_AND_DEVICEID_IS_WIDEVINE_UUID) {
+                Ncg2SdkWrapper.getInstance().init(mContext, Ncg2SdkWrapperListenerImpl.this);
+    }
+
+    ...
+
+ }
+}</code></pre></div></li>
 </ul>
-<h3 id="version-2.10.2"><strong>Version 2.10.2</strong></h3>
+
+<h3 id="toc_10"><strong>Version 2.10.2</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.10.2</strong></p>
+<p><strong>What&#39;s New in Version 2.10.2</strong></p>
 </blockquote>
+
 <p><font color="orangered"><strong><code>Changed</code></strong></font> <code>SqlCipher</code>라이브러리가 <code>Android 11(API 30)</code> 타켓으로 <code>4.4.3</code> 버전이 빌드되어 교체됩니다.</p>
+
 <ul>
-<li>
-<p><code>SqlCipher</code> 버전이 변경되어 <code>androidx.sqlite:sqlite</code> 종속 항목을 앱 모듈 <code>build.gradle</code>에 반드시 추가해야 합니다.</p>
-<pre class=" language-shell"><code class="prism  language-shell">// Android App build.gradle
+<li><p><code>SqlCipher</code> 버전이 변경되어 <code>androidx.sqlite:sqlite</code> 종속 항목을 앱 모듈 <code>build.gradle</code>에 반드시 추가해야 합니다.</p>
+
+<div><pre><code class="language-shell">// Android App build.gradle
 dependencies {
- 	implementation "androidx.sqlite:sqlite:2.1.0"
-}
-</code></pre>
-</li>
+implementation &quot;androidx.sqlite:sqlite:2.1.0&quot;
+}</code></pre></div></li>
 </ul>
+
 <p><font color="royalblue"><strong><code>Fixed</code></strong></font> <code>m3u8</code> 파일 다운로드 받는 버퍼 크기가 변경됩니다.</p>
-<h3 id="version-2.10.1"><strong>Version 2.10.1</strong></h3>
+
+<h3 id="toc_11"><strong>Version 2.10.1</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.10.1</strong></p>
+<p><strong>What&#39;s New in Version 2.10.1</strong></p>
 </blockquote>
+
 <p><font color="royalblue"><strong><code>Fixed</code></strong></font> 생성된 <code>MediaDrm</code> 모두 해제되도록 변경됩니다.</p>
-<h3 id="version-2.10.0"><strong>Version 2.10.0</strong></h3>
+
+<h3 id="toc_12"><strong>Version 2.10.0</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.10.0</strong></p>
+<p><strong>What&#39;s New in Version 2.10.0</strong></p>
 </blockquote>
+
 <p><font color="DarkGreen"><strong><code>Improve</code></strong></font> <code>Widevine UUID</code> 생성 로직이 개선됩니다.</p>
+
 <ul>
 <li><code>MediaDrm</code> 생성에 응답이 없거나 알수 없는 오류로 <code>ANR</code>이 발생되지 않도록 개선됩니다.</li>
 </ul>
-<h3 id="version-2.9.0"><strong>Version 2.9.0</strong></h3>
+
+<h3 id="toc_13"><strong>Version 2.9.0</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.9.0</strong></p>
+<p><strong>What&#39;s New in Version 2.9.0</strong></p>
 </blockquote>
+
 <p><font color="darkviolet"><strong><code>Added</code></strong></font> Http Live Streaming 컨텐츠 Key 파일 보호 로직이 추가됩니다.</p>
+
 <ul>
 <li>로컬 웹서버를 접근하여 HLS 콘텐츠 key 유출 방지하는 로직이 추가되었습니다.</li>
 </ul>
-<h3 id="version-2.8.0"><strong>Version 2.8.0</strong></h3>
+
+<h3 id="toc_14"><strong>Version 2.8.0</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.8.0</strong></p>
+<p><strong>What&#39;s New in Version 2.8.0</strong></p>
 </blockquote>
+
 <p><font color="darkviolet"><strong><code>Added</code></strong></font> <code>getTokenInformation()</code> 함수가 추가됩니다.</p>
+
 <ul>
 <li><code>getTokenInformation()</code> 함수를 통해 주어진 <code>Token</code> 정보를 확인 할 수 있습니다.</li>
 </ul>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Ncg2Agent</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">abstract</span> PallyconTokenInfo <span class="token function">getTokenInformation</span><span class="token punctuation">(</span>String token<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p><font color="green"><strong><code>Update</code></strong></font> 샘플이 <code>Token</code>으로 라이선스를 획득하도록  업데이트 됩니다.</p>
-<h3 id="version-2.7.0"><strong>Version 2.7.0</strong></h3>
+
+<div><pre><code class="language-java">public abstract class Ncg2Agent {
+    public abstract PallyconTokenInfo getTokenInformation(String token) throws Ncg2Exception;
+}</code></pre></div>
+
+<p><font color="green"><strong><code>Update</code></strong></font> 샘플이 <code>Token</code>으로 라이선스를 획득하도록 업데이트 됩니다.</p>
+
+<h3 id="toc_15"><strong>Version 2.7.0</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.7.0</strong></p>
+<p><strong>What&#39;s New in Version 2.7.0</strong></p>
 </blockquote>
+
 <p><code><font color="darkviolet">Add</font></code> 다운로드된 NCG-HLS 콘텐츠 재생을 지원합니다.</p>
+
 <ul>
 <li>다운로드된 NCG-HLS 콘텐츠는 <code>Exoplayer</code>로 재생됩니다.</li>
 </ul>
-<pre class=" language-java"><code class="prism  language-java"><span class="token comment">// 저장된 HLS 경로를 전달하면 암호화된 콘텐츠를 재생할 수 있는 URL(경로)를 반환합니다.</span>
-<span class="token keyword">public</span> String <span class="token function">addHttpLiveStreamUrlForLocalPlayback</span><span class="token punctuation">(</span>String path<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
-</code></pre>
+
+<div><pre><code class="language-java">// 저장된 HLS 경로를 전달하면 암호화된 콘텐츠를 재생할 수 있는 URL(경로)를 반환합니다.
+public String addHttpLiveStreamUrlForLocalPlayback(String path) throws Ncg2InvalidLicenseException, Ncg2Exception;</code></pre></div>
+
 <ul>
 <li>Sample</li>
 </ul>
-<pre class=" language-java"><code class="prism  language-java"><span class="token comment">//</span>
-<span class="token comment">// advanced sample -&gt; MainActivity.java</span>
-<span class="token comment">//</span>
-<span class="token keyword">void</span> <span class="token function">startHlsPlayerActivity</span><span class="token punctuation">(</span>String localM3U8Path<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>isLocalM3U8<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        playbackURL <span class="token operator">=</span> ncgLocalWebServer<span class="token punctuation">.</span><span class="token function">addHttpLiveStreamUrlForLocalPlayback</span><span class="token punctuation">(</span>contentPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>mGlobal<span class="token punctuation">.</span>mIsLive <span class="token operator">==</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            playbackURL <span class="token operator">=</span> ncgLocalWebServer<span class="token punctuation">.</span><span class="token function">addHttpLiveStreamUrlForPlayback</span><span class="token punctuation">(</span>contentPath<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-            playbackURL <span class="token operator">=</span> ncgLocalWebServer<span class="token punctuation">.</span><span class="token function">addHttpLiveStreamUrlForPlayback</span><span class="token punctuation">(</span>contentPath<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token punctuation">}</span>
-</code></pre>
+
+<div><pre><code class="language-java">//
+// advanced sample -&gt; MainActivity.java
+//
+void startHlsPlayerActivity(String localM3U8Path) {
+    ...
+    if (isLocalM3U8) {
+        playbackURL = ncgLocalWebServer.addHttpLiveStreamUrlForLocalPlayback(contentPath);
+    } else {
+        if (mGlobal.mIsLive == true) {
+            playbackURL = ncgLocalWebServer.addHttpLiveStreamUrlForPlayback(contentPath, true);
+        } else {
+            playbackURL = ncgLocalWebServer.addHttpLiveStreamUrlForPlayback(contentPath, false);
+        }
+    }
+    ...
+}</code></pre></div>
+
 <blockquote>
 <p><strong>NOTE</strong></p>
+
 <p>다운로드된 NCG HLS 콘텐츠가 SDK를 통해 재생이 안될 경우 해당 콘텐츠와 함께 문의 주시기 바랍니다.</p>
+
 <p>SDK는 <code>m3u8</code> 파일 다운로드 기능을 지원하지 않습니다.</p>
 </blockquote>
+
 <p><code><font color="LimeGreen">Update</font></code> <code>NCG Core</code>가 <code>v2.4.0</code>로 업데이트 됩니다.</p>
+
 <ul>
 <li>암호화된 NCG HLS 콘텐츠를 플레이어가 재생할 수 있도록 지원합니다.</li>
 </ul>
-<h3 id="version-2.6.3"><strong>Version 2.6.3</strong></h3>
+
+<h3 id="toc_16"><strong>Version 2.6.3</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.6.3</strong></p>
+<p><strong>What&#39;s New in Version 2.6.3</strong></p>
 </blockquote>
+
 <p><code><font color="darkviolet">Add</font></code> SDK Sample 프로젝트에 <code>scoped storage</code> 권한이 추가됩니다.</p>
+
 <ul>
 <li>Android 10에서 파일을 다운로드 받을 경우 <code>android:requestLegacyExternalStorage</code>을 <code>true</code>로 설정해야 합니다.</li>
 </ul>
-<pre class=" language-manifest"><code class="prism  language-manifest">// https://developer.android.com/training/data-storage/use-cases#opt-out-scoped-storage
+
+<div><pre><code class="language-manifest">// https://developer.android.com/training/data-storage/use-cases#opt-out-scoped-storage
 &lt;manifest ... &gt;
-    &lt;!-- This attribute is "false" by default on apps targeting
+    &lt;!-- This attribute is &quot;false&quot; by default on apps targeting
         Android 10 or higher. --&gt;
-    &lt;application android:requestLegacyExternalStorage="true" ... &gt;
+    &lt;application android:requestLegacyExternalStorage=&quot;true&quot; ... &gt;
         ...
     &lt;/application&gt;
-&lt;/manifest&gt;
-</code></pre>
-<h3 id="version-2.6.2"><strong>Version 2.6.2</strong></h3>
+&lt;/manifest&gt;</code></pre></div>
+
+<h3 id="toc_17"><strong>Version 2.6.2</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.6.2</strong></p>
+<p><strong>What&#39;s New in Version 2.6.2</strong></p>
 </blockquote>
+
 <p><code><font color="darkviolet">Added</font></code> <code>Token</code>으로 라이선스 획득이 가능한 API가 추가됩니다.</p>
+
 <ul>
 <li><code>Token</code> 정보를 활용하여 라이선스를 획득 할 수 있는 API 입니다.</li>
 </ul>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">acquireLicenseByToken</span><span class="token punctuation">(</span>String token<span class="token punctuation">,</span> String acquisitionURL<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isTemporary <span class="token punctuation">)</span>
-			<span class="token keyword">throws</span> Ncg2ServerResponseErrorException<span class="token punctuation">,</span> Ncg2HttpException<span class="token punctuation">,</span> Ncg2Exception
-</code></pre>
-<h3 id="version-2.6.1"><strong>Version 2.6.1</strong></h3>
+
+<div><pre><code class="language-java">public void acquireLicenseByToken(String token, String acquisitionURL, boolean isTemporary )
+            throws Ncg2ServerResponseErrorException, Ncg2HttpException, Ncg2Exception</code></pre></div>
+
+<h3 id="toc_18"><strong>Version 2.6.1</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.6.1</strong></p>
+<p><strong>What&#39;s New in Version 2.6.1</strong></p>
 </blockquote>
+
 <p><code><font color="royalblue">Fixed</font></code>샘플 프로젝트 오류를 수정하여 반영합니다.</p>
+
 <ul>
 <li>샘플 프로젝트를 실행할 때 오류로 인해 실행 안되는 문제를 수정하였습니다.</li>
 </ul>
-<h3 id="version-2.6.0"><strong>Version 2.6.0</strong></h3>
+
+<h3 id="toc_19"><strong>Version 2.6.0</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.6.0</strong></p>
+<p><strong>What&#39;s New in Version 2.6.0</strong></p>
 </blockquote>
+
 <p><code><font color="darkviolet">Added</font></code> Android 루팅 확인 시 강도를 지정할 수 있는 <code>setRootingCheckLevel()</code> API가 추가됩니다.</p>
+
 <ul>
 <li>1 ~ 4 레벨로 나뉘며, 기본은 <code>레벨 1</code>입니다.</li>
 </ul>
-<pre class=" language-java"><code class="prism  language-java">level <span class="token operator">=</span> <span class="token number">1</span> Default Level<span class="token punctuation">.</span>
-  	 SU EXISTS<span class="token punctuation">,</span>SU BINARY<span class="token punctuation">,</span>SUPERUSER APK<span class="token punctuation">,</span>PERMISSIVE SELINUX<span class="token punctuation">,</span>RESETPROP<span class="token punctuation">,</span>WRONG PATH PERMITION<span class="token punctuation">,</span>
-  	 DANGEROUS PROPS<span class="token punctuation">,</span>BUSYBOX BINARY<span class="token punctuation">,</span>XPOSED<span class="token punctuation">,</span>RESETPROP<span class="token punctuation">,</span>TEST KEYS<span class="token punctuation">,</span>DEV KEYS<span class="token punctuation">,</span>NON RELEASE KEYS
-level <span class="token operator">=</span> <span class="token number">2</span> SU EXISTS<span class="token punctuation">,</span>SU BINARY<span class="token punctuation">,</span>SUPERUSER APK<span class="token punctuation">,</span>PERMISSIVE SELINUX<span class="token punctuation">,</span>RESETPROP<span class="token punctuation">,</span>WRONG PATH PERMITION<span class="token punctuation">,</span>
-  	 DANGEROUS PROPS<span class="token punctuation">,</span>BUSYBOX BINARY<span class="token punctuation">,</span>XPOSED<span class="token punctuation">,</span>RESETPROP
-level <span class="token operator">=</span> <span class="token number">3</span> SU EXISTS<span class="token punctuation">,</span>SU BINARY<span class="token punctuation">,</span>SUPERUSER APK<span class="token punctuation">,</span>PERMISSIVE SELINUX<span class="token punctuation">,</span>RESETPROP<span class="token punctuation">,</span>WRONG PATH PERMITION
-level <span class="token operator">=</span> <span class="token number">4</span> SU EXISTS<span class="token punctuation">,</span>SU BINARY
-</code></pre>
-<h3 id="version-2.5.5"><strong>Version 2.5.5</strong></h3>
+
+<div><pre><code class="language-java">level = 1 Default Level.
+     SU EXISTS,SU BINARY,SUPERUSER APK,PERMISSIVE SELINUX,RESETPROP,WRONG PATH PERMITION,
+     DANGEROUS PROPS,BUSYBOX BINARY,XPOSED,RESETPROP,TEST KEYS,DEV KEYS,NON RELEASE KEYS
+level = 2 SU EXISTS,SU BINARY,SUPERUSER APK,PERMISSIVE SELINUX,RESETPROP,WRONG PATH PERMITION,
+     DANGEROUS PROPS,BUSYBOX BINARY,XPOSED,RESETPROP
+level = 3 SU EXISTS,SU BINARY,SUPERUSER APK,PERMISSIVE SELINUX,RESETPROP,WRONG PATH PERMITION
+level = 4 SU EXISTS,SU BINARY</code></pre></div>
+
+<h3 id="toc_20"><strong>Version 2.5.5</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.5.5</strong></p>
+<p><strong>What&#39;s New in Version 2.5.5</strong></p>
 </blockquote>
+
 <p><code><font color="orangered">Changed</font></code> Target 28 -&gt; 29로 변경됩니다.</p>
+
 <ul>
 <li>구글 정책에 따라 타겟 버전이 29로 변경됩니다.</li>
 </ul>
+
 <p><code><font color="orangered">Changed</font></code> Android Q(API 29)부터 <code>Widevine</code> UUID를 <code>Device ID</code>로 사용합니다.</p>
+
 <ul>
 <li>Android Q(API 29)부터 <code>TELEPHONY_SERVICE</code>를 사용할 수 없습니다.</li>
 <li><code>Widevine</code> UUID 는 아래 조건을 모두 만족하는 경우에만 사용됩니다.
+
 <ul>
 <li>디바이스가 Android Q(API 29) 이상</li>
 <li><code>Widevine</code> DRM 지원</li>
 <li><code>Widevine</code> 보안등급(<code>securityLevel</code>) <code>L1</code> 일 경우</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="version-2.5.4"><strong>Version 2.5.4</strong></h3>
+
+<h3 id="toc_21"><strong>Version 2.5.4</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.5.4</strong></p>
+<p><strong>What&#39;s New in Version 2.5.4</strong></p>
 </blockquote>
+
 <p><code><font color="orangered">Changed</font></code> 변경된 <code>NCG Core</code>가 적용됩니다.</p>
+
 <ul>
 <li><code>NCG Core</code> 에 m3u8 파일에서 <code>EXT-X-MAP</code>에 있는 URI 추출하는 함수가 추가되어 NCG SDK에 반영됩니다.</li>
 </ul>
+
 <p><code><font color="orangered">Changed</font></code> <code>NCG Advanced</code> 샘플이 HLS 콘텐츠 여부에 따라 각각 다른 플레이어가 호출되도록 변경됩니다.</p>
+
 <ul>
 <li>HLS 콘텐츠일 경우 <code>startHlsPlayerActivity()</code>함수에서 <code>MediaPlayer</code>를 호출하여 재생됩니다.</li>
 <li>HLS 콘텐츠가 아닌 경우 <code>Exoplayer</code>를 통해 재생됩니다.</li>
 </ul>
-<h3 id="version-2.5.3"><strong>Version 2.5.3</strong></h3>
+
+<h3 id="toc_22"><strong>Version 2.5.3</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.5.3</strong></p>
+<p><strong>What&#39;s New in Version 2.5.3</strong></p>
 </blockquote>
+
 <p><code><font color="orangered">Changed</font></code> 안드로이드 루팅 체크가 변경됩니다.</p>
-<h3 id="version-2.5.2"><strong>Version 2.5.2</strong></h3>
+
+<h3 id="toc_23"><strong>Version 2.5.2</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.5.2</strong></p>
+<p><strong>What&#39;s New in Version 2.5.2</strong></p>
 </blockquote>
+
 <p><code><font color="orangered">Changed</font></code> <code>NCG Core</code> 로그가 SDK 외부로 출력됩니다.</p>
+
 <ul>
 <li><code>Secure Time</code> 관련 로그가 <code>NcgExceptionalEventListener</code>로 출력됩니다.</li>
 <li><code>NCG Core</code>에 모든 로그가 출력되 않습니다.</li>
 </ul>
-<h3 id="version-2.5.1"><strong>Version 2.5.1</strong></h3>
+
+<h3 id="toc_24"><strong>Version 2.5.1</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.5.1</strong></p>
+<p><strong>What&#39;s New in Version 2.5.1</strong></p>
 </blockquote>
+
 <p><code><font color="orangered">Changed</font></code> Android Target Sdk 변경(27 -&gt; 28)</p>
+
 <ul>
 <li>Android Target Sdk Version이 27에서 28로 변경됩니다.</li>
 <li>AndroidX 가 적용되었습니다.</li>
 </ul>
+
 <p><code><font color="royalblue">Fixed</font></code> External Display Detection, Rooting Checking 수정</p>
+
 <ul>
 <li>일부 디바이스에서 외부 출력 및 루팅 확인이 안되는 문제를 수정했습니다.</li>
 </ul>
-<h3 id="version-2.5.0"><strong>Version 2.5.0</strong></h3>
+
+<h3 id="toc_25"><strong>Version 2.5.0</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.5.0</strong></p>
+<p><strong>What&#39;s New in Version 2.5.0</strong></p>
 </blockquote>
+
 <p><code><font color="royalblue">Fixed</font></code> 로컬 웹서에서 크래시 발생을 제거했습니다.</p>
+
 <ul>
 <li>로컬 웹서버에서 발생하는 크래시를 제거하여 안정적인 SDK를 사용할 수 있습니다.</li>
 </ul>
-<h3 id="version-2.4.0"><strong>Version 2.4.0</strong></h3>
+
+<h3 id="toc_26"><strong>Version 2.4.0</strong></h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.4.0</strong></p>
+<p><strong>What&#39;s New in Version 2.4.0</strong></p>
 </blockquote>
+
 <p><code><font color="orangered">Changed</font></code> Android 64bit(arm64-v8a, x86_64) 지원</p>
+
 <ul>
 <li>구글이 2019년 8월부터 Android 64bit 지원 요구로 <strong><font color="red">NCG SDK에 Android ABI arm64-v8a, x86_64</font></strong> 가 포함되었습니다.</li>
 <li>8월부터 구글 플레이에 앱 등록하려면 NCG SDK v2.4.0을 반드시 적용해야 합니다.</li>
 </ul>
+
 <p><code><font color="orangered">Changed</font></code> Android API Level 변경(API 15 -&gt; 16)</p>
+
 <ul>
 <li>NCG SDK 64bit를 지원하면서 NDK에서 최소 지원이 <strong><font color="red">Android API Lebel 16</font></strong> 으로 변경되었습니다.</li>
 <li>64bit 에서는 Android 최소 지원은 <strong><font color="red">Android API Lebel 21</font></strong> 입니다.</li>
 </ul>
-<h3 id="version-20190509-released-2019-05-09">Version 20190509 (released 2019-05-09)</h3>
+
+<h3 id="toc_27">Version 20190509 (released 2019-05-09)</h3>
+
 <blockquote>
-<p><strong>What’s New in Version 2.3.3</strong></p>
+<p><strong>What&#39;s New in Version 2.3.3</strong></p>
 </blockquote>
+
 <p><code><font color="darkviolet">Added</font></code> BlueStacks 4 검출 추가</p>
+
 <ul>
 <li>새로운 BlueStacks 4 를 검출하도록 SDK를 수정하였습니다.</li>
 <li>BlueStacks 4에서 SDK 사용이 제한됩니다.</li>
 </ul>
+
 <hr>
-<h3 id="version-20190226-released-2019-02-26">Version 20190226 (released 2019-02-26)</h3>
+
+<h3 id="toc_28">Version 20190226 (released 2019-02-26)</h3>
+
 <blockquote>
 <ul>
 <li><strong><font color="red">ExoPlayer 2.9.3 적용</font></strong></li>
 <li><strong><font color="red">Android 9.0에서 실행 시 발생하는 내부 오류 수정</font></strong></li>
 </ul>
 </blockquote>
-<h4 id="sdk-api"><strong>1. SDK API</strong></h4>
+
+<h4 id="toc_29"><strong>1. SDK API</strong></h4>
+
 <p><code><font color="darkviolet">Added</font></code></p>
+
 <p><code><font color="orangered">Changed</font></code></p>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
-<h4 id="sample-source"><strong>2. Sample Source</strong></h4>
+
+<h4 id="toc_30"><strong>2. Sample Source</strong></h4>
+
 <p><code><font color="darkviolet">Added</font></code></p>
+
 <p><code><font color="orangered">Changed</font></code></p>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
+
 <hr>
-<h3 id="version-20181221-released-2018-12-21">Version 20181221 (released 2018-12-21)</h3>
+
+<h3 id="toc_31">Version 20181221 (released 2018-12-21)</h3>
+
 <blockquote>
 <ul>
 <li><strong><font color="red">Android SDK 내장 에뮬레이터 차단을 위한 core 패치</font></strong></li>
 </ul>
 </blockquote>
-<h4 id="sdk-api-1"><strong>1. SDK API</strong></h4>
+
+<h4 id="toc_32"><strong>1. SDK API</strong></h4>
+
 <p><code><font color="darkviolet">Added</font></code></p>
+
 <p><code><font color="orangered">Changed</font></code></p>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
-<h4 id="sample-source-1"><strong>2. Sample Source</strong></h4>
+
+<h4 id="toc_33"><strong>2. Sample Source</strong></h4>
+
 <p><code><font color="darkviolet">Added</font></code></p>
+
 <p><code><font color="orangered">Changed</font></code></p>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
+
 <hr>
-<h3 id="version-20180912-released-2018-09-12">Version 20180912 (released 2018-09-12)</h3>
+
+<h3 id="toc_34">Version 20180912 (released 2018-09-12)</h3>
+
 <blockquote>
 <ul>
 <li><strong><font color="red">HLS 재생 오류에 관한 core 패치</font></strong></li>
 <li><strong><font color="red">Simple sample 추가</font></strong></li>
 </ul>
 </blockquote>
-<h4 id="sdk-api-2"><strong>1. SDK API</strong></h4>
+
+<h4 id="toc_35"><strong>1. SDK API</strong></h4>
+
 <p><code><font color="darkviolet">Added</font></code></p>
+
 <p><code><font color="orangered">Changed</font></code></p>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
-<h4 id="sample-source-2"><strong>2. Sample Source</strong></h4>
+
+<h4 id="toc_36"><strong>2. Sample Source</strong></h4>
+
 <p><code><font color="darkviolet">Added</font></code></p>
+
 <p><code><font color="orangered">Changed</font></code></p>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
+
 <hr>
-<h3 id="version-20180903-released-2018-09-03">Version 20180903 (released 2018-09-03)</h3>
+
+<h3 id="toc_37">Version 20180903 (released 2018-09-03)</h3>
+
 <blockquote>
 <ul>
 <li><strong><font color="red">이전 securetime과 현재 securetime 획득 로직을 동일하게 수정함.</font></strong></li>
 </ul>
 </blockquote>
-<h4 id="sdk-api-3"><strong>1. SDK API</strong></h4>
+
+<h4 id="toc_38"><strong>1. SDK API</strong></h4>
+
 <p><code><font color="darkviolet">Added</font></code></p>
+
 <p><code><font color="orangered">Changed</font></code></p>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
-<h4 id="sample-source-3"><strong>2. Sample Source</strong></h4>
+
+<h4 id="toc_39"><strong>2. Sample Source</strong></h4>
+
 <p><code><font color="darkviolet">Added</font></code></p>
+
 <p><code><font color="orangered">Changed</font></code></p>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
+
 <hr>
-<h3 id="version-20180726-released-2018-08-06">Version 20180726 (released 2018-08-06)</h3>
+
+<h3 id="toc_40">Version 20180726 (released 2018-08-06)</h3>
+
 <blockquote>
 <ul>
 <li><strong><font color="red">HLS live 기능 추가</font></strong></li>
 <li><strong><font color="red">기본플레이어 : ExoPlayer로 변경</font></strong></li>
 </ul>
 </blockquote>
-<h4 id="sdk-api-4"><strong>1. SDK API</strong></h4>
+
+<h4 id="toc_41"><strong>1. SDK API</strong></h4>
+
 <p><code><font color="darkviolet">Added</font></code></p>
-<pre class=" language-java"><code class="prism  language-java">Ncg2LocalWebServer <span class="token operator">-</span> <span class="token function">addHttpLiveStreamUrlForPlayback</span><span class="token punctuation">(</span>String url<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isLiveHLS<span class="token punctuation">)</span>
-Ncg2LocalWebServer <span class="token operator">-</span> <span class="token function">addHttpLiveStreamUrlForPlayback</span><span class="token punctuation">(</span>String url<span class="token punctuation">,</span> String cid<span class="token punctuation">,</span> String siteID<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isLiveHLS<span class="token punctuation">)</span>
-</code></pre>
+
+<div><pre><code class="language-java">Ncg2LocalWebServer - addHttpLiveStreamUrlForPlayback(String url, boolean isLiveHLS)
+Ncg2LocalWebServer - addHttpLiveStreamUrlForPlayback(String url, String cid, String siteID, boolean isLiveHLS)</code></pre></div>
+
 <p><code><font color="orangered">Changed</font></code></p>
-<pre class=" language-java"><code class="prism  language-java">Default Activity <span class="token operator">:</span> MediaPlayerActivity <span class="token operator">-</span><span class="token operator">&gt;</span> ExoPlayerActivity
-</code></pre>
+
+<div><pre><code class="language-java">Default Activity : MediaPlayerActivity -&gt; ExoPlayerActivity</code></pre></div>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
-<h4 id="sample-source-4"><strong>2. Sample Source</strong></h4>
+
+<h4 id="toc_42"><strong>2. Sample Source</strong></h4>
+
 <p><code><font color="darkviolet">Added</font></code></p>
-<pre class=" language-java"><code class="prism  language-java">ExoPlayerActivity<span class="token punctuation">.</span>java <span class="token keyword">for</span> hls live
-layout_exoplayer<span class="token punctuation">.</span>xml <span class="token keyword">for</span> hls live
-</code></pre>
+
+<div><pre><code class="language-java">ExoPlayerActivity.java for hls live
+layout_exoplayer.xml for hls live</code></pre></div>
+
 <p><code><font color="orangered">Changed</font></code></p>
-<pre class=" language-java"><code class="prism  language-java">Global<span class="token punctuation">.</span>java <span class="token keyword">for</span> hls live
-MainActivity<span class="token punctuation">.</span>java <span class="token keyword">for</span> hls live
-</code></pre>
+
+<div><pre><code class="language-java">Global.java for hls live
+MainActivity.java for hls live</code></pre></div>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
+
 <hr>
-<h3 id="version-20170215-released-2017-02-21">Version 20170215 (released 2017-02-21)</h3>
+
+<h3 id="toc_43">Version 20170215 (released 2017-02-21)</h3>
+
 <blockquote>
 <ul>
 <li><strong><font color="red">보안 기능 강화 패치</font></strong></li>
 </ul>
 </blockquote>
-<h4 id="sdk-api-5"><strong>1. SDK API</strong></h4>
+
+<h4 id="toc_44"><strong>1. SDK API</strong></h4>
+
 <p><code><font color="darkviolet">Added</font></code></p>
+
 <p><code><font color="orangered">Changed</font></code></p>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
-<h4 id="sample-source-5"><strong>2. Sample Source</strong></h4>
+
+<h4 id="toc_45"><strong>2. Sample Source</strong></h4>
+
 <p><code><font color="darkviolet">Added</font></code></p>
+
 <p><code><font color="orangered">Changed</font></code></p>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
+
 <hr>
-<h3 id="version-20170207-released-2017-02-08">Version 20170207 (released 2017-02-08)</h3>
+
+<h3 id="toc_46">Version 20170207 (released 2017-02-08)</h3>
+
 <blockquote>
 <ul>
-<li><strong><font color="red">NoxPlayer 가상머신 탐지 기능 추가</font></strong><br><br>
-<strong>Ncg2FatalException이 추가되었습니다.</strong><br><br>
-<strong>해당 exception에서 사용자 가이드 및 앱 종료 등에 관한 코드를 추가해 주십시오.</strong></li>
+<li><strong><font color="red">NoxPlayer 가상머신 탐지 기능 추가</font></strong><br> &gt; <strong>Ncg2FatalException이 추가되었습니다.</strong><br> &gt; <strong>해당 exception에서 사용자 가이드 및 앱 종료 등에 관한 코드를 추가해 주십시오.</strong></li>
 <li><strong><font color="red">라이센스 요청시 OID 허용 길이가 늘어났습니다. [4096 byte]</font></strong></li>
 </ul>
 </blockquote>
-<h4 id="sdk-api-6"><strong>1. SDK API</strong></h4>
+
+<h4 id="toc_47"><strong>1. SDK API</strong></h4>
+
 <p><code><font color="darkviolet">Added</font></code></p>
+
 <p><code><font color="orangered">Changed</font></code></p>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
-<h4 id="sample-source-6"><strong>2. Sample Source</strong></h4>
+
+<h4 id="toc_48"><strong>2. Sample Source</strong></h4>
+
 <p><code><font color="darkviolet">Added</font></code></p>
+
 <p><code><font color="orangered">Changed</font></code></p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">init</span><span class="token punctuation">(</span>Context context<span class="token punctuation">,</span> Ncg2SdkWrapperListener listener<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    mListener <span class="token operator">=</span> listener<span class="token punctuation">;</span>
-    mContext <span class="token operator">=</span> context<span class="token punctuation">;</span>
-    mHandler <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Handler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    mHttpRequestCallback <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">NcgHttpRequestCallbackImpl</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    OfflineSupportPolicy policy <span class="token operator">=</span> OfflineSupportPolicy<span class="token punctuation">.</span>OfflineSupport<span class="token punctuation">;</span>
-    policy<span class="token punctuation">.</span><span class="token function">setCountOfExecutionLimit</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">try</span> <span class="token punctuation">{</span>
-        mNcg2Agent<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> policy<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        mNcg2Agent<span class="token punctuation">.</span><span class="token function">setHttpRequestCallback</span><span class="token punctuation">(</span>mHttpRequestCallback <span class="token punctuation">)</span><span class="token punctuation">;</span>
-        mNcg2Agent<span class="token punctuation">.</span><span class="token function">enableLog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        mNcg2Agent<span class="token punctuation">.</span><span class="token function">getLocalWebServer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setWebServerListener</span><span class="token punctuation">(</span>mWebserverListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Ncg2FatalException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        mListener<span class="token punctuation">.</span><span class="token function">onAppFinishedError</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-        
-    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Ncg2ReadPhoneStateException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        mListener<span class="token punctuation">.</span><span class="token function">onSecurityError</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-        
-    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Ncg2ModifiedDBFileInoException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        mNcg2Agent<span class="token punctuation">.</span><span class="token function">removeRODBFile</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        mListener<span class="token punctuation">.</span><span class="token function">onModifiedDBFileInoError</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-        
-    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Ncg2CorruptRODBException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        mListener<span class="token punctuation">.</span><span class="token function">onCorruptRODBError</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-        
-    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Ncg2Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        mListener<span class="token punctuation">.</span><span class="token function">onError</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> <span class="token string">"init() Exception : "</span> <span class="token operator">+</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    
-    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+
+<div><pre><code class="language-java">public boolean init(Context context, Ncg2SdkWrapperListener listener) {
+    mListener = listener;
+    mContext = context;
+    mHandler = new Handler();
+    mHttpRequestCallback = new NcgHttpRequestCallbackImpl(context);
+    OfflineSupportPolicy policy = OfflineSupportPolicy.OfflineSupport;
+    policy.setCountOfExecutionLimit(0);
+    try {
+        mNcg2Agent.init(context, policy);
+        mNcg2Agent.setHttpRequestCallback(mHttpRequestCallback );
+        mNcg2Agent.enableLog();
+        mNcg2Agent.getLocalWebServer().setWebServerListener(mWebserverListener);
+
+    } catch (Ncg2FatalException e) {
+        e.printStackTrace();
+        mListener.onAppFinishedError(e);
+        return false;
+
+    } catch (Ncg2ReadPhoneStateException e) {
+        e.printStackTrace();
+        mListener.onSecurityError(e);
+        return false;
+
+    } catch (Ncg2ModifiedDBFileInoException e) {
+        e.printStackTrace();
+        mNcg2Agent.removeRODBFile(context);
+        mListener.onModifiedDBFileInoError(e);
+        return false;
+
+    } catch (Ncg2CorruptRODBException e) {
+        e.printStackTrace();
+        mListener.onCorruptRODBError(e);
+        return false;
+
+    } catch (Ncg2Exception e) {
+        e.printStackTrace();
+        mListener.onError(e, &quot;init() Exception : &quot; + e.getMessage());
+        return false;
+    }
+
+    return true;
+}</code></pre></div>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
+
 <hr>
-<h3 id="version-20161010-released-2016-10-14">Version 20161010 (released 2016-10-14)</h3>
+
+<h3 id="toc_49">Version 20161010 (released 2016-10-14)</h3>
+
 <blockquote>
 <ul>
-<li><strong><font color="red">전화 권한 미 획득 이슈 (READ_PHONE_STATE Error)</font></strong><br><br>
-<strong>Ncg2ReadPhoneStateException이 추가되었습니다.</strong><br><br>
-<strong>1. 해당 exception에서 권한에 관한 사용자 가이드 및 앱 종료 등에 관한 코드를 추가해 주십시오.</strong></li>
-<li><strong><font color="red">Inode 변경에 이슈( NCGERR_MODIFIED_DBFILE_INO Error)</font></strong><br><br>
-<strong>Ncg2ModifiedDBFileInoException이 추가되었습니다.</strong><br><br>
-<strong>1. 해당 exception에서 RODB 파일을 삭제 하십시요.</strong><br><br>
-<strong>2. 해당 exception에서 RODB 앱 종료 등에 관한 사용자 가이드 및 코드를 추가해 주십시오. (init 과정을 다시 하셔도 됩니다.)</strong></li>
+<li><strong><font color="red">전화 권한 미 획득 이슈 (READ<em>PHONE</em>STATE Error)</font></strong><br> &gt; <strong>Ncg2ReadPhoneStateException이 추가되었습니다.</strong><br> &gt; <strong>1. 해당 exception에서 권한에 관한 사용자 가이드 및 앱 종료 등에 관한 코드를 추가해 주십시오.</strong></li>
+<li><strong><font color="red">Inode 변경에 이슈( NCGERR<em>MODIFIED</em>DBFILE_INO Error)</font></strong><br> &gt; <strong>Ncg2ModifiedDBFileInoException이 추가되었습니다.</strong><br> &gt; <strong>1. 해당 exception에서 RODB 파일을 삭제 하십시요.</strong><br> &gt; <strong>2. 해당 exception에서 RODB 앱 종료 등에 관한 사용자 가이드 및 코드를 추가해 주십시오. (init 과정을 다시 하셔도 됩니다.)</strong></li>
 </ul>
 </blockquote>
-<h4 id="sdk-api-7"><strong>1. SDK API</strong></h4>
-<p><code><font color="darkviolet">Added</font></code></p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">removeRODBFile</span><span class="token punctuation">(</span>Context context<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">removeRODBFile</span><span class="token punctuation">(</span>Context context<span class="token punctuation">,</span> String roDbPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p><code><font color="orangered">Changed</font></code></p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span>Context context<span class="token punctuation">,</span> OfflineSupportPolicy policy<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2ReadPhoneStateException<span class="token punctuation">,</span> Ncg2ModifiedDBFileInoException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
-</code></pre>
-<p><code><font color="darkslategray">Removal</font></code></p>
-<p><code><font color="royalblue">Fixed</font></code></p>
-<h4 id="sample-source-7"><strong>2. Sample Source</strong></h4>
-<p><code><font color="darkviolet">Added</font></code></p>
-<p><code><font color="orangered">Changed</font></code></p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">init</span><span class="token punctuation">(</span>Context context<span class="token punctuation">,</span> Ncg2SdkWrapperListener listener<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    mListener <span class="token operator">=</span> listener<span class="token punctuation">;</span>
-    mContext <span class="token operator">=</span> context<span class="token punctuation">;</span>
-    mHandler <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Handler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    mHttpRequestCallback <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">NcgHttpRequestCallbackImpl</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    OfflineSupportPolicy policy <span class="token operator">=</span> OfflineSupportPolicy<span class="token punctuation">.</span>OfflineSupport<span class="token punctuation">;</span>
-    policy<span class="token punctuation">.</span><span class="token function">setCountOfExecutionLimit</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">try</span> <span class="token punctuation">{</span>
-        mNcg2Agent<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> policy<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        mNcg2Agent<span class="token punctuation">.</span><span class="token function">setHttpRequestCallback</span><span class="token punctuation">(</span>mHttpRequestCallback <span class="token punctuation">)</span><span class="token punctuation">;</span>
-        mNcg2Agent<span class="token punctuation">.</span><span class="token function">enableLog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        mNcg2Agent<span class="token punctuation">.</span><span class="token function">getLocalWebServer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setWebServerListener</span><span class="token punctuation">(</span>mWebserverListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    
-    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Ncg2ReadPhoneStateException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        mListener<span class="token punctuation">.</span><span class="token function">onSecurityError</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-        
-    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Ncg2ModifiedDBFileInoException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        mNcg2Agent<span class="token punctuation">.</span><span class="token function">removeRODBFile</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        mListener<span class="token punctuation">.</span><span class="token function">onModifiedDBFileInoError</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-        
-    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Ncg2Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        mListener<span class="token punctuation">.</span><span class="token function">onError</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> <span class="token string">"init() Exception : "</span> <span class="token operator">+</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    
-    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<pre class=" language-java"><code class="prism  language-java"><span class="token annotation punctuation">@Override</span>
-<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onModifiedDBFileInoError</span><span class="token punctuation">(</span>Exception e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment">// TODO Auto-generated method stub</span>
-    AlertDialog<span class="token punctuation">.</span>Builder builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AlertDialog<span class="token punctuation">.</span>Builder</span><span class="token punctuation">(</span>mActivity<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    builder<span class="token punctuation">.</span><span class="token function">setTitle</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>error_dialog_title<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    builder<span class="token punctuation">.</span><span class="token function">setMessage</span><span class="token punctuation">(</span>mActivity<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>modified_dbfile_ino_error<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    builder<span class="token punctuation">.</span><span class="token function">setPositiveButton</span><span class="token punctuation">(</span>mActivity<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>confirm<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">DialogInterface<span class="token punctuation">.</span>OnClickListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        
-        <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onClick</span><span class="token punctuation">(</span>DialogInterface dialog<span class="token punctuation">,</span> <span class="token keyword">int</span> which<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment">// TODO Auto-generated method stub</span>
-            mActivity<span class="token punctuation">.</span><span class="token function">finish</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    
-    Dialog dialog <span class="token operator">=</span> builder<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    dialog<span class="token punctuation">.</span><span class="token function">setCancelable</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    dialog<span class="token punctuation">.</span><span class="token function">setCanceledOnTouchOutside</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    dialog<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
 
-<span class="token annotation punctuation">@Override</span>
-<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSecurityError</span><span class="token punctuation">(</span>Exception e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment">// TODO Auto-generated method stub</span>
-    AlertDialog<span class="token punctuation">.</span>Builder builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AlertDialog<span class="token punctuation">.</span>Builder</span><span class="token punctuation">(</span>mActivity<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    builder<span class="token punctuation">.</span><span class="token function">setTitle</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>error_dialog_title<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    builder<span class="token punctuation">.</span><span class="token function">setMessage</span><span class="token punctuation">(</span>mActivity<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>security_read_phone_state_error<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    builder<span class="token punctuation">.</span><span class="token function">setPositiveButton</span><span class="token punctuation">(</span>mActivity<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>confirm<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">DialogInterface<span class="token punctuation">.</span>OnClickListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        
-        <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onClick</span><span class="token punctuation">(</span>DialogInterface dialog<span class="token punctuation">,</span> <span class="token keyword">int</span> which<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment">// TODO Auto-generated method stub</span>
-            mActivity<span class="token punctuation">.</span><span class="token function">finish</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    
-    Dialog dialog <span class="token operator">=</span> builder<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    dialog<span class="token punctuation">.</span><span class="token function">setCancelable</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    dialog<span class="token punctuation">.</span><span class="token function">setCanceledOnTouchOutside</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    dialog<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<h4 id="toc_50"><strong>1. SDK API</strong></h4>
+
+<p><code><font color="darkviolet">Added</font></code></p>
+
+<div><pre><code class="language-java">public abstract void removeRODBFile(Context context);
+public abstract void removeRODBFile(Context context, String roDbPath);</code></pre></div>
+
+<p><code><font color="orangered">Changed</font></code></p>
+
+<div><pre><code class="language-java">public abstract void init(Context context, OfflineSupportPolicy policy) throws Ncg2ReadPhoneStateException, Ncg2ModifiedDBFileInoException, Ncg2Exception;</code></pre></div>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
+
+<h4 id="toc_51"><strong>2. Sample Source</strong></h4>
+
+<p><code><font color="darkviolet">Added</font></code></p>
+
+<p><code><font color="orangered">Changed</font></code></p>
+
+<div><pre><code class="language-java">public boolean init(Context context, Ncg2SdkWrapperListener listener) {
+    mListener = listener;
+    mContext = context;
+    mHandler = new Handler();
+    mHttpRequestCallback = new NcgHttpRequestCallbackImpl(context);
+    OfflineSupportPolicy policy = OfflineSupportPolicy.OfflineSupport;
+    policy.setCountOfExecutionLimit(0);
+    try {
+        mNcg2Agent.init(context, policy);
+        mNcg2Agent.setHttpRequestCallback(mHttpRequestCallback );
+        mNcg2Agent.enableLog();
+        mNcg2Agent.getLocalWebServer().setWebServerListener(mWebserverListener);
+
+    } catch (Ncg2ReadPhoneStateException e) {
+        e.printStackTrace();
+        mListener.onSecurityError(e);
+        return false;
+
+    } catch (Ncg2ModifiedDBFileInoException e) {
+        e.printStackTrace();
+        mNcg2Agent.removeRODBFile(context);
+        mListener.onModifiedDBFileInoError(e);
+        return false;
+
+    } catch (Ncg2Exception e) {
+        e.printStackTrace();
+        mListener.onError(e, &quot;init() Exception : &quot; + e.getMessage());
+        return false;
+    }
+
+    return true;
+}</code></pre></div>
+
+<div><pre><code class="language-java">@Override
+public void onModifiedDBFileInoError(Exception e) {
+    // TODO Auto-generated method stub
+    AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
+    builder.setTitle(R.string.error_dialog_title);
+    builder.setMessage(mActivity.getString(R.string.modified_dbfile_ino_error));
+    builder.setPositiveButton(mActivity.getString(R.string.confirm), new DialogInterface.OnClickListener() {
+
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            // TODO Auto-generated method stub
+            mActivity.finish();
+        }
+    });
+
+    Dialog dialog = builder.create();
+    dialog.setCancelable(false);
+    dialog.setCanceledOnTouchOutside(false);
+    dialog.show();
+}
+
+@Override
+public void onSecurityError(Exception e) {
+    // TODO Auto-generated method stub
+    AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
+    builder.setTitle(R.string.error_dialog_title);
+    builder.setMessage(mActivity.getString(R.string.security_read_phone_state_error));
+    builder.setPositiveButton(mActivity.getString(R.string.confirm), new DialogInterface.OnClickListener() {
+
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            // TODO Auto-generated method stub
+            mActivity.finish();
+        }
+    });
+
+    Dialog dialog = builder.create();
+    dialog.setCancelable(false);
+    dialog.setCanceledOnTouchOutside(false);
+    dialog.show();
+}</code></pre></div>
+
+<p><code><font color="darkslategray">Removal</font></code></p>
+
+<p><code><font color="royalblue">Fixed</font></code></p>
+
 <hr>
-<h3 id="version-20160531-released-2016-06-15">Version 20160531 (released 2016-06-15)</h3>
+
+<h3 id="toc_52">Version 20160531 (released 2016-06-15)</h3>
+
 <blockquote>
 <ul>
-<li><strong>July 11, 2016부터 구버전 OpenSSL을 사용하면 신규 앱 및 앱 업데이트시 등록이 안될 예정입니다.</strong><br><br>
-<strong>July 11, 2016 이후에 <font color="red">앱 업데이트하려면 반드시 이 버전 SDK로 업데이트</font>하셔야합니다.</strong></li>
+<li><strong>July 11, 2016부터 구버전 OpenSSL을 사용하면 신규 앱 및 앱 업데이트시 등록이 안될 예정입니다.</strong><br> &gt; <strong>July 11, 2016 이후에 <font color="red">앱 업데이트하려면 반드시 이 버전 SDK로 업데이트</font>하셔야합니다.</strong></li>
 <li><strong>모든 so &amp; jar 파일이 교체되어야 합니다.</strong></li>
 </ul>
 </blockquote>
+
 <p><code><font color="darkviolet">Added</font></code></p>
+
 <p>내부 OpenSSL이 1.0.2g로 업데이트 되었습니다. (libsqlcipher_android.so)</p>
+
 <p><code><font color="orangered">Changed</font></code></p>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
+
 <hr>
-<h3 id="version-20160531-released-2016-06-03">Version 20160531 (released 2016-06-03)</h3>
+
+<h3 id="toc_53">Version 20160531 (released 2016-06-03)</h3>
+
 <blockquote>
 <ul>
-<li><strong>July 11, 2016부터 구버전 OpenSSL을 사용하면 신규 앱 및 앱 업데이트시 등록이 안될 예정입니다.</strong><br><br>
-<strong>July 11, 2016 이후에 <font color="red">앱 업데이트하려면 반드시 이 버전 SDK로 업데이트</font>하셔야 합니다.</strong></li>
+<li><strong>July 11, 2016부터 구버전 OpenSSL을 사용하면 신규 앱 및 앱 업데이트시 등록이 안될 예정입니다.</strong><br> &gt; <strong>July 11, 2016 이후에 <font color="red">앱 업데이트하려면 반드시 이 버전 SDK로 업데이트</font>하셔야 합니다.</strong></li>
 </ul>
 </blockquote>
+
 <p><code><font color="darkviolet">Added</font></code></p>
+
 <p>내부 OpenSSL이 1.0.1s로 업데이트 되었습니다.</p>
+
 <p><code><font color="orangered">Changed</font></code></p>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
+
 <hr>
-<h3 id="version-20160212-released-2016-02-24">Version 20160212 (released 2016-02-24)</h3>
+
+<h3 id="toc_54">Version 20160212 (released 2016-02-24)</h3>
+
 <blockquote>
 <ul>
 <li><strong>기존 버전 <font color="red">SDK는 2016년 3월 31일자로 만료</font>되오니 반드시 Version 20160212 (released 2016-02-24)으로 변경하셔야 합니다.</strong></li>
@@ -733,6 +1353,7 @@ MainActivity<span class="token punctuation">.</span>java <span class="token keyw
 <li><strong>Player 교체로 인해 Library &amp; Sample code가 변경되었으니 아래의 사항을 적용해 주십시오.</strong></li>
 </ul>
 </blockquote>
+
 <ol>
 <li>VisualOnPlayer .jar &amp; .so 파일이 추가 되었습니다. 필요한 위치에 추가 해야합니다.</li>
 <li>package 명 체크파일(cap.xml, voVidDec.dat)이 추가되었습니다. asset 폴더에 추가해야합니다.</li>
@@ -742,149 +1363,210 @@ MainActivity<span class="token punctuation">.</span>java <span class="token keyw
 <li>Sample player list 에서 exoplayer 는 제외 되었습니다.</li>
 <li>해당 샘플코드는 단순 참조용으로 원하지 않는 동작이 발생할 경우 헬프데크스로 문의 하시기 바랍니다.</li>
 </ol>
+
 <hr>
-<h4 id="sdk-api-8"><strong>1. SDK API</strong></h4>
+
+<h4 id="toc_55"><strong>1. SDK API</strong></h4>
+
 <p><strong><code><font color="darkviolet">Added</font></code></strong></p>
+
 <p><strong><code><font color="orangered">Changed</font></code></strong></p>
+
 <p><strong><code><font color="darkslategray">Removal</font></code></strong></p>
+
 <p><strong><code><font color="royalblue">Fixed</font></code></strong></p>
+
 <p>VisualOnPlayer 내부 버그 패치</p>
-<h4 id="sample-source-8"><strong>2. Sample Source</strong></h4>
+
+<h4 id="toc_56"><strong>2. Sample Source</strong></h4>
+
 <p><code><font color="darkviolet">Added</font></code></p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">private</span> <span class="token keyword">boolean</span> mIsSurfaceSenario <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-</code></pre>
+
+<div><pre><code class="language-java">private boolean mIsSurfaceSenario = false;</code></pre></div>
+
 <p><code><font color="orangered">Changed</font></code></p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onPause</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment">// 해당 소스코드는 sample code에서 확인 바랍니다.</span>
-    <span class="token comment">// BackGround로 전환될 때 reset하지 않고 suspend하여, ForeGround로 전환될 때 재설정하지 않습니다.</span>
-<span class="token punctuation">}</span>
 
-<span class="token keyword">protected</span> Void <span class="token function">doInBackground</span><span class="token punctuation">(</span>Void<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> params<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment">// 해당 소스코드는 sample code에서 확인 바랍니다.</span>
-    <span class="token comment">// 의미상 mIsNativePlayer 는 mIsSurfaceSenario로 변경되었습니다.</span>
-<span class="token punctuation">}</span>
+<div><pre><code class="language-java">protected void onPause() {
+    // 해당 소스코드는 sample code에서 확인 바랍니다.
+    // BackGround로 전환될 때 reset하지 않고 suspend하여, ForeGround로 전환될 때 재설정하지 않습니다.
+}
 
-<span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onResume</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment">// 해당 소스코드는 sample code에서 확인 바랍니다.</span>
-    <span class="token comment">// surfacecreated 되었을 때만 재설정해야 합니다.</span>
-<span class="token punctuation">}</span>
+protected Void doInBackground(Void... params) {
+    // 해당 소스코드는 sample code에서 확인 바랍니다.
+    // 의미상 mIsNativePlayer 는 mIsSurfaceSenario로 변경되었습니다.
+}
 
-<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">initNcgPlayer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment">// 해당 소스코드는 sample code에서 확인 바랍니다.</span>
-    <span class="token comment">// NexPlayr를 제거하고 Visual on Player로 설정되어야 합니다.</span>
-    <span class="token comment">// 의미상 mIsNativePlayer는 mIsSurfaceSenario로 변경되었습니다.</span>
-<span class="token punctuation">}</span>
+protected void onResume() {
+    // 해당 소스코드는 sample code에서 확인 바랍니다.
+    // surfacecreated 되었을 때만 재설정해야 합니다.
+}
 
-<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">OnStatusChange</span><span class="token punctuation">(</span>Ncg2Player ncgPlayer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment">// 해당 소스코드는 sample code에서 확인 바랍니다.</span>
-    <span class="token comment">// mIsPlayerInitSucceeded가 방어코드이기는 하나 가독성 및 사용성이 떨어져 삭제되었습니다.</span>
-    <span class="token comment">// 원하시는 방어코드는 상황에 맞게 작성하시면 됩니다.</span>
-<span class="token punctuation">}</span>
+private void initNcgPlayer() {
+    // 해당 소스코드는 sample code에서 확인 바랍니다.
+    // NexPlayr를 제거하고 Visual on Player로 설정되어야 합니다.
+    // 의미상 mIsNativePlayer는 mIsSurfaceSenario로 변경되었습니다.
+}
 
-<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">surfaceCreated</span><span class="token punctuation">(</span>SurfaceHolder holder<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment">// 해당 소스코드는 sample code에서 확인 바랍니다.</span>
-    <span class="token comment">// ForeGround로 전환되었을 경우 재설정하지 않고 resume하는 것만으로 이어보기가 가능합니다.</span>
-    <span class="token comment">// resume할 수 없는 경우에만 재설정합니다.</span>
-<span class="token punctuation">}</span>
+public void OnStatusChange(Ncg2Player ncgPlayer) {
+    // 해당 소스코드는 sample code에서 확인 바랍니다.
+    // mIsPlayerInitSucceeded가 방어코드이기는 하나 가독성 및 사용성이 떨어져 삭제되었습니다.
+    // 원하시는 방어코드는 상황에 맞게 작성하시면 됩니다.
+}
 
-OnClickListener mButtonClickListener <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">OnClickListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onClick</span><span class="token punctuation">(</span>View v<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment">// 해당 소스코드는 sample code에서 확인 바랍니다.</span>
-        <span class="token comment">// mIsPlayerInitSucceeded  방어코드이기는 하나 가독성 및 사용성이 떨어져 삭제되었습니다.</span>
-        <span class="token comment">// 원하시는 방어코드는 상황에 맞게 작성하시면 됩니다.</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+public void surfaceCreated(SurfaceHolder holder) {
+    // 해당 소스코드는 sample code에서 확인 바랍니다.
+    // ForeGround로 전환되었을 경우 재설정하지 않고 resume하는 것만으로 이어보기가 가능합니다.
+    // resume할 수 없는 경우에만 재설정합니다.
+}
 
-OnClickListener mButtonClickListener <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">OnClickListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onClick</span><span class="token punctuation">(</span>View v<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">case</span> R<span class="token punctuation">.</span>id<span class="token punctuation">.</span>btn_playnpause <span class="token operator">:</span>
-            <span class="token comment">// 해당 소스코드는 sample code에서 확인 바랍니다.</span>
-            <span class="token comment">// 단순 일시정지는 pause - resume 에서 pause - start 로 변경되었습니다.</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+OnClickListener mButtonClickListener = new OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        // 해당 소스코드는 sample code에서 확인 바랍니다.
+        // mIsPlayerInitSucceeded  방어코드이기는 하나 가독성 및 사용성이 떨어져 삭제되었습니다.
+        // 원하시는 방어코드는 상황에 맞게 작성하시면 됩니다.
+    }
+}
 
-<span class="token keyword">private</span> <span class="token keyword">class</span> <span class="token class-name">UnlockReceiver</span> <span class="token keyword">extends</span> <span class="token class-name">BroadcastReceiver</span> <span class="token punctuation">{</span>
-    <span class="token annotation punctuation">@Override</span>  
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onReceive</span><span class="token punctuation">(</span>Context context<span class="token punctuation">,</span> Intent intent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment">// 해당 소스코드는 sample code에서 확인 바랍니다.</span>
-        <span class="token comment">// screen off / on 시에도 BG / FG 와 유사합니다.</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span> 
-</code></pre>
+OnClickListener mButtonClickListener = new OnClickListener() {
+    public void onClick(View v) {
+        case R.id.btn_playnpause :
+            // 해당 소스코드는 sample code에서 확인 바랍니다.
+            // 단순 일시정지는 pause - resume 에서 pause - start 로 변경되었습니다.
+    }
+}
+
+private class UnlockReceiver extends BroadcastReceiver {
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        // 해당 소스코드는 sample code에서 확인 바랍니다.
+        // screen off / on 시에도 BG / FG 와 유사합니다.
+    }
+}</code></pre></div>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token comment">// Native Player가 mIsSurfaceSenario로 대체되었습니다.</span>
-<span class="token keyword">private</span> <span class="token keyword">boolean</span> mIsNativePlayer <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-<span class="token comment">// 방어코드이기는 하나 가독성 및 사용성이 떨어져 삭제되었습니다.</span>
-<span class="token keyword">private</span> <span class="token keyword">boolean</span> mIsPlayerInitSucceeded<span class="token punctuation">;</span>
-</code></pre>
+
+<div><pre><code class="language-java">// Native Player가 mIsSurfaceSenario로 대체되었습니다.
+private boolean mIsNativePlayer = false;
+// 방어코드이기는 하나 가독성 및 사용성이 떨어져 삭제되었습니다.
+private boolean mIsPlayerInitSucceeded;</code></pre></div>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
+
 <hr>
-<h3 id="version-20160111-released-2016-01-11">Version 20160111 (released 2016-01-11)</h3>
+
+<h3 id="toc_57">Version 20160111 (released 2016-01-11)</h3>
+
 <p><code><font color="darkviolet">Added</font></code></p>
+
 <p>반드시 인증 받은 package명을 사용하셔야 합니다. 다른 package 명을 사용할 경우 player가 동작하지 않습니다. package명을 변경 해야 할 경우 다시 인증 절차를 받아야 하니 연락 바랍니다.</p>
-<p><code><font color="orangered">Changed</font></code></p>
-<p><code><font color="darkslategray">Removal</font></code></p>
-<p><code><font color="royalblue">Fixed</font></code></p>
-<hr>
-<h3 id="version-20160108-released-2016-01-08">Version 20160108 (released 2016-01-08)</h3>
-<p><code><font color="darkviolet">Added</font></code></p>
-<p><code><font color="orangered">Changed</font></code></p>
-<p>오프라인 시 오차 허용범위를 24시간에서 1시간으로 조정</p>
-<p><code><font color="darkslategray">Removal</font></code></p>
-<p><code><font color="royalblue">Fixed</font></code></p>
-<hr>
-<h3 id="version-20151218-released-2015-12-18">Version 20151218 (released 2015-12-18)</h3>
-<p><code><font color="darkviolet">Added</font></code></p>
-<p>기존 pause 함수와 동일한 기능을 수행합니다.</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">suspend</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception<span class="token punctuation">;</span>
-</code></pre>
-<p><code><font color="orangered">Changed</font></code></p>
-<p>오프라인 시 오차 허용범위를 1시간에서 24시간으로 조정</p>
-<p><code><font color="darkslategray">Removal</font></code></p>
-<p><code><font color="royalblue">Fixed</font></code></p>
-<hr>
-<h3 id="version-20151120-released-2015-11-20">Version 20151120 (released 2015-11-20)</h3>
-<p><code><font color="darkviolet">Added</font></code></p>
-<p>Screen Capture 보안 설정을 지정할 수 있습니다. (default : true)</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Ncg2Player</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">setSecure</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> isSecureSurfaceView<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p><code><font color="orangered">Changed</font></code></p>
-<p><code><font color="darkslategray">Removal</font></code></p>
-<p><code><font color="royalblue">Fixed</font></code></p>
-<hr>
-<h3 id="version-20151029-released-2015-10-29">Version 20151029 (released 2015-10-29)</h3>
-<p><code><font color="darkviolet">Added</font></code></p>
-<p>DnP 재생 시 Cookie 값을 포함하여 전달할 수 있도록 수정되었습니다. NCG LocalWebServer가 이 Cookie 값을 포함하여 Request할 수 있습니다.</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Ncg2Player</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">setDataSource</span><span class="token punctuation">(</span>String path<span class="token punctuation">,</span> String remoteUrlForDnp<span class="token punctuation">,</span> <span class="token keyword">long</span> fileSize<span class="token punctuation">,</span> String customCookie<span class="token punctuation">)</span> <span class="token keyword">throws</span> IllegalArgumentException<span class="token punctuation">,</span> IllegalStateException<span class="token punctuation">,</span> IOException<span class="token punctuation">,</span>Ncg2Exception<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
 
-</code></pre>
 <p><code><font color="orangered">Changed</font></code></p>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
+
 <hr>
-<h1 id="previous-version">Previous Version</h1>
+
+<h3 id="toc_58">Version 20160108 (released 2016-01-08)</h3>
+
 <p><code><font color="darkviolet">Added</font></code></p>
-<p>SW 배속 재생 기능이 추가 되었습니다. 기존에는 자동으로 sw 배속 전환하여 재생해 주었으나 설정을 통해 HW / SW 배속 지정을 해야만 합니다. 일부 단말에서 HW 동작이 원할하지 않은 경우가 있기 때문에 반드시 SW 배속으로 돌릴 수 있도록 설정기능이 추가되어야 합니다. (기본값: HW)</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Ncg2Player</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">setSwCodecMode</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> enableSwCodec<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>Screen Recorder 녹화앱 감지기능을 Off 시킬수 있습니다. (기본값: On)</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Ncg2Agent</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">enableScreenRecorderDetecting</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> isEnabled<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+
 <p><code><font color="orangered">Changed</font></code></p>
+
+<p>오프라인 시 오차 허용범위를 24시간에서 1시간으로 조정</p>
+
 <p><code><font color="darkslategray">Removal</font></code></p>
+
 <p><code><font color="royalblue">Fixed</font></code></p>
+
 <hr>
+
+<h3 id="toc_59">Version 20151218 (released 2015-12-18)</h3>
+
+<p><code><font color="darkviolet">Added</font></code></p>
+
+<p>기존 pause 함수와 동일한 기능을 수행합니다.</p>
+
+<div><pre><code class="language-java">public abstract void suspend() throws Ncg2Exception;</code></pre></div>
+
+<p><code><font color="orangered">Changed</font></code></p>
+
+<p>오프라인 시 오차 허용범위를 1시간에서 24시간으로 조정</p>
+
+<p><code><font color="darkslategray">Removal</font></code></p>
+
+<p><code><font color="royalblue">Fixed</font></code></p>
+
+<hr>
+
+<h3 id="toc_60">Version 20151120 (released 2015-11-20)</h3>
+
+<p><code><font color="darkviolet">Added</font></code></p>
+
+<p>Screen Capture 보안 설정을 지정할 수 있습니다. (default : true)</p>
+
+<div><pre><code class="language-java">public abstract class Ncg2Player {
+    public abstract void setSecure(boolean isSecureSurfaceView);
+}</code></pre></div>
+
+<p><code><font color="orangered">Changed</font></code></p>
+
+<p><code><font color="darkslategray">Removal</font></code></p>
+
+<p><code><font color="royalblue">Fixed</font></code></p>
+
+<hr>
+
+<h3 id="toc_61">Version 20151029 (released 2015-10-29)</h3>
+
+<p><code><font color="darkviolet">Added</font></code></p>
+
+<p>DnP 재생 시 Cookie 값을 포함하여 전달할 수 있도록 수정되었습니다. NCG LocalWebServer가 이 Cookie 값을 포함하여 Request할 수 있습니다.</p>
+
+<div><pre><code class="language-java">public abstract class Ncg2Player {
+    public abstract void setDataSource(String path, String remoteUrlForDnp, long fileSize, String customCookie) throws IllegalArgumentException, IllegalStateException, IOException,Ncg2Exception;
+}
+</code></pre></div>
+
+<p><code><font color="orangered">Changed</font></code></p>
+
+<p><code><font color="darkslategray">Removal</font></code></p>
+
+<p><code><font color="royalblue">Fixed</font></code></p>
+
+<hr>
+
+<h1 id="toc_62">Previous Version</h1>
+
+<p><code><font color="darkviolet">Added</font></code></p>
+
+<p>SW 배속 재생 기능이 추가 되었습니다. 기존에는 자동으로 sw 배속 전환하여 재생해 주었으나 설정을 통해 HW / SW 배속 지정을 해야만 합니다. 일부 단말에서 HW 동작이 원할하지 않은 경우가 있기 때문에 반드시 SW 배속으로 돌릴 수 있도록 설정기능이 추가되어야 합니다. (기본값: HW)</p>
+
+<div><pre><code class="language-java">public abstract class Ncg2Player {
+    public abstract void setSwCodecMode(boolean enableSwCodec);
+}</code></pre></div>
+
+<p>Screen Recorder 녹화앱 감지기능을 Off 시킬수 있습니다. (기본값: On)</p>
+
+<div><pre><code class="language-java">public abstract class Ncg2Agent {
+    public abstract void enableScreenRecorderDetecting(boolean isEnabled);
+}</code></pre></div>
+
+<p><code><font color="orangered">Changed</font></code></p>
+
+<p><code><font color="darkslategray">Removal</font></code></p>
+
+<p><code><font color="royalblue">Fixed</font></code></p>
+
+<hr>
+
 <p>이전 버전의 자세한 History는 release_note.txt 파일에 기재되어 있습니다. 참고하시기 바랍니다.</p>
-</div>
+
+
+
+
 </body>
 
 </html>

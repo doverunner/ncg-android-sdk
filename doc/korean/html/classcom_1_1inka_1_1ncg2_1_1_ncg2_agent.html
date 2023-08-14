@@ -26,7 +26,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_inka.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">NCG SDK for Android<span id="projectnumber">&#160;Build 20221115</span>
+   <div id="projectname">NCG SDK for Android<span id="projectnumber">&#160;Build 20230428</span>
    </div>
    <div id="projectbrief">INKA Entworks NCG DRM Library for Android</div>
   </td>
@@ -110,13 +110,19 @@ $(document).ready(function(){initNavTree('classcom_1_1inka_1_1ncg2_1_1_ncg2_agen
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_license_validation.html">LicenseValidation</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><b>LocalFileCallback</b></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_cenc.html">NcgCenc</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_epub_file.html">NcgEpubFile</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_exceptional_event_listener.html">NcgExceptionalEventListener</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_file.html">NcgFile</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>NcgHttpRequestException</b></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>NcgLocalFileException</b></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_offline_support_policy.html">OfflineSupportPolicy</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,14 +131,16 @@ $(document).ready(function(){initNavTree('classcom_1_1inka_1_1ncg2_1_1_ncg2_agen
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:af8bb58e54e38bfa13656f5fe6e340971"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#af8bb58e54e38bfa13656f5fe6e340971">init</a> (Context context, <a class="el" href="enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_offline_support_policy.html">OfflineSupportPolicy</a> policy)  throws Ncg2ReadPhoneStateException, Ncg2ModifiedDBFileInoException, Ncg2Exception</td></tr>
+<tr class="memitem:af8bb58e54e38bfa13656f5fe6e340971"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#af8bb58e54e38bfa13656f5fe6e340971">init</a> (Context context, <a class="el" href="enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_offline_support_policy.html">OfflineSupportPolicy</a> policy)  throws Ncg2ReadPhoneStateException, Ncg2ModifiedDBFileInoException, Ncg2FatalException, Ncg2DeviceIdException, Ncg2Exception</td></tr>
 <tr class="separator:af8bb58e54e38bfa13656f5fe6e340971"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affdf428ce96e2ba6a82cc617de61e1e7"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#affdf428ce96e2ba6a82cc617de61e1e7">init</a> (Context context, <a class="el" href="enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_offline_support_policy.html">OfflineSupportPolicy</a> policy, String strDeviceID)  throws Ncg2ReadPhoneStateException, Ncg2ModifiedDBFileInoException, Ncg2Exception</td></tr>
+<tr class="memitem:affdf428ce96e2ba6a82cc617de61e1e7"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#affdf428ce96e2ba6a82cc617de61e1e7">init</a> (Context context, <a class="el" href="enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_offline_support_policy.html">OfflineSupportPolicy</a> policy, String strDeviceID)  throws Ncg2ReadPhoneStateException, Ncg2ModifiedDBFileInoException, Ncg2FatalException, Ncg2DeviceIdException, Ncg2Exception</td></tr>
 <tr class="separator:affdf428ce96e2ba6a82cc617de61e1e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2de1c7a84dd5d15667d6d36d3f9302e1"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a2de1c7a84dd5d15667d6d36d3f9302e1">init</a> (Context context, <a class="el" href="enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_offline_support_policy.html">OfflineSupportPolicy</a> policy, String deviceID, String roDbPath)  throws Ncg2ReadPhoneStateException, Ncg2ModifiedDBFileInoException, Ncg2Exception</td></tr>
+<tr class="memitem:a2de1c7a84dd5d15667d6d36d3f9302e1"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a2de1c7a84dd5d15667d6d36d3f9302e1">init</a> (Context context, <a class="el" href="enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_offline_support_policy.html">OfflineSupportPolicy</a> policy, String deviceID, String roDbPath)  throws Ncg2ReadPhoneStateException, Ncg2ModifiedDBFileInoException, Ncg2FatalException, Ncg2DeviceIdException, Ncg2Exception</td></tr>
 <tr class="separator:a2de1c7a84dd5d15667d6d36d3f9302e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ac9beee9362da5e43466710297f20cb"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a7ac9beee9362da5e43466710297f20cb">init</a> (Context context, <a class="el" href="enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_offline_support_policy.html">OfflineSupportPolicy</a> policy, String deviceID, String roDbPath, boolean isFirstCallAfterBoot)  throws Ncg2ReadPhoneStateException, Ncg2ModifiedDBFileInoException, Ncg2Exception</td></tr>
+<tr class="memitem:a7ac9beee9362da5e43466710297f20cb"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a7ac9beee9362da5e43466710297f20cb">init</a> (Context context, <a class="el" href="enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_offline_support_policy.html">OfflineSupportPolicy</a> policy, String deviceID, String roDbPath, boolean isFirstCallAfterBoot)  throws Ncg2ReadPhoneStateException, Ncg2ModifiedDBFileInoException, Ncg2FatalException, Ncg2DeviceIdException, Ncg2Exception</td></tr>
 <tr class="separator:a7ac9beee9362da5e43466710297f20cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a18b7823b061076b105caa41eb95e45"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a4a18b7823b061076b105caa41eb95e45">init</a> (Context context, <a class="el" href="enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_offline_support_policy.html">OfflineSupportPolicy</a> policy, String deviceID, String roDbPath, String prefixPreferenceName, boolean isFirstCallAfterBoot)  throws Ncg2ReadPhoneStateException, Ncg2ModifiedDBFileInoException, Ncg2FatalException, Ncg2DeviceIdException, Ncg2Exception</td></tr>
+<tr class="separator:a4a18b7823b061076b105caa41eb95e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcf2638db73c55186f77c59101319983"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#abcf2638db73c55186f77c59101319983">updateSecureTime</a> ()  throws Ncg2DetectedDeviceTimeModifiedException,   				   Ncg2OfflineNotSupportedException,  				   Ncg2NotAuthorizedAppID, 				   Ncg2Exception</td></tr>
 <tr class="separator:abcf2638db73c55186f77c59101319983"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d4f89b78b31704b4d9b0b7d0f0837e1"><td class="memItemLeft" align="right" valign="top">abstract boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a6d4f89b78b31704b4d9b0b7d0f0837e1">isInitialized</a> ()</td></tr>
@@ -145,13 +153,13 @@ Public 멤버 함수</h2></td></tr>
 <tr class="separator:a1e307afd0c558efa637a606bccfda537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81966029303c9e55fcbf7d795ddbbc39"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a81966029303c9e55fcbf7d795ddbbc39">acquireLicenseByPath</a> (String path, String userID, String orderID, boolean isTemporary)  throws Ncg2ServerResponseErrorException, Ncg2HttpException, Ncg2Exception</td></tr>
 <tr class="separator:a81966029303c9e55fcbf7d795ddbbc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15816fee54255b2a97debe28241b0e04"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a15816fee54255b2a97debe28241b0e04">acquireLicenseByCID</a> (String contentID, String userID, String orderID, String acquisitionURL)  throws Ncg2ServerResponseErrorException, Ncg2HttpException, Ncg2Exception</td></tr>
+<tr class="memitem:a15816fee54255b2a97debe28241b0e04"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a15816fee54255b2a97debe28241b0e04">acquireLicenseByCID</a> (String contentID, String userID, String orderID, String acquisitionURL)  throws Ncg2ServerResponseErrorException, Ncg2HttpException, Ncg2DeviceIdException, Ncg2Exception</td></tr>
 <tr class="separator:a15816fee54255b2a97debe28241b0e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad66ac230c27a20a147bf0ef72d4386fa"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#ad66ac230c27a20a147bf0ef72d4386fa">acquireLicenseByCID</a> (String contentID, String userID, String siteID, String orderID, String acquisitionURL)  throws Ncg2ServerResponseErrorException, Ncg2Exception</td></tr>
 <tr class="separator:ad66ac230c27a20a147bf0ef72d4386fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a907af097ebc2c999d85364089a55bbd8"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a907af097ebc2c999d85364089a55bbd8">acquireLicenseByCID</a> (String contentID, String userID, String siteID, String orderID, String acquisitionURL, boolean isTemporary)  throws Ncg2ServerResponseErrorException, Ncg2HttpException, Ncg2Exception</td></tr>
 <tr class="separator:a907af097ebc2c999d85364089a55bbd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f64cb41968ca47d473cae6b45112e92"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a4f64cb41968ca47d473cae6b45112e92">acquireLicenseByToken</a> (String token, boolean isTemporary)  throws Ncg2ServerResponseErrorException, Ncg2HttpException, Ncg2Exception</td></tr>
+<tr class="memitem:a4f64cb41968ca47d473cae6b45112e92"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a4f64cb41968ca47d473cae6b45112e92">acquireLicenseByToken</a> (String token, boolean isTemporary)  throws Ncg2ServerResponseErrorException, Ncg2HttpException, Ncg2DeviceIdException, Ncg2Exception</td></tr>
 <tr class="separator:a4f64cb41968ca47d473cae6b45112e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42d0cefbb5f76fbc70f9fc8e79decb1e"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a42d0cefbb5f76fbc70f9fc8e79decb1e">acquireLicenseByToken</a> (String token, String acquisitionURL, boolean isTemporary)  throws Ncg2ServerResponseErrorException, Ncg2HttpException, Ncg2Exception</td></tr>
 <tr class="separator:a42d0cefbb5f76fbc70f9fc8e79decb1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,6 +222,8 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
 <tr class="separator:a5ca5e83bbfa4aba597acc044e0f9684f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ebe4cdbb01037012c5fc310e0c7808b"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a4ebe4cdbb01037012c5fc310e0c7808b">setHttpRequestCallback</a> (HttpRequestCallback callback)</td></tr>
 <tr class="separator:a4ebe4cdbb01037012c5fc310e0c7808b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e9e6dd6d5ff897b4a8efb78efc3d410"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a3e9e6dd6d5ff897b4a8efb78efc3d410">setLocalFileCallback</a> (LocalFileCallback callback)</td></tr>
+<tr class="separator:a3e9e6dd6d5ff897b4a8efb78efc3d410"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a067ce4d342fae17c2d6b99285c7ec28c"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a067ce4d342fae17c2d6b99285c7ec28c">setRootingCheckLevel</a> (int level)</td></tr>
 <tr class="separator:a067ce4d342fae17c2d6b99285c7ec28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95f1f6850ea2ec3f706dc46d54d618f1"><td class="memItemLeft" align="right" valign="top">abstract String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a95f1f6850ea2ec3f706dc46d54d618f1">getCurrentSecureTime</a> ()</td></tr>
@@ -244,6 +254,9 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
 <tr class="separator:a3ebe538aa723a6472dd8645e016f66f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addaa7c2191d907b4fb6d6bd9e686e38b"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#addaa7c2191d907b4fb6d6bd9e686e38b">enableScreenRecorderDetecting</a> (boolean isEnabled)</td></tr>
 <tr class="separator:addaa7c2191d907b4fb6d6bd9e686e38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab649549a6915f16edf50436c3943bceb"><td class="memItemLeft" align="right" valign="top"><a id="ab649549a6915f16edf50436c3943bceb" name="ab649549a6915f16edf50436c3943bceb"></a>
+abstract <a class="el" href="interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_epub_file.html">NcgEpubFile</a>&#160;</td><td class="memItemRight" valign="bottom"><b>createNcgEpub</b> ()</td></tr>
+<tr class="separator:ab649549a6915f16edf50436c3943bceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bcff70a76c174decf737e0370fd93d7"><td class="memItemLeft" align="right" valign="top">abstract <a class="el" href="interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_cenc.html">NcgCenc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a2bcff70a76c174decf737e0370fd93d7">getNcgCenc</a> ()</td></tr>
 <tr class="separator:a2bcff70a76c174decf737e0370fd93d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -293,7 +306,7 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> throws <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_server_response_error_exception.html">Ncg2ServerResponseErrorException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_http_exception.html">Ncg2HttpException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td>
+          <td></td><td> throws <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_server_response_error_exception.html">Ncg2ServerResponseErrorException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_http_exception.html">Ncg2HttpException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_device_id_exception.html">Ncg2DeviceIdException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td>
         </tr>
       </table>
   </td>
@@ -316,6 +329,7 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
   <table class="exception">
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_server_response_error_exception.html">Ncg2ServerResponseErrorException</a></td><td>서버에서 오류 코드를 응답한 경우 </td></tr>
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_http_exception.html">Ncg2HttpException</a></td><td>서버와의 통신 과정 중 오류가 발생한 경우 </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_device_id_exception.html">Ncg2DeviceIdException</a></td><td>기기 재부팅 및 미디어 서버의 재시작이 필요한 경우 </td></tr>
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td><td>라이선스 획득 과정 중 오류가 발생한 경우 </td></tr>
   </table>
   </dd>
@@ -705,7 +719,7 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> throws <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_server_response_error_exception.html">Ncg2ServerResponseErrorException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_http_exception.html">Ncg2HttpException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td>
+          <td></td><td> throws <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_server_response_error_exception.html">Ncg2ServerResponseErrorException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_http_exception.html">Ncg2HttpException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_device_id_exception.html">Ncg2DeviceIdException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td>
         </tr>
       </table>
   </td>
@@ -726,6 +740,7 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
   <table class="exception">
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_server_response_error_exception.html">Ncg2ServerResponseErrorException</a></td><td>서버에서 오류 코드를 응답한 경우 </td></tr>
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_http_exception.html">Ncg2HttpException</a></td><td>서버와의 통신 과정 중 오류가 발생한 경우 </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_device_id_exception.html">Ncg2DeviceIdException</a></td><td>기기 재부팅 및 미디어 서버의 재시작이 필요한 경우 </td></tr>
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td><td>라이선스 획득 과정 중 오류가 발생한 경우 </td></tr>
   </table>
   </dd>
@@ -1716,7 +1731,7 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
 </div>
 </div>
 <a id="af8bb58e54e38bfa13656f5fe6e340971" name="af8bb58e54e38bfa13656f5fe6e340971"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8bb58e54e38bfa13656f5fe6e340971">&#9670;&#160;</a></span>init() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af8bb58e54e38bfa13656f5fe6e340971">&#9670;&#160;</a></span>init() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1739,7 +1754,7 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> throws <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_read_phone_state_exception.html">Ncg2ReadPhoneStateException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_modified_d_b_file_ino_exception.html">Ncg2ModifiedDBFileInoException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td>
+          <td></td><td> throws <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_read_phone_state_exception.html">Ncg2ReadPhoneStateException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_modified_d_b_file_ino_exception.html">Ncg2ModifiedDBFileInoException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_fatal_exception.html">Ncg2FatalException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_device_id_exception.html">Ncg2DeviceIdException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td>
         </tr>
       </table>
   </td>
@@ -1760,6 +1775,8 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
   <table class="exception">
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_read_phone_state_exception.html">Ncg2ReadPhoneStateException</a></td><td>기기 상태를 읽어올 권한이 없는 경우 </td></tr>
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_modified_d_b_file_ino_exception.html">Ncg2ModifiedDBFileInoException</a></td><td>기기에 저장된 RD DB 파일의 inode 값이 변경된 경우 </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_fatal_exception.html">Ncg2FatalException</a></td><td>실행 디바이스가 가상환경일 경우 </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_device_id_exception.html">Ncg2DeviceIdException</a></td><td>기기 재부팅 및 미디어 서버의 재시작이 필요한 경우 </td></tr>
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td><td>초기화 과정 중 오류가 발생한 경우</td></tr>
   </table>
   </dd>
@@ -1768,7 +1785,7 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
 </div>
 </div>
 <a id="a2de1c7a84dd5d15667d6d36d3f9302e1" name="a2de1c7a84dd5d15667d6d36d3f9302e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2de1c7a84dd5d15667d6d36d3f9302e1">&#9670;&#160;</a></span>init() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2de1c7a84dd5d15667d6d36d3f9302e1">&#9670;&#160;</a></span>init() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1803,7 +1820,7 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> throws <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_read_phone_state_exception.html">Ncg2ReadPhoneStateException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_modified_d_b_file_ino_exception.html">Ncg2ModifiedDBFileInoException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td>
+          <td></td><td> throws <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_read_phone_state_exception.html">Ncg2ReadPhoneStateException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_modified_d_b_file_ino_exception.html">Ncg2ModifiedDBFileInoException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_fatal_exception.html">Ncg2FatalException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_device_id_exception.html">Ncg2DeviceIdException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td>
         </tr>
       </table>
   </td>
@@ -1827,6 +1844,8 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
   <table class="exception">
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_read_phone_state_exception.html">Ncg2ReadPhoneStateException</a></td><td>기기 상태를 읽어올 권한이 없는 경우 </td></tr>
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_modified_d_b_file_ino_exception.html">Ncg2ModifiedDBFileInoException</a></td><td>기기에 저장된 RD DB 파일의 inode 값이 변경된 경우 </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_fatal_exception.html">Ncg2FatalException</a></td><td>실행 디바이스가 가상환경일 경우 </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_device_id_exception.html">Ncg2DeviceIdException</a></td><td>기기 재부팅 및 미디어 서버의 재시작이 필요한 경우 </td></tr>
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td><td>초기화 과정 중 오류가 발생한 경우 </td></tr>
   </table>
   </dd>
@@ -1835,7 +1854,7 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
 </div>
 </div>
 <a id="a7ac9beee9362da5e43466710297f20cb" name="a7ac9beee9362da5e43466710297f20cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ac9beee9362da5e43466710297f20cb">&#9670;&#160;</a></span>init() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ac9beee9362da5e43466710297f20cb">&#9670;&#160;</a></span>init() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1876,7 +1895,7 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> throws <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_read_phone_state_exception.html">Ncg2ReadPhoneStateException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_modified_d_b_file_ino_exception.html">Ncg2ModifiedDBFileInoException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td>
+          <td></td><td> throws <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_read_phone_state_exception.html">Ncg2ReadPhoneStateException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_modified_d_b_file_ino_exception.html">Ncg2ModifiedDBFileInoException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_fatal_exception.html">Ncg2FatalException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_device_id_exception.html">Ncg2DeviceIdException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td>
         </tr>
       </table>
   </td>
@@ -1901,6 +1920,89 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
   <table class="exception">
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_read_phone_state_exception.html">Ncg2ReadPhoneStateException</a></td><td>기기 상태를 읽어올 권한이 없는 경우 </td></tr>
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_modified_d_b_file_ino_exception.html">Ncg2ModifiedDBFileInoException</a></td><td>기기에 저장된 RD DB 파일의 inode 값이 변경된 경우 </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_fatal_exception.html">Ncg2FatalException</a></td><td>실행 디바이스가 가상환경일 경우 </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_device_id_exception.html">Ncg2DeviceIdException</a></td><td>기기 재부팅 및 미디어 서버의 재시작이 필요한 경우 </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td><td>초기화 과정 중 오류가 발생한 경우 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4a18b7823b061076b105caa41eb95e45" name="a4a18b7823b061076b105caa41eb95e45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a18b7823b061076b105caa41eb95e45">&#9670;&#160;</a></span>init() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void com.inka.ncg2.Ncg2Agent.init </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_offline_support_policy.html">OfflineSupportPolicy</a>&#160;</td>
+          <td class="paramname"><em>policy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>deviceID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>roDbPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>prefixPreferenceName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>isFirstCallAfterBoot</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_read_phone_state_exception.html">Ncg2ReadPhoneStateException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_modified_d_b_file_ino_exception.html">Ncg2ModifiedDBFileInoException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_fatal_exception.html">Ncg2FatalException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_device_id_exception.html">Ncg2DeviceIdException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >NCG 라이브러리를 사용하기 전 해당 메소드를 호출하여 초기화시켜줘야 한다. 일반적으로 android.app.Application 의 Context를 통해 초기화시킨다.</p>
+<p >내부적으로 Secure Time값을 체크한다. Secure Time을 획득하기 위해 현재 인터넷이 연결된 상태이면 온라인 타임서버를 통해 SecureTime을 획득한다. 인터넷이 연결되지 않은 상태이면 Device 시간값을 이용하게 된다. SDK 외부에서 Secure Time을 직접 설정할 수 있는 다음의 메소드가 제공된다. init(Context activity, String strGmtFormatTime) 만약 Secure Time을 얻는데 실패한 다면 RuntimeException이 발생될 것 이다. </p><dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>Context 객체 </td></tr>
+    <tr><td class="paramname">policy</td><td>오프라인 상태를 어떻게 처리할지에 대한 정책 정보 </td></tr>
+    <tr><td class="paramname">deviceID</td><td>라이브러리내에서 사용할 DeviceID값을 입력한다. null 입력시 SDK에서 자동 추출한다. </td></tr>
+    <tr><td class="paramname">roDbPath</td><td>라이브러리내에서 사용할 RoDB(라이선스 DB) 경로를 입력한다. null 입력시 샌드박스 안에 생성된다. </td></tr>
+    <tr><td class="paramname">isFirstCallAfterBoot</td><td>Android 시스템이 부팅된 이후 처음 init 메소드가 호출되는 경우 true로 설정해주고 부팅이후 처음 호출되는게 아니라면 false로 설정해야 한다. 현재 SDK 내부적으로 LogCat 프로세스를 실행시켜서 이용한다. 그런데 만약 Application이 비정상 종료된 경우에 기존 남아있던 LogCat프로세스를 종료시켜야 한다. 그렇지만 초기화시에 보관된 이전 LogCat의 PID가 유효한지 아닌지를 판단하기 위해 부팅시 처음 초기화를 시키는 것인지의 여부값이 필요하다. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>예외</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_read_phone_state_exception.html">Ncg2ReadPhoneStateException</a></td><td>기기 상태를 읽어올 권한이 없는 경우 </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_modified_d_b_file_ino_exception.html">Ncg2ModifiedDBFileInoException</a></td><td>기기에 저장된 RD DB 파일의 inode 값이 변경된 경우 </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_fatal_exception.html">Ncg2FatalException</a></td><td>실행 디바이스가 가상환경일 경우 </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_device_id_exception.html">Ncg2DeviceIdException</a></td><td>기기 재부팅 및 미디어 서버의 재시작이 필요한 경우 </td></tr>
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td><td>초기화 과정 중 오류가 발생한 경우 </td></tr>
   </table>
   </dd>
@@ -1909,7 +2011,7 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
 </div>
 </div>
 <a id="affdf428ce96e2ba6a82cc617de61e1e7" name="affdf428ce96e2ba6a82cc617de61e1e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affdf428ce96e2ba6a82cc617de61e1e7">&#9670;&#160;</a></span>init() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#affdf428ce96e2ba6a82cc617de61e1e7">&#9670;&#160;</a></span>init() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1938,7 +2040,7 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> throws <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_read_phone_state_exception.html">Ncg2ReadPhoneStateException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_modified_d_b_file_ino_exception.html">Ncg2ModifiedDBFileInoException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td>
+          <td></td><td> throws <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_read_phone_state_exception.html">Ncg2ReadPhoneStateException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_modified_d_b_file_ino_exception.html">Ncg2ModifiedDBFileInoException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_fatal_exception.html">Ncg2FatalException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_device_id_exception.html">Ncg2DeviceIdException</a>, <a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td>
         </tr>
       </table>
   </td>
@@ -1962,6 +2064,8 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
   <table class="exception">
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_read_phone_state_exception.html">Ncg2ReadPhoneStateException</a></td><td>기기 상태를 읽어올 권한이 없는 경우 </td></tr>
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_modified_d_b_file_ino_exception.html">Ncg2ModifiedDBFileInoException</a></td><td>기기에 저장된 RD DB 파일의 inode 값이 변경된 경우 </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_fatal_exception.html">Ncg2FatalException</a></td><td>실행 디바이스가 가상환경일 경우 </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_device_id_exception.html">Ncg2DeviceIdException</a></td><td>기기 재부팅 및 미디어 서버의 재시작이 필요한 경우 </td></tr>
     <tr><td class="paramname"><a class="el" href="classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html">Ncg2Exception</a></td><td>초기화 과정 중 오류가 발생한 경우 </td></tr>
   </table>
   </dd>
@@ -2728,6 +2832,39 @@ abstract <a class="el" href="classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.
 <dl class="params"><dt>매개변수</dt><dd>
   <table class="params">
     <tr><td class="paramname">callback</td><td>구현된 HttpRequestCallback 객체 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3e9e6dd6d5ff897b4a8efb78efc3d410" name="a3e9e6dd6d5ff897b4a8efb78efc3d410"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e9e6dd6d5ff897b4a8efb78efc3d410">&#9670;&#160;</a></span>setLocalFileCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void com.inka.ncg2.Ncg2Agent.setLocalFileCallback </td>
+          <td>(</td>
+          <td class="paramtype">LocalFileCallback&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >LocalFileCallback 객체를 SDK에 등록한다. SDK 내부적으로 사용되는 Local File 접근 함수 대신 콜백 처리가 필요한 경우 해당 객체의 메소드를 호출한다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>구현된 LocalFileCallback 객체 </td></tr>
   </table>
   </dd>
 </dl>

@@ -11,7 +11,7 @@ var searchData=
   ['playstartdate_8',['playStartDate',['../classcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_license_information.html#ada9c604db3bbe0435348b9c2c90d84d8',1,'com::inka::ncg2::Ncg2Agent::LicenseInformation']]],
   ['playtotalcount_9',['playTotalCount',['../classcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_license_information.html#a22ec38b5f4e7ad3e2a0489d5fda61eaf',1,'com::inka::ncg2::Ncg2Agent::LicenseInformation']]],
   ['playverificationmethod_10',['playVerificationMethod',['../classcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_license_information.html#af96948d86efbe80758a3810fc501de4e',1,'com::inka::ncg2::Ncg2Agent::LicenseInformation']]],
-  ['prepare_11',['prepare',['../interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_file.html#a25df8d5446018d8d930f7d347dd5c47f',1,'com::inka::ncg2::Ncg2Agent::NcgFile']]],
+  ['prepare_11',['prepare',['../interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_file.html#a25df8d5446018d8d930f7d347dd5c47f',1,'com.inka.ncg2.Ncg2Agent.NcgFile.prepare()'],['../interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_epub_file.html#a91382934573acfb078ce84f42342193b',1,'com.inka.ncg2.Ncg2Agent.NcgEpubFile.prepare()']]],
   ['prepareasync_12',['prepareAsync',['../classcom_1_1inka_1_1ncg2_1_1playerlib_1_1_ncg2_player.html#adcb26b992dcdc87be042fe794a3ff0fc',1,'com::inka::ncg2::playerlib::Ncg2Player']]],
   ['preparecencdecrypt_13',['prepareCencDecrypt',['../interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_cenc.html#a30035251659bb53e04f8b13f1ab73e43',1,'com::inka::ncg2::Ncg2Agent::NcgCenc']]]
 ];

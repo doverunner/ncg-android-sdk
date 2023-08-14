@@ -26,7 +26,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_inka.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">NCG SDK for Android<span id="projectnumber">&#160;Build 20221105</span>
+   <div id="projectname">NCG SDK for Android<span id="projectnumber">&#160;Build 20230428</span>
    </div>
    <div id="projectbrief">INKA Entworks NCG DRM Library for Android</div>
   </td>
@@ -98,592 +98,916 @@ $(document).ready(function(){initNavTree('implementation_basic_guides.html','');
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PallyCon_implematation_Guide_Android_ENG.md</title>
-  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>PallyCon_implematation_Guide_Android_ENG</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
 </head>
 
-<body class="stackedit">
-  <div class="stackedit__html"><h1 id="a-namedoc_topapallycon-android-sdk-application-guide"><a></a>PallyCon Android SDK Application Guide</h1>
-<h2 id="development-environment-setting">1. Development Environment Setting</h2>
+<body>
+
+<h1 id="toc_0"><a name="doc_top"></a>PallyCon Android SDK Application Guide</h1>
+
+<h2 id="toc_1">1. Development Environment Setting</h2>
+
 <blockquote>
-<p><strong>NOTE</strong><br>
+<p><strong>NOTE</strong>
 This document is prepared in accordance with the following environment.</p>
 </blockquote>
-<p>For the installation of PallyCon Android SDK, only copy the files.<br>
-Since PallyCon Android SDK consists of jar and so files, there’s no need of a separate installation but just copy the appropriate files to the library folder (libs) of Application project to which SDK applies.<br>
-As shown in demo project, in order to apply PallyCon Android SDK to a separate project, you can set project according to the following steps:</p>
-<ol>
-<li>
-<p>Copy so files to libs/armeabi folder.</p>
-</li>
-<li>
-<p>Copy ncg2sdk.jar file to libs folder.</p>
-</li>
-<li>
-<p>As shown in the following figure, add ncg2sdk.jarfile to “Java Build Path”.</p>
-</li>
-</ol>
-<p><img src="build_setting.png" width="700" height="450"></p>
-<ol start="4">
-<li>Also as shown in the following figure, check ncg2sdk.jar on “Order and Export” tab.</li>
-</ol>
-<p><img src="build_setting_check.png" width="700" height="450"></p>
-<blockquote>
-<p><strong>NOTE</strong><br>
-In case of managing jar files by generating another folder in libs folder within project, FATAL error may occur when running App.<br>
-In this case, check ncg2sdk.jar on “Order and Export” tab.</p>
-</blockquote>
-<p><a href="#doc_top">Top</a></p>
-<hr>
-<h3 id="androidmanifest.xml-authorization-setting">AndroidManifest.xml Authorization Setting</h3>
-<p>For a normal use of PallyCon Android SDK, the authorizations to be basically required are as follows:</p>
 
-<table>
-<thead>
-<tr>
-<th>Item</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>READ_LOGS</td>
-<td>Authority to read LOG</td>
-</tr>
-<tr>
-<td>INTERNET</td>
-<td>Authority to use network</td>
-</tr>
-<tr>
-<td>WRITE_EXTERNAL_STORAGE</td>
-<td>Authority to use external storage</td>
-</tr>
-<tr>
-<td>READ_PHONE_STATE</td>
-<td>Authority to read the status of device</td>
-</tr>
-<tr>
-<td>MOUNT_UNMOUNT_FILESYSTEMS</td>
-<td>Authority to edit file system</td>
-</tr>
-</tbody>
-</table><p><a href="#doc_top">Top</a></p>
+<p>For the installation of PallyCon Android SDK, only copy the files.
+Since PallyCon Android SDK consists of jar and so files, there’s no need of a separate installation but just copy the appropriate files to the library folder (libs) of Application project to which SDK applies. 
+As shown in demo project, in order to apply PallyCon Android SDK to a separate project, you can set project according to the following steps:</p>
+
+<ol>
+<li><p>Copy so files to libs/armeabi folder.</p></li>
+<li><p>Copy ncg2sdk.jar file to libs folder.</p></li>
+<li><p>As shown in the following figure, add ncg2sdk.jarfile to &quot;Java Build Path&quot;.</p></li>
+</ol>
+
+<p><img src="build_setting.png" width="700" height="450"></p>
+
+<ol>
+<li>Also as shown in the following figure, check ncg2sdk.jar on &quot;Order and Export&quot; tab.</li>
+</ol>
+
+<p><img src="build_setting_check.png" width="700" height="450"></p>
+
+<blockquote>
+<p><strong>NOTE</strong>
+In case of managing jar files by generating another folder in libs folder within project, FATAL error may occur when running App.
+In this case, check ncg2sdk.jar on &quot;Order and Export&quot; tab.</p>
+</blockquote>
+
+<p><a href="#doc_top">Top</a></p>
+
 <hr>
-<h2 id="initialization">2. Initialization</h2>
+
+<h3 id="toc_2">AndroidManifest.xml Authorization Setting</h3>
+
+<p>For a normal use of PallyCon Android SDK, the authorizations to be basically required are as follows:
+Item | Description 
+-|-
+READ<em>LOGS | Authority to read LOG
+INTERNET | Authority to use network
+WRITE</em>EXTERNAL<em>STORAGE | Authority to use external storage
+READ</em>PHONE<em>STATE | Authority to read the status of device
+MOUNT</em>UNMOUNT_FILESYSTEMS | Authority to edit file system</p>
+
+<p><a href="#doc_top">Top</a></p>
+
+<hr>
+
+<h2 id="toc_3">2. Initialization</h2>
+
 <p>Core object is generated only one while App is running in a single tone.</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DemoLibrary</span> <span class="token punctuation">{</span>
-    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-    <span class="token keyword">static</span> Ncg2Agent g_ncgAgent <span class="token operator">=</span> Ncg2SdkFactory<span class="token punctuation">.</span><span class="token function">getNcgAgentInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">static</span> Ncg2Agent <span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> g_ncgAgent<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>In order to use Ncg2Agent object, necessarily perform the initialization work through init() method.<br>
-In general, init() method of Ncg2Agent is called at a time when App starts (onCreate of android.app.Application).<br>
+
+<div><pre><code class="language-java">public class DemoLibrary {
+    ...
+    static Ncg2Agent g_ncgAgent = Ncg2SdkFactory.getNcgAgentInstance();
+    public final static Ncg2Agent getNcgAgent() {
+        return g_ncgAgent;
+    }
+    ...
+}</code></pre></div>
+
+<p>In order to use Ncg2Agent object, necessarily perform the initialization work through init() method.
+In general, init() method of Ncg2Agent is called at a time when App starts (onCreate of android.app.Application).
 It is noted that if internal methods are called when Ncg2Agent object has not been initialized or already released, an error occurs.</p>
 
-<table>
-<thead>
-<tr>
-<th>Item</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>NotSupportOffline</td>
-<td>Not support offline mode</td>
-</tr>
-<tr>
-<td>OfflineSupport</td>
-<td>Support offline mode</td>
-</tr>
-</tbody>
-</table><p>If you set the offlice policy to ‘OfflineSupport’ then you can limit the count of execution.<br>
+<p>Item | Description
+-|-
+NotSupportOffline | Not support offline mode
+OfflineSupport | Support offline mode</p>
+
+<p>If you set the offlice policy to &#39;OfflineSupport&#39; then you can limit the count of execution.
 The default limit count is 10 and the value can be changed by calling the method of setCountOfExecutionLimit of OfflineSupportPolicy enum class.</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DemoApplication</span> <span class="token keyword">extends</span> <span class="token class-name">Application</span> <span class="token punctuation">{</span>
-    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">initializeNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">initializeNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">try</span> <span class="token punctuation">{</span>
-            DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setHttpRequestCallback</span><span class="token punctuation">(</span>mHttpRequestCallback<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            Ncg2Agent<span class="token punctuation">.</span>OfflineSupportPolicy policy <span class="token operator">=</span> Ncg2Agent<span class="token punctuation">.</span>OfflineSupportPolicy<span class="token punctuation">.</span>OfflineSupport<span class="token punctuation">;</span>
-            policy<span class="token punctuation">.</span><span class="token function">setCountOfExecutionLimit</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> policy<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">enableLog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Ncg2Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            String errorMsg <span class="token operator">=</span> <span class="token string">"Exception in init() : "</span> <span class="token operator">+</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            Log<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>DemoLibrary<span class="token punctuation">.</span>TAG<span class="token punctuation">,</span> errorMsg<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            Toast<span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> errorMsg<span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>Controlling HTTP communication inside PallyCon Android SDK requires implementing HttpRequestCallback in App and then initialize it before setting Callback.<br>
-Setting HttpRequestCallback Callback object requires using Ncg2Agent.setHttpRequestCallback method.</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DemoApplication</span> <span class="token keyword">extends</span> <span class="token class-name">Application</span><span class="token punctuation">{</span>
-    <span class="token keyword">private</span> Ncg2Agent<span class="token punctuation">.</span>HttpRequestCallback mHttpRequestCallback <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Ncg2Agent<span class="token punctuation">.</span>HttpRequestCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> String <span class="token function">sendRequest</span><span class="token punctuation">(</span>String url<span class="token punctuation">,</span> String param<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        <span class="token punctuation">}</span>
-        <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">sendRequestResponseBytes</span><span class="token punctuation">(</span>String url<span class="token punctuation">,</span> String param<span class="token punctuation">)</span> <span class="token keyword">throws</span> NcgHttpRequestException <span class="token punctuation">{</span>
-            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        <span class="token punctuation">}</span>
-        <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">sendRequest</span><span class="token punctuation">(</span>String url<span class="token punctuation">,</span> String param<span class="token punctuation">,</span> <span class="token keyword">int</span> begin<span class="token punctuation">,</span> <span class="token keyword">int</span> end<span class="token punctuation">)</span> <span class="token keyword">throws</span> NcgHttpRequestException <span class="token punctuation">{</span>    
-            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">initializeNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setHttpRequestCallback</span><span class="token punctuation">(</span>mHttpRequestCallback<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-    <span class="token punctuation">}</span>
- <span class="token punctuation">}</span>
-</code></pre>
+
+<div><pre><code class="language-java">public class DemoApplication extends Application {
+    ...
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        initializeNcgAgent();
+    }
+    private void initializeNcgAgent() {
+        try {
+            DemoLibrary.getNcgAgent().setHttpRequestCallback(mHttpRequestCallback);
+            Ncg2Agent.OfflineSupportPolicy policy = Ncg2Agent.OfflineSupportPolicy.OfflineSupport;
+            policy.setCountOfExecutionLimit(20);
+            DemoLibrary.getNcgAgent().init(this, policy);
+            DemoLibrary.getNcgAgent().enableLog();
+        } catch (Ncg2Exception e) {
+            e.printStackTrace();
+            String errorMsg = &quot;Exception in init() : &quot; + e.getMessage();
+            Log.e(DemoLibrary.TAG, errorMsg);
+            Toast.makeText(this, errorMsg, Toast.LENGTH_LONG).show();
+        }
+    }
+    ...
+}</code></pre></div>
+
+<p>To control Local File inside PallyCon Android SDK, you can implement LocalFileCallback in the app and set the callback after initialization.
+To set the LocalFileCallback callback object, Ncg2Agent.setLocalFileCallback method is used.</p>
+
+<div><pre><code class="language-java">public class DemoApplication extends Application{
+    private Ncg2Agent.LocalFileCallback mLocalFileCallback = new Ncg2Agent.LocalFileCallback() {
+        @Override
+        public Boolean fileOpen(String filePath, String openMode, int cloneNum) throws NcgLocalFileException {
+            ...
+        }
+        @Override
+        public void fileClose(int cloneNum) throws NcgLocalFileException {
+            ...
+        }
+        @Override
+        public byte[] fileRead(long numBytes, int cloneNum) throws NcgLocalFileException {    
+            ...
+        }
+        @Override
+        public long fileWrite(byte[] data, long numBytes, int cloneNum) throws NcgLocalFileException {    
+            ...
+        }
+        @Override
+        public long getFileSize(int cloneNum) throws NcgLocalFileException {    
+            ...
+        }
+        @Override
+        public long setFilePointer(long distanceToMove, int moveMethod, int cloneNum) throws NcgLocalFileException {    
+            ...
+        }
+    }
+    private void initializeNcgAgent() {
+        ...
+        DemoLibrary.getNcgAgent().setLocalFileCallback(mLocalFileCallback);
+        ...
+    }
+ }</code></pre></div>
+
 <p><a href="#doc_top">Top</a></p>
+
 <hr>
-<h2 id="license">3. License</h2>
-<h3 id="confirmation-of-license">Confirmation of License</h3>
-<p>In order to use the content applying DRM, you must be obtained a license.<br>
-Licensed file contains the authorization of content including effective period, play count, and whether TV-out is permitted, etc.<br>
-Thus, playing the content requires the issuance of license from the server; if there’s no license or if any, it is not valid, using DRM content shall be restricted.<br>
+
+<h2 id="toc_4">3. License</h2>
+
+<h3 id="toc_5">Confirmation of License</h3>
+
+<p>In order to use the content applying DRM, you must be obtained a license.
+Licensed file contains the authorization of content including effective period, play count, and whether TV-out is permitted, etc.
+Thus, playing the content requires the issuance of license from the server; if there’s no license or if any, it is not valid, using DRM content shall be restricted.
 For the confirmation of license, the functions to be provided by PallyCon Android SDK are as follows:</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">interface</span> <span class="token class-name">Ncg2Agent</span><span class="token punctuation">{</span>
-    <span class="token comment">// Confirm whether a file situated in the entered path and URL is NCG file.</span>
-    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isNcgContent</span><span class="token punctuation">(</span>String strFileOrURL<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception
+
+<div><pre><code class="language-java">interface Ncg2Agent{
+    // Confirm whether a file situated in the entered path and URL is NCG file.
+    public boolean isNcgContent(String strFileOrURL) throws Ncg2Exception
     
-    <span class="token comment">// Confirm the license of file situated in the entered path and URL for validity.</span>
-    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isLicenseValid</span><span class="token punctuation">(</span>String strFileOrURL<span class="token punctuation">)</span> <span class="token keyword">throw</span> Ncg2Exception
+    // Confirm the license of file situated in the entered path and URL for validity.
+    public boolean isLicenseValid(String strFileOrURL) throw Ncg2Exception
     
-    <span class="token comment">// Confirm the license of content for validity.</span>
-    <span class="token keyword">public</span> LicenseValidation <span class="token function">checkLicenseValid</span><span class="token punctuation">(</span>String path<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception
-<span class="token punctuation">}</span>
-</code></pre>
+    // Confirm the license of content for validity.
+    public LicenseValidation checkLicenseValid(String path) throws Ncg2Exception
+}</code></pre></div>
+
 <p>LicenseValidation enum type returned from checkLicenseValid method is as follows:</p>
 
-<table>
-<thead>
-<tr>
-<th>Item</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ValidLicense</td>
-<td>Valid license</td>
-</tr>
-<tr>
-<td>NotExistLicense</td>
-<td>No license or invalid license</td>
-</tr>
-<tr>
-<td>ExternalDeviceDisallowed</td>
-<td>License with external output device disallowed</td>
-</tr>
-<tr>
-<td>RootedDeviceDisallowed</td>
-<td>License disallowed from rooted terminal</td>
-</tr>
-<tr>
-<td>ExpiredLicense</td>
-<td>Expired license</td>
-</tr>
-<tr>
-<td>ExceededPlayCount</td>
-<td>License with play count exceeded</td>
-</tr>
-<tr>
-<td>DeviceTimeModified</td>
-<td>Detected the device time modified</td>
-</tr>
-<tr>
-<td>OfflineNotSupported</td>
-<td>Failed to access server and detected offline in the course of initializing under the policy not supporting offline mode</td>
-</tr>
-<tr>
-<td>OfflineStatusTooLong</td>
-<td>A state necessary of online mode because of too many cases executed offline. For more information, refer to the following note.</td>
-</tr>
-<tr>
-<td>NotAuthorizedAppID</td>
-<td>Failed to initialize since the executing App is not authenticated in server</td>
-</tr>
-<tr>
-<td>ScreenRecorderDetected</td>
-<td>Detected a screen recording app</td>
-</tr>
-</tbody>
-</table><p>In Sample Project, confirm license for validity in the following order.</p>
-<pre class=" language-java"><code class="prism  language-java">    <span class="token keyword">if</span><span class="token punctuation">(</span> DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isNcgContent</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token boolean">false</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+<p>Item | Description
+-|-
+ValidLicense | Valid license
+NotExistLicense | No license or invalid license
+ExternalDeviceDisallowed | License with external output device disallowed
+RootedDeviceDisallowed | License disallowed from rooted terminal
+ExpiredLicense | Expired license
+ExceededPlayCount | License with play count exceeded
+DeviceTimeModified | Detected the device time modified
+OfflineNotSupported | Failed to access server and detected offline in the course of initializing under the policy not supporting offline mode
+OfflineStatusTooLong | A state necessary of online mode because of too many cases executed offline. For more information, refer to the following note.
+NotAuthorizedAppID | Failed to initialize since the executing App is not authenticated in server
+ScreenRecorderDetected | Detected a screen recording app</p>
+
+<p>In Sample Project, confirm license for validity in the following order.</p>
+
+<div><pre><code class="language-java">    if( DemoLibrary.getNcgAgent().isNcgContent(path) == false ) {
+        return true;
+    }
     
-    Ncg2Agent<span class="token punctuation">.</span>LicenseValidation validation <span class="token operator">=</span> DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">checkLicenseValid</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span> validation <span class="token operator">==</span> LicenseValidation<span class="token punctuation">.</span>ValidLicense <span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment">// Routine to process license for validity</span>
-            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    Ncg2Agent.LicenseValidation validation = DemoLibrary.getNcgAgent().checkLicenseValid(path);
+        if( validation == LicenseValidation.ValidLicense ) {
+            // Routine to process license for validity
+            ...
     
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span> validation <span class="token operator">==</span> LicenseValidation<span class="token punctuation">.</span>NotExistLicense <span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment">// No license or invalid license</span>
-            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        } else if( validation == LicenseValidation.NotExistLicense ) {
+            // No license or invalid license
+            ...
         
-            <span class="token comment">// Request license to license server</span>
-            DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">acquireLicenseByPath</span><span class="token punctuation">(</span> path<span class="token punctuation">,</span> DemoLibrary<span class="token punctuation">.</span><span class="token function">getUserID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> DemoLibrary<span class="token punctuation">.</span><span class="token function">getOrderID</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span> DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">checkLicenseValid</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span> <span class="token operator">==</span> LicenseValidation<span class="token punctuation">.</span>ValidLicense <span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment">// Acquire valid license from server</span>
+            // Request license to license server
+            DemoLibrary.getNcgAgent().acquireLicenseByPath( path, DemoLibrary.getUserID(), DemoLibrary.getOrderID() );
+            if( DemoLibrary.getNcgAgent().checkLicenseValid(path) == LicenseValidation.ValidLicense ) {
+                // Acquire valid license from server
             
-            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                <span class="token comment">// Not acquire license from server</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span> validation <span class="token operator">==</span> LicenseValidation<span class="token punctuation">.</span>ExternalDeviceDisallowed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment">// Not allow to play to the connection to external device such as HDMI device</span>
-            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span> validation <span class="token operator">==</span> LicenseValidation<span class="token punctuation">.</span>RootedDeviceDisallowed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment">// License not allowed in Rooting terminal.</span>
-            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>validation <span class="token operator">==</span> LicenseValidation<span class="token punctuation">.</span>ExpiredLicense<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token comment">// Expired license</span>
-            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>validation <span class="token operator">==</span> LicenseValidation<span class="token punctuation">.</span>ExceededPlayCount<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token comment">// Frequency license with play count exceeded</span>
-            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>validation <span class="token operator">==</span> LicenseValidation<span class="token punctuation">.</span>ScreenRecorderDetected <span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token comment">// You can check the package name and the appName of screen recorder app.</span>
-            HashMap<span class="token operator">&lt;</span>String<span class="token punctuation">,</span>String<span class="token operator">&gt;</span> data <span class="token operator">=</span> validation<span class="token punctuation">.</span><span class="token function">getExtraData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            String appName <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"AppName"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            String packageName <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"AppPackageName"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        <span class="token punctuation">}</span>
-</code></pre>
+            } else {
+                // Not acquire license from server
+            }
+        } else if( validation == LicenseValidation.ExternalDeviceDisallowed) {
+            // Not allow to play to the connection to external device such as HDMI device
+            ...
+        } else if( validation == LicenseValidation.RootedDeviceDisallowed) {
+            // License not allowed in Rooting terminal.
+            ...
+        } else if(validation == LicenseValidation.ExpiredLicense){
+            // Expired license
+            ...
+        } else if(validation == LicenseValidation.ExceededPlayCount){
+            // Frequency license with play count exceeded
+            ...
+        } else if(validation == LicenseValidation.ScreenRecorderDetected ){
+            // You can check the package name and the appName of screen recorder app.
+            HashMap&lt;String,String&gt; data = validation.getExtraData();
+            String appName = data.get(&quot;AppName&quot;);
+            String packageName = data.get(&quot;AppPackageName&quot;);
+            ...
+        }</code></pre></div>
+
 <blockquote>
-<p><strong>NOTE</strong><br>
-In order to detect the cases where a user intentionally changes device time,<br>
-in the other license types other than unlimited license, if it executes more than limit value set by setCountOfExecutionLimit method in the internal offline mode, OfflineStatusTooLong value is returned.<br>
+<p><strong>NOTE</strong>
+In order to detect the cases where a user intentionally changes device time, 
+in the other license types other than unlimited license, if it executes more than limit value set by setCountOfExecutionLimit method in the internal offline mode, OfflineStatusTooLong value is returned.
 OfflineStatusTooLong value is only operated when it is set as OfflineSupport parameter option at init() method called.</p>
 </blockquote>
+
 <p><a href="#doc_top">Top</a></p>
+
 <hr>
-<h3 id="issuance-and-renewal-of-license">Issuance and Renewal of License</h3>
-<p>No license or expired license requires the issuance of license suitable for the applicable content. The license may be issued at any time before actual use; however, SDK Sample App Project tries to issue license at a time to play. The timing to issue license depends on App scenario, but the license is generally requested at a time to play.<br>
+
+<h3 id="toc_6">Issuance and Renewal of License</h3>
+
+<p>No license or expired license requires the issuance of license suitable for the applicable content. The license may be issued at any time before actual use; however, SDK Sample App Project tries to issue license at a time to play. The timing to issue license depends on App scenario, but the license is generally requested at a time to play.
 The functions supported by PallyCon Android SDK to issue license are as follows:</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">interface</span> <span class="token class-name">Ncg2Agent</span><span class="token punctuation">{</span>
-    <span class="token comment">// Acquire license via the entered path with UserID and OrderID.</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">acquireLicenseByPath</span><span class="token punctuation">(</span>String path<span class="token punctuation">,</span> String userId<span class="token punctuation">,</span> String orderId<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception
 
-    <span class="token comment">// Acquire license via the entered path with UserID and OrderID, there can be acquired temporary license by setting a temporary.</span>
-    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">acquireLicenseByPath</span><span class="token punctuation">(</span> String path<span class="token punctuation">,</span> String userID<span class="token punctuation">,</span> String orderID<span class="token punctuation">,</span> <span class="token keyword">boolean</span> temporary <span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception<span class="token punctuation">;</span>
+<div><pre><code class="language-java">interface Ncg2Agent{
+    // Acquire license via the entered path with UserID and OrderID.
+    public void acquireLicenseByPath(String path, String userId, String orderId) throws Ncg2Exception
 
-    <span class="token comment">// Acquire license using Content ID.</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">acquireLicenseByCID</span><span class="token punctuation">(</span>String cid<span class="token punctuation">,</span> String userID<span class="token punctuation">,</span> String orderID<span class="token punctuation">,</span> String acquisitionURL<span class="token punctuation">)</span> <span class="token keyword">throw</span> Ncg2Exception
+    // Acquire license via the entered path with UserID and OrderID, there can be acquired temporary license by setting a temporary.
+    public abstract void acquireLicenseByPath( String path, String userID, String orderID, boolean temporary ) throws Ncg2Exception;
 
-    <span class="token comment">// Acquire license using Content ID.</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">acquireLicenseByCID</span><span class="token punctuation">(</span>String cid<span class="token punctuation">,</span> String userID<span class="token punctuation">,</span> String siteID<span class="token punctuation">,</span> String orderID<span class="token punctuation">,</span> String acquisitionURL<span class="token punctuation">)</span> <span class="token keyword">throw</span> Ncg2Exception
+    // Acquire license using Content ID.
+    public void acquireLicenseByCID(String cid, String userID, String orderID, String acquisitionURL) throw Ncg2Exception
 
-    <span class="token comment">// Acquire license using Content ID, there can be acquired temporary license by setting a temporary.</span>
-    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">acquireLicenseByCID</span><span class="token punctuation">(</span>String cid<span class="token punctuation">,</span> String userID<span class="token punctuation">,</span> String siteID<span class="token punctuation">,</span> String orderID<span class="token punctuation">,</span> String acquisitionURL<span class="token punctuation">,</span> <span class="token keyword">boolean</span> temporary <span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception<span class="token punctuation">;</span>        
-<span class="token punctuation">}</span>
-</code></pre>
-<p>Unlike term license, frequency license requires confirming license information.<br>
+    // Acquire license using Content ID.
+    public void acquireLicenseByCID(String cid, String userID, String siteID, String orderID, String acquisitionURL) throw Ncg2Exception
+
+    // Acquire license using Content ID, there can be acquired temporary license by setting a temporary.
+    public abstract void acquireLicenseByCID(String cid, String userID, String siteID, String orderID, String acquisitionURL, boolean temporary ) throws Ncg2Exception;        
+}</code></pre></div>
+
+<p>Unlike term license, frequency license requires confirming license information.
 If you use frequency license, the functions that deduct the frequency are provided by PallyCon Android SDK; and such deduction is conducted at a time when license is issued and virtual URL return is completed.</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">private</span> OnPreparedListener mPreparedListener <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">OnPreparedListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onPrepared</span><span class="token punctuation">(</span>MediaPlayer mp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span> mIsCountLimitedContent <span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">decreasePlayCount</span><span class="token punctuation">(</span>mNcgFilePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+
+<div><pre><code class="language-java">private OnPreparedListener mPreparedListener = new OnPreparedListener(){
+    @Override
+    public void onPrepared(MediaPlayer mp) {
+        ...
+        if( mIsCountLimitedContent ) {
+            DemoLibrary.getNcgAgent().decreasePlayCount(mNcgFilePath);
+        }
+        ...
+    }
+}</code></pre></div>
+
 <blockquote>
-<p><strong>NOTE</strong><br>
-For remote content (PD/HLS), if network environment is not stable, license issuance and content playing may not be smoothly conducted.<br>
-If there need acquire license whenever you play the content, it is preferable to acquire temporary license.<br>
+<p><strong>NOTE</strong>
+For remote content (PD/HLS), if network environment is not stable, license issuance and content playing may not be smoothly conducted.
+If there need acquire license whenever you play the content, it is preferable to acquire temporary license.
 For Downloaded Contents, if license has been issued, it may play in an environment without network. Thus, it is desirable to acquire license at a time that contents are completely downloaded (i.e., network is connected).</p>
 </blockquote>
+
 <p><a href="#doc_top">Top</a></p>
+
 <hr>
-<h3 id="license-deletion">License Deletion</h3>
+
+<h3 id="toc_7">License Deletion</h3>
+
 <p>Already-issued license may be necessarily discarded in accordance with APP scenario. In this case, the functions related to license deletion are as follows, which you can use suitable for scenario. The temporary license may be terminated at any time after use; For the SDK Sample App Project, the license is terminated when the video play is stopped.</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">interface</span> <span class="token class-name">Ncg2Agent</span><span class="token punctuation">{</span>
-    <span class="token comment">// Delete license via all CIDs of the issued licenses.</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">removeLicenseAllCID</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception
 
-    <span class="token comment">// Delete temporary license.</span>
-    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">removeAllTemporaryLicense</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception
+<div><pre><code class="language-java">interface Ncg2Agent{
+    // Delete license via all CIDs of the issued licenses.
+    public void removeLicenseAllCID() throws Ncg2Exception
 
-    <span class="token comment">// Delete license via CID.</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">removeLicenseByCID</span><span class="token punctuation">(</span>strContentsID<span class="token punctuation">)</span> <span class="token keyword">throw</span> Ncg2Exception
+    // Delete temporary license.
+    public abstract void removeAllTemporaryLicense() throws Ncg2Exception
 
-    <span class="token comment">// Delete license of the content in the file path.</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">removeLicenseByPath</span><span class="token punctuation">(</span>strFilename<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception
-<span class="token punctuation">}</span>
-</code></pre>
+    // Delete license via CID.
+    public void removeLicenseByCID(strContentsID) throw Ncg2Exception
+
+    // Delete license of the content in the file path.
+    public void removeLicenseByPath(strFilename) throws Ncg2Exception
+}</code></pre></div>
+
 <p><a href="#doc_top">Top</a></p>
+
 <hr>
-<h2 id="play">4. Play</h2>
-<p>If license is normally issued using PallyCon Androide SDK, using Ncg2LocalWebServer interface, you can control LocalWebserver located inside.<br>
-If you designate the path of PallyCon content to play PallyCon content, it can be used in a form to return virtual URL.<br>
-After obtaining virtual URL you can access MediaPlayer or 3th Party Player provided by Android for playing.<br>
+
+<h2 id="toc_8">4. Play</h2>
+
+<p>If license is normally issued using PallyCon Androide SDK, using Ncg2LocalWebServer interface, you can control LocalWebserver located inside.
+If you designate the path of PallyCon content to play PallyCon content, it can be used in a form to return virtual URL.
+After obtaining virtual URL you can access MediaPlayer or 3th Party Player provided by Android for playing.
 The followings are virtual URL return functions provided by Ncg2LocalWebServer.</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">interface</span> <span class="token class-name">Ncg2LocalWebServer</span><span class="token punctuation">{</span>
-    <span class="token comment">// In case of Local File,</span>
-    <span class="token keyword">public</span> String <span class="token function">addLocalFilePathForPlayback</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">,</span> String url<span class="token punctuation">,</span> <span class="token keyword">long</span> fileSize<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
-    
-    <span class="token comment">// In case of PD contents,</span>
-    <span class="token keyword">public</span> String <span class="token function">addProgressiveDownloadUrlForPlayback</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">,</span> String url<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
-    
-    <span class="token comment">// In case of HLS,</span>
-    <span class="token keyword">public</span> String <span class="token function">addHttpLiveStreamUrlForPlayback</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">,</span> String url<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
 
-    <span class="token comment">// In case of HLS (live),</span>
-    <span class="token keyword">public</span> String <span class="token function">addHttpLiveStreamUrlForPlayback</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">,</span> String url<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isLiveHLS<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
+<div><pre><code class="language-java">interface Ncg2LocalWebServer{
+    // In case of Local File,
+    public String addLocalFilePathForPlayback(Activity activity, String url, long fileSize) throws Ncg2InvalidLicenseException, Ncg2Exception;
     
-    <span class="token comment">// In case of HLS,</span>
-    <span class="token comment">// unlike addHttpLiveStreamUrlForPlayback(), do not prior check key file equivalent to m3u8 path.</span>
-    <span class="token keyword">public</span> String <span class="token function">addHttpLiveStreamUrlForPlaybackWithoutChecking</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">,</span> String url<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
+    // In case of PD contents,
+    public String addProgressiveDownloadUrlForPlayback(Activity activity, String url) throws Ncg2InvalidLicenseException, Ncg2Exception;
     
-    <span class="token comment">// In case of HLS,</span>
-    <span class="token comment">// You can call this method to add HLS url without accessing the URLs of m3u8 and key file.</span>
-    <span class="token keyword">public</span> String <span class="token function">addHttpLiveStreamUrlForPlayback</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">,</span> String url<span class="token punctuation">,</span> String cid<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
+    // In case of HLS,
+    public String addHttpLiveStreamUrlForPlayback(Activity activity, String url) throws Ncg2InvalidLicenseException, Ncg2Exception;
 
-    <span class="token comment">// In case of HLS (live),</span>
-    <span class="token comment">// You can call this method to add HLS url without accessing the URLs of m3u8 and key file.</span>
-    <span class="token keyword">public</span> String <span class="token function">addHttpLiveStreamUrlForPlayback</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">,</span> String url<span class="token punctuation">,</span> String cid<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isLiveHLS<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+    // In case of HLS (live),
+    public String addHttpLiveStreamUrlForPlayback(Activity activity, String url, boolean isLiveHLS) throws Ncg2InvalidLicenseException, Ncg2Exception;
+    
+    // In case of HLS,
+    // unlike addHttpLiveStreamUrlForPlayback(), do not prior check key file equivalent to m3u8 path.
+    public String addHttpLiveStreamUrlForPlaybackWithoutChecking(Activity activity, String url) throws Ncg2InvalidLicenseException, Ncg2Exception;
+    
+    // In case of HLS,
+    // You can call this method to add HLS url without accessing the URLs of m3u8 and key file.
+    public String addHttpLiveStreamUrlForPlayback(Activity activity, String url, String cid) throws Ncg2InvalidLicenseException, Ncg2Exception;
+
+    // In case of HLS (live),
+    // You can call this method to add HLS url without accessing the URLs of m3u8 and key file.
+    public String addHttpLiveStreamUrlForPlayback(Activity activity, String url, String cid, boolean isLiveHLS) throws Ncg2InvalidLicenseException, Ncg2Exception;
+}</code></pre></div>
+
 <p>The following code indicates how to obtain virtual URL from PallyCon contents.</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PlayerActivity</span> <span class="token keyword">extends</span> <span class="token class-name">Activity</span> <span class="token punctuation">{</span>
-    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span>Bundle savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Ncg2Agent ncgAgent <span class="token operator">=</span> Ncg2SdkFactory<span class="token punctuation">.</span><span class="token function">getNcgAgentInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        Ncg2LocalWebServer ncgLocalWebServer <span class="token operator">=</span> ncgAgent<span class="token punctuation">.</span><span class="token function">getLocalWebServer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        ncgLocalWebServer<span class="token punctuation">.</span><span class="token function">setWebServerListener</span><span class="token punctuation">(</span>mWebServerCallback<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        ncgLocalWebServer<span class="token punctuation">.</span><span class="token function">clearPlaybackUrls</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">try</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span> mNcgFilePath<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">".m3u8"</span><span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment">// HLS Playback</span>
-                mPlaybackURL <span class="token operator">=</span> ncgLocalWebServer<span class="token punctuation">.</span><span class="token function">addHttpLiveStreamUrlForPlayback</span><span class="token punctuation">(</span>mNcgFilePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>mNcgFilePath<span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span><span class="token string">"http://"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment">// PD Playback</span>
-                mPlaybackURL <span class="token operator">=</span> ncgLocalWebServer<span class="token punctuation">.</span><span class="token function">addProgressiveDownloadUrlForPlayback</span><span class="token punctuation">(</span>mNcgFilePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                <span class="token comment">// Local Playback</span>
-                mPlaybackURL <span class="token operator">=</span> ncgLocalWebServer<span class="token punctuation">.</span><span class="token function">addLocalFilePathForPlayback</span><span class="token punctuation">(</span>mNcgFilePath<span class="token punctuation">,</span> mNcgFileSize<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Ncg2Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            Toast<span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>MediaPlayerActivity<span class="token punctuation">.</span><span class="token keyword">this</span><span class="token punctuation">,</span> 
-                <span class="token string">"[onCreate] Error Occured. : "</span> <span class="token operator">+</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">return</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+
+<div><pre><code class="language-java">public class PlayerActivity extends Activity {
+    ...
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        Ncg2Agent ncgAgent = Ncg2SdkFactory.getNcgAgentInstance();
+        Ncg2LocalWebServer ncgLocalWebServer = ncgAgent.getLocalWebServer();
+        ncgLocalWebServer.setWebServerListener(mWebServerCallback);
+        ncgLocalWebServer.clearPlaybackUrls();
+        try {
+            if( mNcgFilePath.contains(&quot;.m3u8&quot;) ) {
+                // HLS Playback
+                mPlaybackURL = ncgLocalWebServer.addHttpLiveStreamUrlForPlayback(mNcgFilePath);
+            } else if(mNcgFilePath.startsWith(&quot;http://&quot;)) {
+                // PD Playback
+                mPlaybackURL = ncgLocalWebServer.addProgressiveDownloadUrlForPlayback(mNcgFilePath);
+            } else {
+                // Local Playback
+                mPlaybackURL = ncgLocalWebServer.addLocalFilePathForPlayback(mNcgFilePath, mNcgFileSize);
+            }
+        } catch (Ncg2Exception e) {
+            e.printStackTrace();
+            Toast.makeText(MediaPlayerActivity.this, 
+                &quot;[onCreate] Error Occured. : &quot; + e.getMessage(), Toast.LENGTH_LONG).show();
+            return;
+        }
+    }
+}</code></pre></div>
+
 <blockquote>
-<p><strong>NOTE</strong><br>
-HLS is supported in Android Media Player of more than Android 3.0.<br>
+<p><strong>NOTE</strong>
+HLS is supported in Android Media Player of more than Android 3.0. 
 However, playing may not be smooth depending on device.</p>
 </blockquote>
+
 <p>The following code indicates how to decrypt and use virtual URL.</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">try</span> <span class="token punctuation">{</span>
-    mPlayer<span class="token punctuation">.</span><span class="token function">setDataSource</span><span class="token punctuation">(</span>mPlaybackURL<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    mPlayer<span class="token punctuation">.</span><span class="token function">prepareAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IllegalArgumentException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    errorMsg <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IllegalStateException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    errorMsg <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    errorMsg <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+
+<div><pre><code class="language-java">try {
+    mPlayer.setDataSource(mPlaybackURL);
+    mPlayer.prepareAsync();
+} catch (IllegalArgumentException e) {
+    e.printStackTrace();
+    errorMsg = e.getMessage();
+} catch (IllegalStateException e) {
+    e.printStackTrace();
+    errorMsg = e.getMessage();
+} catch (IOException e) {
+    e.printStackTrace();
+    errorMsg = e.getMessage();
+}</code></pre></div>
+
 <p><a href="#doc_top">Top</a></p>
+
 <hr>
-<h3 id="localwebserver-callback">LocalWebserver Callback</h3>
-<p>Ncg2LocalWebServer internally uses Web Server in a proxy form; the information of event from this Web Server outside SDK uses WebServerListener interface.<br>
-As shown in the following codes, you can process notice or error of Ncg2LocalWebserver.<br>
+
+<h3 id="toc_9">LocalWebserver Callback</h3>
+
+<p>Ncg2LocalWebServer internally uses Web Server in a proxy form; the information of event from this Web Server outside SDK uses WebServerListener interface.
+As shown in the following codes, you can process notice or error of Ncg2LocalWebserver.
 It is noted that you confirm whether onCheckPlayerStatus()method is in an applicable state of player before returning.</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">private</span> Ncg2LocalWebServer<span class="token punctuation">.</span>WebServerListener mWebServerCallback <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Ncg2LocalWebServer<span class="token punctuation">.</span>WebServerListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onNotification</span><span class="token punctuation">(</span><span class="token keyword">int</span> notificationCode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment">//Most of notice codes should be ignored.</span>
-    <span class="token punctuation">}</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token keyword">int</span> errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment">//Show the applicable user error message.</span>
-    <span class="token punctuation">}</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> PlayerState <span class="token function">onCheckPlayerStatus</span><span class="token punctuation">(</span>String uri<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>mIsPrepared<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment">//Only when player can play, return</span>
-            PlayerState<span class="token punctuation">.</span>ReadyToPlay<span class="token punctuation">.</span>
-            <span class="token keyword">return</span> PlayerState<span class="token punctuation">.</span>ReadyToPlay<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-            <span class="token comment">// Block playing when PlayerState.Fail is returned.</span>
-            <span class="token keyword">return</span> PlayerState<span class="token punctuation">.</span>Fail<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
+
+<div><pre><code class="language-java">private Ncg2LocalWebServer.WebServerListener mWebServerCallback = new Ncg2LocalWebServer.WebServerListener(){
+    @Override
+    public void onNotification(int notificationCode) {
+        //Most of notice codes should be ignored.
+    }
+    @Override
+    public void onError(int errorCode, String errorMessage) {
+        //Show the applicable user error message.
+    }
+    @Override
+    public PlayerState onCheckPlayerStatus(String uri) {
+        if (mIsPrepared) {
+            //Only when player can play, return
+            PlayerState.ReadyToPlay.
+            return PlayerState.ReadyToPlay;
+        } else {
+            // Block playing when PlayerState.Fail is returned.
+            return PlayerState.Fail;
+        }
+    }
+};</code></pre></div>
+
 <blockquote>
-<p><strong>NOTE</strong><br>
-In order to prevent the case where a hacker accesses via virtual URL to download data, check the state of Player.<br>
+<p><strong>NOTE</strong>
+In order to prevent the case where a hacker accesses via virtual URL to download data, check the state of Player.
 When accessed via virtual URL but not under playing, it is to block decrypting.</p>
 </blockquote>
+
 <p><a href="#doc_top">Top</a></p>
+
 <hr>
-<h3 id="file-decryption">File Decryption</h3>
-<p>PallyCon Android SDK provides the function to also decrypt ordinary NCG files.<br>
-NcgFile object is returned from Ncg2Agent to proceed the order from open to read.<br>
+
+<h3 id="toc_10">File Decryption</h3>
+
+<p>PallyCon Android SDK provides the function to also decrypt ordinary NCG files.
+NcgFile object is returned from Ncg2Agent to proceed the order from open to read.
 The following is the function to be provided for NcgFile:</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">interface</span> <span class="token class-name">Ncg2Agent</span><span class="token punctuation">{</span>
-    <span class="token comment">//Return NcgFile object.</span>
-    <span class="token keyword">public</span> NcgFile <span class="token function">createNcgFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<div><pre><code class="language-java">interface Ncg2Agent{
+    //Return NcgFile object.
+    public NcgFile createNcgFile();
     
-    <span class="token keyword">interface</span> <span class="token class-name">NcgFile</span><span class="token punctuation">{</span>
-        <span class="token comment">//Open NCG file.</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">open</span><span class="token punctuation">(</span>String path<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2InvalidNcgFileException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
-        <span class="token comment">//Set license and open NCG file.</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">open</span><span class="token punctuation">(</span>String path<span class="token punctuation">,</span> <span class="token keyword">boolean</span> prepare<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2InvalidNcgFileException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
-        <span class="token comment">//Call the applicable method in a status after open and make it a status to enable decrypting. </span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">prepare</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2InvalidLicenseException<span class="token punctuation">,</span> Ncg2InvalidNcgFileException<span class="token punctuation">,</span> Ncg2Exception<span class="token punctuation">;</span>
-        <span class="token comment">//Close the opened file.</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment">//Read content data from NCG file.</span>
-        <span class="token keyword">public</span> <span class="token keyword">long</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> buff<span class="token punctuation">,</span> <span class="token keyword">long</span> sizeToRead<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception<span class="token punctuation">;</span>
-        <span class="token comment">//Move the location of file pointer to read.</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">seek</span><span class="token punctuation">(</span><span class="token keyword">long</span> offset<span class="token punctuation">,</span> SeekMethod seekMethod<span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception<span class="token punctuation">;</span>
-        <span class="token comment">//Return the current location of file pointer.</span>
-        <span class="token keyword">public</span> <span class="token keyword">long</span> <span class="token function">getCurrentFilePointer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception<span class="token punctuation">;</span>
-        <span class="token comment">//Return the size of NCG file header.</span>
-        <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getHeaderSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception<span class="token punctuation">;</span>
-        <span class="token comment">//Return InputStream for NCG file.</span>
-        <span class="token keyword">public</span> InputStream <span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Ncg2Exception<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+    interface NcgFile{
+        //Open NCG file.
+        public void open(String path) throws Ncg2InvalidLicenseException, Ncg2InvalidNcgFileException, Ncg2Exception;
+        //Set license and open NCG file.
+        public void open(String path, boolean prepare) throws Ncg2InvalidLicenseException, Ncg2InvalidNcgFileException, Ncg2Exception;
+        //Call the applicable method in a status after open and make it a status to enable decrypting. 
+        public void prepare() throws Ncg2InvalidLicenseException, Ncg2InvalidNcgFileException, Ncg2Exception;
+        //Close the opened file.
+        public void close();
+        //Read content data from NCG file.
+        public long read(byte[] buff, long sizeToRead) throws Ncg2Exception;
+        //Move the location of file pointer to read.
+        public void seek(long offset, SeekMethod seekMethod) throws Ncg2Exception;
+        //Return the current location of file pointer.
+        public long getCurrentFilePointer() throws Ncg2Exception;
+        //Return the size of NCG file header.
+        public int getHeaderSize() throws Ncg2Exception;
+        //Return InputStream for NCG file.
+        public InputStream getInputStream() throws Ncg2Exception;
+    }
+}
+</code></pre></div>
 
-</code></pre>
 <p>The following is a sample code to make original content using NcgFile object.</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">try</span> <span class="token punctuation">{</span>
-    String ncgFilePath <span class="token operator">=</span> mFilePath<span class="token punctuation">;</span>
-    ncgFile <span class="token operator">=</span> DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createNcgFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    ncgFile<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span>ncgFilePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    ncgFile<span class="token punctuation">.</span><span class="token function">seek</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> SeekMethod<span class="token punctuation">.</span>End<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token comment">// the original file's size will be used for checking success of decryption.</span>
-    <span class="token keyword">long</span> contentFileSize <span class="token operator">=</span> ncgFile<span class="token punctuation">.</span><span class="token function">getCurrentFilePointer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    ncgFile<span class="token punctuation">.</span><span class="token function">seek</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> SeekMethod<span class="token punctuation">.</span>Begin<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> pos <span class="token operator">=</span> mFilePath<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<div><pre><code class="language-java">try {
+    String ncgFilePath = mFilePath;
+    ncgFile = DemoLibrary.getNcgAgent().createNcgFile();
+    ncgFile.open(ncgFilePath);
+    ncgFile.seek(0, SeekMethod.End);
 
-    <span class="token comment">// removes ".ncg" in the path of NCG file</span>
-    String unpackFilePath <span class="token operator">=</span> ncgFilePath<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> pos<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"unpackFile.mp4"</span><span class="token punctuation">;</span>
-    fileOutStream <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BufferedOutputStream</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">FileOutputStream</span><span class="token punctuation">(</span>unpackFilePath<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">long</span> totalReadBytes <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span> <span class="token boolean">true</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">long</span> readBytes <span class="token operator">=</span> ncgFile<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span> readBytes <span class="token operator">&lt;=</span> <span class="token number">0</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        fileOutStream<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>readBytes<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        totalReadBytes <span class="token operator">+=</span> readBytes<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span> totalReadBytes <span class="token operator">==</span> contentFileSize <span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Log<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>DemoLibrary<span class="token punctuation">.</span>TAG<span class="token punctuation">,</span> <span class="token string">"Decryption succeeded"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-        Log<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>DemoLibrary<span class="token punctuation">.</span>TAG<span class="token punctuation">,</span> <span class="token string">"Decryption failed"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        Toast<span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mainActivity<span class="token punctuation">,</span> <span class="token string">"[unpackNcgFiles] decryption failed"</span><span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Ncg2Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token punctuation">}</span>
-</code></pre>
+    // the original file&#39;s size will be used for checking success of decryption.
+    long contentFileSize = ncgFile.getCurrentFilePointer();
+    ncgFile.seek(0, SeekMethod.Begin);
+    int pos = mFilePath.lastIndexOf(&quot;/&quot;);
+
+    // removes &quot;.ncg&quot; in the path of NCG file
+    String unpackFilePath = ncgFilePath.substring(0, pos+1) + &quot;unpackFile.mp4&quot;;
+    fileOutStream = new BufferedOutputStream(new FileOutputStream(unpackFilePath));
+    long totalReadBytes = 0;
+    while( true ) {
+        long readBytes = ncgFile.read(buffer, 1024);
+        if( readBytes &lt;= 0 ) {
+            break;
+        }
+        fileOutStream.write(buffer, 0, (int)readBytes);
+        totalReadBytes += readBytes;
+    }
+    if( totalReadBytes == contentFileSize ) {
+        Log.d(DemoLibrary.TAG, &quot;Decryption succeeded&quot;);
+    } else {
+        Log.d(DemoLibrary.TAG, &quot;Decryption failed&quot;);
+        Toast.makeText(mainActivity, &quot;[unpackNcgFiles] decryption failed&quot;, Toast.LENGTH_LONG).show();
+    }
+} catch (Ncg2Exception e) {
+    ...
+}</code></pre></div>
+
 <blockquote>
-<p><strong>NOTE</strong><br>
-If making a file after decrypting, there is a risk to expose original file.<br>
+<p><strong>NOTE</strong>
+If making a file after decrypting, there is a risk to expose original file.
 Thus, it is recommended to decrypt and use it only in memory.</p>
 </blockquote>
+
 <p><a href="#doc_top">Top</a></p>
+
 <hr>
-<h2 id="release">5. Release</h2>
-<p>After Ncg2Agent object ends its use, release() method should be called for release.<br>
-release() method should be called at a time to end App (i.e., when a user explicitly ends App).<br>
+
+<h2 id="toc_11">5. Release</h2>
+
+<p>After Ncg2Agent object ends its use, release() method should be called for release.
+release() method should be called at a time to end App (i.e., when a user explicitly ends App).
 Sample App generates dialog in OnBackPressed() method to call release() method.</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">case</span> DIALOG_EXIT <span class="token operator">:</span>
-    builder<span class="token punctuation">.</span><span class="token function">setMessage</span><span class="token punctuation">(</span> <span class="token function">getString</span><span class="token punctuation">(</span> R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>confirm_end <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    builder<span class="token punctuation">.</span><span class="token function">setPositiveButton</span><span class="token punctuation">(</span> <span class="token function">getString</span><span class="token punctuation">(</span> R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>yes <span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">DialogInterface<span class="token punctuation">.</span>OnClickListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token annotation punctuation">@Override</span> <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onClick</span><span class="token punctuation">(</span>DialogInterface dialog<span class="token punctuation">,</span> <span class="token keyword">int</span> which<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-            <span class="token function">finish</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            DemoLibrary<span class="token punctuation">.</span><span class="token function">getNcgAgent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">release</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    builder<span class="token punctuation">.</span><span class="token function">setNegativeButton</span><span class="token punctuation">(</span> R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>no<span class="token punctuation">,</span> null <span class="token punctuation">)</span><span class="token punctuation">;</span>
-    dialog <span class="token operator">=</span> builder<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">break</span><span class="token punctuation">;</span>
-</code></pre>
+
+<div><pre><code class="language-java">case DIALOG_EXIT :
+    builder.setMessage( getString( R.string.confirm_end ));
+    builder.setPositiveButton( getString( R.string.yes ), new DialogInterface.OnClickListener() {
+        @Override public void onClick(DialogInterface dialog, int which) {
+            ...
+            finish();
+            DemoLibrary.getNcgAgent().release();
+        }
+    });
+    builder.setNegativeButton( R.string.no, null );
+    dialog = builder.create();
+    break;</code></pre></div>
+
 <blockquote>
-<p><strong>NOTE</strong><br>
+<p><strong>NOTE</strong>
 There is a case to call Ncg2Agent.release method in onTerminate method of Application; however, onTerminate method is not often explicitly called so that it is not desirable to call Ncg2Agent.release method in onTerminate.</p>
 </blockquote>
-<p><a href="#doc_top">Top</a></p>
-<hr>
-<h2 id="error-processing">6. Error Processing</h2>
-<p>A mechanism to process errors in PallyCon Android SDK is implemented through Exception.</p>
-<p>There is Ncg2Exception class which is a basic exception class; and then there exist a variety of separate exception classes which inherit the aforesaid class.<br>
-NcgException class is a basic exception class of PallyCon SDK, which has internally as its member, ErrorCode and Error Message.<br>
-If ErrorCode is set, ErrorCode can be confirmed with getErrorCode() method; if ErrorCode is not set, -1 is returned.<br>
-Error Message can be confirmed with getMessage() method.<br>
-The following is an example code to catch Ncg2Exception exception when calling for the case to use setDataSource() method of Ncg2Player.</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">try</span> <span class="token punctuation">{</span>
-    mPlayer<span class="token punctuation">.</span><span class="token function">setDataSource</span><span class="token punctuation">(</span>mNcgFilePath<span class="token punctuation">,</span> mNcgFileSize<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    mPlayer<span class="token punctuation">.</span><span class="token function">prepareAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Ncg2Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    errorMsg <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IllegalArgumentException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    errorMsg <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IllegalStateException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    errorMsg <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    errorMsg <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h2 id="etc">7. Etc</h2>
-<h3 id="testing-in-emulator">Testing in emulator</h3>
-<p>When developing an app, it is an API for users that can only be developed in an emulator environment. When distributing an actual app, it must be removed or called ‘disableVirtualMachine()’.</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token comment">//enable</span>
-Ncg2Agent ncgAgent <span class="token operator">=</span> Ncg2SdkFactory<span class="token punctuation">.</span><span class="token function">getNcgAgentInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-ncgAgent<span class="token punctuation">.</span><span class="token function">enableVirtualMachine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token comment">//disable</span>
-ncgAgent<span class="token punctuation">.</span><span class="token function">disableVirtualMachine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
 <p><a href="#doc_top">Top</a></p>
+
 <hr>
-</div>
+
+<h2 id="toc_12">6. Error Processing</h2>
+
+<p>A mechanism to process errors in PallyCon Android SDK is implemented through Exception. </p>
+
+<p>There is Ncg2Exception class which is a basic exception class; and then there exist a variety of separate exception classes which inherit the aforesaid class.
+NcgException class is a basic exception class of PallyCon SDK, which has internally as its member, ErrorCode and Error Message.
+If ErrorCode is set, ErrorCode can be confirmed with getErrorCode() method; if ErrorCode is not set, -1 is returned.
+Error Message can be confirmed with getMessage() method.
+The following is an example code to catch Ncg2Exception exception when calling for the case to use setDataSource() method of Ncg2Player.</p>
+
+<div><pre><code class="language-java">try {
+    mPlayer.setDataSource(mNcgFilePath, mNcgFileSize);
+    mPlayer.prepareAsync();
+} catch (Ncg2Exception e) {
+    e.printStackTrace();
+    errorMsg = e.getMessage();
+} catch (IllegalArgumentException e) {
+    e.printStackTrace();
+    errorMsg = e.getMessage();
+} catch (IllegalStateException e) {
+    e.printStackTrace();
+    errorMsg = e.getMessage();
+} catch (IOException e) {
+    e.printStackTrace();
+    errorMsg = e.getMessage();
+}</code></pre></div>
+
+<h2 id="toc_13">7. Etc</h2>
+
+<h3 id="toc_14">Testing in emulator</h3>
+
+<p>When developing an app, it is an API for users that can only be developed in an emulator environment. When distributing an actual app, it must be removed or called &#39;disableVirtualMachine()&#39;.</p>
+
+<div><pre><code class="language-java">//enable
+Ncg2Agent ncgAgent = Ncg2SdkFactory.getNcgAgentInstance();
+ncgAgent.enableVirtualMachine();
+
+//disable
+ncgAgent.disableVirtualMachine();</code></pre></div>
+
+<p><a href="#doc_top">Top</a></p>
+
+<hr>
+
+
+
+
 </body>
 
 </html>

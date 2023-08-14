@@ -91,7 +91,8 @@ public class Ncg2SdkWrapper {
 		OfflineSupportPolicy policy = OfflineSupportPolicy.OfflineSupport;
 		policy.setCountOfExecutionLimit(0);
 		try {
-			mNcg2Agent.init(context, policy);
+//			mNcg2Agent.init(context, policy);
+			mNcg2Agent.init(context, policy, null, null, "DRM", true);
 			//mNcg2Agent.setHttpRequestCallback(mHttpRequestCallback );
 			//mNcg2Agent.disableLog();
 		} catch (Ncg2FatalException e) {
@@ -429,6 +430,7 @@ public class Ncg2SdkWrapper {
 					isTemporaryLicense = false;
 				}
 				mNcg2Agent.acquireLicenseByToken(mToken, isTemporaryLicense);
+//				mNcg2Agent.acquireLicenseByToken(mToken, "https://license-sqa.pallycon.com/ri/licenseManager.do", isTemporaryLicense);
 				mIsSucceeded = true;
 			}
 			catch(final Ncg2HttpException e) {
@@ -501,18 +503,19 @@ public class Ncg2SdkWrapper {
 					isTemporaryLicense = false;	
 				}
 
+				String testUrl = "https://license-sqa.pallycon.com";
 				HeaderInformation header = mNcg2Agent.getHeaderInfo( mFilePath );
 				if( mFilePath.contains("token") ) {
 					mNcg2Agent.acquireLicenseByToken(
 							header.contentID, mUserID, header.siteID,
 							"eyJyZXNwb25zZV9mb3JtYXQiOiJvcmlnaW5hbCIsInVzZXJfaWQiOiJ1dGVzdCIsImRybV90eXBlIjoibmNnIiwic2l0ZV9pZCI6IkRFTU8iLCJoYXNoIjoidUpiZWJvWXM5K0EwWlJHVzhFZ1AzaDhtMitMTXpVbEkwWjI0TmY0WERTUT0iLCJjaWQiOiJuY2ctbGxhbWEiLCJwb2xpY3kiOiI5V3FJV2tkaHB4VkdLOFBTSVljbkpzY3Z1QTlzeGd1YkxzZCthanVcL2JvbVFaUGJxSSt4YWVZZlFvY2NrdnVFZnVMdHZVTFlxME51aDVSWjhYRmM0NUVsR3dXXC82N1lYVHEyUEgyeGd3SEdYQ2pVbmlIM2w0ODVTZnA2Y25ldW5uanYzMXhreVR3elZQM3VYSFBiVjVkdz09IiwidGltZXN0YW1wIjoiMjAyMC0wOC0yNVQxNTo1NTo0NFoifQ==",
-							header.acquisitionURL, isTemporaryLicense);
+							testUrl, isTemporaryLicense);
 				} else {
 					mNcg2Agent.acquireLicenseByCID(
 							header.contentID, mUserID,
 							header.siteID,
 							mOrderID,
-							header.acquisitionURL, isTemporaryLicense);
+							testUrl, isTemporaryLicense);
 				}
 				mIsSucceeded = true;
 			}

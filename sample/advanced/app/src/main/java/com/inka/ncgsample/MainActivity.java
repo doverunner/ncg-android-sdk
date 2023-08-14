@@ -156,10 +156,10 @@ public class MainActivity extends Activity {
 				requestPermissions(new String[]{Manifest.permission.READ_PHONE_STATE}, 1);
 				return;
 			}
-			if( checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED ) {
-				requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 2);
-				return;
-			}
+//			if( checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED ) {
+//				requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 2);
+//				return;
+//			}
 		}
 
 		if(mNcgSdkWrapper.getNcgAgent().isInitialized() == false) {
@@ -807,7 +807,7 @@ public class MainActivity extends Activity {
 		textViewPlayRemainCount.setText(strPlayRemainCount);
 		textViewExternalDisplay.setText(strExternalDisplayAllow);
 		textViewRootedDevice.setText(strRootingDeviceAllow);
-		textViewDeviceModel.setText(new DeviceManager(this).getDeviceModel());
+		textViewDeviceModel.setText(new DeviceManager.Builder(this).prefixName("DRM").build().getDeviceModel());
 
 		AlertDialog.Builder	builder = new AlertDialog.Builder( MainActivity.this );
 		builder.setView(layout);

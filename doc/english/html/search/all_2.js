@@ -5,7 +5,7 @@ var searchData=
   ['checkmethodtypea_2',['checkMethodTypeA',['../classcom_1_1inka_1_1ncg2_1_1_ncg2_agent.html#a4608372f557d8d3fc12d624df8e1a326',1,'com::inka::ncg2::Ncg2Agent']]],
   ['clearcencdecrypt_3',['clearCencDecrypt',['../interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_cenc.html#ae0e9c4729f117a359cbaa5a335478ea0',1,'com::inka::ncg2::Ncg2Agent::NcgCenc']]],
   ['clearplaybackurls_4',['clearPlaybackUrls',['../interfacecom_1_1inka_1_1ncg2_1_1_ncg2_local_web_server.html#a295918c44af50f73c8f977b20504e07d',1,'com::inka::ncg2::Ncg2LocalWebServer']]],
-  ['close_5',['close',['../interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_file.html#abdf5de68d9f237dff85fca6cdb521ced',1,'com::inka::ncg2::Ncg2Agent::NcgFile']]],
+  ['close_5',['close',['../interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_file.html#abdf5de68d9f237dff85fca6cdb521ced',1,'com.inka.ncg2.Ncg2Agent.NcgFile.close()'],['../interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_epub_file.html#ae3d9ec0040caea5b649a81363de8b960',1,'com.inka.ncg2.Ncg2Agent.NcgEpubFile.close()']]],
   ['conception_6',['Conception',['../conception.html',1,'']]],
   ['contentformattype_7',['ContentFormatType',['../enumcom_1_1inka_1_1ncg2_1_1playerlib_1_1_ncg2_player_1_1_content_format_type.html',1,'com::inka::ncg2::playerlib::Ncg2Player']]],
   ['contentid_8',['contentID',['../classcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_header_information.html#a0802f1056c1c71bd4db56ed5bdc9db53',1,'com::inka::ncg2::Ncg2Agent::HeaderInformation']]],

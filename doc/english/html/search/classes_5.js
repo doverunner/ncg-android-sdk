@@ -18,11 +18,12 @@ var searchData=
   ['ncg2readphonestateexception_15',['Ncg2ReadPhoneStateException',['../classcom_1_1inka_1_1ncg2_1_1_ncg2_read_phone_state_exception.html',1,'com::inka::ncg2']]],
   ['ncg2serverresponseerrorexception_16',['Ncg2ServerResponseErrorException',['../classcom_1_1inka_1_1ncg2_1_1_ncg2_server_response_error_exception.html',1,'com::inka::ncg2']]],
   ['ncgcenc_17',['NcgCenc',['../interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_cenc.html',1,'com::inka::ncg2::Ncg2Agent']]],
-  ['ncgexceptionaleventlistener_18',['NcgExceptionalEventListener',['../interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_exceptional_event_listener.html',1,'com::inka::ncg2::Ncg2Agent']]],
-  ['ncgfile_19',['NcgFile',['../interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_file.html',1,'com::inka::ncg2::Ncg2Agent']]],
-  ['ncgplayerlistener_20',['NcgPlayerListener',['../classcom_1_1inka_1_1ncg2_1_1playerlib_1_1_ncg2_player_1_1_ncg_player_listener.html',1,'com::inka::ncg2::playerlib::Ncg2Player']]],
-  ['ncgziparchive_21',['NcgZipArchive',['../classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.html',1,'com::inka::ncg::zip']]],
-  ['ncgzipcore_22',['NcgZipCore',['../classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_core.html',1,'com::inka::ncg::zip']]],
-  ['ncgzipentry_23',['NcgZipEntry',['../classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_entry.html',1,'com::inka::ncg::zip']]],
-  ['ncgzipexception_24',['NcgZipException',['../classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_exception.html',1,'com::inka::ncg::zip']]]
+  ['ncgepubfile_18',['NcgEpubFile',['../interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_epub_file.html',1,'com::inka::ncg2::Ncg2Agent']]],
+  ['ncgexceptionaleventlistener_19',['NcgExceptionalEventListener',['../interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_exceptional_event_listener.html',1,'com::inka::ncg2::Ncg2Agent']]],
+  ['ncgfile_20',['NcgFile',['../interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_file.html',1,'com::inka::ncg2::Ncg2Agent']]],
+  ['ncgplayerlistener_21',['NcgPlayerListener',['../classcom_1_1inka_1_1ncg2_1_1playerlib_1_1_ncg2_player_1_1_ncg_player_listener.html',1,'com::inka::ncg2::playerlib::Ncg2Player']]],
+  ['ncgziparchive_22',['NcgZipArchive',['../classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.html',1,'com::inka::ncg::zip']]],
+  ['ncgzipcore_23',['NcgZipCore',['../classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_core.html',1,'com::inka::ncg::zip']]],
+  ['ncgzipentry_24',['NcgZipEntry',['../classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_entry.html',1,'com::inka::ncg::zip']]],
+  ['ncgzipexception_25',['NcgZipException',['../classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_exception.html',1,'com::inka::ncg::zip']]]
 ];

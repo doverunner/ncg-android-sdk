@@ -24,6 +24,7 @@ var annotated_dup =
           [ "Ncg2CorruptRODBException", "classcom_1_1inka_1_1ncg2_1_1_ncg2_corrupt_r_o_d_b_exception.html", null ],
           [ "Ncg2DetectedExternalDisplayException", "classcom_1_1inka_1_1ncg2_1_1_ncg2_detected_external_display_exception.html", null ],
           [ "Ncg2DetectedRootingDeviceException", "classcom_1_1inka_1_1ncg2_1_1_ncg2_detected_rooting_device_exception.html", null ],
+          [ "Ncg2DeviceIdException", "classcom_1_1inka_1_1ncg2_1_1_ncg2_device_id_exception.html", null ],
           [ "Ncg2DeviceNotMatchedException", "classcom_1_1inka_1_1ncg2_1_1_ncg2_device_not_matched_exception.html", null ],
           [ "Ncg2Exception", "classcom_1_1inka_1_1ncg2_1_1_ncg2_exception.html", "classcom_1_1inka_1_1ncg2_1_1_ncg2_exception" ],
           [ "Ncg2FatalException", "classcom_1_1inka_1_1ncg2_1_1_ncg2_fatal_exception.html", null ],
