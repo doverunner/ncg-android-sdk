@@ -6,7 +6,7 @@ android {
     defaultConfig {
         multiDexEnabled true
         applicationId "com.inka.ncgplayerlib.sample"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"
@@ -44,7 +44,7 @@ dependencies {
     implementation 'androidx.media:media:1.5.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.ads.interactivemedia.v3:interactivemedia:3.14.0'
-    implementation 'com.google.android.gms:play-services-ads:18.2.0'
+//    implementation 'com.google.android.gms:play-services-ads:21.5.0'
     implementation 'com.google.android.exoplayer:exoplayer:2.9.6'
     implementation "androidx.sqlite:sqlite:2.1.0"
 }

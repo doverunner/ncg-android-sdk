@@ -6,12 +6,6 @@ var annotated_dup =
           [ "jni", null, [
             [ "Ncg2CoreErrorCode", "classcom_1_1inka_1_1ncg_1_1jni_1_1_ncg2_core_error_code.html", null ],
             [ "OnNcgLocalWebServerListener", "classcom_1_1inka_1_1ncg_1_1jni_1_1_on_ncg_local_web_server_listener.html", "classcom_1_1inka_1_1ncg_1_1jni_1_1_on_ncg_local_web_server_listener" ]
-          ] ],
-          [ "zip", null, [
-            [ "NcgZipArchive", "classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.html", null ],
-            [ "NcgZipCore", "classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_core.html", null ],
-            [ "NcgZipEntry", "classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_entry.html", null ],
-            [ "NcgZipException", "classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_exception.html", null ]
           ] ]
         ] ],
         [ "ncg2", null, [

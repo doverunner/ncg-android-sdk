@@ -17,8 +17,7 @@ var hierarchy =
         [ "com.inka.ncg2.Ncg2ReadPhoneStateException", "classcom_1_1inka_1_1ncg2_1_1_ncg2_read_phone_state_exception.html", null ],
         [ "com.inka.ncg2.Ncg2ServerResponseErrorException", "classcom_1_1inka_1_1ncg2_1_1_ncg2_server_response_error_exception.html", null ],
         [ "com.inka.ncg2.SdcardIdNotMatchedException", "classcom_1_1inka_1_1ncg2_1_1_sdcard_id_not_matched_exception.html", null ]
-      ] ],
-      [ "com.inka.ncg.zip.NcgZipException", "classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_exception.html", null ]
+      ] ]
     ] ],
     [ "com.inka.ncg2.Ncg2Agent.HeaderInformation", "classcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_header_information.html", null ],
     [ "com.inka.ncg2.Ncg2Agent.LicenseInformation", "classcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_license_information.html", null ],
@@ -34,9 +33,6 @@ var hierarchy =
     [ "com.inka.ncg2.Ncg2Agent.NcgExceptionalEventListener", "interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_exceptional_event_listener.html", null ],
     [ "com.inka.ncg2.Ncg2Agent.NcgFile", "interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_file.html", null ],
     [ "com.inka.ncg2.playerlib.Ncg2Player.NcgPlayerListener", "classcom_1_1inka_1_1ncg2_1_1playerlib_1_1_ncg2_player_1_1_ncg_player_listener.html", null ],
-    [ "com.inka.ncg.zip.NcgZipArchive", "classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.html", null ],
-    [ "com.inka.ncg.zip.NcgZipCore", "classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_core.html", null ],
-    [ "com.inka.ncg.zip.NcgZipEntry", "classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_entry.html", null ],
     [ "com.inka.ncg2.Ncg2Agent.OfflineSupportPolicy", "enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_offline_support_policy.html", null ],
     [ "com.inka.ncg.jni.OnNcgLocalWebServerListener", "classcom_1_1inka_1_1ncg_1_1jni_1_1_on_ncg_local_web_server_listener.html", null ],
     [ "com.inka.ncg2.Ncg2Agent.PallyconTokenInfo", "classcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_pallycon_token_info.html", null ],

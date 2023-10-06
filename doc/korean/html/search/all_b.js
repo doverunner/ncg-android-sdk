@@ -123,11 +123,7 @@ var searchData=
   ['ncgexceptionaleventlistener_120',['NcgExceptionalEventListener',['../interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_exceptional_event_listener.html',1,'com::inka::ncg2::Ncg2Agent']]],
   ['ncgfile_121',['NcgFile',['../interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_file.html',1,'com::inka::ncg2::Ncg2Agent']]],
   ['ncgplayerlistener_122',['NcgPlayerListener',['../classcom_1_1inka_1_1ncg2_1_1playerlib_1_1_ncg2_player_1_1_ncg_player_listener.html',1,'com::inka::ncg2::playerlib::Ncg2Player']]],
-  ['ncgziparchive_123',['NcgZipArchive',['../classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_archive.html',1,'com::inka::ncg::zip']]],
-  ['ncgzipcore_124',['NcgZipCore',['../classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_core.html',1,'com::inka::ncg::zip']]],
-  ['ncgzipentry_125',['NcgZipEntry',['../classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_entry.html',1,'com::inka::ncg::zip']]],
-  ['ncgzipexception_126',['NcgZipException',['../classcom_1_1inka_1_1ncg_1_1zip_1_1_ncg_zip_exception.html',1,'com::inka::ncg::zip']]],
-  ['notauthorizedappid_127',['NotAuthorizedAppID',['../enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_license_validation.html#a8cacbdf152af4ace1fafac1b80eb409a',1,'com::inka::ncg2::Ncg2Agent::LicenseValidation']]],
-  ['notexistlicense_128',['NotExistLicense',['../enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_license_validation.html#abd885f7b03c04853d1be2177710ad38b',1,'com::inka::ncg2::Ncg2Agent::LicenseValidation']]],
-  ['notsupportoffline_129',['NotSupportOffline',['../enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_offline_support_policy.html#a2287600727459fd6656041e47103fec6',1,'com::inka::ncg2::Ncg2Agent::OfflineSupportPolicy']]]
+  ['notauthorizedappid_123',['NotAuthorizedAppID',['../enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_license_validation.html#a8cacbdf152af4ace1fafac1b80eb409a',1,'com::inka::ncg2::Ncg2Agent::LicenseValidation']]],
+  ['notexistlicense_124',['NotExistLicense',['../enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_license_validation.html#abd885f7b03c04853d1be2177710ad38b',1,'com::inka::ncg2::Ncg2Agent::LicenseValidation']]],
+  ['notsupportoffline_125',['NotSupportOffline',['../enumcom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_offline_support_policy.html#a2287600727459fd6656041e47103fec6',1,'com::inka::ncg2::Ncg2Agent::OfflineSupportPolicy']]]
 ];

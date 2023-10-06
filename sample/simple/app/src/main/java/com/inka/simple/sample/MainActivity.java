@@ -50,10 +50,8 @@ public class MainActivity extends AppCompatActivity {
     private String userAgent;
 
     // TODO : set content information.
-//    private String contentUrl = "https://contents.pallycon.com/TEST/PACKAGED_CONTENT/TEST_SIMPLE/sintel-trailer.mp4.ncg";
-//    private String token = "eyJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJvcmlnaW5hbCIsInVzZXJfaWQiOiJ1dGVzdCIsImRybV90eXBlIjoibmNnIiwic2l0ZV9pZCI6IkRFTU8iLCJoYXNoIjoiXC9zUXA5YmpkTjA1NXJVQm5YdFhVUGlLWER0S0pYY3dydjdmSms5OThkUUU9IiwiY2lkIjoiVGVzdFJ1bm5lciIsInBvbGljeSI6IjlXcUlXa2RocHhWR0s4UFNJWWNuSnNjdnVBOXN4Z3ViTHNkK2FqdVwvYm9tUVpQYnFJK3hhZVlmUW9jY2t2dUVmdUx0dlVMWXEwTnVoNVJaOFhGYzQ1RWxHd1dcLzY3WVhUcTJQSDJ4Z3dIR1hDalVuaUgzbDQ4NVNmcDZjbmV1bm5qdjMxeGt5VHd6VlAzdVhIUGJWNWR3PT0iLCJ0aW1lc3RhbXAiOiIyMDIwLTExLTIwVDE1OjUwOjQyWiJ9";
-    private String contentUrl = "https://contents.pallycon.com/DEV/yhpark/ncg/ncg-hls-django-drm/hls_ncg/master.m3u8";
-    private String token = "eyJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJjdXN0b20iLCJ1c2VyX2lkIjoidXRlc3QiLCJkcm1fdHlwZSI6Im5jZyIsInNpdGVfaWQiOiJERU1PIiwiaGFzaCI6InZNNVdKN3NYcnFZclFsXC81MDFyejZjNkxcL1htNXB3RkVPUUdteWRVUFdWTT0iLCJjaWQiOiJuY2ctaGxzLWRqYW5nby1kcm0iLCJwb2xpY3kiOiI5V3FJV2tkaHB4VkdLOFBTSVljbkpzY3Z1QTlzeGd1YkxzZCthanVcL2JvbVFaUGJxSSt4YWVZZlFvY2NrdnVFZkFhcWRXNWhYZ0pOZ2NTUzNmUzdvOE5zandzempNdXZ0KzBRekxrWlZWTm14MGtlZk9lMndDczJUSVRnZFU0QnZOOWFiaGQwclFrTUlybW9JZW9KSHFJZUhjUnZWZjZUMTRSbVRBREVwQ1k3UEhmUGZcL1ZGWVwvVmJYdXhYXC9XVHRWU0ZKU0g5c3hwd1FJUVhyNUI2UitBYWFmU2ZWWFNLazRtVkZsZTJQXC9wcmpoNTgrYk9oYnRVNDQ0bHg5b3JlRzUiLCJ0aW1lc3RhbXAiOiIyMDIzLTAyLTIwVDA1OjUwOjU2WiJ9";
+    private String contentUrl = "https://contents.pallycon.com/TEST/PACKAGED_CONTENT/TEST_SIMPLE/sintel-trailer.mp4.ncg";
+    private String token = "eyJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJvcmlnaW5hbCIsInVzZXJfaWQiOiJ1dGVzdCIsImRybV90eXBlIjoibmNnIiwic2l0ZV9pZCI6IkRFTU8iLCJoYXNoIjoicE1DUXFldzFZeGk4WXJDYlJlQnNzM0IwYUI0T3hBVER1UmdZaVRVXC8zbVk9IiwiY2lkIjoiVGVzdFJ1bm5lciIsInBvbGljeSI6IjlXcUlXa2RocHhWR0s4UFNJWWNuSnNjdnVBOXN4Z3ViTHNkK2FqdVwvYm9tUVpQYnFJK3hhZVlmUW9jY2t2dUVmdUx0dlVMWXEwTnVoNVJaOFhGYzQ1RWxHd1dcLzY3WVhUcTJQSDJ4Z3dIR1hDalVuaUgzbDQ4NVNmcDZjbmV1bm5qdjMxeGt5VHd6VlAzdVhIUGJWNWR3PT0iLCJ0aW1lc3RhbXAiOiIyMDIwLTExLTIwVDA0OjE2OjI1WiJ9";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,10 +101,10 @@ public class MainActivity extends AppCompatActivity {
             // TODO 3. get playback url.
             start = System.currentTimeMillis();
             Ncg2LocalWebServer localWebServer = ncg2Agent.getLocalWebServer();
-            playbackUrl = localWebServer.addHttpLiveStreamUrlForPlayback(contentUrl);
+            playbackUrl = localWebServer.addProgressiveDownloadUrlForPlayback(contentUrl);
             end = System.currentTimeMillis();
             time = end-start;
-            Log.d("PALLYCON", String.format("addHttpLiveStreamUrlForPlayback %d", time));
+            Log.d("PALLYCON", String.format("addProgressiveDownloadUrlForPlayback %d", time));
 
 
         } catch (Ncg2Exception e) {

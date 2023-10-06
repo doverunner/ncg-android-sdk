@@ -1,9 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_file.html#a4cbf008eaa0d5ff607de2d7414b4fafb":[4,0,0,0,1,2,6,7],
-"interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_file.html#a4cff843e3963733fce8ebb42e971af14":[4,0,0,0,1,2,6,5],
-"interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_file.html#a5065e0a2ca71632b0b4e912d0cb5ae38":[4,0,0,0,1,2,6,3],
-"interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_file.html#aa5773cacc8adf88b48b30b39b578f240":[4,0,0,0,1,2,6,10],
 "interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_file.html#abdf5de68d9f237dff85fca6cdb521ced":[4,0,0,0,1,2,6,1],
 "interfacecom_1_1inka_1_1ncg2_1_1_ncg2_agent_1_1_ncg_file.html#ad152c980f5925f2d4f58f91d2b7ebd73":[4,0,0,0,1,2,6,9],
 "interfacecom_1_1inka_1_1ncg2_1_1_ncg2_local_web_server.html":[4,0,0,0,1,13],

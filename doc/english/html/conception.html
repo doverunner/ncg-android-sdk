@@ -94,7 +94,672 @@ $(document).ready(function(){initNavTree('conception.html',''); initResizable();
   <div class="headertitle"><div class="title">Conception </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">  </div></div><!-- contents -->
+<div class="textblock"><!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>PallyCon_Conception_Android_ENG</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<script src="raphael-min.js"></script>
+<script src="flowchart-latest.js"></script>
+<script src="webfont.js"></script>
+<script src="underscore-min.js"></script>
+<script src="sequence-diagram-min.js"></script>
+
+<h1 id="toc_0"><a name="doc_top"></a>PallyCon SDK Sample App Scenario</h1>
+
+<p>When planning, designing, and implementing Application, it is very important to understand PallyCon SDK. 
+This document helps understand <strong>how SDK processes DRM contents</strong> in Flow Chat and describes <strong>the entire interaction between the operation and roles of SDK in the reflected Sample App</strong> ultimately preventing the error in planning/designing Application.</p>
+
+<ul>
+<li><a href="#sdk-drm-processing">SDK DRM Processing</a> describes the flow for SDK to process DRM contents (Downloaded Contents).</li>
+<li><a href="#sdk-sample-app-sequence">SDK Sample App Sequence</a> describes the entire interactions among User, App (Application), SDK, and License Server.<br></li>
+</ul>
+
+<hr>
+
+<h2 id="toc_1">SDK DRM Processing</h2>
+
+<p>Only when you understand the flow how PallyCon SDK processes DRM contents, you can plan the scenario of Application (App) to be implemented.
+The following flow chart indicates the flow for SDK to process DRM video contents. The following flow focuses on DRM video contents; besides, audio, document, and picture are also processed in the similar flow.</p>
+
+<p><center>
+<div id="flow"></div>
+<script>
+  var diagram = flowchart.parse(
+  &quot;st=&gt;start: Contents Select\n&quot; +
+  &quot;e=&gt;end\n&quot; +
+  &quot;isNCG=&gt;condition: 1. Encrypted ?\n&quot; +
+  &quot;licenseExist=&gt;condition: 2. License\n&quot; +
+  &quot;  Exist ?\n&quot; +
+  &quot;licenseValid=&gt;condition: 3. Valid\n&quot; +
+  &quot;License ?\n&quot; +
+  &quot;acquire=&gt;subroutine: 4. License\n&quot; +
+  &quot;Acquisition\n&quot; +
+  &quot;acquireLicensecheck=&gt;condition: 5. Valid\n&quot; +
+  &quot;License ?\n&quot; +
+  &quot;Proxy=&gt;subroutine: 6. Local WebServer\n&quot; +
+  &quot;io=&gt;inputoutput: 7. Player(Playback)\n&quot; +
+  &quot;st-&gt;isNCG-&gt;licenseExist-&gt;licenseValid-&gt;Proxy-&gt;io-&gt;e\n&quot; +
+  &quot;isNCG(yes)-&gt;licenseExist\n&quot; +
+  &quot;isNCG(no)-&gt;io\n&quot; +
+  &quot;licenseExist(yes)-&gt;licenseValid\n&quot; +
+  &quot;licenseExist(no)-&gt;acquire\n&quot; +
+  &quot;licenseValid(yes)-&gt;Proxy\n&quot; +
+  &quot;licenseValid(no)-&gt;acquire(right)-&gt;acquireLicensecheck\n&quot; +
+  &quot;acquireLicensecheck(yes)-&gt;Proxy\n&quot; +
+  &quot;acquireLicensecheck(no)-&gt;e\n&quot;);
+  diagram.drawSVG(&#39;flow&#39;);
+</script>
+</center></p>
+
+<p>The following is a description about ‘Flow Chart`.</p>
+
+<blockquote>
+<p>If you try to play video contents on App</p>
+
+<ol>
+<li>Determine whether the video content is a DRM file.
+
+<ul>
+<li>if not a DRM file, since it is not an encrypted file, following the general play procedure as set forth in Step 7.</li>
+<li>If it is a DRM file, find the license as set forth in Step 2.</li>
+</ul></li>
+<li>If you are trying to find the license of video content,
+
+<ul>
+<li>if there exists license, confirm the license for validity as set forth in Step 3.</li>
+<li>If there is no license, try to acquire license (from license server) as set forth in Step 4.</li>
+</ul></li>
+<li>If there exist license for video content, confirm it for validity.
+
+<ul>
+<li>If it is valid, move to Step 6 for play trying.</li>
+<li>If it is not valid, try to acquire license as set forth in Step 4 (you may also restrict playing).</li>
+</ul></li>
+<li>Try to acquire license from license server.</li>
+<li>Confirm the issued license for validity.
+
+<ul>
+<li>If it is valid, move to Step 6 Local Server.</li>
+<li>If it is not valid, restrict playing (which depends on scenario).</li>
+</ul></li>
+<li>Local WebServer returns virtual URL for Player to play DRM contents.<br></li>
+<li>Player plays an ordinary normal file or a normal DRM content.</li>
+</ol>
+</blockquote>
+
+<p><a href="#doc_top">Top</a></p>
+
+<hr>
+
+<h2 id="toc_2">SDK Sample App Sequence</h2>
+
+<p>It is a sequence diagram indicating the entire interaction and flow of Sample App to which SDK is applied.
+In order for <code>User</code> to use ‘DRM contents<code>, there should be App with</code>SDK (PallyCon SDK)` applied as well as ‘License Server’ should be ready to acquire license for DRM contents.
+Depending User event, indicate the acts of App, SDK, and License Server in order, describing such acts focusing on App and SDK.<br>
+The following describes the case of DRM Contents, not considering Non-DRM File.</p>
+
+<p><center>
+<div id="sequence"></div>
+<script>
+  var diagram = Diagram.parse(
+  &quot;User-&gt;App: App Excute\n&quot; +
+  &quot;App-&gt;SDK: 1. init\n&quot; +
+  &quot;SDK-&gt;&gt;SDK: initialize: Local Server Start\n&quot; +
+  &quot;User-&gt;App: Playback or Download\n&quot; +
+  &quot;App-&gt;SDK: 2. Check License of Contents\n&quot; +
+  &quot;SDK--&gt;App: License Validation Return\n&quot; +
+  &quot;App-&gt;SDK: 3. License Acquisition\n&quot; +
+  &quot;SDK-&gt;License Server: Device info Enroll\n&quot; +
+  &quot;License Server--&gt;SDK: Certification Issue\n&quot; +
+  &quot;Note over SDK: Certification Save\n&quot; +
+  &quot;SDK-&gt;License Server: License Acquire\n&quot; +
+  &quot;License Server--&gt;SDK: License Issue\n&quot; +
+  &quot;Note over SDK: License Check\n&quot; +
+  &quot;App-&gt;SDK: 4. Playback URL Request\n&quot; +
+  &quot;Note over SDK: Playable URL\n&quot; +
+  &quot;SDK--&gt;App: 5. Virtual URL Return\n&quot; +
+  &quot;App-&gt;&gt;App: Playback\n&quot; +
+  &quot;App--&gt;User: Watching\n&quot; +
+  &quot;User-&gt;App: App Background Entry\n&quot; +
+  &quot;App-&gt;&gt;App: Play Stop\n&quot; +
+  &quot;App-&gt;SDK: 6. Remove All Temporary License\n&quot; +
+  &quot;App-&gt;SDK: 7. App Background Entry\n&quot; +
+  &quot;User-&gt;App: App Foreground Entry\n&quot; +
+  &quot;App-&gt;SDK: 8. App Foreground Entry\n&quot; +
+  &quot;App-&gt;&gt;App: Playback\n&quot; +
+  &quot;App--&gt;User: Watching&quot;);
+  diagram.drawSVG(&quot;sequence&quot;, {theme: &#39;simple&#39;});
+</script>
+</center></p>
+
+<p>The following describes <code>Sequence Diagram</code>.</p>
+
+<blockquote>
+<p>If a device is installed an App to which SDK is applied</p>
+
+<ol>
+<li>init
+
+<ul>
+<li>When a user runs App, the App carries out initialization work with init function of PallyCon SDK.</li>
+<li>At this time, verify DRM license file and authentication file for validity before loading data.</li>
+<li>You can also set offline policy at the initializing time and reference &#39;OfflineSupportPolicy&#39; enum class for the details</li>
+<li>Current time is internally set in PallyCon SDK, where time value is periodically updated.</li>
+</ul></li>
+<li>Check License of Contents</li>
+<li>Verify license of the content for validity before a user plays the content.</li>
+<li>License Acquisition
+
+<ul>
+<li><strong>If there exists valid license</strong>, you skip the process to acquire license.</li>
+<li>If no license, first acquire authentication for device, and then request and acquire license. </li>
+<li>Acquiring license requires calling <code>aquireLicenseByCID</code> for such acquisition when a user knows <code>aquireLicenseByPath</code>, CID; request HTTP to send it to license server and then interpret HTTP Response to store license. <strong>If there need temporary license</strong>, you can be acquired a temporary license used temporary parameter.</li>
+</ul></li>
+<li>Playback URL Request 
+
+<ul>
+<li>When the received license is confirmed for validity, call <code>addLocalFilePathForPlayback</code>, <code>addProgressiveDownloadUrlForPlayback</code>, and  <code>addHttpLiveStreamUrlForPlayback</code> functions of LocalWebserver Interface to request playable virtual URL.</li>
+</ul></li>
+<li>Virtual URL Return
+
+<ul>
+<li>SDK returns virtual URL of DRM contents that player can play with No. 3 function while player plays and shows it to a user.</li>
+</ul></li>
+<li>Remove All Temporary License
+<strong>If there acquired temporary license</strong>, exit the program or call the <code>removeAllTemporaryLicense</code>, temporary license is deleted.</li>
+<li>App Background Entry
+
+<ul>
+<li>When a user makes App enter Background while playing DRM content, App stops to run and makes Player reset.</li>
+</ul></li>
+<li>App Foreground Entry
+
+<ul>
+<li>When a user makes App situated in Background enter Foreground again, App sets URL again in setDataSource of Player and plays.</li>
+</ul></li>
+</ol>
+</blockquote>
+
+<p><a href="#doc_top">Top</a></p>
+
+<hr>
+
+<h2 id="toc_3">PallyCon SDK Sample App UI</h2>
+
+<p>SDK Sample App consists of the UIs as shown in the following figure.
+<p><img src="main_activity.png" width="500" height="800"></p>
+List consists of <code>Download</code>, <code>ProgressiveDownload</code>, and <code>Http Live Streaming, Local Downloaded</code>; the respective meaning is as shown in the following table.</p>
+
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Download</td>
+<td>Download file in remote area</td>
+</tr>
+<tr>
+<td>Progressive Download(PD)</td>
+<td>Play media file in remote area</td>
+</tr>
+<tr>
+<td>HTTP Live Streaming(HLS)</td>
+<td>Play HTTP-based media streaming</td>
+</tr>
+<tr>
+<td>Local Downloaded</td>
+<td>Play media file in device (Local File)</td>
+</tr>
+</tbody>
+</table>
+
+<p><code>Download</code> downloads file in remote area.
+<code>Progressive Download(PD)</code> downloads the encrypted content file in remote area while playing it. File is downloaded but not stored in a physical file only existing in memory.
+<code>HTTP Live Streaming(HLS)</code> is a protocol provided by Apple in 2009 for iOS 3.0 and QuickTime X, which is an HTTP-based media streaming. The information about playing is sent to player using m3u8 file; which is played decrypting the encrypted ‘Key’.
+<code>Local Downloaded</code> means to play the encrypted contents in device, which can be a file downloaded or directly placed in App.</p>
+
+<p><a href="#doc_top">Top</a></p>
+
+<hr>
+
+<h2 id="toc_4">Sample App Playback Test</h2>
+
+<p>Use SDK Sample App Project to conduct play test respectively for each content type (Download, Progressive Download, Http Live Streaming).</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Screenshots</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center"><img src="playback_screen.png" width="700" height="400"></td>
+</tr>
+<tr>
+<td style="text-align: center">Play</td>
+</tr>
+<tr>
+<td style="text-align: center"><img src="content_attr_dialog.png" width="400" height="600"></td>
+</tr>
+<tr>
+<td style="text-align: center">Item Long Click</td>
+</tr>
+<tr>
+<td style="text-align: center"></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_5">Download</h3>
+
+<ol>
+<li>Click on the list, the content that you desire to play in Download category to download the file.</li>
+<li>If downloading is complete, the file is generated in Local Downloaded category.</li>
+<li>When pressing Play button while downloading, you can play the content while downloading.</li>
+<li>When playing is complete or if clicking ‘Complete’ while playing, you go back to List.</li>
+</ol>
+
+<h3 id="toc_6">Progressive Download Playback</h3>
+
+<ol>
+<li>Click on the list, the content that you desire to play in PD category.</li>
+<li>Player runs and the content starts to play.</li>
+<li>When playing is complete or if clicking ‘Complete’ while playing, you go back to List.</li>
+</ol>
+
+<h3 id="toc_7">HTTP Live Streaming Playback</h3>
+
+<ol>
+<li>Click on the list, the content that you desire to play in HLS category.</li>
+<li>Player runs and the content starts to play.</li>
+<li>When playing is complete or if clicking ‘Complete’ while playing, you go back to List.</li>
+</ol>
+
+<h3 id="toc_8">Local Downloaded</h3>
+
+<ol>
+<li>Click on the list, the content that you desire to play in Local Downloaded category.</li>
+<li>Player runs and the content starts to play.</li>
+<li>When playing is complete or if clicking ‘Complete’ while playing, you go back to List.</li>
+<li>Press longer on the list, the content that you desire to confirm a license in Local Downloaded category.</li>
+<li>A dialog is generated indicating license and header information.</li>
+</ol>
+
+<blockquote>
+<p><strong>Note:</strong>
+- For Progressive Download contents, if moov tag is located behind, the contents may not normally work.</p>
+</blockquote>
+
+<p><a href="#doc_top">Top</a></p>
+
+<hr>
+
+<h2 id="toc_9">Test Contents URL</h2>
+
+<p>The contents provided for test are shown in the following table.</p>
+
+<p>| Download Contents |
+|-|
+| http://cdn.pallycon.com/demo/d/PallyConDownload<em>1.mp4.ncg |
+| http://cdn.pallycon.com/demo/d/PallyConDownload</em>2.mp4.ncg |</p>
+
+<p>| Progressive Download |
+|-|
+| http://cdn.pallycon.com/demo/d/PallyConPD<em>1.mp4.ncg |
+| http://cdn.pallycon.com/demo/d/PallyConPD</em>2.mp4.ncg |</p>
+
+<p>| HTTP Live Streaming |
+|-|
+| http://cdn.pallycon.com/demo/hls/gosigak01/gosigak<em>01.m3u8 |
+| http://cdn.pallycon.com/demo/hls/gosigak02/gosigak</em>02.m3u8 |</p>
+
+<p><a href="#doc_top">Top</a></p>
+
+<hr>
+
+
+
+
+</body>
+
+</html>
+  </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

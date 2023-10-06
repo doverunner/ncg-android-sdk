@@ -1196,10 +1196,6 @@ public class MainActivity extends Activity {
 					"https://contents.pallycon.com/TEST/PACKAGED_CONTENT/TEST_SIMPLE/hls_ncg/master.m3u8",
 					"Sintel Trailer-SIMPLE-AES"));
 			mListViewItems.add( new ListViewItem(ListItemType.HLS,
-					"https://contents.pallycon.com/DEV/sglee/hlsncgTest_cenc/hls_ncg/master.m3u8",
-					"eyJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJvcmlnaW5hbCIsInVzZXJfaWQiOiJ1dGVzdCIsImRybV90eXBlIjoibmNnIiwic2l0ZV9pZCI6IkRFTU8iLCJoYXNoIjoibUlnaDUxeWl6R01iV1FTYTdzS1Z3Y1V0Q0JhcTRVVU8waXhURWk2dktYVT0iLCJjaWQiOiJsbGFtYSIsInBvbGljeSI6IjlXcUlXa2RocHhWR0s4UFNJWWNuSnNjdnVBOXN4Z3ViTHNkK2FqdVwvYm9tUVpQYnFJK3hhZVlmUW9jY2t2dUVmdUx0dlVMWXEwTnVoNVJaOFhGYzQ1RWxHd1dcLzY3WVhUcTJQSDJ4Z3dIR1hDalVuaUgzbDQ4NVNmcDZjbmV1bm5qdjMxeGt5VHd6VlAzdVhIUGJWNWR3PT0iLCJ0aW1lc3RhbXAiOiIyMDIyLTA2LTI0VDAxOjE1OjU0WiJ9",
-					"hls sglee/bunny/hls_ncg"));
-			mListViewItems.add( new ListViewItem(ListItemType.HLS,
 					"https://contents.pallycon.com/DEV/yhpark/original/tictoc-hls/prog_index.m3u8",
 					"clear",
 					"hls original"));
