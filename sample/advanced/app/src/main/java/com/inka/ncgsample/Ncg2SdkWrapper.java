@@ -93,7 +93,7 @@ public class Ncg2SdkWrapper {
 		try {
 //			mNcg2Agent.init(context, policy);
 			mNcg2Agent.init(context, policy, null, null, "DRM", true);
-			//mNcg2Agent.setHttpRequestCallback(mHttpRequestCallback );
+//			mNcg2Agent.setHttpRequestCallback(mHttpRequestCallback );
 			//mNcg2Agent.disableLog();
 		} catch (Ncg2FatalException e) {
 			e.printStackTrace();
@@ -429,8 +429,8 @@ public class Ncg2SdkWrapper {
 				else {
 					isTemporaryLicense = false;
 				}
-				mNcg2Agent.acquireLicenseByToken(mToken, isTemporaryLicense);
-//				mNcg2Agent.acquireLicenseByToken(mToken, "https://license-sqa.pallycon.com/ri/licenseManager.do", isTemporaryLicense);
+//				mNcg2Agent.acquireLicenseByToken(mToken, isTemporaryLicense);
+				mNcg2Agent.acquireLicenseByToken(mToken, "https://testtokyo.pallycon.com/ri/licenseManager.do", isTemporaryLicense);
 				mIsSucceeded = true;
 			}
 			catch(final Ncg2HttpException e) {
