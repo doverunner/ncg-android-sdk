@@ -91,9 +91,8 @@ public class Ncg2SdkWrapper {
 		OfflineSupportPolicy policy = OfflineSupportPolicy.OfflineSupport;
 		policy.setCountOfExecutionLimit(0);
 		try {
-//			mNcg2Agent.init(context, policy);
-			mNcg2Agent.init(context, policy, null, null, "DRM", true);
-//			mNcg2Agent.setHttpRequestCallback(mHttpRequestCallback );
+			mNcg2Agent.init(context, policy);
+			mNcg2Agent.setHttpRequestCallback(mHttpRequestCallback );
 			//mNcg2Agent.disableLog();
 		} catch (Ncg2FatalException e) {
 			e.printStackTrace();
@@ -227,7 +226,7 @@ public class Ncg2SdkWrapper {
 				//
 				//	Non-DRM Content
 				//
-				if( contentPath.startsWith("http://") ) {
+				if( contentPath.startsWith("http://") || contentPath.startsWith("https://") ) {
 					playbackURL = contentPath;
 				}
 				else {
@@ -251,7 +250,7 @@ public class Ncg2SdkWrapper {
 				if( contentPath.contains(".m3u8") ) {
 					// HLS content
 					playbackURL = ncgLocalWebServer.addHttpLiveStreamUrlForPlayback(contentPath);
-				} else if(contentPath.startsWith("http://")) {
+				} else if(contentPath.startsWith("http://") || contentPath.startsWith("https://")) {
 					// PD content
 					playbackURL = ncgLocalWebServer.addProgressiveDownloadUrlForPlayback(contentPath);
 				} else {
@@ -422,15 +421,14 @@ public class Ncg2SdkWrapper {
 		protected Void doInBackground(Void... params) {
 			try {
 				boolean isTemporaryLicense;
-				if( mUrl.startsWith("http://") ) {
+				if( mUrl.startsWith("http://") || mUrl.startsWith("https://") ) {
 					// 스트리밍 라이선스인 경우.
 					isTemporaryLicense = true;
 				}
 				else {
 					isTemporaryLicense = false;
 				}
-//				mNcg2Agent.acquireLicenseByToken(mToken, isTemporaryLicense);
-				mNcg2Agent.acquireLicenseByToken(mToken, "https://testtokyo.pallycon.com/ri/licenseManager.do", isTemporaryLicense);
+				mNcg2Agent.acquireLicenseByToken(mToken, isTemporaryLicense);
 				mIsSucceeded = true;
 			}
 			catch(final Ncg2HttpException e) {
@@ -495,7 +493,7 @@ public class Ncg2SdkWrapper {
 		protected Void doInBackground(Void... params) {
 			try {
 				boolean isTemporaryLicense;
-				if( mFilePath.startsWith("http://") ) {
+				if( mFilePath.startsWith("http://") || mFilePath.startsWith("https://") ) {
 					// 스트리밍 라이선스인 경우.
 					isTemporaryLicense = true;
 				}
