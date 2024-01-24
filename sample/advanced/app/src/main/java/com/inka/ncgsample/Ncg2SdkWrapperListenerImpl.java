@@ -248,8 +248,10 @@ public class Ncg2SdkWrapperListenerImpl implements Ncg2SdkWrapperListener {
 						new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
 
-						Ncg2SdkWrapper.getInstance().acquireLicenseByToken(
-								mActivity, contentPath,	token);
+//						Ncg2SdkWrapper.getInstance().acquireLicenseByToken(
+//								mActivity, contentPath,	token);
+						Ncg2SdkWrapper.getInstance().acquireLicense(
+								mActivity, contentPath, token);
 						mAcquireLicenseDlg = null;
 					}
 				});

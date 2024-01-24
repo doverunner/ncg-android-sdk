@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>HttpRequestJniCallback</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>NCG SDK for Android</span>
+            </a>
+    </div>
+    <div>
+2.15.0    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="NCG SDK for Android::com.inka.ncg.jni/HttpRequestJniCallback///PointingToDeclaration//77799447">
+  <div class="breadcrumbs"><a href="../../../index.html">NCG SDK for Android</a><span class="delimiter">/</span><a href="../index.html">com.inka.ncg.jni</a><span class="delimiter">/</span><span class="current">HttpRequestJniCallback</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Http</span><wbr></wbr><span>Request</span><wbr></wbr><span>Jni</span><wbr></wbr><span><span>Callback</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">HttpRequestJniCallback</a></div><p class="paragraph">SDK 외부로는 노출되지 않는 인터페이스. com.inka.ncg.player 패키저에서만 참조해야 한다. Ncg2AgentImpl 클래스에서 해당 인터페이스를 구현한다. 콜백으로 등록된 해당 객채의 메소드는 JNI에서 직접 호출하게 된다. 호출되는 스레드 Contenxt는 Java에서 JNI에 호출할때의 Thread Context가 된다.</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">jypark</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="257916216%2FFunctions%2F77799447" anchor-label="getLastErrorMsg" id="257916216%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-last-error-msg.html"><span>get</span><wbr></wbr><span>Last</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Msg</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="257916216%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-last-error-msg.html"><span class="token function">getLastErrorMsg</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="905303594%2FFunctions%2F77799447" anchor-label="getLastErrorMsgStatic" id="905303594%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-last-error-msg-static.html"><span>get</span><wbr></wbr><span>Last</span><wbr></wbr><span>Error</span><wbr></wbr><span>Msg</span><wbr></wbr><span><span>Static</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="905303594%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-last-error-msg-static.html"><span class="token function">getLastErrorMsgStatic</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1756346936%2FFunctions%2F77799447" anchor-label="getStatusCode" id="-1756346936%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-status-code.html"><span>get</span><wbr></wbr><span>Status</span><wbr></wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1756346936%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span>int <a href="get-status-code.html"><span class="token function">getStatusCode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1447955782%2FFunctions%2F77799447" anchor-label="getStatusCodeStatic" id="-1447955782%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-status-code-static.html"><span>get</span><wbr></wbr><span>Status</span><wbr></wbr><span>Code</span><wbr></wbr><span><span>Static</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1447955782%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>int <a href="get-status-code-static.html"><span class="token function">getStatusCodeStatic</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2130262276%2FFunctions%2F77799447" anchor-label="getStatusMsg" id="2130262276%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-status-msg.html"><span>get</span><wbr></wbr><span>Status</span><wbr></wbr><span><span>Msg</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2130262276%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-status-msg.html"><span class="token function">getStatusMsg</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="596543734%2FFunctions%2F77799447" anchor-label="getStatusMsgStatic" id="596543734%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-status-msg-static.html"><span>get</span><wbr></wbr><span>Status</span><wbr></wbr><span>Msg</span><wbr></wbr><span><span>Static</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="596543734%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-status-msg-static.html"><span class="token function">getStatusMsgStatic</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1617819767%2FFunctions%2F77799447" anchor-label="sendRequest" id="-1617819767%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="send-request.html"><span>send</span><wbr></wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1617819767%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="send-request.html"><span class="token function">sendRequest</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> url<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> param</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1740960923%2FFunctions%2F77799447" anchor-label="sendRequestResponseBytes" id="-1740960923%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="send-request-response-bytes.html"><span>send</span><wbr></wbr><span>Request</span><wbr></wbr><span>Response</span><wbr></wbr><span><span>Bytes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1740960923%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span>byte<span class="token operator">&gt;</span> <a href="send-request-response-bytes.html"><span class="token function">sendRequestResponseBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> url<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> param</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-184757709%2FFunctions%2F77799447" anchor-label="sendRequestResponseBytesStatic" id="-184757709%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="send-request-response-bytes-static.html"><span>send</span><wbr></wbr><span>Request</span><wbr></wbr><span>Response</span><wbr></wbr><span>Bytes</span><wbr></wbr><span><span>Static</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-184757709%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span>byte<span class="token operator">&gt;</span> <a href="send-request-response-bytes-static.html"><span class="token function">sendRequestResponseBytesStatic</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> url<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> param</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="786732905%2FProperties%2F77799447" anchor-label="mRegisteredCallback" id="786732905%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#786732905%2FProperties%2F77799447"><span>m</span><wbr></wbr><span>Registered</span><wbr></wbr><span><span>Callback</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="786732905%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="786732905%2FProperties%2F77799447" anchor-label="mRegisteredCallback" id="786732905%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="index.html">HttpRequestJniCallback</a> <a href="index.html#786732905%2FProperties%2F77799447">mRegisteredCallback</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>(c) 2024. INKA Entworks. All rights reserved.</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

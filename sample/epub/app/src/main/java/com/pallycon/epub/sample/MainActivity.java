@@ -13,6 +13,7 @@ import com.inka.ncg2.Ncg2Exception;
 import com.inka.ncg2.Ncg2SdkFactory;
 
 import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -26,6 +27,7 @@ import java.util.zip.ZipFile;
 
 public class MainActivity extends AppCompatActivity {
     private String contentUrl = "https://contents.pallycon.com/DEV/sglee/ziptest.zip";
+
     private String rootAbsolutePath = "";
     private String ncgFileName = "ziptest.zip";
     private Ncg2Agent ncg2Agent = null;
@@ -42,17 +44,12 @@ public class MainActivity extends AppCompatActivity {
         ncg2Agent = Ncg2SdkFactory.getNcgAgentInstance();
         Ncg2Agent.OfflineSupportPolicy policy = Ncg2Agent.OfflineSupportPolicy.OfflineSupport;
         try {
-            // TODO 1. init ncg2Agent.
+            // init ncg2Agent.
             ncg2Agent.init(getApplicationContext(), policy);
-
-
-
+//            ncg2Agent.disableLog();
         } catch (Ncg2Exception e) {
             e.printStackTrace();
         }
-
-        // disable log
-//            ncg2Agent.disableLog();
 
         mHttpRequestCallback = new NcgHttpRequestCallbackImpl(getApplicationContext());
 
@@ -61,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
         String path = rootAbsolutePath + "/" + ncgFileName;
 
         mLocalFileCallback = new NcgLocalFileCallbackImpl(ncg2Agent, path);
-        ncg2Agent.setHttpRequestCallback(mHttpRequestCallback);
         ncg2Agent.setLocalFileCallback(mLocalFileCallback);
+        ncg2Agent.setHttpRequestCallback(mHttpRequestCallback);
 
         // download content.
         Button downloadButton = findViewById(R.id.downloadButton);
@@ -94,8 +91,7 @@ public class MainActivity extends AppCompatActivity {
         protected Void doInBackground(Void... voids) {
             long startTime = System.currentTimeMillis();
             try {
-                // TODO 2. aquire license for content.
-                ncg2Agent.acquireLicenseByToken("eyJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJvcmlnaW5hbCIsInVzZXJfaWQiOiJ0ZXN0VXNlciIsImRybV90eXBlIjoiTkNHIiwic2l0ZV9pZCI6IkRFTU8iLCJoYXNoIjoiNmlPTVhZNEFKN2xKRTg3Tzg0WXFnbkplQkFpN3NyWlBBU1NGOWJOZzQ0UT0iLCJjaWQiOiJ6aXB0ZXN0IiwicG9saWN5IjoiOVdxSVdrZGhweFZHSzhQU0lZY25Kc2N2dUE5c3hndWJMc2QrYWp1XC9ib21RWlBicUkreGFlWWZRb2Nja3Z1RWZBYXFkVzVoWGdKTmdjU1MzZlM3bzhDXC8zNWs3d0N2dXNIbHhVa1BuUk84OXZ0M3lKUkp3SE9BTUxxNnRJeDBuZG5WZVlqZXVFWmNuVmlcL3psWDIwNVFldFN6d01sWko4T2RlQVJNSTYycWJ0eGdENDZXQk44TDhDdVFJMUVUUEJTdWp1MDZKTDhXMXBWTk5SQThpalFXWEFUcEZMWGtBaGdPSFhzRndVbE1zeUtVdm85aEhBWkduYUljRXY1b3pqTiIsInRpbWVzdGFtcCI6IjIwMjMtMDctMTNUMDY6MzA6MjNaIn0=", true);
+                ncg2Agent.acquireLicenseByToken("eyJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJvcmlnaW5hbCIsInVzZXJfaWQiOiJ0ZXN0VXNlciIsImRybV90eXBlIjoiTkNHIiwic2l0ZV9pZCI6IkRFTU8iLCJoYXNoIjoiUzJuUHBncXBONUEybVZPQlVDT2hmS2NcL0I4dlJrSzVJVTVYXC9KSnFtbCtrPSIsImNpZCI6InppcHRlc3QiLCJwb2xpY3kiOiI5V3FJV2tkaHB4VkdLOFBTSVljbkpzY3Z1QTlzeGd1YkxzZCthanVcL2JvbVFaUGJxSSt4YWVZZlFvY2NrdnVFZkFhcWRXNWhYZ0pOZ2NTUzNmUzdvOE5zandzempNdXZ0KzBRekxrWlZWTm14MGtlZk9lMndDczJUSVRnZFU0QnZOOWFiaGQwclFrTUlybW9JZW9KSHFJZUhjUnZWZjZUMTRSbVRBREVwQ1k3UEhmUGZcL1ZGWVwvVmJYdXhYXC9XVHRWYXM0T1VwQ0RkNW0xc3BUWG04RFwvTUhGcGlieWZacERMRnBHeFArNkR4OThKSXhtTmFwWmRaRmlTTXB3aVpZRTIiLCJ0aW1lc3RhbXAiOiIyMDI0LTAxLTI0VDA0OjU5OjExWiJ9", true);
 
                 Enumeration<? extends NcgLocalFileCallbackImpl.FileEntry> entries = mLocalFileCallback.entries();
 
@@ -122,7 +118,6 @@ public class MainActivity extends AppCompatActivity {
                             out.write(buffer, 0, count);
                         }
 
-                        entry.close();
                         out.close();
                     }
                 }
@@ -140,8 +135,75 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    class DownloadFileFromURL extends AsyncTask<String, String, String> {
+    private class UnpackTask2 extends AsyncTask<String, String, String> {
+        @Override
+        protected String doInBackground(String... f_url) {
+            long startTime = System.currentTimeMillis();
+            try {
+                ncg2Agent.acquireLicenseByToken("eyJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJvcmlnaW5hbCIsInVzZXJfaWQiOiJ1dGVzdCIsImRybV90eXBlIjoiTkNHIiwic2l0ZV9pZCI6IkpRNEkiLCJoYXNoIjoiYTRXVzNKcm1GZ0UxWlFuVTRGZEFZUnhSeDNDT0RcL1FTRlNmVXhiZklTWjg9IiwiY2lkIjoiMjAyMzA2MTYtZTE4ZDBjYmExOTFiMjVkZTgyNzdiNzlhYmE5YWYyZjIiLCJwb2xpY3kiOiJyRFBPZjV5NzcrWThQd3ErYXBGWXBOZElsczBCVHg4N1pCZTdzK3lHSG5JVE1TRktPeUltZGtnUytiQWlXaE9zQUt4a2VaMlQ2N1hqTVZXemExUzZ4U1ZlU0RtK2xCY2dpQ1JTaTJleDZQUHNoWG5oOEs2ZHdBV2tUKzhGZlZXUUV6cVl5VTZGM04wRFliOHNGSDFtdnNDdDdqVDlLbEVEMXlhVmd2SlRQS1FOQUN2WXl0akg0cGkzRDgzN2dmTTQ0RlRXb3hGQWEwV3k1cytySTBoNjNlQ3RsU1gyeUNCZVhyR1wvMko5Q1A1NjZ0NlNjbzFwaUhkcnQxdHhUbnlNNCIsInRpbWVzdGFtcCI6IjIwMjMtMDctMjdUMDA6MjE6NTlaIn0=", true);
 
+                ZipFile zipFile = new ZipFile(f_url[0]);
+                Enumeration e = zipFile.entries();
+                Ncg2Agent.NcgEpubFile ncgEpubFile = ncg2Agent.createNcgEpub();
+
+                while (e.hasMoreElements()) {
+                    ZipEntry entry = (ZipEntry) e.nextElement();
+                    File destinationFilePath = new File(f_url[0], entry.getName());
+
+                    destinationFilePath.getParentFile().mkdirs();
+
+                    if (entry.isDirectory())
+                        continue;
+
+                    String fileName = entry.getName();
+                    String savePath = rootAbsolutePath + "/" + fileName;
+                    String saveDecryptedPath = rootAbsolutePath + "/" + fileName.substring(0, fileName.length()-4);
+                    File file = new File(savePath);
+                    File file2 = new File(saveDecryptedPath);
+                    File dir = file.getParentFile();
+                    if (!dir.exists()) {
+                        dir.mkdirs();
+                    }
+
+                    FileOutputStream out = new FileOutputStream(file, true);
+                    byte[] buffer = new byte[8192];
+                    int count;
+
+                    BufferedInputStream bis = new BufferedInputStream(zipFile.getInputStream(entry));
+
+                    while ((count = bis.read(buffer, 0, 8192)) != -1) {
+                        out.write(buffer, 0, count);
+                    }
+                    out.close();
+                    bis.close();
+
+                    ncgEpubFile.open(savePath);
+
+                    FileOutputStream out2 = new FileOutputStream(file2, true);
+
+                    while ((count = (int) ncgEpubFile.read(buffer, 8192)) > 0) {
+                        out2.write(buffer, 0, count);
+                    }
+
+                    ncgEpubFile.close();
+
+                    out2.close();
+                }
+
+                ncgEpubFile.release();
+            } catch (Ncg2Exception e) {
+                Log.d("unpack","Ncg2Exception : " + e.getMessage());
+            } catch (IOException e) {
+                Log.d("unpack","IOException : " + e.getMessage());
+            }
+
+            long endTime = System.currentTimeMillis();
+            System.out.println((endTime - startTime));
+            return null;
+        }
+    }
+
+    class DownloadFileFromURL extends AsyncTask<String, String, String> {
         /**
          * Before starting background thread Show Progress Bar Dialog
          **/

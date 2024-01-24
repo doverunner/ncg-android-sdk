@@ -2,6 +2,7 @@ package com.pallycon.epub.sample;
 
 import com.inka.ncg2.Ncg2Agent;
 import com.inka.ncg2.Ncg2Agent.NcgEpubFile;
+import com.inka.ncg2.Ncg2Agent.NcgFile.SeekMethod;
 import com.inka.ncg2.Ncg2Agent.LocalFileCallback;
 import com.inka.ncg2.Ncg2Agent.NcgLocalFileException;
 import com.inka.ncg2.Ncg2Exception;

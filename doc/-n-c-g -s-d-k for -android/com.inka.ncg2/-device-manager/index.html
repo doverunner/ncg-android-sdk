@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>DeviceManager</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>NCG SDK for Android</span>
+            </a>
+    </div>
+    <div>
+2.15.0    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="NCG SDK for Android::com.inka.ncg2/DeviceManager///PointingToDeclaration//77799447">
+  <div class="breadcrumbs"><a href="../../../index.html">NCG SDK for Android</a><span class="delimiter">/</span><a href="../index.html">com.inka.ncg2</a><span class="delimiter">/</span><span class="current">DeviceManager</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Device</span><wbr></wbr><span><span>Manager</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">class </span><a href="index.html">DeviceManager</a><span class="token keyword"> extends </span><span data-unresolved-link="com.inka.ncg2/DeviceManagerInner///PointingToDeclaration/">DeviceManagerInner</span></div><p class="paragraph">Android 디바이스에 대한 정보를 얻기 위한 CLASS Private API 클래스</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">맑은(준)호걸(호)</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="1771585728%2FConstructors%2F77799447" anchor-label="DeviceManager" id="1771585728%2FConstructors%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-device-manager.html"><span>Device</span><wbr></wbr><span><span>Manager</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1771585728%2FConstructors%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="-device-manager.html"><span class="token function">DeviceManager</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a> context</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1148011903%2FConstructors%2F77799447" anchor-label="DeviceManager" id="1148011903%2FConstructors%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-device-manager.html"><span>Device</span><wbr></wbr><span><span>Manager</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1148011903%2FConstructors%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="-device-manager.html"><span class="token function">DeviceManager</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="-builder/index.html">DeviceManager.Builder</a> builder</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="-1005219530%2FClasslikes%2F77799447" anchor-label="Builder" id="-1005219530%2FClasslikes%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-builder/index.html"><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1005219530%2FClasslikes%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">class </span><a href="-builder/index.html">Builder</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-703801614%2FClasslikes%2F77799447" anchor-label="OutParam" id="-703801614%2FClasslikes%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-out-param/index.html"><span>Out</span><wbr></wbr><span><span>Param</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-703801614%2FClasslikes%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">class </span><a href="-out-param/index.html">OutParam</a><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="1016380586%2FFunctions%2F77799447" anchor-label="getCPUsageIdle" id="1016380586%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-c-p-usage-idle.html"><span>get</span><wbr></wbr><span>CPUsage</span><wbr></wbr><span><span>Idle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1016380586%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>float <a href="get-c-p-usage-idle.html"><span class="token function">getCPUsageIdle</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1599463696%2FFunctions%2F77799447" anchor-label="getCPUsageInfo" id="1599463696%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-c-p-usage-info.html"><span>get</span><wbr></wbr><span>CPUsage</span><wbr></wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1599463696%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>boolean <a href="get-c-p-usage-info.html"><span class="token function">getCPUsageInfo</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">단말기의 CPU 사용률에 대한 정보를 수집합니다.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1151352511%2FFunctions%2F77799447" anchor-label="getCPUsageNice" id="-1151352511%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-c-p-usage-nice.html"><span>get</span><wbr></wbr><span>CPUsage</span><wbr></wbr><span><span>Nice</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1151352511%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>float <a href="get-c-p-usage-nice.html"><span class="token function">getCPUsageNice</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="82233967%2FFunctions%2F77799447" anchor-label="getCPUsageSystem" id="82233967%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-c-p-usage-system.html"><span>get</span><wbr></wbr><span>CPUsage</span><wbr></wbr><span><span>System</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="82233967%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>float <a href="get-c-p-usage-system.html"><span class="token function">getCPUsageSystem</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2002380213%2FFunctions%2F77799447" anchor-label="getCPUsageUse" id="2002380213%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-c-p-usage-use.html"><span>get</span><wbr></wbr><span>CPUsage</span><wbr></wbr><span><span>Use</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2002380213%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>float <a href="get-c-p-usage-use.html"><span class="token function">getCPUsageUse</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">현재 CPU의 사용률을 알려 줍니다.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1206092759%2FFunctions%2F77799447" anchor-label="getDeviceID" id="1206092759%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-device-i-d.html"><span>get</span><wbr></wbr><span>Device</span><wbr></wbr><span><span>ID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1206092759%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-device-i-d.html"><span class="token function">getDeviceID</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">디바이스에서 유니크한 ID들을 조회하여 UUID 형식의 문자열로 돌려 줍니다.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1537711327%2FFunctions%2F77799447" anchor-label="getDeviceIdDirectly" id="-1537711327%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-device-id-directly.html"><span>get</span><wbr></wbr><span>Device</span><wbr></wbr><span>Id</span><wbr></wbr><span><span>Directly</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1537711327%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-device-id-directly.html"><span class="token function">getDeviceIdDirectly</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1662296240%2FFunctions%2F77799447" anchor-label="getDeviceIdOfAndroidID" id="-1662296240%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-device-id-of-android-i-d.html"><span>get</span><wbr></wbr><span>Device</span><wbr></wbr><span>Id</span><wbr></wbr><span>Of</span><wbr></wbr><span>Android</span><wbr></wbr><span><span>ID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1662296240%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-device-id-of-android-i-d.html"><span class="token function">getDeviceIdOfAndroidID</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Android에서 재공하는 ANDROID_ID 값을 UUID 형식의 문자열로 변환하여 돌려 줍니다.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-965812542%2FFunctions%2F77799447" anchor-label="getDeviceIdOfTelephony" id="-965812542%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-device-id-of-telephony.html"><span>get</span><wbr></wbr><span>Device</span><wbr></wbr><span>Id</span><wbr></wbr><span>Of</span><wbr></wbr><span><span>Telephony</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-965812542%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-device-id-of-telephony.html"><span class="token function">getDeviceIdOfTelephony</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">전화모듈의 장치 ID을 얻어서 UUID 형식을 문자열로 돌려 줍니다.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1306141707%2FFunctions%2F77799447" anchor-label="getDeviceIdOfWifi" id="1306141707%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-device-id-of-wifi.html"><span>get</span><wbr></wbr><span>Device</span><wbr></wbr><span>Id</span><wbr></wbr><span>Of</span><wbr></wbr><span><span>Wifi</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1306141707%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-device-id-of-wifi.html"><span class="token function">getDeviceIdOfWifi</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">WIFI 모듈의 장치 ID값을 UUID 형식의 문자열로 돌려 줍니다.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1959054369%2FFunctions%2F77799447" anchor-label="getDeviceModel" id="-1959054369%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-device-model.html"><span>get</span><wbr></wbr><span>Device</span><wbr></wbr><span><span>Model</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1959054369%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-device-model.html"><span class="token function">getDeviceModel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1707885107%2FFunctions%2F77799447" anchor-label="getExternalStorageCIDs" id="-1707885107%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-external-storage-c-i-ds.html"><span>get</span><wbr></wbr><span>External</span><wbr></wbr><span>Storage</span><wbr></wbr><span><span>CIDs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1707885107%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token operator">&gt;</span> <a href="get-external-storage-c-i-ds.html"><span class="token function">getExternalStorageCIDs</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">리턴되는 값이 null 이 아닌지를 검증 후 사용한다.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1056241279%2FFunctions%2F77799447" anchor-label="getLocalIpAddress" id="-1056241279%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-local-ip-address.html"><span>get</span><wbr></wbr><span>Local</span><wbr></wbr><span>Ip</span><wbr></wbr><span><span>Address</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1056241279%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-local-ip-address.html"><span class="token function">getLocalIpAddress</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a> context</span></span><span class="token punctuation">)</span></div><div class="brief ">단말기에 설정되어 있는 IP Address 값을 알려준다.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1089423493%2FFunctions%2F77799447" anchor-label="getMemoryFree" id="-1089423493%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-memory-free.html"><span>get</span><wbr></wbr><span>Memory</span><wbr></wbr><span><span>Free</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1089423493%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="get-memory-free.html"><span class="token function">getMemoryFree</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">단말기의 사용가능한(남은) 메모리 크기를 얻습니다.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1014327431%2FFunctions%2F77799447" anchor-label="getMemoryInfo" id="-1014327431%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-memory-info.html"><span>get</span><wbr></wbr><span>Memory</span><wbr></wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1014327431%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>boolean <a href="get-memory-info.html"><span class="token function">getMemoryInfo</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">단말기의 메모리 정보를 수집합니다.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="938277263%2FFunctions%2F77799447" anchor-label="getMemoryTotal" id="938277263%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-memory-total.html"><span>get</span><wbr></wbr><span>Memory</span><wbr></wbr><span><span>Total</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="938277263%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="get-memory-total.html"><span class="token function">getMemoryTotal</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">단말기의 전체 메모리 크기를 얻습니다.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-461225163%2FFunctions%2F77799447" anchor-label="getWidevineUUID" id="-461225163%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-widevine-u-u-i-d.html"><span>get</span><wbr></wbr><span>Widevine</span><wbr></wbr><span><span>UUID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-461225163%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/RequiresApi.html"><span class="token annotation builtin">RequiresApi</span></a><span class="token punctuation">(</span><span>api<span class="token operator"> = </span><a href="https://developer.android.com/reference/kotlin/android/os/Build.VERSION_CODES.html">Build.VERSION_CODES.Q</a></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span>int <a href="get-widevine-u-u-i-d.html"><span class="token function">getWidevineUUID</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="-out-param/index.html">DeviceManager.OutParam</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token operator">&gt;</span> uuid</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1023119458%2FFunctions%2F77799447" anchor-label="isDeviceIdStored" id="-1023119458%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="is-device-id-stored.html"><span>is</span><wbr></wbr><span>Device</span><wbr></wbr><span>Id</span><wbr></wbr><span><span>Stored</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1023119458%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>boolean <a href="is-device-id-stored.html"><span class="token function">isDeviceIdStored</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="654570621%2FFunctions%2F77799447" anchor-label="isEmulator" id="654570621%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="is-emulator.html"><span>is</span><wbr></wbr><span><span>Emulator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="654570621%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>boolean <a href="is-emulator.html"><span class="token function">isEmulator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="657910228%2FFunctions%2F77799447" anchor-label="isPromiscuousMode" id="657910228%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="is-promiscuous-mode.html"><span>is</span><wbr></wbr><span>Promiscuous</span><wbr></wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="657910228%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>boolean <a href="is-promiscuous-mode.html"><span class="token function">isPromiscuousMode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">활성화된 네트워크중에 promiscuous mode가 있는지를 확인 합니다.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="780868392%2FFunctions%2F77799447" anchor-label="isRooting" id="780868392%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="is-rooting.html"><span>is</span><wbr></wbr><span><span>Rooting</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="780868392%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>boolean <a href="is-rooting.html"><span class="token function">isRooting</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">단말기가 루팅이 되어 있는지를 확인 합니다.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1371623793%2FFunctions%2F77799447" anchor-label="setForceDeviceModel" id="-1371623793%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="set-force-device-model.html"><span>set</span><wbr></wbr><span>Force</span><wbr></wbr><span>Device</span><wbr></wbr><span><span>Model</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1371623793%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span>void <a href="set-force-device-model.html"><span class="token function">setForceDeviceModel</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> device_model</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1242629553%2FFunctions%2F77799447" anchor-label="shell" id="1242629553%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="shell.html"><span><span>shell</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1242629553%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static synchronized </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="shell.html"><span class="token function">shell</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> cmd<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> param</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-538827417%2FFunctions%2F77799447" anchor-label="storeDeviceID" id="-538827417%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="store-device-i-d.html"><span>store</span><wbr></wbr><span>Device</span><wbr></wbr><span><span>ID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-538827417%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="store-device-i-d.html"><span class="token function">storeDeviceID</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> deviceID</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2076735274%2FFunctions%2F77799447" anchor-label="storeDeviceIDWithoutEncrypt" id="2076735274%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="store-device-i-d-without-encrypt.html"><span>store</span><wbr></wbr><span>Device</span><wbr></wbr><span>IDWithout</span><wbr></wbr><span><span>Encrypt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2076735274%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="store-device-i-d-without-encrypt.html"><span class="token function">storeDeviceIDWithoutEncrypt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> deviceID</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>(c) 2024. INKA Entworks. All rights reserved.</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

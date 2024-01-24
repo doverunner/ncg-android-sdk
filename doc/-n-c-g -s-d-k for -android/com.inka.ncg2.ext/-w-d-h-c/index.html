@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>WDHC</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>NCG SDK for Android</span>
+            </a>
+    </div>
+    <div>
+2.15.0    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="NCG SDK for Android::com.inka.ncg2.ext/WDHC///PointingToDeclaration//77799447">
+  <div class="breadcrumbs"><a href="../../../index.html">NCG SDK for Android</a><span class="delimiter">/</span><a href="../index.html">com.inka.ncg2.ext</a><span class="delimiter">/</span><span class="current">WDHC</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>WDHC</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">class </span><a href="index.html">WDHC</a><span class="token keyword"> extends </span><span data-unresolved-link="com.inka.ncg2.ext/WatchDogHdmiConnection///PointingToDeclaration/">WatchDogHdmiConnection</span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="1853134119%2FFunctions%2F77799447" anchor-label="addFilter" id="1853134119%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-logcat-process/add-filter.html"><span>add</span><wbr></wbr><span><span>Filter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1853134119%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="../-logcat-process/add-filter.html"><span class="token function">addFilter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> tag</span></span><span class="token punctuation">)</span></div><div class="brief ">LogCat filter 등록  ex) SoundBooster:E(<strong>E</strong>rror/<strong>D</strong>ebug/<strong>I</strong>nfomation/<strong>V</strong>erbos/<strong>*</strong>:all/<strong>S</strong>ilence)     *:S ( 등록된 Tag 이외 모두 무시 ) </div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1317206214%2FFunctions%2F77799447" anchor-label="clearLogCat" id="1317206214%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-logcat-process/clear-log-cat.html"><span>clear</span><wbr></wbr><span>Log</span><wbr></wbr><span><span>Cat</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1317206214%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="../-logcat-process/clear-log-cat.html"><span class="token function">clearLogCat</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1817405274%2FFunctions%2F77799447" anchor-label="clearPreviousLogCatProcessID" id="-1817405274%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-logcat-process/clear-previous-log-cat-process-i-d.html"><span>clear</span><wbr></wbr><span>Previous</span><wbr></wbr><span>Log</span><wbr></wbr><span>Cat</span><wbr></wbr><span>Process</span><wbr></wbr><span><span>ID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1817405274%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void <a href="../-logcat-process/clear-previous-log-cat-process-i-d.html"><span class="token function">clearPreviousLogCatProcessID</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a> ctx</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1530532523%2FFunctions%2F77799447" anchor-label="disableLogcat" id="1530532523%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-logcat-process/disable-logcat.html"><span>disable</span><wbr></wbr><span><span>Logcat</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1530532523%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void <a href="../-logcat-process/disable-logcat.html"><span class="token function">disableLogcat</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2052113888%2FFunctions%2F77799447" anchor-label="enableLogcat" id="-2052113888%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-logcat-process/enable-logcat.html"><span>enable</span><wbr></wbr><span><span>Logcat</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2052113888%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void <a href="../-logcat-process/enable-logcat.html"><span class="token function">enableLogcat</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1658780835%2FFunctions%2F77799447" anchor-label="getInstance" id="1658780835%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-instance.html"><span>get</span><wbr></wbr><span><span>Instance</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1658780835%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="index.html">WDHC</a> <a href="get-instance.html"><span class="token function">getInstance</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1200338054%2FFunctions%2F77799447" anchor-label="init" id="-1200338054%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-logcat-process/init.html"><span><span>init</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1200338054%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>boolean <a href="../-logcat-process/init.html"><span class="token function">init</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a> ctx</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>boolean <a href="index.html#889998704%2FFunctions%2F77799447"><span class="token function">init</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a> act</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-796392684%2FFunctions%2F77799447" anchor-label="isConnected" id="-796392684%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-796392684%2FFunctions%2F77799447"><span>is</span><wbr></wbr><span><span>Connected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-796392684%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>boolean <a href="index.html#-796392684%2FFunctions%2F77799447"><span class="token function">isConnected</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1361822231%2FFunctions%2F77799447" anchor-label="OnInitInThread" id="-1361822231%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1361822231%2FFunctions%2F77799447"><span>On</span><wbr></wbr><span>Init</span><wbr></wbr><span>In</span><wbr></wbr><span><span>Thread</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1361822231%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>boolean <a href="index.html#-1361822231%2FFunctions%2F77799447"><span class="token function">OnInitInThread</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">LogCat Thread 의 안에서 필요한 초기화 작업을 수행한다.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-810440784%2FFunctions%2F77799447" anchor-label="OnLogcatData" id="-810440784%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-logcat-process/-on-logcat-data.html"><span>On</span><wbr></wbr><span>Logcat</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-810440784%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span>void <a href="../-logcat-process/-on-logcat-data.html"><span class="token function">OnLogcatData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> data</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="index.html#-1951456985%2FFunctions%2F77799447"><span class="token function">OnLogcatData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> data</span></span><span class="token punctuation">)</span></div><div class="brief ">LogCat 데이터를 전달 받을 함수</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-252799109%2FFunctions%2F77799447" anchor-label="readWdhcInfo" id="-252799109%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-252799109%2FFunctions%2F77799447"><span>read</span><wbr></wbr><span>Wdhc</span><wbr></wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-252799109%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="index.html#-252799109%2FFunctions%2F77799447"><span class="token function">readWdhcInfo</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-174443508%2FFunctions%2F77799447" anchor-label="release" id="-174443508%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-174443508%2FFunctions%2F77799447"><span><span>release</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-174443508%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="index.html#-174443508%2FFunctions%2F77799447"><span class="token function">release</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="115649025%2FFunctions%2F77799447" anchor-label="run" id="115649025%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-logcat-process/run.html"><span><span>run</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="115649025%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="../-logcat-process/run.html"><span class="token function">run</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span>void <a href="index.html#-853624561%2FFunctions%2F77799447"><span class="token function">run</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-86447670%2FFunctions%2F77799447" anchor-label="setOnHdmiConnectionListener" id="-86447670%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-86447670%2FFunctions%2F77799447"><span>set</span><wbr></wbr><span>On</span><wbr></wbr><span>Hdmi</span><wbr></wbr><span>Connection</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-86447670%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="index.html#-86447670%2FFunctions%2F77799447"><span class="token function">setOnHdmiConnectionListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../-on-hdmi-connection-listener/index.html">OnHdmiConnectionListener</a> listener</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-645773918%2FFunctions%2F77799447" anchor-label="startWatchLogcatDataThread" id="-645773918%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-logcat-process/start-watch-logcat-data-thread.html"><span>start</span><wbr></wbr><span>Watch</span><wbr></wbr><span>Logcat</span><wbr></wbr><span>Data</span><wbr></wbr><span><span>Thread</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-645773918%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>boolean <a href="../-logcat-process/start-watch-logcat-data-thread.html"><span class="token function">startWatchLogcatDataThread</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1790298578%2FFunctions%2F77799447" anchor-label="stopWatchLogcatDataThread" id="1790298578%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-logcat-process/stop-watch-logcat-data-thread.html"><span>stop</span><wbr></wbr><span>Watch</span><wbr></wbr><span>Logcat</span><wbr></wbr><span>Data</span><wbr></wbr><span><span>Thread</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1790298578%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="../-logcat-process/stop-watch-logcat-data-thread.html"><span class="token function">stopWatchLogcatDataThread</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>(c) 2024. INKA Entworks. All rights reserved.</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>downloadLicense</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>NCG SDK for Android</span>
+            </a>
+    </div>
+    <div>
+2.15.0    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="NCG SDK for Android::com.inka.ncg.jni/NcgCoreWrapper/downloadLicense/#java.lang.String#java.lang.String#java.lang.String#java.lang.String#java.lang.String#java.lang.String#boolean#com.inka.ncg.jni.HttpRequestJniCallback/PointingToDeclaration//77799447">
+  <div class="breadcrumbs"><a href="../../../index.html">NCG SDK for Android</a><span class="delimiter">/</span><a href="../index.html">com.inka.ncg.jni</a><span class="delimiter">/</span><a href="index.html">NcgCoreWrapper</a><span class="delimiter">/</span><span class="current">downloadLicense</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>download</span><wbr></wbr><span><span>License</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="download-license.html"><span class="token function">downloadLicense</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> userID<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> cid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> siteID<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> oid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> appID<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> acquisitionURL<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>boolean temporary<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../-http-request-jni-callback/index.html">HttpRequestJniCallback</a> callback</span></span><span class="token punctuation">)</span></div><p class="paragraph">so 내부적으로 HTTP 통신을 처리하여 License를 다운로드 받는다. 통신시 암화방식은 내부적으로 PKI 방식이 이용된다. NOTE: 특이하게도 callback 객체를 미리등록시켜놨다가 사용하려고 시도를 했었는데 callback 객체를 미리 등록시켜놨다가 사용하려고 하면 JNI에서 오류가 발생되었다. 따라서 DownloadLicense메소드에서 직접 파라미터를 받도록 처리하였다.</p><span class="kdoc-tag"><h4 class="">Return</h4><p class="paragraph">오류코드. NCGERR_FAILED_TO_DOWNLOAD_CERTIFICATE : 인증서를 다운로드하는 오류가 발생됨을 나타낸다. NCGERR_FAILED_TO_DOWNLOAD_LICENSE : 라이선스RO를 다운로드하는 오류가 발생됨을 나타낸다.NCGERR_LICENSE_SERVER_RESPONSE_ERROR : 서버로부터 명시적인 오류코드를 받은 경우를 나타낸다.</p></span><h4 class="">Parameters</h4><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>user</span><wbr></wbr><span><span>ID</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">사용자ID</p></div></div></div></div></div><div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>cid</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">Content ID</p></div></div></div></div></div><div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>site</span><wbr></wbr><span><span>ID</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">Site ID</p></div></div></div></div></div><div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>oid</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">Order ID</p></div></div></div></div></div><div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>app</span><wbr></wbr><span><span>ID</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">package name.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>acquisition</span><wbr></wbr><span><span>URL</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">Acquisition URL</p></div></div></div></div></div><div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>temporary</span></span></u></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>callback</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">Http 요청 콜백객체 - Http Request처리를 SDK 외부에서 처리하기 위한 매커니즘을 제공한다.</p></div></div></div></div></div></div></div></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>(c) 2024. INKA Entworks. All rights reserved.</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

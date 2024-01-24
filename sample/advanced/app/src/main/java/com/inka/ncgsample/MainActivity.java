@@ -1059,7 +1059,7 @@ public class MainActivity extends Activity {
 	void startHlsPlayerActivity(String localM3U8Path) {
 		String contentPath;
 		boolean isLocalM3U8;
-		if (localM3U8Path.startsWith("http://") || localM3U8Path.startsWith("https://")) {
+		if (localM3U8Path.startsWith("http")) {
 			contentPath = mGlobal.mNcgFilePath;
 			isLocalM3U8 = false;
 		} else {
@@ -1173,19 +1173,20 @@ public class MainActivity extends Activity {
 		public CustomAdapter() {
 			mListViewItems.add( new ListViewItem(ListItemType.Title, "Download"));
 			mListViewItems.add( new ListViewItem(ListItemType.Download,
-					"https://contents.pallycon.com/DEV/yhpark/ncg/TestRunner/llama.mp4.ncg",
-					"eyJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJvcmlnaW5hbCIsInVzZXJfaWQiOiJ1dGVzdCIsImRybV90eXBlIjoibmNnIiwic2l0ZV9pZCI6IkRFTU8iLCJoYXNoIjoiQUt1YnhnRTB6czNteXdjT1pPb3pjWDV0c3hacG43anFKNUo2ZHp4MXliMD0iLCJjaWQiOiJUZXN0UnVubmVyIiwicG9saWN5IjoiOVdxSVdrZGhweFZHSzhQU0lZY25Kc2N2dUE5c3hndWJMc2QrYWp1XC9ib21RWlBicUkreGFlWWZRb2Nja3Z1RWZBYXFkVzVoWGdKTmdjU1MzZlM3bzhNcXNINTBRZTVVUzNFMXp1T0M5M0pQVXVJOW9CQUl1aEdVVDBZRnFcL3pONjdEc3AwdGtkXC9NS3JBT3NYUDZtWVFwZjkrTDY1VmI0QnlBbG9DbDltdlFlWXJYXC96U1RnaTlXZXVyejl0QVoxTFpjenYzSzF3XC9GeXJpbU5FNjl4WFhiT29oa1Q2V3E3N0VuWW5rd1FxK3ZsdmlZS3FHQ1N6M3N2aWhnWHhybzF0IiwidGltZXN0YW1wIjoiMjAyMi0wOC0wMlQwOTowODoyM1oifQ==",
+					"https://contents.pallycon.com/TEST/PACKAGED_CONTENT/TEST_SIMPLE/sintel-trailer.mp4.ncg",
+					"eyJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJvcmlnaW5hbCIsInVzZXJfaWQiOiJ1dGVzdCIsImRybV90eXBlIjoibmNnIiwic2l0ZV9pZCI6IkRFTU8iLCJoYXNoIjoicE1DUXFldzFZeGk4WXJDYlJlQnNzM0IwYUI0T3hBVER1UmdZaVRVXC8zbVk9IiwiY2lkIjoiVGVzdFJ1bm5lciIsInBvbGljeSI6IjlXcUlXa2RocHhWR0s4UFNJWWNuSnNjdnVBOXN4Z3ViTHNkK2FqdVwvYm9tUVpQYnFJK3hhZVlmUW9jY2t2dUVmdUx0dlVMWXEwTnVoNVJaOFhGYzQ1RWxHd1dcLzY3WVhUcTJQSDJ4Z3dIR1hDalVuaUgzbDQ4NVNmcDZjbmV1bm5qdjMxeGt5VHd6VlAzdVhIUGJWNWR3PT0iLCJ0aW1lc3RhbXAiOiIyMDIwLTExLTIwVDA0OjE2OjI1WiJ9",
 					"Sintel Trailer"));
 
 			mListViewItems.add( new ListViewItem(ListItemType.Title, "ProgressiveDownload") );
 			mListViewItems.add( new ListViewItem(ListItemType.PD,
-					"https://contents.pallycon.com/DEV/yhpark/ncg/TestRunner/llama.mp4.ncg",
-					"eyJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJvcmlnaW5hbCIsInVzZXJfaWQiOiJ1dGVzdCIsImRybV90eXBlIjoibmNnIiwic2l0ZV9pZCI6IkRFTU8iLCJoYXNoIjoiQUt1YnhnRTB6czNteXdjT1pPb3pjWDV0c3hacG43anFKNUo2ZHp4MXliMD0iLCJjaWQiOiJUZXN0UnVubmVyIiwicG9saWN5IjoiOVdxSVdrZGhweFZHSzhQU0lZY25Kc2N2dUE5c3hndWJMc2QrYWp1XC9ib21RWlBicUkreGFlWWZRb2Nja3Z1RWZBYXFkVzVoWGdKTmdjU1MzZlM3bzhNcXNINTBRZTVVUzNFMXp1T0M5M0pQVXVJOW9CQUl1aEdVVDBZRnFcL3pONjdEc3AwdGtkXC9NS3JBT3NYUDZtWVFwZjkrTDY1VmI0QnlBbG9DbDltdlFlWXJYXC96U1RnaTlXZXVyejl0QVoxTFpjenYzSzF3XC9GeXJpbU5FNjl4WFhiT29oa1Q2V3E3N0VuWW5rd1FxK3ZsdmlZS3FHQ1N6M3N2aWhnWHhybzF0IiwidGltZXN0YW1wIjoiMjAyMi0wOC0wMlQwOTowODoyM1oifQ==",
+					"https://contents.pallycon.com/TEST/PACKAGED_CONTENT/TEST_SIMPLE/sintel-trailer.mp4.ncg",
+					"eyJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJvcmlnaW5hbCIsInVzZXJfaWQiOiJ1dGVzdCIsImRybV90eXBlIjoibmNnIiwic2l0ZV9pZCI6IkRFTU8iLCJoYXNoIjoicE1DUXFldzFZeGk4WXJDYlJlQnNzM0IwYUI0T3hBVER1UmdZaVRVXC8zbVk9IiwiY2lkIjoiVGVzdFJ1bm5lciIsInBvbGljeSI6IjlXcUlXa2RocHhWR0s4UFNJWWNuSnNjdnVBOXN4Z3ViTHNkK2FqdVwvYm9tUVpQYnFJK3hhZVlmUW9jY2t2dUVmdUx0dlVMWXEwTnVoNVJaOFhGYzQ1RWxHd1dcLzY3WVhUcTJQSDJ4Z3dIR1hDalVuaUgzbDQ4NVNmcDZjbmV1bm5qdjMxeGt5VHd6VlAzdVhIUGJWNWR3PT0iLCJ0aW1lc3RhbXAiOiIyMDIwLTExLTIwVDA0OjE2OjI1WiJ9",
 					"Sintel Trailer"));
 
 			mListViewItems.add( new ListViewItem(ListItemType.Title, "Http Live Streaming") );
 			mListViewItems.add( new ListViewItem(ListItemType.HLS,
 					"https://contents.pallycon.com/TEST/PACKAGED_CONTENT/TEST_SIMPLE/hls_ncg/master.m3u8",
+					"eyJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJvcmlnaW5hbCIsInVzZXJfaWQiOiJ1dGVzdCIsImRybV90eXBlIjoibmNnIiwic2l0ZV9pZCI6IkRFTU8iLCJoYXNoIjoicE1DUXFldzFZeGk4WXJDYlJlQnNzM0IwYUI0T3hBVER1UmdZaVRVXC8zbVk9IiwiY2lkIjoiVGVzdFJ1bm5lciIsInBvbGljeSI6IjlXcUlXa2RocHhWR0s4UFNJWWNuSnNjdnVBOXN4Z3ViTHNkK2FqdVwvYm9tUVpQYnFJK3hhZVlmUW9jY2t2dUVmdUx0dlVMWXEwTnVoNVJaOFhGYzQ1RWxHd1dcLzY3WVhUcTJQSDJ4Z3dIR1hDalVuaUgzbDQ4NVNmcDZjbmV1bm5qdjMxeGt5VHd6VlAzdVhIUGJWNWR3PT0iLCJ0aW1lc3RhbXAiOiIyMDIwLTExLTIwVDA0OjE2OjI1WiJ9",
 					"Sintel Trailer-SIMPLE-AES"));
 			mListViewItems.add( new ListViewItem(ListItemType.HLS,
 					"https://contents.pallycon.com/DEV/yhpark/original/tictoc-hls/prog_index.m3u8",
@@ -1202,23 +1203,12 @@ public class MainActivity extends Activity {
 				}
 			}
 
-			Collections.sort(files, new Comparator<File>() {
-				public int compare(File f1, File f2) {
-					if( f1.getName().compareTo(f2.getName()) > 0 )
-						return 1;
-					else
-						return -1;
-				}
+			Collections.sort(files, (f1, f2) -> {
+				if( f1.getName().compareTo(f2.getName()) > 0 )
+					return 1;
+				else
+					return -1;
 			});
-
-//			mListViewItems.add( new ListViewItem(ListItemType.Title, "CENC-dec. call test") );
-//			if( files != null ) {
-//				for (File file : files) {
-//					if (file.getName().equals("01_llama_drama_1080p_loc.mp4.ncg")) {
-//						mListViewItems.add(new ListViewItem(ListItemType.CENC, file.getAbsolutePath()));
-//					}
-//				}
-//			}
 
 			mListViewItems.add( new ListViewItem(ListItemType.Title, "Local Downloaded") );
 			if( files != null ) {

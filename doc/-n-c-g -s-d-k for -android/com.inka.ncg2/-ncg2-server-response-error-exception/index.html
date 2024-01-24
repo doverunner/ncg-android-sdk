@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Ncg2ServerResponseErrorException</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>NCG SDK for Android</span>
+            </a>
+    </div>
+    <div>
+2.15.0    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="NCG SDK for Android::com.inka.ncg2/Ncg2ServerResponseErrorException///PointingToDeclaration//77799447">
+  <div class="breadcrumbs"><a href="../../../index.html">NCG SDK for Android</a><span class="delimiter">/</span><a href="../index.html">com.inka.ncg2</a><span class="delimiter">/</span><span class="current">Ncg2ServerResponseErrorException</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Ncg2Server</span><wbr></wbr><span>Response</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Exception</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">class </span><a href="index.html">Ncg2ServerResponseErrorException</a><span class="token keyword"> extends </span><a href="../-ncg2-exception/index.html">Ncg2Exception</a></div><p class="paragraph">The relevant exception occurs when the error responses on License Issuer explicitly And it also occurs when the error is returned during processing the client requests on NCG server.  For example, if the corrected error code is received from the server, it is able to check error through  the relevant exception such as device number is overloaded when it requests license and it is false Signature about requesting.</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">jypark</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="553682740%2FConstructors%2F77799447" anchor-label="Ncg2ServerResponseErrorException" id="553682740%2FConstructors%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-ncg2-server-response-error-exception.html"><span>Ncg2Server</span><wbr></wbr><span>Response</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="553682740%2FConstructors%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="-ncg2-server-response-error-exception.html"><span class="token function">Ncg2ServerResponseErrorException</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> msg<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int serverError<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> serverErrorMsg</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1009588680%2FConstructors%2F77799447" anchor-label="Ncg2ServerResponseErrorException" id="1009588680%2FConstructors%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-ncg2-server-response-error-exception.html"><span>Ncg2Server</span><wbr></wbr><span>Response</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1009588680%2FConstructors%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="-ncg2-server-response-error-exception.html"><span class="token function">Ncg2ServerResponseErrorException</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> msg<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> serverErrorMsg</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-639545609%2FConstructors%2F77799447" anchor-label="Ncg2ServerResponseErrorException" id="-639545609%2FConstructors%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-ncg2-server-response-error-exception.html"><span>Ncg2Server</span><wbr></wbr><span>Response</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-639545609%2FConstructors%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="-ncg2-server-response-error-exception.html"><span class="token function">Ncg2ServerResponseErrorException</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-566912122%2FConstructors%2F77799447" anchor-label="Ncg2ServerResponseErrorException" id="-566912122%2FConstructors%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-ncg2-server-response-error-exception.html"><span>Ncg2Server</span><wbr></wbr><span>Response</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-566912122%2FConstructors%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="-ncg2-server-response-error-exception.html"><span class="token function">Ncg2ServerResponseErrorException</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> msg<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int serverError<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> serverErrorMsg<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> requestRowData<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> requestPlainData<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> responseRowData</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-1898257014%2FFunctions%2F77799447" anchor-label="addSuppressed" id="-1898257014%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1898257014%2FFunctions%2F77799447"><span>add</span><wbr></wbr><span><span>Suppressed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1898257014%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">synchronized </span>void <a href="index.html#-1898257014%2FFunctions%2F77799447"><span class="token function">addSuppressed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Throwable.html">Throwable</a> exception</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1207709164%2FFunctions%2F77799447" anchor-label="fillInStackTrace" id="-1207709164%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1207709164%2FFunctions%2F77799447"><span>fill</span><wbr></wbr><span>In</span><wbr></wbr><span>Stack</span><wbr></wbr><span><span>Trace</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1207709164%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">synchronized </span><a href="https://developer.android.com/reference/kotlin/java/lang/Throwable.html">Throwable</a> <a href="index.html#-1207709164%2FFunctions%2F77799447"><span class="token function">fillInStackTrace</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-252564762%2FFunctions%2F77799447" anchor-label="getCause" id="-252564762%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-252564762%2FFunctions%2F77799447"><span>get</span><wbr></wbr><span><span>Cause</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-252564762%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">synchronized </span><a href="https://developer.android.com/reference/kotlin/java/lang/Throwable.html">Throwable</a> <a href="index.html#-252564762%2FFunctions%2F77799447"><span class="token function">getCause</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-780493227%2FFunctions%2F77799447" anchor-label="getErrorCode" id="-780493227%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-ncg2-exception/get-error-code.html"><span>get</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-780493227%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="../-ncg2-exception/get-error-code.html"><span class="token function">getErrorCode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">오류코드를 반환한다.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2138642817%2FFunctions%2F77799447" anchor-label="getLocalizedMessage" id="-2138642817%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-2138642817%2FFunctions%2F77799447"><span>get</span><wbr></wbr><span>Localized</span><wbr></wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2138642817%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="index.html#-2138642817%2FFunctions%2F77799447"><span class="token function">getLocalizedMessage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1068546184%2FFunctions%2F77799447" anchor-label="getMessage" id="1068546184%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1068546184%2FFunctions%2F77799447"><span>get</span><wbr></wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1068546184%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="index.html#1068546184%2FFunctions%2F77799447"><span class="token function">getMessage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2017251997%2FFunctions%2F77799447" anchor-label="getRequestPlainData" id="2017251997%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-request-plain-data.html"><span>get</span><wbr></wbr><span>Request</span><wbr></wbr><span>Plain</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2017251997%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-request-plain-data.html"><span class="token function">getRequestPlainData</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-620996211%2FFunctions%2F77799447" anchor-label="getRequestRowData" id="-620996211%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-request-row-data.html"><span>get</span><wbr></wbr><span>Request</span><wbr></wbr><span>Row</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-620996211%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-request-row-data.html"><span class="token function">getRequestRowData</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2076416683%2FFunctions%2F77799447" anchor-label="getResponseRowData" id="-2076416683%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-response-row-data.html"><span>get</span><wbr></wbr><span>Response</span><wbr></wbr><span>Row</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2076416683%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-response-row-data.html"><span class="token function">getResponseRowData</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-532927162%2FFunctions%2F77799447" anchor-label="getServerErrorCode" id="-532927162%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-server-error-code.html"><span>get</span><wbr></wbr><span>Server</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-532927162%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="get-server-error-code.html"><span class="token function">getServerErrorCode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2125239866%2FFunctions%2F77799447" anchor-label="getServerErrorMsg" id="-2125239866%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-server-error-msg.html"><span>get</span><wbr></wbr><span>Server</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Msg</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2125239866%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-server-error-msg.html"><span class="token function">getServerErrorMsg</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1238049138%2FFunctions%2F77799447" anchor-label="getStackTrace" id="-1238049138%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1238049138%2FFunctions%2F77799447"><span>get</span><wbr></wbr><span>Stack</span><wbr></wbr><span><span>Trace</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1238049138%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/lang/StackTraceElement.html">StackTraceElement</a><span class="token operator">&gt;</span> <a href="index.html#-1238049138%2FFunctions%2F77799447"><span class="token function">getStackTrace</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1678506999%2FFunctions%2F77799447" anchor-label="getSuppressed" id="1678506999%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1678506999%2FFunctions%2F77799447"><span>get</span><wbr></wbr><span><span>Suppressed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1678506999%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">synchronized </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/lang/Throwable.html">Throwable</a><span class="token operator">&gt;</span> <a href="index.html#1678506999%2FFunctions%2F77799447"><span class="token function">getSuppressed</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-104903378%2FFunctions%2F77799447" anchor-label="initCause" id="-104903378%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-104903378%2FFunctions%2F77799447"><span>init</span><wbr></wbr><span><span>Cause</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-104903378%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">synchronized </span><a href="https://developer.android.com/reference/kotlin/java/lang/Throwable.html">Throwable</a> <a href="index.html#-104903378%2FFunctions%2F77799447"><span class="token function">initCause</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Throwable.html">Throwable</a> cause</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1357294889%2FFunctions%2F77799447" anchor-label="printStackTrace" id="-1357294889%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1357294889%2FFunctions%2F77799447"><span>print</span><wbr></wbr><span>Stack</span><wbr></wbr><span><span>Trace</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1357294889%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="index.html#-1357294889%2FFunctions%2F77799447"><span class="token function">printStackTrace</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1146009933%2FFunctions%2F77799447" anchor-label="setStackTrace" id="-1146009933%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1146009933%2FFunctions%2F77799447"><span>set</span><wbr></wbr><span>Stack</span><wbr></wbr><span><span>Trace</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1146009933%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="index.html#-1146009933%2FFunctions%2F77799447"><span class="token function">setStackTrace</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/lang/StackTraceElement.html">StackTraceElement</a><span class="token operator">&gt;</span> stackTrace</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1869833549%2FFunctions%2F77799447" anchor-label="toString" id="1869833549%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1869833549%2FFunctions%2F77799447"><span>to</span><wbr></wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1869833549%2FFunctions%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="index.html#1869833549%2FFunctions%2F77799447"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-1843251237%2FProperties%2F77799447" anchor-label="ERROR_CANNOT_FIND_CID" id="-1843251237%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1843251237%2FProperties%2F77799447"><span><span>ERROR_CANNOT_FIND_CID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1843251237%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-1843251237%2FProperties%2F77799447" anchor-label="ERROR_CANNOT_FIND_CID" id="-1843251237%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-1843251237%2FProperties%2F77799447">ERROR_CANNOT_FIND_CID</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1624068661%2FProperties%2F77799447" anchor-label="ERROR_CANNOT_FIND_SID" id="-1624068661%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1624068661%2FProperties%2F77799447"><span><span>ERROR_CANNOT_FIND_SID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1624068661%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-1624068661%2FProperties%2F77799447" anchor-label="ERROR_CANNOT_FIND_SID" id="-1624068661%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-1624068661%2FProperties%2F77799447">ERROR_CANNOT_FIND_SID</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-433928948%2FProperties%2F77799447" anchor-label="ERROR_CANNOT_ISSUE_LICENSE" id="-433928948%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-433928948%2FProperties%2F77799447"><span><span>ERROR_CANNOT_ISSUE_LICENSE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-433928948%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-433928948%2FProperties%2F77799447" anchor-label="ERROR_CANNOT_ISSUE_LICENSE" id="-433928948%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-433928948%2FProperties%2F77799447">ERROR_CANNOT_ISSUE_LICENSE</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1038978166%2FProperties%2F77799447" anchor-label="ERROR_CERT_ALREADY_EXIST" id="1038978166%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1038978166%2FProperties%2F77799447"><span><span>ERROR_CERT_ALREADY_EXIST</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1038978166%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="1038978166%2FProperties%2F77799447" anchor-label="ERROR_CERT_ALREADY_EXIST" id="1038978166%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#1038978166%2FProperties%2F77799447">ERROR_CERT_ALREADY_EXIST</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1306601701%2FProperties%2F77799447" anchor-label="ERROR_CERT_NOT_EXIST" id="-1306601701%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1306601701%2FProperties%2F77799447"><span><span>ERROR_CERT_NOT_EXIST</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1306601701%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-1306601701%2FProperties%2F77799447" anchor-label="ERROR_CERT_NOT_EXIST" id="-1306601701%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-1306601701%2FProperties%2F77799447">ERROR_CERT_NOT_EXIST</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1372075839%2FProperties%2F77799447" anchor-label="ERROR_DATASET_INVALID" id="1372075839%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1372075839%2FProperties%2F77799447"><span><span>ERROR_DATASET_INVALID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1372075839%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="1372075839%2FProperties%2F77799447" anchor-label="ERROR_DATASET_INVALID" id="1372075839%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#1372075839%2FProperties%2F77799447">ERROR_DATASET_INVALID</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1494633633%2FProperties%2F77799447" anchor-label="ERROR_DB_ERROR_8000" id="-1494633633%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1494633633%2FProperties%2F77799447"><span><span>ERROR_DB_ERROR_8000</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1494633633%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-1494633633%2FProperties%2F77799447" anchor-label="ERROR_DB_ERROR_8000" id="-1494633633%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-1494633633%2FProperties%2F77799447">ERROR_DB_ERROR_8000</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1463613826%2FProperties%2F77799447" anchor-label="ERROR_DB_ERROR_8001" id="-1463613826%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1463613826%2FProperties%2F77799447"><span><span>ERROR_DB_ERROR_8001</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1463613826%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-1463613826%2FProperties%2F77799447" anchor-label="ERROR_DB_ERROR_8001" id="-1463613826%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-1463613826%2FProperties%2F77799447">ERROR_DB_ERROR_8001</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1432594019%2FProperties%2F77799447" anchor-label="ERROR_DB_ERROR_8002" id="-1432594019%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1432594019%2FProperties%2F77799447"><span><span>ERROR_DB_ERROR_8002</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1432594019%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-1432594019%2FProperties%2F77799447" anchor-label="ERROR_DB_ERROR_8002" id="-1432594019%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-1432594019%2FProperties%2F77799447">ERROR_DB_ERROR_8002</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1281772600%2FProperties%2F77799447" anchor-label="ERROR_DB_INTERNAL_ERROR" id="-1281772600%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1281772600%2FProperties%2F77799447"><span><span>ERROR_DB_INTERNAL_ERROR</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1281772600%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-1281772600%2FProperties%2F77799447" anchor-label="ERROR_DB_INTERNAL_ERROR" id="-1281772600%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-1281772600%2FProperties%2F77799447">ERROR_DB_INTERNAL_ERROR</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="216957657%2FProperties%2F77799447" anchor-label="ERROR_DEVIC_NOT_REGIST" id="216957657%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#216957657%2FProperties%2F77799447"><span><span>ERROR_DEVIC_NOT_REGIST</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="216957657%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="216957657%2FProperties%2F77799447" anchor-label="ERROR_DEVIC_NOT_REGIST" id="216957657%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#216957657%2FProperties%2F77799447">ERROR_DEVIC_NOT_REGIST</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="257296562%2FProperties%2F77799447" anchor-label="ERROR_DEVICE_OVER" id="257296562%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#257296562%2FProperties%2F77799447"><span><span>ERROR_DEVICE_OVER</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="257296562%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="257296562%2FProperties%2F77799447" anchor-label="ERROR_DEVICE_OVER" id="257296562%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#257296562%2FProperties%2F77799447">ERROR_DEVICE_OVER</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="41822490%2FProperties%2F77799447" anchor-label="ERROR_DH_INIT_FAILED" id="41822490%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#41822490%2FProperties%2F77799447"><span><span>ERROR_DH_INIT_FAILED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="41822490%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="41822490%2FProperties%2F77799447" anchor-label="ERROR_DH_INIT_FAILED" id="41822490%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#41822490%2FProperties%2F77799447">ERROR_DH_INIT_FAILED</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="216887033%2FProperties%2F77799447" anchor-label="ERROR_GATEWAY_ERROR_1001" id="216887033%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#216887033%2FProperties%2F77799447"><span><span>ERROR_GATEWAY_ERROR_1001</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="216887033%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="216887033%2FProperties%2F77799447" anchor-label="ERROR_GATEWAY_ERROR_1001" id="216887033%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#216887033%2FProperties%2F77799447">ERROR_GATEWAY_ERROR_1001</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="247906840%2FProperties%2F77799447" anchor-label="ERROR_GATEWAY_ERROR_1002" id="247906840%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#247906840%2FProperties%2F77799447"><span><span>ERROR_GATEWAY_ERROR_1002</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="247906840%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="247906840%2FProperties%2F77799447" anchor-label="ERROR_GATEWAY_ERROR_1002" id="247906840%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#247906840%2FProperties%2F77799447">ERROR_GATEWAY_ERROR_1002</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="278926647%2FProperties%2F77799447" anchor-label="ERROR_GATEWAY_ERROR_1003" id="278926647%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#278926647%2FProperties%2F77799447"><span><span>ERROR_GATEWAY_ERROR_1003</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="278926647%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="278926647%2FProperties%2F77799447" anchor-label="ERROR_GATEWAY_ERROR_1003" id="278926647%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#278926647%2FProperties%2F77799447">ERROR_GATEWAY_ERROR_1003</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="309946454%2FProperties%2F77799447" anchor-label="ERROR_GATEWAY_ERROR_1004" id="309946454%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#309946454%2FProperties%2F77799447"><span><span>ERROR_GATEWAY_ERROR_1004</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="309946454%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="309946454%2FProperties%2F77799447" anchor-label="ERROR_GATEWAY_ERROR_1004" id="309946454%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#309946454%2FProperties%2F77799447">ERROR_GATEWAY_ERROR_1004</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="603687626%2FProperties%2F77799447" anchor-label="ERROR_GATEWAY_INTERNAL_ERROR" id="603687626%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#603687626%2FProperties%2F77799447"><span><span>ERROR_GATEWAY_INTERNAL_ERROR</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="603687626%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="603687626%2FProperties%2F77799447" anchor-label="ERROR_GATEWAY_INTERNAL_ERROR" id="603687626%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#603687626%2FProperties%2F77799447">ERROR_GATEWAY_INTERNAL_ERROR</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1619292986%2FProperties%2F77799447" anchor-label="ERROR_GATEWAY_RESPONSE_ERROR" id="-1619292986%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1619292986%2FProperties%2F77799447"><span><span>ERROR_GATEWAY_RESPONSE_ERROR</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1619292986%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-1619292986%2FProperties%2F77799447" anchor-label="ERROR_GATEWAY_RESPONSE_ERROR" id="-1619292986%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-1619292986%2FProperties%2F77799447">ERROR_GATEWAY_RESPONSE_ERROR</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-642549675%2FProperties%2F77799447" anchor-label="ERROR_HMAC_IS_INVALID" id="-642549675%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-642549675%2FProperties%2F77799447"><span><span>ERROR_HMAC_IS_INVALID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-642549675%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-642549675%2FProperties%2F77799447" anchor-label="ERROR_HMAC_IS_INVALID" id="-642549675%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-642549675%2FProperties%2F77799447">ERROR_HMAC_IS_INVALID</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1144663277%2FProperties%2F77799447" anchor-label="ERROR_INVALID_DATA_ERROR_9001" id="-1144663277%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1144663277%2FProperties%2F77799447"><span><span>ERROR_INVALID_DATA_ERROR_9001</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1144663277%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-1144663277%2FProperties%2F77799447" anchor-label="ERROR_INVALID_DATA_ERROR_9001" id="-1144663277%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-1144663277%2FProperties%2F77799447">ERROR_INVALID_DATA_ERROR_9001</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1082623663%2FProperties%2F77799447" anchor-label="ERROR_INVALID_DATA_ERROR_9003" id="-1082623663%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1082623663%2FProperties%2F77799447"><span><span>ERROR_INVALID_DATA_ERROR_9003</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1082623663%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-1082623663%2FProperties%2F77799447" anchor-label="ERROR_INVALID_DATA_ERROR_9003" id="-1082623663%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-1082623663%2FProperties%2F77799447">ERROR_INVALID_DATA_ERROR_9003</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1170425131%2FProperties%2F77799447" anchor-label="ERROR_INVALID_DATA_ERROR_9999" id="1170425131%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1170425131%2FProperties%2F77799447"><span><span>ERROR_INVALID_DATA_ERROR_9999</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1170425131%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="1170425131%2FProperties%2F77799447" anchor-label="ERROR_INVALID_DATA_ERROR_9999" id="1170425131%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#1170425131%2FProperties%2F77799447">ERROR_INVALID_DATA_ERROR_9999</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="21111652%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_2002" id="21111652%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#21111652%2FProperties%2F77799447"><span><span>ERROR_INVALID_LIC_DATA_ERROR_2002</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="21111652%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="21111652%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_2002" id="21111652%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#21111652%2FProperties%2F77799447">ERROR_INVALID_LIC_DATA_ERROR_2002</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="52131459%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_2003" id="52131459%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#52131459%2FProperties%2F77799447"><span><span>ERROR_INVALID_LIC_DATA_ERROR_2003</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="52131459%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="52131459%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_2003" id="52131459%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#52131459%2FProperties%2F77799447">ERROR_INVALID_LIC_DATA_ERROR_2003</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="83151266%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_2004" id="83151266%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#83151266%2FProperties%2F77799447"><span><span>ERROR_INVALID_LIC_DATA_ERROR_2004</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="83151266%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="83151266%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_2004" id="83151266%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#83151266%2FProperties%2F77799447">ERROR_INVALID_LIC_DATA_ERROR_2004</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="114171073%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_2005" id="114171073%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#114171073%2FProperties%2F77799447"><span><span>ERROR_INVALID_LIC_DATA_ERROR_2005</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="114171073%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="114171073%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_2005" id="114171073%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#114171073%2FProperties%2F77799447">ERROR_INVALID_LIC_DATA_ERROR_2005</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="145190880%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_2006" id="145190880%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#145190880%2FProperties%2F77799447"><span><span>ERROR_INVALID_LIC_DATA_ERROR_2006</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="145190880%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="145190880%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_2006" id="145190880%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#145190880%2FProperties%2F77799447">ERROR_INVALID_LIC_DATA_ERROR_2006</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="683193542%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_3001" id="683193542%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#683193542%2FProperties%2F77799447"><span><span>ERROR_INVALID_LIC_DATA_ERROR_3001</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="683193542%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="683193542%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_3001" id="683193542%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#683193542%2FProperties%2F77799447">ERROR_INVALID_LIC_DATA_ERROR_3001</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2100416743%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_5002" id="2100416743%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#2100416743%2FProperties%2F77799447"><span><span>ERROR_INVALID_LIC_DATA_ERROR_5002</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2100416743%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="2100416743%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_5002" id="2100416743%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#2100416743%2FProperties%2F77799447">ERROR_INVALID_LIC_DATA_ERROR_5002</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2131436550%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_5003" id="2131436550%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#2131436550%2FProperties%2F77799447"><span><span>ERROR_INVALID_LIC_DATA_ERROR_5003</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2131436550%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="2131436550%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_5003" id="2131436550%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#2131436550%2FProperties%2F77799447">ERROR_INVALID_LIC_DATA_ERROR_5003</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2101491132%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_5005" id="-2101491132%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-2101491132%2FProperties%2F77799447"><span><span>ERROR_INVALID_LIC_DATA_ERROR_5005</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2101491132%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-2101491132%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_5005" id="-2101491132%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-2101491132%2FProperties%2F77799447">ERROR_INVALID_LIC_DATA_ERROR_5005</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2070471325%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_5006" id="-2070471325%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-2070471325%2FProperties%2F77799447"><span><span>ERROR_INVALID_LIC_DATA_ERROR_5006</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2070471325%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-2070471325%2FProperties%2F77799447" anchor-label="ERROR_INVALID_LIC_DATA_ERROR_5006" id="-2070471325%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-2070471325%2FProperties%2F77799447">ERROR_INVALID_LIC_DATA_ERROR_5006</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="152472446%2FProperties%2F77799447" anchor-label="ERROR_INVALID_PACK_DATA_ERROR_2001" id="152472446%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#152472446%2FProperties%2F77799447"><span><span>ERROR_INVALID_PACK_DATA_ERROR_2001</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="152472446%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="152472446%2FProperties%2F77799447" anchor-label="ERROR_INVALID_PACK_DATA_ERROR_2001" id="152472446%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#152472446%2FProperties%2F77799447">ERROR_INVALID_PACK_DATA_ERROR_2001</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="814554336%2FProperties%2F77799447" anchor-label="ERROR_INVALID_PACK_DATA_ERROR_3000" id="814554336%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#814554336%2FProperties%2F77799447"><span><span>ERROR_INVALID_PACK_DATA_ERROR_3000</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="814554336%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="814554336%2FProperties%2F77799447" anchor-label="ERROR_INVALID_PACK_DATA_ERROR_3000" id="814554336%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#814554336%2FProperties%2F77799447">ERROR_INVALID_PACK_DATA_ERROR_3000</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="938633564%2FProperties%2F77799447" anchor-label="ERROR_INVALID_PACK_DATA_ERROR_3004" id="938633564%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#938633564%2FProperties%2F77799447"><span><span>ERROR_INVALID_PACK_DATA_ERROR_3004</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="938633564%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="938633564%2FProperties%2F77799447" anchor-label="ERROR_INVALID_PACK_DATA_ERROR_3004" id="938633564%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#938633564%2FProperties%2F77799447">ERROR_INVALID_PACK_DATA_ERROR_3004</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-708006172%2FProperties%2F77799447" anchor-label="ERROR_INVALID_PACK_DATA_ERROR_7000" id="-708006172%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-708006172%2FProperties%2F77799447"><span><span>ERROR_INVALID_PACK_DATA_ERROR_7000</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-708006172%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-708006172%2FProperties%2F77799447" anchor-label="ERROR_INVALID_PACK_DATA_ERROR_7000" id="-708006172%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-708006172%2FProperties%2F77799447">ERROR_INVALID_PACK_DATA_ERROR_7000</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-649895297%2FProperties%2F77799447" anchor-label="ERROR_LICENSE_GATE_WAY_RESPONSE_ERROR" id="-649895297%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-649895297%2FProperties%2F77799447"><span><span>ERROR_LICENSE_GATE_WAY_RESPONSE_ERROR</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-649895297%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-649895297%2FProperties%2F77799447" anchor-label="ERROR_LICENSE_GATE_WAY_RESPONSE_ERROR" id="-649895297%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-649895297%2FProperties%2F77799447">ERROR_LICENSE_GATE_WAY_RESPONSE_ERROR</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1752366187%2FProperties%2F77799447" anchor-label="ERROR_MAX" id="1752366187%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1752366187%2FProperties%2F77799447"><span><span>ERROR_MAX</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1752366187%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="1752366187%2FProperties%2F77799447" anchor-label="ERROR_MAX" id="1752366187%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#1752366187%2FProperties%2F77799447">ERROR_MAX</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="545145661%2FProperties%2F77799447" anchor-label="ERROR_MIN" id="545145661%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#545145661%2FProperties%2F77799447"><span><span>ERROR_MIN</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="545145661%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="545145661%2FProperties%2F77799447" anchor-label="ERROR_MIN" id="545145661%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#545145661%2FProperties%2F77799447">ERROR_MIN</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2034510380%2FProperties%2F77799447" anchor-label="ERROR_NOT_SUPPORT_MODE" id="2034510380%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#2034510380%2FProperties%2F77799447"><span><span>ERROR_NOT_SUPPORT_MODE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2034510380%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="2034510380%2FProperties%2F77799447" anchor-label="ERROR_NOT_SUPPORT_MODE" id="2034510380%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#2034510380%2FProperties%2F77799447">ERROR_NOT_SUPPORT_MODE</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="888477145%2FProperties%2F77799447" anchor-label="ERROR_SVR_MODULE_ERROR_5001" id="888477145%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#888477145%2FProperties%2F77799447"><span><span>ERROR_SVR_MODULE_ERROR_5001</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="888477145%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="888477145%2FProperties%2F77799447" anchor-label="ERROR_SVR_MODULE_ERROR_5001" id="888477145%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#888477145%2FProperties%2F77799447">ERROR_SVR_MODULE_ERROR_5001</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1989266950%2FProperties%2F77799447" anchor-label="ERROR_SVR_MODULE_ERROR_7002" id="-1989266950%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1989266950%2FProperties%2F77799447"><span><span>ERROR_SVR_MODULE_ERROR_7002</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1989266950%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-1989266950%2FProperties%2F77799447" anchor-label="ERROR_SVR_MODULE_ERROR_7002" id="-1989266950%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-1989266950%2FProperties%2F77799447">ERROR_SVR_MODULE_ERROR_7002</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1958247143%2FProperties%2F77799447" anchor-label="ERROR_SVR_MODULE_ERROR_7003" id="-1958247143%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1958247143%2FProperties%2F77799447"><span><span>ERROR_SVR_MODULE_ERROR_7003</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1958247143%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-1958247143%2FProperties%2F77799447" anchor-label="ERROR_SVR_MODULE_ERROR_7003" id="-1958247143%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-1958247143%2FProperties%2F77799447">ERROR_SVR_MODULE_ERROR_7003</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1896207529%2FProperties%2F77799447" anchor-label="ERROR_SVR_MODULE_ERROR_7005" id="-1896207529%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1896207529%2FProperties%2F77799447"><span><span>ERROR_SVR_MODULE_ERROR_7005</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1896207529%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-1896207529%2FProperties%2F77799447" anchor-label="ERROR_SVR_MODULE_ERROR_7005" id="-1896207529%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-1896207529%2FProperties%2F77799447">ERROR_SVR_MODULE_ERROR_7005</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1865187722%2FProperties%2F77799447" anchor-label="ERROR_SVR_MODULE_ERROR_7006" id="-1865187722%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1865187722%2FProperties%2F77799447"><span><span>ERROR_SVR_MODULE_ERROR_7006</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1865187722%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-1865187722%2FProperties%2F77799447" anchor-label="ERROR_SVR_MODULE_ERROR_7006" id="-1865187722%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-1865187722%2FProperties%2F77799447">ERROR_SVR_MODULE_ERROR_7006</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1834167915%2FProperties%2F77799447" anchor-label="ERROR_SVR_MODULE_ERROR_7007" id="-1834167915%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
+        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1834167915%2FProperties%2F77799447"><span><span>ERROR_SVR_MODULE_ERROR_7007</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1834167915%2FProperties%2F77799447"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><a data-name="-1834167915%2FProperties%2F77799447" anchor-label="ERROR_SVR_MODULE_ERROR_7007" id="-1834167915%2FProperties%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span>int <a href="index.html#-1834167915%2FProperties%2F77799447">ERROR_SVR_MODULE_ERROR_7007</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>(c) 2024. INKA Entworks. All rights reserved.</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
