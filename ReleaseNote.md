@@ -1,32 +1,36 @@
 > **<font color="blue">This product supports Android 5.0(API Level 21) or later </font>**
 
+### **Version 2.16.0**
+
+> **What's New in Version 2.16.0**
+
+<font color="darkviolet">**`Added`**</font> Added Builder class.
+
+- Users can now use the Builder class to create Ncg2Agent objects when they create them.
+
+<font color="darkviolet">**`Added`**</font> Added Ncg2Agent functions.
+
+- New functions using LicenseConfig have been added, including the ability to request licenses without using AsyncTask.
+  - void acquireLicense(LicenseConfig, Callback<Void>, Callback<Ncg2Exception>)
+  - void removeLicense(LicenseConfig)
+  - void checkLicenseValid(LicenseConfig)
+  - void getLicenseInfo(LicenseConfig)
+  - void updateSecureTime(Callback<Void>, Callback<Ncg2Exception>)
+
+<font color="orangered">**`Changed`**</font> Internal library enhancements and performance improvements.
+
+- Fixed a crash in the registerReceiver() function during NCG init().
+
+<font color="orangered">**`Changed`**</font> Change from DoxyGen documentation to javadoc documentation.
+<font color="orangered">**`Changed`**</font> The library distribution method has been changed to AARs.
+
 ### **Version 2.15.0**
 
 > **What's New in Version 2.15.0**
 
-<font color="darkviolet">**`Added`**</font> Added Builder class.
-
- - Users can now use the Builder class to create Ncg2Agent objects when they create them.
-
 <font color="darkviolet">**`Added`**</font> Added LicenseConfig class.
 
  - The LicenseConfig class allows users to set the required parameters when requesting a license.
-
-<font color="darkviolet">**`Added`**</font> Added Ncg2Agent functions.
-
- - New functions using LicenseConfig have been added, including the ability to request licenses without using AsyncTask.
-   - void acquireLicense(LicenseConfig, Callback<Void>, Callback<Ncg2Exception>)
-   - void removeLicense(LicenseConfig)
-   - void checkLicenseValid(LicenseConfig)
-   - void getLicenseInfo(LicenseConfig)
-   - void updateSecureTime(Callback<Void>, Callback<Ncg2Exception>)
-
-<font color="orangered">**`Changed`**</font> Internal library enhancements and performance improvements.
- 
- - Fixed a crash in the registerReceiver() function during NCG init().
-
-<font color="orangered">**`Changed`**</font> Change from DoxyGen documentation to javadoc documentation.
-<font color="orangered">**`Changed`**</font> The library distribution method has been changed to AARs.
 
 ### **Version 2.14.1**
 
