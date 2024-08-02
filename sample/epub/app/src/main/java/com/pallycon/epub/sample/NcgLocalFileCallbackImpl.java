@@ -36,9 +36,10 @@ public class NcgLocalFileCallbackImpl implements LocalFileCallback {
             try {
                 if (ncgEpubFile == null) {
                     ncgEpubFile = ncg2Agent.createNcgEpub();
+                    ncgEpubFile.open(getName());
+                } else {
+                    ncgEpubFile.open(getName());
                 }
-
-                ncgEpubFile.open(getName());
             } catch (Ncg2Exception e) {
                 throw e;
             }
@@ -122,11 +123,6 @@ public class NcgLocalFileCallbackImpl implements LocalFileCallback {
         if (!filePath.equals(zipEntry.getName())) {
             return false;
         }
-
-//        if (filePath.equals("OEBPS/page-344.html.ncg")) {
-//            int asdf = 0;
-//            Log.d("asdf", "asdfasdf");
-//        }
 
         try {
             InputStream decodeInputStream = zipFile.getInputStream(zipEntry);

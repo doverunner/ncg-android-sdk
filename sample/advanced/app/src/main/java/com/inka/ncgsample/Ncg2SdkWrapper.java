@@ -4,6 +4,7 @@ import java.io.BufferedOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.security.InvalidParameterException;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -271,6 +272,11 @@ public class Ncg2SdkWrapper {
 			mListener.onError(e, "getPlaybackUrl() Exception : " + e.getMessage());
 			return null;
 		}
+		catch (InvalidParameterException e) {
+			e.printStackTrace();
+			mListener.onError(e, "getPlaybackUrl() InvalidParameterException : " + e.getMessage());
+			return null;
+		}
 	}
 	
 	
@@ -295,7 +301,7 @@ public class Ncg2SdkWrapper {
 		
 	}
 
-	private boolean checkLicenseAndNotifyIfInvalid(String contentPath, String token) throws Ncg2HttpException, Ncg2Exception {
+	private boolean checkLicenseAndNotifyIfInvalid(String contentPath, String token) throws Ncg2HttpException, Ncg2Exception, InvalidParameterException {
 		LicenseValidation lv = mNcg2Agent.checkLicenseValid(contentPath);
 		if( lv == LicenseValidation.ValidLicense ) {
 			return true;

@@ -1,5 +1,13 @@
 > **<font color="blue">This product supports Android 5.0(API Level 21) or later </font>**
 
+### **Version 2.16.1**
+
+> **What's New in Version 2.16.1**
+
+<font color="orangered">**`Changed`**</font> Improves the performance of the open() function of the NcgEpubFile class.
+
+- If there are A1.ncg, A2.ncg, A3.ncg, ... etc. inside the AAA.epub file, it is faster to read the A2 and A3 files because the DRM header is read only when the A1.ncg file is opened for the first time.
+
 ### **Version 2.16.0**
 
 > **What's New in Version 2.16.0**
