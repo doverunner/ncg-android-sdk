@@ -140,34 +140,29 @@ public class ExoPlayerActivity extends Activity {
 
         @Override
         public void onClick(View v) {
-            switch (v.getId()) {
-                case R.id.btn_play_speed_up:
-                    if (playSpeed < 2.0f) {
-                        playSpeed += 0.1f;
-                        playbackParameters = new PlaybackParameters(playSpeed, 1.0f);
-                        player.setPlaybackParameters(playbackParameters);
+            int id = v.getId();
+            if (id == R.id.btn_play_speed_up) {
+                if (playSpeed < 2.0f) {
+                    playSpeed += 0.1f;
+                    playbackParameters = new PlaybackParameters(playSpeed, 1.0f);
+                    player.setPlaybackParameters(playbackParameters);
 
-                        TextView tv1 = (TextView) findViewById(R.id.tx_play_speed);
-                        if (tv1 != null) {
-                            tv1.setText(String.format("%.1fx", playSpeed));
-                        }
+                    TextView tv1 = (TextView) findViewById(R.id.tx_play_speed);
+                    if (tv1 != null) {
+                        tv1.setText(String.format("%.1fx", playSpeed));
                     }
+                }
+            } else if (id == R.id.btn_play_speed_down) {
+                if (playSpeed > 0.5f) {
+                    playSpeed -= 0.1f;
+                    playbackParameters = new PlaybackParameters(playSpeed, 1.0f);
+                    player.setPlaybackParameters(playbackParameters);
 
-                    break;
-
-                case R.id.btn_play_speed_down:
-                    if (playSpeed > 0.5f) {
-                        playSpeed -= 0.1f;
-                        playbackParameters = new PlaybackParameters(playSpeed, 1.0f);
-                        player.setPlaybackParameters(playbackParameters);
-
-                        TextView tv2 = (TextView) findViewById(R.id.tx_play_speed);
-                        if (tv2 != null) {
-                            tv2.setText(String.format("%.1fx", playSpeed));
-                        }
+                    TextView tv2 = (TextView) findViewById(R.id.tx_play_speed);
+                    if (tv2 != null) {
+                        tv2.setText(String.format("%.1fx", playSpeed));
                     }
-
-                    break;
+                }
             }
         }
     };

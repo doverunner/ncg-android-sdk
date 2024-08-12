@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>Ncg2LocalWebServerImpl</title>
     <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
     <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -18,12 +19,13 @@
         }
     }
     </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
 <link href="../../../styles/style.css" rel="Stylesheet">
-<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../../styles/main.css" rel="Stylesheet">
 <link href="../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
@@ -32,303 +34,315 @@
 <script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
 </head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-            <a href="../../../index.html">
-                    <span>NCG SDK for Android</span>
-            </a>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            NCG SDK for Android
+                    </a>
+            </div>
+            <div class="library-version">
+2.16.2            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ncg2sdk:dokkaHtml/release">androidJvm</button>
+        </div>
     </div>
-    <div>
-2.16.1    </div>
-    <div class="pull-right d-flex">
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
-    </div>
-    <div id="main">
-<div class="main-content" id="content" pageIds="NCG SDK for Android::com.inka.ncg2/Ncg2LocalWebServerImpl///PointingToDeclaration//77799447">
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="NCG SDK for Android::com.inka.ncg2/Ncg2LocalWebServerImpl///PointingToDeclaration//-1830542854">
   <div class="breadcrumbs"><a href="../../../index.html">NCG SDK for Android</a><span class="delimiter">/</span><a href="../index.html">com.inka.ncg2</a><span class="delimiter">/</span><span class="current">Ncg2LocalWebServerImpl</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Ncg2Local</span><wbr></wbr><span>Web</span><wbr></wbr><span>Server</span><wbr></wbr><span><span>Impl</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">class </span><a href="index.html">Ncg2LocalWebServerImpl</a><span class="token keyword"> implements </span><a href="../-ncg2-local-web-server/index.html">Ncg2LocalWebServer</a></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">class </span><a href="index.html">Ncg2LocalWebServerImpl</a><span class="token keyword"> implements </span><a href="../-ncg2-local-web-server/index.html">Ncg2LocalWebServer</a></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="tabbedcontent">Constructors</h2>
-      <div class="table" data-togglable="Constructors"><a data-name="-580412666%2FConstructors%2F77799447" anchor-label="Ncg2LocalWebServerImpl" id="-580412666%2FConstructors%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-ncg2-local-web-server-impl.html"><span>Ncg2Local</span><wbr></wbr><span>Web</span><wbr></wbr><span>Server</span><wbr></wbr><span><span>Impl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-580412666%2FConstructors%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="-ncg2-local-web-server-impl.html"><span class="token function">Ncg2LocalWebServerImpl</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.inka.ncg.jni/NcgCoreWrapper///PointingToDeclaration/">NcgCoreWrapper</span> ncgCore<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a> context</span></span><span class="token punctuation">)</span></div></div></div>
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-580412666%2FConstructors%2F-1830542854" anchor-label="Ncg2LocalWebServerImpl" id="-580412666%2FConstructors%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ncg2-local-web-server-impl.html"><span>Ncg2Local</span><wbr></wbr><span>Web</span><wbr></wbr><span>Server</span><wbr></wbr><span><span>Impl</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-580412666%2FConstructors%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="-ncg2-local-web-server-impl.html"><span class="token function">Ncg2LocalWebServerImpl</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.inka.ncg.jni/NcgCoreWrapper///PointingToDeclaration/">NcgCoreWrapper</span> ncgCore<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a> context</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="827544871%2FFunctions%2F77799447" anchor-label="addHttpLiveStreamUrlForLocalPlayback" id="827544871%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="add-http-live-stream-url-for-local-playback.html"><span>add</span><wbr></wbr><span>Http</span><wbr></wbr><span>Live</span><wbr></wbr><span>Stream</span><wbr></wbr><span>Url</span><wbr></wbr><span>For</span><wbr></wbr><span>Local</span><wbr></wbr><span><span>Playback</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="827544871%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-http-live-stream-url-for-local-playback.html"><span class="token function">addHttpLiveStreamUrlForLocalPlayback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> path</span></span><span class="token punctuation">)</span></div><div class="brief ">A method to set HLS URL to play downloaded HLS content encrypted with NCG and acquire Play URL</div></div></div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="827544871%2FFunctions%2F-1830542854" anchor-label="addHttpLiveStreamUrlForLocalPlayback" id="827544871%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-http-live-stream-url-for-local-playback.html"><span>add</span><wbr></wbr><span>Http</span><wbr></wbr><span>Live</span><wbr></wbr><span>Stream</span><wbr></wbr><span>Url</span><wbr></wbr><span>For</span><wbr></wbr><span>Local</span><wbr></wbr><span><span>Playback</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="827544871%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-http-live-stream-url-for-local-playback.html"><span class="token function">addHttpLiveStreamUrlForLocalPlayback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> path</span></span><span class="token punctuation">)</span></div><div class="brief ">A method to set HLS URL to play downloaded HLS content encrypted with NCG and acquire Play URL</div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-677217812%2FFunctions%2F77799447" anchor-label="addHttpLiveStreamUrlForPlayback" id="-677217812%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="add-http-live-stream-url-for-playback.html"><span>add</span><wbr></wbr><span>Http</span><wbr></wbr><span>Live</span><wbr></wbr><span>Stream</span><wbr></wbr><span>Url</span><wbr></wbr><span>For</span><wbr></wbr><span><span>Playback</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-677217812%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-http-live-stream-url-for-playback.html"><span class="token function">addHttpLiveStreamUrlForPlayback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> url</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-http-live-stream-url-for-playback.html"><span class="token function">addHttpLiveStreamUrlForPlayback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> url<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> cid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> siteID</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-http-live-stream-url-for-playback.html"><span class="token function">addHttpLiveStreamUrlForPlayback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> url<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> cid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> siteID<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>boolean isLiveHLS</span></span><span class="token punctuation">)</span></div><div class="brief ">A method to set HLS URL to play HLS content encrypted with NCG and acquire Play URL</div><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-http-live-stream-url-for-playback.html"><span class="token function">addHttpLiveStreamUrlForPlayback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> url<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>boolean isLiveHLS</span></span><span class="token punctuation">)</span></div><div class="brief ">A method to set HLS URL to play HLS content encrypted with NCG and acquire Play URL &isLiveHLS</div></div></div>
+<a data-name="-677217812%2FFunctions%2F-1830542854" anchor-label="addHttpLiveStreamUrlForPlayback" id="-677217812%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-http-live-stream-url-for-playback.html"><span>add</span><wbr></wbr><span>Http</span><wbr></wbr><span>Live</span><wbr></wbr><span>Stream</span><wbr></wbr><span>Url</span><wbr></wbr><span>For</span><wbr></wbr><span><span>Playback</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-677217812%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-http-live-stream-url-for-playback.html"><span class="token function">addHttpLiveStreamUrlForPlayback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> url</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-http-live-stream-url-for-playback.html"><span class="token function">addHttpLiveStreamUrlForPlayback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> url<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> cid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> siteID</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-http-live-stream-url-for-playback.html"><span class="token function">addHttpLiveStreamUrlForPlayback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> url<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> cid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> siteID<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>boolean isLiveHLS</span></span><span class="token punctuation">)</span></div><div class="brief ">A method to set HLS URL to play HLS content encrypted with NCG and acquire Play URL</div><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-http-live-stream-url-for-playback.html"><span class="token function">addHttpLiveStreamUrlForPlayback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> url<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>boolean isLiveHLS</span></span><span class="token punctuation">)</span></div><div class="brief ">A method to set HLS URL to play HLS content encrypted with NCG and acquire Play URL &isLiveHLS</div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="1168398214%2FFunctions%2F77799447" anchor-label="addHttpLiveStreamUrlForPlaybackWithoutChecking" id="1168398214%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="add-http-live-stream-url-for-playback-without-checking.html"><span>add</span><wbr></wbr><span>Http</span><wbr></wbr><span>Live</span><wbr></wbr><span>Stream</span><wbr></wbr><span>Url</span><wbr></wbr><span>For</span><wbr></wbr><span>Playback</span><wbr></wbr><span>Without</span><wbr></wbr><span><span>Checking</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1168398214%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-http-live-stream-url-for-playback-without-checking.html"><span class="token function">addHttpLiveStreamUrlForPlaybackWithoutChecking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> url</span></span><span class="token punctuation">)</span></div><div class="brief ">A method to set HLS URL to play HLS content encrypted with NCG and acquire Play URL Unlike addHttpLiveStreamUrlForPlayback(), this method does not prior check key file falling under m3u8 path.</div></div></div>
+<a data-name="1168398214%2FFunctions%2F-1830542854" anchor-label="addHttpLiveStreamUrlForPlaybackWithoutChecking" id="1168398214%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-http-live-stream-url-for-playback-without-checking.html"><span>add</span><wbr></wbr><span>Http</span><wbr></wbr><span>Live</span><wbr></wbr><span>Stream</span><wbr></wbr><span>Url</span><wbr></wbr><span>For</span><wbr></wbr><span>Playback</span><wbr></wbr><span>Without</span><wbr></wbr><span><span>Checking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1168398214%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-http-live-stream-url-for-playback-without-checking.html"><span class="token function">addHttpLiveStreamUrlForPlaybackWithoutChecking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> url</span></span><span class="token punctuation">)</span></div><div class="brief ">A method to set HLS URL to play HLS content encrypted with NCG and acquire Play URL Unlike addHttpLiveStreamUrlForPlayback(), this method does not prior check key file falling under m3u8 path.</div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-233763296%2FFunctions%2F77799447" anchor-label="addLocalFilePathForPlayback" id="-233763296%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="add-local-file-path-for-playback.html"><span>add</span><wbr></wbr><span>Local</span><wbr></wbr><span>File</span><wbr></wbr><span>Path</span><wbr></wbr><span>For</span><wbr></wbr><span><span>Playback</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-233763296%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-local-file-path-for-playback.html"><span class="token function">addLocalFilePathForPlayback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> path<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>long fileSize</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-local-file-path-for-playback.html"><span class="token function">addLocalFilePathForPlayback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> path<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> remoteUrlForDnp<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>long fileSize</span></span><span class="token punctuation">)</span></div><div class="brief ">A method to set the path of NCG file to play NCG file in Local and acquire Play URL.</div></div></div>
+<a data-name="-233763296%2FFunctions%2F-1830542854" anchor-label="addLocalFilePathForPlayback" id="-233763296%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-local-file-path-for-playback.html"><span>add</span><wbr></wbr><span>Local</span><wbr></wbr><span>File</span><wbr></wbr><span>Path</span><wbr></wbr><span>For</span><wbr></wbr><span><span>Playback</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-233763296%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-local-file-path-for-playback.html"><span class="token function">addLocalFilePathForPlayback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> path<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>long fileSize</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-local-file-path-for-playback.html"><span class="token function">addLocalFilePathForPlayback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> path<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> remoteUrlForDnp<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>long fileSize</span></span><span class="token punctuation">)</span></div><div class="brief ">A method to set the path of NCG file to play NCG file in Local and acquire Play URL.</div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="1457207494%2FFunctions%2F77799447" anchor-label="addLocalFilePathForPlaybackByCID" id="1457207494%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="add-local-file-path-for-playback-by-c-i-d.html"><span>add</span><wbr></wbr><span>Local</span><wbr></wbr><span>File</span><wbr></wbr><span>Path</span><wbr></wbr><span>For</span><wbr></wbr><span>Playback</span><wbr></wbr><span>By</span><wbr></wbr><span><span>CID</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1457207494%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-local-file-path-for-playback-by-c-i-d.html"><span class="token function">addLocalFilePathForPlaybackByCID</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> path<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> cid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> sid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>long fileSize</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-local-file-path-for-playback-by-c-i-d.html"><span class="token function">addLocalFilePathForPlaybackByCID</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> path<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> cid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> sid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> remoteUrlForDnp<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>long fileSize</span></span><span class="token punctuation">)</span></div><div class="brief ">A method to set the path of NCG file to play NCG file in Local and acquire Play URL.</div></div></div>
+<a data-name="1457207494%2FFunctions%2F-1830542854" anchor-label="addLocalFilePathForPlaybackByCID" id="1457207494%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-local-file-path-for-playback-by-c-i-d.html"><span>add</span><wbr></wbr><span>Local</span><wbr></wbr><span>File</span><wbr></wbr><span>Path</span><wbr></wbr><span>For</span><wbr></wbr><span>Playback</span><wbr></wbr><span>By</span><wbr></wbr><span><span>CID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1457207494%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-local-file-path-for-playback-by-c-i-d.html"><span class="token function">addLocalFilePathForPlaybackByCID</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> path<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> cid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> sid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>long fileSize</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-local-file-path-for-playback-by-c-i-d.html"><span class="token function">addLocalFilePathForPlaybackByCID</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> path<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> cid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> sid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> remoteUrlForDnp<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>long fileSize</span></span><span class="token punctuation">)</span></div><div class="brief ">A method to set the path of NCG file to play NCG file in Local and acquire Play URL.</div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-1890650345%2FFunctions%2F77799447" anchor-label="addProgressiveDownloadUrlForPlayback" id="-1890650345%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="add-progressive-download-url-for-playback.html"><span>add</span><wbr></wbr><span>Progressive</span><wbr></wbr><span>Download</span><wbr></wbr><span>Url</span><wbr></wbr><span>For</span><wbr></wbr><span><span>Playback</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1890650345%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-progressive-download-url-for-playback.html"><span class="token function">addProgressiveDownloadUrlForPlayback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> url</span></span><span class="token punctuation">)</span></div><div class="brief ">A method to set URL to play NCG in a form of ProgressiveDownload and acquire Play URL.</div></div></div>
+<a data-name="-1890650345%2FFunctions%2F-1830542854" anchor-label="addProgressiveDownloadUrlForPlayback" id="-1890650345%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-progressive-download-url-for-playback.html"><span>add</span><wbr></wbr><span>Progressive</span><wbr></wbr><span>Download</span><wbr></wbr><span>Url</span><wbr></wbr><span>For</span><wbr></wbr><span><span>Playback</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1890650345%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-progressive-download-url-for-playback.html"><span class="token function">addProgressiveDownloadUrlForPlayback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> url</span></span><span class="token punctuation">)</span></div><div class="brief ">A method to set URL to play NCG in a form of ProgressiveDownload and acquire Play URL.</div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-1856554606%2FFunctions%2F77799447" anchor-label="addProgressiveDownloadUrlForPlaybackByCID" id="-1856554606%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="add-progressive-download-url-for-playback-by-c-i-d.html"><span>add</span><wbr></wbr><span>Progressive</span><wbr></wbr><span>Download</span><wbr></wbr><span>Url</span><wbr></wbr><span>For</span><wbr></wbr><span>Playback</span><wbr></wbr><span>By</span><wbr></wbr><span><span>CID</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1856554606%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-progressive-download-url-for-playback-by-c-i-d.html"><span class="token function">addProgressiveDownloadUrlForPlaybackByCID</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> url<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> cid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> sid</span></span><span class="token punctuation">)</span></div><div class="brief ">A method to set URL to play NCG in a form of ProgressiveDownload and acquire Play URL.</div></div></div>
+<a data-name="-1856554606%2FFunctions%2F-1830542854" anchor-label="addProgressiveDownloadUrlForPlaybackByCID" id="-1856554606%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-progressive-download-url-for-playback-by-c-i-d.html"><span>add</span><wbr></wbr><span>Progressive</span><wbr></wbr><span>Download</span><wbr></wbr><span>Url</span><wbr></wbr><span>For</span><wbr></wbr><span>Playback</span><wbr></wbr><span>By</span><wbr></wbr><span><span>CID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1856554606%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="add-progressive-download-url-for-playback-by-c-i-d.html"><span class="token function">addProgressiveDownloadUrlForPlaybackByCID</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> url<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> cid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> sid</span></span><span class="token punctuation">)</span></div><div class="brief ">A method to set URL to play NCG in a form of ProgressiveDownload and acquire Play URL.</div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-1195210133%2FFunctions%2F77799447" anchor-label="clearPlaybackUrls" id="-1195210133%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="clear-playback-urls.html"><span>clear</span><wbr></wbr><span>Playback</span><wbr></wbr><span><span>Urls</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1195210133%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="clear-playback-urls.html"><span class="token function">clearPlaybackUrls</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Delete the set Play URL information.</div></div></div>
+<a data-name="-1195210133%2FFunctions%2F-1830542854" anchor-label="clearPlaybackUrls" id="-1195210133%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="clear-playback-urls.html"><span>clear</span><wbr></wbr><span>Playback</span><wbr></wbr><span><span>Urls</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1195210133%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="clear-playback-urls.html"><span class="token function">clearPlaybackUrls</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Delete the set Play URL information.</div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="412627081%2FFunctions%2F77799447" anchor-label="fireNotification" id="412627081%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="fire-notification.html"><span>fire</span><wbr></wbr><span><span>Notification</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="412627081%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="fire-notification.html"><span class="token function">fireNotification</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span>int code<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> msg</span></span><span class="token punctuation">)</span></div></div></div>
+<a data-name="412627081%2FFunctions%2F-1830542854" anchor-label="fireNotification" id="412627081%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fire-notification.html"><span>fire</span><wbr></wbr><span><span>Notification</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="412627081%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="fire-notification.html"><span class="token function">fireNotification</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span>int code<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> msg</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-268148230%2FFunctions%2F77799447" anchor-label="isHdmiDetecting" id="-268148230%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="is-hdmi-detecting.html"><span>is</span><wbr></wbr><span>Hdmi</span><wbr></wbr><span><span>Detecting</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-268148230%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>boolean <a href="is-hdmi-detecting.html"><span class="token function">isHdmiDetecting</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">It is function to check externalDisplay option.</div></div></div>
+<a data-name="-268148230%2FFunctions%2F-1830542854" anchor-label="isHdmiDetecting" id="-268148230%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-hdmi-detecting.html"><span>is</span><wbr></wbr><span>Hdmi</span><wbr></wbr><span><span>Detecting</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-268148230%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>boolean <a href="is-hdmi-detecting.html"><span class="token function">isHdmiDetecting</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">It is function to check externalDisplay option.</div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-184120285%2FFunctions%2F77799447" anchor-label="setCookieChecking" id="-184120285%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="set-cookie-checking.html"><span>set</span><wbr></wbr><span>Cookie</span><wbr></wbr><span><span>Checking</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-184120285%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="set-cookie-checking.html"><span class="token function">setCookieChecking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span>boolean enabled</span></span><span class="token punctuation">)</span></div><div class="brief ">Activate or deactivate verification function for Cookie function.</div></div></div>
+<a data-name="-184120285%2FFunctions%2F-1830542854" anchor-label="setCookieChecking" id="-184120285%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-cookie-checking.html"><span>set</span><wbr></wbr><span>Cookie</span><wbr></wbr><span><span>Checking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-184120285%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="set-cookie-checking.html"><span class="token function">setCookieChecking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span>boolean enabled</span></span><span class="token punctuation">)</span></div><div class="brief ">Activate or deactivate verification function for Cookie function.</div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-2114386149%2FFunctions%2F77799447" anchor-label="setCustomCookie" id="-2114386149%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="set-custom-cookie.html"><span>set</span><wbr></wbr><span>Custom</span><wbr></wbr><span><span>Cookie</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2114386149%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="set-custom-cookie.html"><span class="token function">setCustomCookie</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> cookie</span></span><span class="token punctuation">)</span></div><div class="brief ">Set custom cookie for DnP</div></div></div>
+<a data-name="-2114386149%2FFunctions%2F-1830542854" anchor-label="setCustomCookie" id="-2114386149%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-custom-cookie.html"><span>set</span><wbr></wbr><span>Custom</span><wbr></wbr><span><span>Cookie</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2114386149%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="set-custom-cookie.html"><span class="token function">setCustomCookie</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> cookie</span></span><span class="token punctuation">)</span></div><div class="brief ">Set custom cookie for DnP</div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="1853493075%2FFunctions%2F77799447" anchor-label="setEnableMultipleConnectDetection" id="1853493075%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="set-enable-multiple-connect-detection.html"><span>set</span><wbr></wbr><span>Enable</span><wbr></wbr><span>Multiple</span><wbr></wbr><span>Connect</span><wbr></wbr><span><span>Detection</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1853493075%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="set-enable-multiple-connect-detection.html"><span class="token function">setEnableMultipleConnectDetection</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span>boolean enabled</span></span><span class="token punctuation">)</span></div><div class="brief ">Activate or deactivate verification function for MultipleConnection Detection.</div></div></div>
+<a data-name="1853493075%2FFunctions%2F-1830542854" anchor-label="setEnableMultipleConnectDetection" id="1853493075%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-enable-multiple-connect-detection.html"><span>set</span><wbr></wbr><span>Enable</span><wbr></wbr><span>Multiple</span><wbr></wbr><span>Connect</span><wbr></wbr><span><span>Detection</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1853493075%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="set-enable-multiple-connect-detection.html"><span class="token function">setEnableMultipleConnectDetection</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span>boolean enabled</span></span><span class="token punctuation">)</span></div><div class="brief ">Activate or deactivate verification function for MultipleConnection Detection.</div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-1390955674%2FFunctions%2F77799447" anchor-label="setEnableUserAgentChecking" id="-1390955674%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="set-enable-user-agent-checking.html"><span>set</span><wbr></wbr><span>Enable</span><wbr></wbr><span>User</span><wbr></wbr><span>Agent</span><wbr></wbr><span><span>Checking</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1390955674%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="set-enable-user-agent-checking.html"><span class="token function">setEnableUserAgentChecking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span>boolean enabled</span></span><span class="token punctuation">)</span></div><div class="brief ">Activate or deactivate verification function for User Agent Checking.</div></div></div>
+<a data-name="-1390955674%2FFunctions%2F-1830542854" anchor-label="setEnableUserAgentChecking" id="-1390955674%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-enable-user-agent-checking.html"><span>set</span><wbr></wbr><span>Enable</span><wbr></wbr><span>User</span><wbr></wbr><span>Agent</span><wbr></wbr><span><span>Checking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1390955674%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="set-enable-user-agent-checking.html"><span class="token function">setEnableUserAgentChecking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span>boolean enabled</span></span><span class="token punctuation">)</span></div><div class="brief ">Activate or deactivate verification function for User Agent Checking.</div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="464829993%2FFunctions%2F77799447" anchor-label="setWebServerListener" id="464829993%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="set-web-server-listener.html"><span>set</span><wbr></wbr><span>Web</span><wbr></wbr><span>Server</span><wbr></wbr><span><span>Listener</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="464829993%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="set-web-server-listener.html"><span class="token function">setWebServerListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../-ncg2-local-web-server/-web-server-listener/index.html">Ncg2LocalWebServer.WebServerListener</a> listener</span></span><span class="token punctuation">)</span></div><div class="brief ">setWebServerListener object can be registered to be informed of the events creating while playing local web server.</div></div></div>
+<a data-name="464829993%2FFunctions%2F-1830542854" anchor-label="setWebServerListener" id="464829993%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-web-server-listener.html"><span>set</span><wbr></wbr><span>Web</span><wbr></wbr><span>Server</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="464829993%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="set-web-server-listener.html"><span class="token function">setWebServerListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../-ncg2-local-web-server/-web-server-listener/index.html">Ncg2LocalWebServer.WebServerListener</a> listener</span></span><span class="token punctuation">)</span></div><div class="brief ">setWebServerListener object can be registered to be informed of the events creating while playing local web server.</div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="795497614%2FFunctions%2F77799447" anchor-label="startWebserver" id="795497614%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="start-webserver.html"><span>start</span><wbr></wbr><span><span>Webserver</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="795497614%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="start-webserver.html"><span class="token function">startWebserver</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+<a data-name="795497614%2FFunctions%2F-1830542854" anchor-label="startWebserver" id="795497614%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start-webserver.html"><span>start</span><wbr></wbr><span><span>Webserver</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="795497614%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="start-webserver.html"><span class="token function">startWebserver</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-594252190%2FFunctions%2F77799447" anchor-label="stopWebserver" id="-594252190%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="stop-webserver.html"><span>stop</span><wbr></wbr><span><span>Webserver</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-594252190%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="stop-webserver.html"><span class="token function">stopWebserver</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+<a data-name="-594252190%2FFunctions%2F-1830542854" anchor-label="stopWebserver" id="-594252190%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stop-webserver.html"><span>stop</span><wbr></wbr><span><span>Webserver</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-594252190%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="stop-webserver.html"><span class="token function">stopWebserver</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -342,7 +356,8 @@
                 class="pull-right"><span>Generated by </span><a
                 href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
 </body>
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>LicenseValidation</title>
     <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">
     <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -18,12 +19,13 @@
         }
     }
     </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
 <script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async="async"></script>
 <link href="../../../../styles/style.css" rel="Stylesheet">
-<link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../../../styles/main.css" rel="Stylesheet">
 <link href="../../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../../../scripts/clipboard.js" async="async"></script>
 <script type="text/javascript" src="../../../../scripts/navigation-loader.js" async="async"></script>
 <script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async="async"></script>
@@ -32,273 +34,285 @@
 <script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
 </head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-            <a href="../../../../index.html">
-                    <span>NCG SDK for Android</span>
-            </a>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../../index.html">
+                            NCG SDK for Android
+                    </a>
+            </div>
+            <div class="library-version">
+2.16.2            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ncg2sdk:dokkaHtml/release">androidJvm</button>
+        </div>
     </div>
-    <div>
-2.16.1    </div>
-    <div class="pull-right d-flex">
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
-    </div>
-    <div id="main">
-<div class="main-content" id="content" pageIds="NCG SDK for Android::com.inka.ncg2/Ncg2Agent.LicenseValidation///PointingToDeclaration//77799447">
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="NCG SDK for Android::com.inka.ncg2/Ncg2Agent.LicenseValidation///PointingToDeclaration//-1830542854">
   <div class="breadcrumbs"><a href="../../../../index.html">NCG SDK for Android</a><span class="delimiter">/</span><a href="../../index.html">com.inka.ncg2</a><span class="delimiter">/</span><a href="../index.html">Ncg2Agent</a><span class="delimiter">/</span><span class="current">LicenseValidation</span></div>
   <div class="cover ">
     <h1 class="cover"><span>License</span><wbr></wbr><span><span>Validation</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">enum </span><a href="index.html">LicenseValidation</a></div><p class="paragraph">LicenseValidation type enumerates license validity.</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">enum </span><a href="index.html">LicenseValidation</a></div><p class="paragraph">LicenseValidation type enumerates license validity.</p></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Entries">Entries</button><button class="section-tab" data-togglable="Functions">Functions</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="ENTRY">Entries</button></div>
     <div class="tabs-section-body">
-      <h2 class="tabbedcontent">Entries</h2>
-      <div class="table" data-togglable="Entries"><a data-name="1628478623%2FClasslikes%2F77799447" anchor-label="ValidLicense" id="1628478623%2FClasslikes%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-valid-license/index.html">ValidLicense</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1628478623%2FClasslikes%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><a href="-valid-license/index.html">ValidLicense</a></div><div class="brief "><p class="paragraph">There is a valid license.</p></div></div></div>
+      <div data-togglable="ENTRY">
+        <h2 class="">Entries</h2>
+        <div class="table"><a data-name="1628478623%2FClasslikes%2F-1830542854" anchor-label="ValidLicense" id="1628478623%2FClasslikes%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-valid-license/index.html">ValidLicense</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1628478623%2FClasslikes%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace"><a href="-valid-license/index.html">ValidLicense</a></div><div class="brief "><p class="paragraph">There is a valid license.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-1237431893%2FClasslikes%2F77799447" anchor-label="NotExistLicense" id="-1237431893%2FClasslikes%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-not-exist-license/index.html">NotExistLicense</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1237431893%2FClasslikes%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><a href="-not-exist-license/index.html">NotExistLicense</a></div><div class="brief "><p class="paragraph">There is no license whether valid or not.</p></div></div></div>
+<a data-name="-1237431893%2FClasslikes%2F-1830542854" anchor-label="NotExistLicense" id="-1237431893%2FClasslikes%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-not-exist-license/index.html">NotExistLicense</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1237431893%2FClasslikes%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace"><a href="-not-exist-license/index.html">NotExistLicense</a></div><div class="brief "><p class="paragraph">There is no license whether valid or not.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-1898580586%2FClasslikes%2F77799447" anchor-label="ExpiredLicense" id="-1898580586%2FClasslikes%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-expired-license/index.html">ExpiredLicense</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1898580586%2FClasslikes%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><a href="-expired-license/index.html">ExpiredLicense</a></div><div class="brief "><p class="paragraph">Playable period is expired.</p></div></div></div>
+<a data-name="-1898580586%2FClasslikes%2F-1830542854" anchor-label="ExpiredLicense" id="-1898580586%2FClasslikes%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-expired-license/index.html">ExpiredLicense</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1898580586%2FClasslikes%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace"><a href="-expired-license/index.html">ExpiredLicense</a></div><div class="brief "><p class="paragraph">Playable period is expired.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-629533345%2FClasslikes%2F77799447" anchor-label="BeforeStartDate" id="-629533345%2FClasslikes%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-before-start-date/index.html">BeforeStartDate</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-629533345%2FClasslikes%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><a href="-before-start-date/index.html">BeforeStartDate</a></div><div class="brief "><p class="paragraph">In advance of Playable date</p></div></div></div>
+<a data-name="-629533345%2FClasslikes%2F-1830542854" anchor-label="BeforeStartDate" id="-629533345%2FClasslikes%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-before-start-date/index.html">BeforeStartDate</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-629533345%2FClasslikes%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace"><a href="-before-start-date/index.html">BeforeStartDate</a></div><div class="brief "><p class="paragraph">In advance of Playable date</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="2057843286%2FClasslikes%2F77799447" anchor-label="ExceededPlayCount" id="2057843286%2FClasslikes%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-exceeded-play-count/index.html">ExceededPlayCount</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2057843286%2FClasslikes%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><a href="-exceeded-play-count/index.html">ExceededPlayCount</a></div><div class="brief "><p class="paragraph">No more playback count</p></div></div></div>
+<a data-name="2057843286%2FClasslikes%2F-1830542854" anchor-label="ExceededPlayCount" id="2057843286%2FClasslikes%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-exceeded-play-count/index.html">ExceededPlayCount</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2057843286%2FClasslikes%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace"><a href="-exceeded-play-count/index.html">ExceededPlayCount</a></div><div class="brief "><p class="paragraph">No more playback count</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-1284742475%2FClasslikes%2F77799447" anchor-label="ExternalDeviceDisallowed" id="-1284742475%2FClasslikes%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-external-device-disallowed/index.html">ExternalDeviceDisallowed</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1284742475%2FClasslikes%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><a href="-external-device-disallowed/index.html">ExternalDeviceDisallowed</a></div><div class="brief "><p class="paragraph">Playback of content is not allowed in a device connected with external device, but the device is connected with external device.</p></div></div></div>
+<a data-name="-1284742475%2FClasslikes%2F-1830542854" anchor-label="ExternalDeviceDisallowed" id="-1284742475%2FClasslikes%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-external-device-disallowed/index.html">ExternalDeviceDisallowed</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1284742475%2FClasslikes%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace"><a href="-external-device-disallowed/index.html">ExternalDeviceDisallowed</a></div><div class="brief "><p class="paragraph">Playback of content is not allowed in a device connected with external device, but the device is connected with external device.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-96831765%2FClasslikes%2F77799447" anchor-label="RootedDeviceDisallowed" id="-96831765%2FClasslikes%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-rooted-device-disallowed/index.html">RootedDeviceDisallowed</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-96831765%2FClasslikes%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><a href="-rooted-device-disallowed/index.html">RootedDeviceDisallowed</a></div><div class="brief "><p class="paragraph">Playback of content is not allowed in a rooted device, but the device seems that rooted.</p></div></div></div>
+<a data-name="-96831765%2FClasslikes%2F-1830542854" anchor-label="RootedDeviceDisallowed" id="-96831765%2FClasslikes%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-rooted-device-disallowed/index.html">RootedDeviceDisallowed</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-96831765%2FClasslikes%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace"><a href="-rooted-device-disallowed/index.html">RootedDeviceDisallowed</a></div><div class="brief "><p class="paragraph">Playback of content is not allowed in a rooted device, but the device seems that rooted.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-613428378%2FClasslikes%2F77799447" anchor-label="DeviceTimeModified" id="-613428378%2FClasslikes%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-device-time-modified/index.html">DeviceTimeModified</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-613428378%2FClasslikes%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><a href="-device-time-modified/index.html">DeviceTimeModified</a></div><div class="brief "><p class="paragraph">A device time modification is detected. It needs to call updateSecureTime() on on-line to solve this condition.</p></div></div></div>
+<a data-name="-613428378%2FClasslikes%2F-1830542854" anchor-label="DeviceTimeModified" id="-613428378%2FClasslikes%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-device-time-modified/index.html">DeviceTimeModified</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-613428378%2FClasslikes%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace"><a href="-device-time-modified/index.html">DeviceTimeModified</a></div><div class="brief "><p class="paragraph">A device time modification is detected. It needs to call updateSecureTime() on on-line to solve this condition.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-1730333236%2FClasslikes%2F77799447" anchor-label="OfflineNotSupported" id="-1730333236%2FClasslikes%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-offline-not-supported/index.html">OfflineNotSupported</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1730333236%2FClasslikes%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><a href="-offline-not-supported/index.html">OfflineNotSupported</a></div><div class="brief "><p class="paragraph">A device is off-line however off-line mode is disallowed. It needs to call updateSecureTime() on on-line to solve this condition.</p></div></div></div>
+<a data-name="-1730333236%2FClasslikes%2F-1830542854" anchor-label="OfflineNotSupported" id="-1730333236%2FClasslikes%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-offline-not-supported/index.html">OfflineNotSupported</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1730333236%2FClasslikes%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace"><a href="-offline-not-supported/index.html">OfflineNotSupported</a></div><div class="brief "><p class="paragraph">A device is off-line however off-line mode is disallowed. It needs to call updateSecureTime() on on-line to solve this condition.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-720213003%2FClasslikes%2F77799447" anchor-label="OfflineStatusTooLong" id="-720213003%2FClasslikes%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-offline-status-too-long/index.html">OfflineStatusTooLong</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-720213003%2FClasslikes%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><a href="-offline-status-too-long/index.html">OfflineStatusTooLong</a></div><div class="brief "><p class="paragraph">Too many off-line execution It needs to call updateSecureTime() on on-line to solve this condition.</p></div></div></div>
+<a data-name="-720213003%2FClasslikes%2F-1830542854" anchor-label="OfflineStatusTooLong" id="-720213003%2FClasslikes%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-offline-status-too-long/index.html">OfflineStatusTooLong</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-720213003%2FClasslikes%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace"><a href="-offline-status-too-long/index.html">OfflineStatusTooLong</a></div><div class="brief "><p class="paragraph">Too many off-line execution It needs to call updateSecureTime() on on-line to solve this condition.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="2093991048%2FClasslikes%2F77799447" anchor-label="NotAuthorizedAppID" id="2093991048%2FClasslikes%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-not-authorized-app-i-d/index.html">NotAuthorizedAppID</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2093991048%2FClasslikes%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><a href="-not-authorized-app-i-d/index.html">NotAuthorizedAppID</a></div><div class="brief "><p class="paragraph">Failure on init() method because the running app can not be authorized.</p></div></div></div>
+<a data-name="2093991048%2FClasslikes%2F-1830542854" anchor-label="NotAuthorizedAppID" id="2093991048%2FClasslikes%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-not-authorized-app-i-d/index.html">NotAuthorizedAppID</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2093991048%2FClasslikes%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace"><a href="-not-authorized-app-i-d/index.html">NotAuthorizedAppID</a></div><div class="brief "><p class="paragraph">Failure on init() method because the running app can not be authorized.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-488442842%2FClasslikes%2F77799447" anchor-label="ScreenRecorderDetected" id="-488442842%2FClasslikes%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-screen-recorder-detected/index.html">ScreenRecorderDetected</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-488442842%2FClasslikes%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace"><a href="-screen-recorder-detected/index.html">ScreenRecorderDetected</a></div><div class="brief "><p class="paragraph">Some screen recorder apps are detected. </p></div></div></div>
+<a data-name="-488442842%2FClasslikes%2F-1830542854" anchor-label="ScreenRecorderDetected" id="-488442842%2FClasslikes%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-screen-recorder-detected/index.html">ScreenRecorderDetected</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-488442842%2FClasslikes%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace"><a href="-screen-recorder-detected/index.html">ScreenRecorderDetected</a></div><div class="brief "><p class="paragraph">Some screen recorder apps are detected. </p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="-1437464334%2FFunctions%2F77799447" anchor-label="getExtraData" id="-1437464334%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="get-extra-data.html"><span>get</span><wbr></wbr><span>Extra</span><wbr></wbr><span><span>Data</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1437464334%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/util/HashMap.html">HashMap</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token operator">&gt;</span> <a href="get-extra-data.html"><span class="token function">getExtraData</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1437464334%2FFunctions%2F-1830542854" anchor-label="getExtraData" id="-1437464334%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-extra-data.html"><span>get</span><wbr></wbr><span>Extra</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1437464334%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/util/HashMap.html">HashMap</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token operator">&gt;</span> <a href="get-extra-data.html"><span class="token function">getExtraData</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-122922818%2FFunctions%2F77799447" anchor-label="setExtraData" id="-122922818%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="set-extra-data.html"><span>set</span><wbr></wbr><span>Extra</span><wbr></wbr><span><span>Data</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-122922818%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="set-extra-data.html"><span class="token function">setExtraData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/util/HashMap.html">HashMap</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token operator">&gt;</span> extraData</span></span><span class="token punctuation">)</span></div></div></div>
+<a data-name="-122922818%2FFunctions%2F-1830542854" anchor-label="setExtraData" id="-122922818%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-extra-data.html"><span>set</span><wbr></wbr><span>Extra</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-122922818%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="set-extra-data.html"><span class="token function">setExtraData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/util/HashMap.html">HashMap</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token operator">&gt;</span> extraData</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="1994946071%2FFunctions%2F77799447" anchor-label="valueOf" id="1994946071%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="value-of.html"><span>value</span><wbr></wbr><span><span>Of</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1994946071%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="index.html">Ncg2Agent.LicenseValidation</a> <a href="value-of.html"><span class="token function">valueOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> name</span></span><span class="token punctuation">)</span></div><div class="brief ">Returns the enum constant of this type with the specified name.</div></div></div>
+<a data-name="1994946071%2FFunctions%2F-1830542854" anchor-label="valueOf" id="1994946071%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="value-of.html"><span>value</span><wbr></wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1994946071%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="index.html">Ncg2Agent.LicenseValidation</a> <a href="value-of.html"><span class="token function">valueOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> name</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Returns the enum constant of this type with the specified name. The string must match exactly an identifier used to declare an enum constant in this type. (Extraneous whitespace characters are not permitted.)</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="1773256052%2FFunctions%2F77799447" anchor-label="values" id="1773256052%2FFunctions%2F77799447" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest"></a>
-        <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/unitTest" data-filterable-set=":ncg2sdk:dokkaHtml/unitTest">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="values.html"><span><span>values</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1773256052%2FFunctions%2F77799447"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/unitTest"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="index.html">Ncg2Agent.LicenseValidation</a><span class="token operator">&gt;</span> <a href="values.html"><span class="token function">values</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Returns an array containing the constants of this enum type, in the order they're declared.</div></div></div>
+<a data-name="1773256052%2FFunctions%2F-1830542854" anchor-label="values" id="1773256052%2FFunctions%2F-1830542854" data-filterable-set=":ncg2sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":ncg2sdk:dokkaHtml/release" data-filterable-set=":ncg2sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="values.html"><span><span>values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1773256052%2FFunctions%2F-1830542854"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ncg2sdk:dokkaHtml/release"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="index.html">Ncg2Agent.LicenseValidation</a><span class="token operator">&gt;</span> <a href="values.html"><span class="token function">values</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Returns an array containing the constants of this enum type, in the order they're declared. This method may be used to iterate over the constants.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -312,7 +326,8 @@
                 class="pull-right"><span>Generated by </span><a
                 href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
 </body>
 </html>

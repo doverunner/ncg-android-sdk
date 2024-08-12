@@ -54,6 +54,8 @@ import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import com.inka.ncgsample.R;
+
 /**
  * This class plays NCG contents by using Ncg2MediaPlayer class.<br> 
  */
@@ -644,39 +646,32 @@ import java.util.TimerTask;
 				Log.d(DemoLibrary.TAG,"You need to complete the prepre task before this call.");
 				return;
 			}
-			
-			switch( v.getId()) {
-			case R.id.btn_advance: 
-				
+
+			int id = v.getId();
+			if (id == R.id.btn_advance) {
 				timePos = mPlayer.getCurrentPosition() + 10000;
-				if( timePos > mPlayer.getDuration() ) {
+				if (timePos > mPlayer.getDuration()) {
 					timePos = mPlayer.getDuration();
-				}				
-				seekTo(timePos);										
+				}
+				seekTo(timePos);
 				resetControllHideCount();
-				
-				break;
-			case R.id.btn_retour :				
+			} else if (id == R.id.btn_retour) {
 				timePos = mPlayer.getCurrentPosition() - 10000;
-				if( timePos < 0 ) {
+				if (timePos < 0) {
 					timePos = 0;
 				}
 				seekTo(timePos);
 				resetControllHideCount();
-				break;			
-				
-			case R.id.btn_playnpause :				
-				if( mPlayer != null ) {
-					if( mPlayer.isPlaying() ) {						
-						mPlayer.pause(); 
-					}
-					else {						
+			} else if (id == R.id.btn_playnpause) {
+				if (mPlayer != null) {
+					if (mPlayer.isPlaying()) {
+						mPlayer.pause();
+					} else {
 						mPlayer.start();
-					}					
+					}
 					resetControllHideCount();
 				}
-				break;
-			}	
+			}
 		}
 	};
 	

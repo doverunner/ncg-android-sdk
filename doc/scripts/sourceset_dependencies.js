@@ -1,1 +1,1 @@
-sourceset_dependencies='{":ncg2sdk:dokkaHtml/androidTestRelease":[],":ncg2sdk:dokkaHtml/androidTestUnitTest":[],":ncg2sdk:dokkaHtml/debug":[],":ncg2sdk:dokkaHtml/main":[],":ncg2sdk:dokkaHtml/release":[],":ncg2sdk:dokkaHtml/testFixtures":[],":ncg2sdk:dokkaHtml/testFixturesDebug":[],":ncg2sdk:dokkaHtml/testFixturesRelease":[],":ncg2sdk:dokkaHtml/testFixturesUnitTest":[],":ncg2sdk:dokkaHtml/unitTest":[]}'
+sourceset_dependencies='{":ncg2sdk:dokkaHtml/debug":[],":ncg2sdk:dokkaHtml/main":[],":ncg2sdk:dokkaHtml/release":[]}'
