@@ -356,6 +356,7 @@ public class Ncg2SdkWrapper {
 				s -> mListener.onCompletedAcquireLicense(contentPath, token),
 				e -> mListener.onError(e, "Cannot acquire license")
 		);
+
 		progress.dismiss();
 	}
 

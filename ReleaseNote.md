@@ -1,5 +1,10 @@
 > **<font color="blue">This product supports Android 5.0(API Level 21) or later </font>**
 
+# Version 2.16.3
+
+- **Update target sdk:**
+  - For m3u8.ncg files, we modified the existing HLS internal processing code to not work with them.
+
 # Version 2.16.2
 
 - **Update target sdk:**
