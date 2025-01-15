@@ -119,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                         out.close();
+                        entry.close();
                     }
                 }
 
@@ -186,7 +187,6 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     ncgEpubFile.close();
-
                     out2.close();
                 }
 

@@ -55,7 +55,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.ads.interactivemedia.v3:interactivemedia:3.14.0'
 //    implementation 'com.google.android.gms:play-services-ads:21.5.0'
-    implementation 'com.google.android.exoplayer:exoplayer:2.9.6'
+    implementation 'com.google.android.exoplayer:exoplayer:2.19.1'
     implementation "androidx.sqlite:sqlite:2.1.0"
     
 }

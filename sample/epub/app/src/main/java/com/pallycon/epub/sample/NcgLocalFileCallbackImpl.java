@@ -130,6 +130,8 @@ public class NcgLocalFileCallbackImpl implements LocalFileCallback {
             currentPosition = 0;
         } catch (IOException e) {
             throw new NcgLocalFileException(e.getMessage());
+        } catch (Exception e) {
+            throw new NcgLocalFileException("Failed to open file");
         }
 
         return true;
@@ -144,6 +146,8 @@ public class NcgLocalFileCallbackImpl implements LocalFileCallback {
             }
         } catch (IOException e) {
             throw new NcgLocalFileException(e.getMessage());
+        } catch (Exception e) {
+            throw new NcgLocalFileException("Failed to open file");
         }
     }
 
@@ -168,6 +172,8 @@ public class NcgLocalFileCallbackImpl implements LocalFileCallback {
             return outputStream.toByteArray();
         } catch (IOException e) {
             throw new NcgLocalFileException(e.getMessage());
+        } catch (Exception e) {
+            throw new NcgLocalFileException("Failed to open file");
         }
     }
 
@@ -203,6 +209,8 @@ public class NcgLocalFileCallbackImpl implements LocalFileCallback {
 
         } catch (IOException e) {
             throw new NcgLocalFileException(e.getMessage());
+        } catch (Exception e) {
+            throw new NcgLocalFileException("Failed to open file");
         }
 
         return currentPosition;

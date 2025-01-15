@@ -19,43 +19,45 @@ import android.widget.Toast;
 
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.DefaultRenderersFactory;
-import com.google.android.exoplayer2.ExoPlaybackException;
-import com.google.android.exoplayer2.ExoPlayerFactory;
+import com.google.android.exoplayer2.ExoPlayer;
+import com.google.android.exoplayer2.MediaItem;
+import com.google.android.exoplayer2.PlaybackException;
 import com.google.android.exoplayer2.PlaybackParameters;
 import com.google.android.exoplayer2.Player;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.extractor.DefaultExtractorsFactory;
-import com.google.android.exoplayer2.extractor.ExtractorsFactory;
-import com.google.android.exoplayer2.source.ExtractorMediaSource;
+import com.google.android.exoplayer2.source.DefaultMediaSourceFactory;
 import com.google.android.exoplayer2.source.MediaSource;
+import com.google.android.exoplayer2.source.ProgressiveMediaSource;
 import com.google.android.exoplayer2.source.dash.DashMediaSource;
-import com.google.android.exoplayer2.source.dash.DefaultDashChunkSource;
 import com.google.android.exoplayer2.source.hls.HlsMediaSource;
 import com.google.android.exoplayer2.trackselection.AdaptiveTrackSelection;
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
 import com.google.android.exoplayer2.trackselection.TrackSelection;
-import com.google.android.exoplayer2.ui.SimpleExoPlayerView;
+import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter;
+import com.google.android.exoplayer2.upstream.DefaultDataSource;
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
-import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
+import com.google.android.exoplayer2.upstream.DefaultHttpDataSource;
 import com.google.android.exoplayer2.upstream.HttpDataSource;
 import com.google.android.exoplayer2.util.Util;
 import com.inka.ncg2.Ncg2Agent;
 import com.inka.ncg2.Ncg2LocalWebServer;
 import com.inka.ncg2.Ncg2SdkFactory;
 
+import java.util.Collections;
+
 public class ExoPlayerActivity extends Activity {
     private static final String TAG = "ExoPlayerActivity";
-    private SimpleExoPlayer player;
+    private ExoPlayer player;
     private boolean shouldAutoPlay;
     private Handler eventHandler;
-    private SimpleExoPlayerView simpleExoPlayerView;
+    private PlayerView playerView;
     private DefaultBandwidthMeter bandwidthMeter;
     private DefaultTrackSelector trackSelector;
     private DefaultTrackSelector.Parameters trackSelectorParameters;
     private DataSource.Factory mediaDataSourceFactory;
-    private static final DefaultBandwidthMeter BANDWIDTH_METER = new DefaultBandwidthMeter();
     private String cookie;
     private String playbackUrl;
     private Handler mHandler = new Handler();
@@ -124,17 +126,30 @@ public class ExoPlayerActivity extends Activity {
         }
     };
 
-    private Player.EventListener playerEventListener = new Player.DefaultEventListener() {
+    private Player.Listener playerEventListener = new Player.Listener() {
         @Override
-        public void onPlayerError(ExoPlaybackException error) {
+        public void onPlayerError(PlaybackException error) {
             AlertDialog.Builder builder = new AlertDialog.Builder(ExoPlayerActivity.this);
             builder.setTitle("Play Error");
             builder.setMessage(error.getMessage());
             builder.setPositiveButton("OK", null);
             Dialog dialog = builder.create();
             dialog.show();
+            Player.Listener.super.onPlayerError(error);
         }
     };
+
+//    private Player.EventListener playerEventListener = new Player.DefaultEventListener() {
+//        @Override
+//        public void onPlayerError(ExoPlaybackException error) {
+//            AlertDialog.Builder builder = new AlertDialog.Builder(ExoPlayerActivity.this);
+//            builder.setTitle("Play Error");
+//            builder.setMessage(error.getMessage());
+//            builder.setPositiveButton("OK", null);
+//            Dialog dialog = builder.create();
+//            dialog.show();
+//        }
+//    };
 
     View.OnClickListener mButtonClickListener = new View.OnClickListener() {
 
@@ -173,10 +188,9 @@ public class ExoPlayerActivity extends Activity {
         setContentView(R.layout.layout_exoplayer);
 
         shouldAutoPlay = true;
-        simpleExoPlayerView = findViewById(R.id.player_view);
-        simpleExoPlayerView.requestFocus();
+        playerView = findViewById(R.id.player_view);
+        playerView.requestFocus();
         eventHandler = new Handler();
-        bandwidthMeter = new DefaultBandwidthMeter();
 
         trackSelectorParameters = new DefaultTrackSelector.ParametersBuilder().build();
         mediaDataSourceFactory = buildDataSourceFactory();
@@ -206,7 +220,7 @@ public class ExoPlayerActivity extends Activity {
                 showDialog(e.getMessage());
             }
         } else {
-            simpleExoPlayerView.setUseController(true);
+            playerView.setUseController(true);
             player.setPlayWhenReady(shouldAutoPlay);
         }
     }
@@ -261,27 +275,22 @@ public class ExoPlayerActivity extends Activity {
         }
 
         if (player == null) {
-            TrackSelection.Factory adaptiveTrackSelectionFactory =
-                    new AdaptiveTrackSelection.Factory(BANDWIDTH_METER);
-            trackSelector = new DefaultTrackSelector(adaptiveTrackSelectionFactory);
+            DefaultTrackSelector trackSelector = new DefaultTrackSelector(this);
             trackSelector.setParameters(trackSelectorParameters);
 
-            @DefaultRenderersFactory.ExtensionRendererMode int extensionRendererMode = DefaultRenderersFactory.EXTENSION_RENDERER_MODE_ON;
-            // TODO : Set Pallycon drmSessionManager for drm controller.
-            DefaultRenderersFactory renderersFactory = new DefaultRenderersFactory(this,
-                    null, extensionRendererMode);
+            player = new ExoPlayer.Builder(this)
+                    .setTrackSelector(trackSelector)
+                    .build();
 
-            player = ExoPlayerFactory.newSimpleInstance(this, renderersFactory, trackSelector);
-            // TODO : Set Pallycon drmSessionManager for listener.
             player.addListener(playerEventListener);
 
-            // TODO : Set Sercurity API to protect media recording by screen recorder
-            SurfaceView view = (SurfaceView) simpleExoPlayerView.getVideoSurfaceView();
+            // TODO : Set security API to protect media recording by screen recorder
+            SurfaceView view = (SurfaceView) playerView.getVideoSurfaceView();
             if (Build.VERSION.SDK_INT >= 17) {
                 view.setSecure(true);
             }
 
-            simpleExoPlayerView.setPlayer(player);
+            playerView.setPlayer(player);
             player.setPlayWhenReady(shouldAutoPlay);
         }
 
@@ -306,27 +315,31 @@ public class ExoPlayerActivity extends Activity {
 
     private MediaSource buildMediaSource(Uri uri) {
         int type = Util.inferContentType(uri.getLastPathSegment());
+        MediaItem.Builder mediaItemBuilder = new MediaItem.Builder();
+        mediaItemBuilder.setUri(uri);
+        MediaItem mediaItem = mediaItemBuilder.build();
+
         switch (type) {
             case C.TYPE_DASH:
-                return new DashMediaSource(uri, buildDataSourceFactory(), new DefaultDashChunkSource.Factory(mediaDataSourceFactory), eventHandler, null);
+                return new DashMediaSource.Factory(mediaDataSourceFactory).createMediaSource(mediaItem);
             case C.TYPE_OTHER:
-                return new ExtractorMediaSource(uri, mediaDataSourceFactory, new DefaultExtractorsFactory(), eventHandler, null);
+                return new ProgressiveMediaSource.Factory(mediaDataSourceFactory, new DefaultExtractorsFactory()).createMediaSource(mediaItem);
             case C.TYPE_HLS:
-                //return new HlsMediaSource(uri, mediaDataSourceFactory, eventHandler, null);
-                return new HlsMediaSource.Factory(mediaDataSourceFactory).createMediaSource(uri);
+                return new HlsMediaSource.Factory(mediaDataSourceFactory).createMediaSource(mediaItem);
             default:
                 throw new IllegalStateException("Unsupported type: " + type);
         }
     }
 
     private DataSource.Factory buildDataSourceFactory() {
-        HttpDataSource.Factory httpDataSourceFactory = buildHttpDataSourceFactory();
-        httpDataSourceFactory.setDefaultRequestProperty("Cookie", cookie);
-        return new DefaultDataSourceFactory(this, null, httpDataSourceFactory);
+        DefaultHttpDataSource.Factory httpDataSourceFactory = buildHttpDataSourceFactory();
+        return new DefaultDataSource.Factory(this, httpDataSourceFactory);
     }
 
-    private HttpDataSource.Factory buildHttpDataSourceFactory() {
-        return new DefaultHttpDataSourceFactory(Util.getUserAgent(this, "ExoPlayerSample"), null);
+    private DefaultHttpDataSource.Factory buildHttpDataSourceFactory() {
+        return new DefaultHttpDataSource.Factory()
+                .setDefaultRequestProperties(Collections.singletonMap("Cookie", cookie))
+                .setUserAgent(Util.getUserAgent(this, "ExoPlayerSample"));
     }
 
     private void showDialog(String msg) {

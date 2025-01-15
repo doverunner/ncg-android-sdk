@@ -1,5 +1,19 @@
 > **<font color="blue">This product supports Android 5.0(API Level 21) or later </font>**
 
+# Version 2.16.5
+
+- **Update target sdk:**
+  - The targetSdk version has been updated to 35.
+- Support 16 KB page sizes
+  - The sdk now supports 16 KB page sizes.
+- Reduce crash
+  -  Reduce crashing when opening files for EPUB as much as possible (needs testing)
+  
+# Version 2.16.4
+
+- Fixed Bug
+  - Fixed issue with incorrect close handling when opening the same file twice.
+
 # Version 2.16.3
 
 - **Update target sdk:**
