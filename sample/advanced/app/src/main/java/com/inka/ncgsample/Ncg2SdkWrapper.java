@@ -352,7 +352,7 @@ public class Ncg2SdkWrapper {
 		}
 		mNcg2Agent.acquireLicense(
 				new LicenseConfig.Builder(token, isTemporaryLicense)
-						.acquisitionURL("https://testtokyo.pallycon.com/ri/licenseManager.do")
+						.acquisitionURL("https://license.pallycon.com/ri/ncg/licenseManager.do")
 						.build(),
 				s -> mListener.onCompletedAcquireLicense(contentPath, token),
 				e -> mListener.onError(e, "Cannot acquire license")

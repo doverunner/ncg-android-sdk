@@ -13,21 +13,23 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.ExoPlayerFactory;
+import com.google.android.exoplayer2.ExoPlayer;
+import com.google.android.exoplayer2.MediaItem;
 import com.google.android.exoplayer2.SimpleExoPlayer;
-import com.google.android.exoplayer2.source.ExtractorMediaSource;
 import com.google.android.exoplayer2.source.MediaSource;
+import com.google.android.exoplayer2.source.ProgressiveMediaSource;
 import com.google.android.exoplayer2.source.dash.DashMediaSource;
 import com.google.android.exoplayer2.source.dash.DefaultDashChunkSource;
 import com.google.android.exoplayer2.source.hls.HlsMediaSource;
 import com.google.android.exoplayer2.source.smoothstreaming.DefaultSsChunkSource;
 import com.google.android.exoplayer2.source.smoothstreaming.SsMediaSource;
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
-import com.google.android.exoplayer2.ui.SimpleExoPlayerView;
+import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter;
+import com.google.android.exoplayer2.upstream.DefaultDataSource;
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
-import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
+import com.google.android.exoplayer2.upstream.DefaultHttpDataSource;
 import com.google.android.exoplayer2.upstream.HttpDataSource;
 import com.google.android.exoplayer2.upstream.TransferListener;
 import com.google.android.exoplayer2.util.Log;
@@ -40,10 +42,10 @@ import com.inka.ncg2.Ncg2SdkFactory;
 public class MainActivity extends AppCompatActivity {
     private final int MY_PERMISSION = 1;
     private final int MY_WRITE_EXTERNAL_STORAGE = 2;
-    private static final DefaultBandwidthMeter BANDWIDTH_METER = new DefaultBandwidthMeter();
+    private DefaultBandwidthMeter BANDWIDTH_METER;
 
-    private SimpleExoPlayer player;
-    private SimpleExoPlayerView simpleExoPlayerView;
+    private ExoPlayer player;
+    private PlayerView exoPlayerView;
     private DataSource.Factory mediaDataSourceFactory;
     private DefaultTrackSelector trackSelector;
     private MediaSource mediaSource;
@@ -58,15 +60,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        BANDWIDTH_METER = new DefaultBandwidthMeter.Builder(this).build();
+
         StrictMode.ThreadPolicy pol = new StrictMode.ThreadPolicy.Builder().permitNetwork().build();
         StrictMode.setThreadPolicy(pol);
 
-        simpleExoPlayerView = findViewById(R.id.player_view);
-        simpleExoPlayerView.requestFocus();
+        exoPlayerView = findViewById(R.id.player_view);
+        exoPlayerView.requestFocus();
 
         userAgent = Util.getUserAgent(this, "ExoPlayerDemo");
         mediaDataSourceFactory = buildDataSourceFactory(true);
-        trackSelector = new DefaultTrackSelector();
+        trackSelector = new DefaultTrackSelector(this);
 
         if (Build.VERSION.SDK_INT >= 23) {
             if( checkSelfPermission(Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_DENIED ) {
@@ -114,12 +118,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // player setting
-        player = ExoPlayerFactory.newSimpleInstance(this, trackSelector);
-        simpleExoPlayerView.setPlayer(player);
+        player = new ExoPlayer.Builder(this)
+                .setTrackSelector(trackSelector)
+                .build();
+        exoPlayerView.setPlayer(player);
         player.setPlayWhenReady(true);
         Uri uri = Uri.parse(playbackUrl);
         mediaSource = buildMediaSource(uri, null);
-        player.prepare(mediaSource);
+        player.setMediaSource(mediaSource);
+        player.prepare();
     }
 
     private void releasePlayer() {
@@ -190,18 +197,19 @@ public class MainActivity extends AppCompatActivity {
         @C.ContentType int type = Util.inferContentType(uri, overrideExtension);
         switch (type) {
             case C.TYPE_DASH:
-                return new DashMediaSource.Factory(
-                        new DefaultDashChunkSource.Factory(mediaDataSourceFactory), null).createMediaSource(uri);
+                return new DashMediaSource.Factory(mediaDataSourceFactory)
+                        .createMediaSource(MediaItem.fromUri(uri));
             case C.TYPE_SS:
-                return new SsMediaSource.Factory(
-                        new DefaultSsChunkSource.Factory(mediaDataSourceFactory), null).createMediaSource(uri);
+                return new SsMediaSource.Factory(mediaDataSourceFactory)
+                        .createMediaSource(MediaItem.fromUri(uri));
             case C.TYPE_HLS:
-                return new HlsMediaSource.Factory(mediaDataSourceFactory).createMediaSource(uri);
+                return new HlsMediaSource.Factory(mediaDataSourceFactory)
+                        .createMediaSource(MediaItem.fromUri(uri));
             case C.TYPE_OTHER:
-                return new ExtractorMediaSource.Factory(mediaDataSourceFactory).createMediaSource(uri);
-            default: {
+                return new ProgressiveMediaSource.Factory(mediaDataSourceFactory)
+                        .createMediaSource(MediaItem.fromUri(uri));
+            default:
                 throw new IllegalStateException("Unsupported type: " + type);
-            }
         }
     }
 
@@ -210,11 +218,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public DataSource.Factory buildDataSourceFactory(TransferListener listener) {
-        DefaultDataSourceFactory upstreamFactory = new DefaultDataSourceFactory(this, listener, buildHttpDataSourceFactory(listener));
+        DefaultDataSource.Factory upstreamFactory = new DefaultDataSource.Factory(this,
+                buildHttpDataSourceFactory(listener));
         return upstreamFactory;
     }
 
     public HttpDataSource.Factory buildHttpDataSourceFactory(TransferListener listener) {
-        return new DefaultHttpDataSourceFactory(userAgent, listener);
+        return new DefaultHttpDataSource.Factory()
+                .setUserAgent(userAgent)
+                .setTransferListener(listener);
     }
 }
